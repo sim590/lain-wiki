@@ -29,4 +29,4 @@ You can call the notification with a key binding like this:
 
 where ``altkey = "Mod1"`` and ``show`` argument is an optional integer, meaning timeout seconds.
 
-**Note that** this widget exploits ``cal`` to do the alignment, in order to avoid more dozens of code lines, but this requires that `font` is monospaced.
+**Note that** this widget exploits ``cal`` to do the rows alignment, in order to avoid more dozens of code lines, but this requires that `font` is monospaced.
