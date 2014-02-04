@@ -12,6 +12,7 @@ Attaches a calendar notification to a widget.
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `icons` | Path to calendar icons | string | [lain/icons/cal/white](https://github.com/copycat-killer/lain/tree/master/icons/cal/white)
+`font` | Calendar font | string | `beautiful.font`
 `font_size` | Calendar font size | int | 12
 `fg` | Calendar foreground color | string | `beautiful.fg_normal`
 `bg` | Calendar background color | string | `beautiful.bg_normal`
@@ -28,4 +29,4 @@ You can call the notification with a key binding like this:
 
 where ``altkey = "Mod1"`` and ``show`` argument is an optional integer, meaning timeout seconds.
 
-**Note that** this widget exploits ``cal`` to do the alignment, in order to avoid more dozens of code lines, but this requires that your system font is monospaced.
+**Note that** this widget exploits ``cal`` to do the alignment, in order to avoid more dozens of code lines, but this requires that `calendar.font` is monospaced.
