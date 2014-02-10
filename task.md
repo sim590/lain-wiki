@@ -8,9 +8,9 @@ Attaches a [taskwarrior](http://taskwarrior.org/projects/show/taskwarrior) notif
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`font_size` | Calendar font size | int | 12
-`fg` | Calendar foreground color | string | `beautiful.fg_normal`
-`bg` | Calendar background color | string | `beautiful.bg_normal`
+`font_size` | Notifcation font size | int | 12
+`fg` | Notification foreground color | string | `beautiful.fg_normal`
+`bg` | Notification background color | string | `beautiful.bg_normal`
 `position` | Calendar position | string | "top_right"
 `timeout` | Notification timeout seconds | int | 7
 
