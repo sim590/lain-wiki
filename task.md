@@ -9,9 +9,9 @@ Attaches a [taskwarrior](http://taskwarrior.org/projects/show/taskwarrior) notif
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `font_size` | Notifcation font size | int | 12
-`fg` | Notification foreground color | string | `beautiful.fg_normal`
-`bg` | Notification background color | string | `beautiful.bg_normal`
-`position` | Calendar position | string | "top_right"
+`fg` | Notification popup foreground color | string | `beautiful.fg_normal`
+`bg` | Notification popu background color | string | `beautiful.bg_normal`
+`position` | Notification popup position | string | "top_right"
 `timeout` | Notification timeout seconds | int | 7
 
 `position` possible values are defined [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify).
