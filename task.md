@@ -1,6 +1,6 @@
 [<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
 
-Attaches a [taskwarrior](http://taskwarrior.org/projects/show/taskwarrior) notification to a widget, and lets to add/search tasks from the promptbox.
+Attaches a [taskwarrior](http://taskwarrior.org) notification to a widget, and lets to add/search tasks from the promptbox.
 
     lain.widgets.contrib.task:attach(widget, args)
 
