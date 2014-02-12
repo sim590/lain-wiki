@@ -29,6 +29,7 @@ If you want to see more complex applications, check [awesome-copycats](https://g
 Index
 -----
 
+- [base](https://github.com/copycat-killer/lain/wiki/base)
 - [alsa](https://github.com/copycat-killer/lain/wiki/alsa)
 - [alsabar](https://github.com/copycat-killer/lain/wiki/alsabar)
 - [bat](https://github.com/copycat-killer/lain/wiki/bat)
@@ -44,8 +45,6 @@ Index
 - [sysload](https://github.com/copycat-killer/lain/wiki/sysload)
 - [temp](https://github.com/copycat-killer/lain/wiki/temp)
 - [yawn](https://github.com/copycat-killer/lain/wiki/yawn)
-
-- [base](https://github.com/copycat-killer/lain/wiki/base) (widget template)
 
 Users contributed
 ----------------
