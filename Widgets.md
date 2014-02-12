@@ -45,6 +45,8 @@ Index
 - [temp](https://github.com/copycat-killer/lain/wiki/temp)
 - [yawn](https://github.com/copycat-killer/lain/wiki/yawn)
 
+- [base](https://github.com/copycat-killer/lain/wiki/base) (widget template)
+
 Users contributed
 ----------------
 
