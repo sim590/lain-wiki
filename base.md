@@ -14,7 +14,7 @@ Variable | Meaning | Type | Default
 `cmd` | The command to execute | string | empty string
 `settings` | User settings | function | empty function
 
-`settings` can use the string `base.output`, which is the output of `cmd`.
+`settings` can use the string `output`, which is the output of `cmd`.
 
 ### output table
 
