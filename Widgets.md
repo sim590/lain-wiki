@@ -29,9 +29,9 @@ If you want to see more complex applications, check [awesome-copycats](https://g
 Index
 -----
 
-- [base](https://github.com/copycat-killer/lain/wiki/base)
 - [alsa](https://github.com/copycat-killer/lain/wiki/alsa)
 - [alsabar](https://github.com/copycat-killer/lain/wiki/alsabar)
+- [base](https://github.com/copycat-killer/lain/wiki/base)
 - [bat](https://github.com/copycat-killer/lain/wiki/bat)
 - [borderbox](https://github.com/copycat-killer/lain/wiki/borderbox)
 - [calendar](https://github.com/copycat-killer/lain/wiki/calendar)
