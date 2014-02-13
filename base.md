@@ -21,6 +21,6 @@ Variable | Meaning | Type | Default
 Variable | Meaning | Type
 --- | --- | ---
 `widget` | The widget | `wibox.widget.textbox`
-`update`* | Update `widget` | function
+`update` | Update `widget` | function
 
-* Can be used to refresh the widget before `timeout` expires.
+The `update` function can be used to refresh the widget before `timeout` expires.
