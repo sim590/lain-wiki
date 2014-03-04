@@ -33,7 +33,7 @@ Variable | Meaning | Type | Default
 `ignore_boxes` | Boxes to ignore | table of strings | empty table
 `settings` | User settings | function | empty function
 
-`settings` can use the string `newmail, which format will be something like defined above, or "no mail".
+`settings` can use the string `newmail`, which format will be something like defined above, or "no mail".
 
 ### output
 
