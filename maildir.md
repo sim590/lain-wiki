@@ -22,7 +22,7 @@ therefore the widget checks whether there are files in the `new` directories.
 If there's new mails, the textbox will say something like "mail: bugs(3), system(1)", otherwise it says
 "no mail".
 
-	mymaildir = lain.widgets.maildir("/path/to/my/maildir")
+	mymaildir = lain.widgets.maildir(args)
 
 ### input table
 
@@ -30,9 +30,10 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 60
 `mailpath` | Path to your maildir | string | "~/Mail"
+ignore_boxes | Boxes to ignore | table of strings | empty table
 `settings` | User settings | function | empty function
 
-`settings` can use the string `newmail`, which format will be something like defined above, or "no mail".
+`settings` can use the string `newmail, which format will be something like defined above, or "no mail".
 
 ### output
 
