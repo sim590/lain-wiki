@@ -27,7 +27,7 @@ Variable | Meaning | Type | Default
 `port` | IMAP port | int | 993
 `timeout` | Refresh timeout seconds | int | 60
 `is_plain` | Define whether `password` is a plain password (true) or a function that retrieves it (false) | boolean | false
-`settings` | User settings | function
+`settings` | User settings | function | empty function
 
 Let's focus better on `is_plain`.
 
