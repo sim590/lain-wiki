@@ -52,4 +52,3 @@ Users contributed
 - [task](https://github.com/copycat-killer/lain/wiki/task)
 - [tpbat](https://github.com/copycat-killer/lain/wiki/tpbat)
 - [ccurr](https://github.com/copycat-killer/lain/wiki/ccurr)
-- [redshift](https://github.com/blueluke/lain/wiki/redshift)
