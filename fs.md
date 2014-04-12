@@ -33,4 +33,4 @@ You can display the notification with a key binding like this:
 
 where ``altkey = "Mod1"`` and ``show`` argument is an optional integer, meaning timeout seconds.
 
-**Note that** `naughty` notification requires `beautiful.font` or `fs_notification_preset.font` to be monospaced, in order to correctly display the output.
+**Note that** naughty notification requires `beautiful.font` or `fs_notification_preset.font` to be monospaced, in order to correctly display the output.
