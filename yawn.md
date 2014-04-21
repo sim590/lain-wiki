@@ -2,7 +2,7 @@
 
 (YAhoo! Weather Notification)
 
-Yawn provides brief and compact Yahoo! Weather notification.
+Yawn provides brief and compact Yahoo! Weather notifications.
 
 Usage
 -----
