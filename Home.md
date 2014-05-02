@@ -14,7 +14,7 @@ Installation
 
 ### Arch Linux
 
-[AUR package](https://aur.archlinux.org/packages/lain/)
+[AUR package](https://aur.archlinux.org/packages/lain-git/)
 
 ### Other distributions
 
