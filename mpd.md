@@ -33,6 +33,8 @@ Variable | Meaning | Type | Default
 `default_art` | Default art | string | ""
 `settings` | User settings | function | empty function
 
+Pay attention to case sensitivity when defining `music_dir`.
+
 `settings` can use `mpd_now` table, which contains the following string values:
 
 - state (possible values: "play", "pause", "stop")
