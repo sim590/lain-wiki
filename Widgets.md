@@ -29,6 +29,7 @@ If you want to see more complex applications, check [awesome-copycats](https://g
 Index
 -----
 
+- [abase](https://github.com/copycat-killer/lain/wiki/abase)
 - [alsa](https://github.com/copycat-killer/lain/wiki/alsa)
 - [alsabar](https://github.com/copycat-killer/lain/wiki/alsabar)
 - [base](https://github.com/copycat-killer/lain/wiki/base)
