@@ -41,8 +41,8 @@ then you can call its functions:
 they all take one argument, which is the text to markup, except `font`, `fg.color` and `bg.color`:
 
     markup.font(font, text)
-    markup.fg.color(text, color)
-    markup.bg.color(text, color)
+    markup.fg.color(color, text)
+    markup.bg.color(color, text)
 
 `focus`, `normal` and `urgent` use `beautiful` variables.
 
