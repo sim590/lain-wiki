@@ -32,4 +32,8 @@ You can call the notification with a key binding like this:
 
 where ``altkey = "Mod1"`` and ``show`` argument is an optional integer, meaning timeout seconds.
 
+You can also set the notification screen adding a third argument to `show` like this:
+
+    awful.key({ altkey }, "c", function () lain.widgets.calendar:show(7, 0, my_scr_number) end),
+
 **Note that** naughty notification requires `font` to be monospaced, in order to correctly display the output.
