@@ -18,6 +18,7 @@ Variable | Meaning | Type | Default
 `fg` | Calendar foreground color | string | `beautiful.fg_normal`
 `bg` | Calendar background color | string | `beautiful.bg_normal`
 `position` | Calendar position | string | "top_right"
+`scr_pos` | Notification screen | int | 1
 
 \* `cal` program options may vary depending on the operating system: you may need to set this variable properly (`/usr/bin/cal -h` [for instance](https://github.com/copycat-killer/lain/pull/34)) in order to display the current day highlighting.
 
@@ -32,7 +33,7 @@ You can call the notification with a key binding like this:
 
 where ``altkey = "Mod1"`` and ``show`` argument is an optional integer, meaning timeout seconds.
 
-You can also set the notification screen adding a third argument to `show` like this:
+You can also call it defining a notification screen with a third argument like this:
 
     awful.key({ altkey }, "c", function () lain.widgets.calendar:show(7, 0, my_scr_number) end),
 
