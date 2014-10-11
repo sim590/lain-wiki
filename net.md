@@ -12,6 +12,7 @@ Variable | Meaning | Type | Default
 `iface` | Network device | string | autodetected
 `units` | Units | int | 1024 (kilobytes) 
 `notify` | Display "no carrier" notifications | string | "on"
+`screen` | Notifications screen | int | 1
 `settings` | User settings | function | empty function
 
 Possible other values for `units` are 1 (byte) or multiple of 1024: 1024^2 (mb), 1024^3 (gb), and so on.
