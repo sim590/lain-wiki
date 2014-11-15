@@ -64,6 +64,12 @@ Arguments:
 
 Hovering over ``widget`` will display the notification.
 
+### fetch_weather
+
+    lain.widgets.yawn.fetch_weather()
+
+Force fetching of weather data. Useful when combined with other widgets workflow (i.e. called from net widget when the internet connection is restored).
+
 Popup shortcut
 --------------
 
