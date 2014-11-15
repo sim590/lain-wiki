@@ -17,7 +17,7 @@ Variable | Meaning | Type | Default
 
 Possible other values for `units` are 1 (byte) or multiple of 1024: 1024^2 (mb), 1024^3 (gb), and so on.
 
-If `notify != "on"`, the widget won't display a notification when there's no carrier.
+If `notify = "off"` is set, the widget won't display a notification when there's no carrier.
 
 `settings` can use the following `iface` related strings:
 
