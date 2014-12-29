@@ -54,3 +54,4 @@ Users contributed
 - [tpbat](https://github.com/copycat-killer/lain/wiki/tpbat)
 - [ccurr](https://github.com/copycat-killer/lain/wiki/ccurr)
 - [redshift](https://github.com/copycat-killer/lain/wiki/redshift)
+- [moc](https://github.com/copycat-killer/lain/wiki/moc)
