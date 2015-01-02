@@ -66,3 +66,7 @@ Note that `mailcount` is 0 either if there are no new mails or credentials are i
 ### output 
 
 A textbox.
+
+### notes
+
+***This widget is asynchronous***, so you can use it in multiple instances.
