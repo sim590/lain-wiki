@@ -6,7 +6,7 @@ The asynchronous version of `base`:
 
 Read [here](https://github.com/copycat-killer/lain/wiki/base) for the rest.
 
-Examples
+Use case examples
 ========
 
 cmus
