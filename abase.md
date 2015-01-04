@@ -8,7 +8,7 @@ Read [here](https://github.com/copycat-killer/lain/wiki/base) for the rest.
 
 Use case examples
 ========
-*Do you wrote a nice widget that could be useful to others as well? Feel free to add it here.*
+*Do you wrote a widget that could be useful to others as well? Feel free to add it here.*
 
 cmus
 ----
