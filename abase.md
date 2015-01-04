@@ -8,6 +8,7 @@ Read [here](https://github.com/copycat-killer/lain/wiki/base) for the rest.
 
 Use case examples
 ========
+*Have a nice use case? Feel free to pull request me it.*
 
 cmus
 ----
