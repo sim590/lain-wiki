@@ -43,6 +43,8 @@ Pay attention to case sensitivity when defining `music_dir`.
 - title
 - album
 - date
+- [time](https://github.com/copycat-killer/lain/pull/90)
+- [elapsed](https://github.com/copycat-killer/lain/pull/90)
 
 and can modify `mpd_notification_preset` table, which will be the preset for the naughty notifications. Check [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the list of variables it can contain. Default definition:
 
