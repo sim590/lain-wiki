@@ -9,8 +9,8 @@ A separator function `separators.separator` takes two color arguments, defined a
 
 Currently available separator functions:
 
-. `arrow_right`
-. `arrow_left`
+- `arrow_right`
+- `arrow_left`
 
 markup
 ------
