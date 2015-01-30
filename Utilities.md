@@ -7,10 +7,12 @@ Adds cairo separators.
 
 A separator function `separators.separator` takes two color arguments, defined as strings. `"alpha"` argument is allowed. [Example](https://github.com/copycat-killer/awesome-copycats/blob/master/rc.lua.powerarrow-darker#L249-250).
 
-Available functions:
+List of functions:
 
-- `arrow_right`
-- `arrow_left`
+     +-- separators
+     |
+     |`-- arrow_right()        Draw a right arrow.
+     |`-- arrow_left()         Draw a left arrow.
 
 markup
 ------
