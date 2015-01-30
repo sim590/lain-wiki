@@ -7,7 +7,7 @@ Adds cairo separators.
 
 A separator function `separators.separator` takes two color arguments, defined as strings. `"alpha"` argument is allowed. [Example](https://github.com/copycat-killer/awesome-copycats/blob/master/rc.lua.powerarrow-darker#L249-250).
 
-Currently available separator functions:
+Available functions:
 
 - `arrow_right`
 - `arrow_left`
@@ -15,13 +15,11 @@ Currently available separator functions:
 markup
 ------
 
-Made markup easier!
-
-First, require it like this:
+Mades markup easier.
 
     local markup = lain.util.markup
 
-then you can call its functions:
+List of functions:
 
      +-- markup
      |
