@@ -1,7 +1,7 @@
 separators
 ----------
 
-Adds cairo separators.
+Adds Cairo separators.
 
     local separators = lain.util.separators
 
