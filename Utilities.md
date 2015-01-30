@@ -1,3 +1,17 @@
+separators
+----------
+
+Adds cairo separators.
+
+    local separators = lain.util.separators
+
+A separator function `separators.separator` takes two color arguments, defined as strings. `"alpha"` argument is allowed. [Example](https://github.com/copycat-killer/awesome-copycats/blob/master/rc.lua.powerarrow-darker#L249-250).
+
+Currently available separator functions:
+
+. `arrow_right`
+. `arrow_left`
+
 markup
 ------
 
