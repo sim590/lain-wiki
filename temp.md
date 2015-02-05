@@ -19,3 +19,7 @@ Variable | Meaning | Type | Default
 ### output 
 
 A textbox.
+
+### note
+
+Depending on the architecture, keep in mind that your temp files location [might change](https://github.com/copycat-killer/lain/issues/84#issuecomment-72751763).
