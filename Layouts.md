@@ -277,6 +277,12 @@ Example:
 
 	theme.useless_gap_width = 10
 
+xmonad-like uselesstile
+=======================
+
+If you want to have uselesstile behave like xmonad, with internal gaps two times wider than external ones, replace `lain/layout/uselesstile` with [this](https://gist.github.com/copycat-killer/9e56dcfbe66bfe14967c).
+
+
 What about layout icons?
 ========================
 
