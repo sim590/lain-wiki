@@ -16,6 +16,18 @@ Variable | Meaning | Type | Default
 `notify` | Enable notifications | string | "on"
 `settings` | User settings | function | empty function
 
+**Please note**: If widget outputs "N/A", then `BAT0` might not be your battery file. Look for the right file in  `/sys/class/power_supply/` and set `battery` properly. For instance, with `BAT1`:
+
+```lua
+batwidget = lain.widgets.bat({
+    battery = "BAT1",
+    settings = function()
+        -- do stuff
+    end
+})
+
+```
+
 To disable warning notifications, set `notify` to `"off"`.
 
 `settings` can use the `bat_now` table, which contains the following strings:
