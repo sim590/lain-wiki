@@ -69,7 +69,7 @@ For instance, with `BAT1`:
 
 ```lua
 batwidget = lain.widgets.bat({
-    battery  = "BAT1",
+    battery = "BAT1",
     settings = function()
         -- do stuff
     end
