@@ -64,7 +64,8 @@ A textbox.
 
 ### Note
 
-If your widget is always on "N/A", then `BAT0` might not be your battery file. Look for the right file in  `/sys/class/power_supply/` and set `battery` properly. For instance, with `BAT1`:
+If your widget is always on "N/A", then `BAT0` might not be your battery file. Look for the right file in  `/sys/class/power_supply/` and set `battery` properly. 
+For instance, with `BAT1`:
 
 ```lua
 batwidget = lain.widgets.bat({
