@@ -64,7 +64,7 @@ A textbox.
 
 ### Note
 
-If your widget is always on "N/A", then `BAT0` might not be your battery file. Look for the right on in  `/sys/class/power_supply/` and set `battery` properly. 
+If your widget is always on "N/A", then `BAT0` might not be your battery file. Locate the right one in  `/sys/class/power_supply/` and set `battery` properly. 
 For instance, with `BAT1`:
 
 ```lua
