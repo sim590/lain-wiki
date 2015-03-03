@@ -16,7 +16,7 @@ Variable | Meaning | Type | Default
 `notify` | Enable notifications | string | "on"
 `settings` | User settings | function | empty function
 
-**Please note**: if your widget outputs "N/A", then `BAT0` might not be your battery file. Look for the right file in  `/sys/class/power_supply/` and set `battery` properly. For instance, with `BAT1`:
+**Please note**: if your widget is always on "N/A", then `BAT0` might not be your battery file. Look for the right file in  `/sys/class/power_supply/` and set `battery` properly. For instance, with `BAT1`:
 
 ```lua
 batwidget = lain.widgets.bat({
