@@ -20,7 +20,7 @@ Variable | Meaning | Type | Default
 
 ```lua
 batwidget = lain.widgets.bat({
-    battery = "BAT1",
+    battery  = "BAT1",
     settings = function()
         -- do stuff
     end
