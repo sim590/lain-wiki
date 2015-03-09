@@ -30,26 +30,28 @@ Variable | Meaning | Type
 
 You can control the widget with key bindings like these:
 
-    -- Volume control
+```lua
+    -- ALSA volume control
     awful.key({ altkey }, "Up",
-    function ()
-        awful.util.spawn("amixer set Master 1%+")
-        volumewidget.update()
-    end),
+        function ()
+            awful.util.spawn(string.format("amixer -c %s set %s 1+", volumewidget.card, volumewidget.channel))
+            volumewidget.update()
+        end),
     awful.key({ altkey }, "Down",
-    function ()
-        awful.util.spawn("amixer set Master 1%-")
-        volumewidget.update()
-    end),
+        function ()
+            awful.util.spawn(string.format("amixer -c %s set %s 1-", volumewidget.card, volumewidget.channel))
+            volumewidget.update()
+        end),
     awful.key({ altkey }, "m",
-    function ()
-        awful.util.spawn("amixer set Master playback toggle")
-        volumewidget.update()
-    end),
-    awful.key({ altkey, "Control" }, "m", 
-    function ()
-        awful.util.spawn("amixer set Master playback 100%", false )
-        volumewidget.update()
-    end),
+        function ()
+            awful.util.spawn(string.format("amixer -c %s set %s toggle", volumewidget.card, volumewidget.channel))
+            volumewidget.update()
+        end),
+    awful.key({ altkey, "Control" }, "m",
+        function ()
+            awful.util.spawn(string.format("amixer -c %s set %s 100%%", volumewidget.card, volumewidget.channel))
+            volumewidget.update()
+        end),
+```
 
 where `altkey = "Mod1"`.
