@@ -24,6 +24,8 @@ Variable | Meaning | Type | Values
 Variable | Meaning | Type
 --- | --- | --- 
 `widget` | The widget | `wibox.widget.textbox`
+`card` | Alsa card | string
+`channel` | Alsa channel | string
 `update` | Update `widget` | function
 
 You can control the widget with key bindings like these:
