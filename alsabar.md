@@ -56,31 +56,34 @@ Variable | Meaning | Type
 --- | --- | ---
 `bar` | The widget | `awful.widget.progressbar`
 `channel` | Alsa channel | string
+`card` | Alsa card | string
 `step` | Increase/decrease step | string
 `notify` | The notification | function
 
 You can control the widget with key bindings like these:
 
+```lua
     -- ALSA volume control
     awful.key({ altkey }, "Up",
         function ()
-            awful.util.spawn("amixer -q set " .. volume.channel .. " " .. volume.step .. "+")
-            volume.notify()
+            awful.util.spawn(string.format("amixer -c %s set %s %s+", volume.card, volume.channel, volume.step))
+            volume.update()
         end),
     awful.key({ altkey }, "Down",
         function ()
-            awful.util.spawn("amixer -q set " .. volume.channel .. " " .. volume.step .. "-")
-            volume.notify()
+            awful.util.spawn(string.format("amixer -c %s set %s %s-", volume.card, volume.channel, volume.step))
+            volume.update()
         end),
     awful.key({ altkey }, "m",
         function ()
-            awful.util.spawn("amixer -q set " .. volume.channel .. " playback toggle")
-            volume.notify()
+            awful.util.spawn(string.format("amixer -c %s set %s toggle", volume.card, volume.channel))
+            volume.update()
         end),
     awful.key({ altkey, "Control" }, "m",
         function ()
-            awful.util.spawn("amixer -q set " .. volume.channel .. " playback 100%")
-            volume.notify()
+            awful.util.spawn(string.format("amixer -c %s set %s 100", volume.card, volume.channel))
+            volume.update()
         end),
+```
 
 where `altkey = "Mod1"`.
