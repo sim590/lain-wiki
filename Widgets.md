@@ -13,7 +13,7 @@ To markup the textbox, call `widget:set_markup(...)` within `settings`.
 
 You can feed `set_markup` with predefined arguments, see the sections for all the details.
 
-`widget` is a textbox, so you can threat it like any other `wibox.widget.textbox`.
+`widget` is a textbox, so you can treat it like any other `wibox.widget.textbox`.
 
 Here follows an example: 
 
