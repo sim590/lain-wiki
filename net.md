@@ -28,3 +28,11 @@ If `notify = "off"` is set, the widget won't display a notification when there's
 ### output
 
 A textbox.
+
+### Notes
+
+If the widget spawns a "no carrier" notification and you are sure to have an active network device, then autodetection is probably not working. In this case you can set `iface` manually with the device which state is *UP*, as you can read in the output of the following command:
+
+```shell
+ip link show
+```
