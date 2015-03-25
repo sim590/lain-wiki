@@ -19,6 +19,7 @@ Variable | Meaning | Type | Default
 `ticks` | Set bar ticks on | boolean | false
 `ticks_size` | Ticks size | int | 7
 `vertical` | Set the bar vertical | boolean | false
+`card` | Sound card numeric id | string | "0"
 `channel` | Mixer channel | string | "Master" 
 `step` | Step at which volume is increased/decreased | string | "5%"
 `colors` | Bar colors | table | see **colors**
