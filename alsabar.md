@@ -21,7 +21,7 @@ Variable | Meaning | Type | Default
 `vertical` | Set the bar vertical | boolean | false
 `card` | Sound card numeric id | string | "0"
 `channel` | Mixer channel | string | "Master" 
-`step` | Step at which volume is increased/decreased | string | "5%"
+`step` | Step at which volume is increased/decreased | string | "2%"
 `colors` | Bar colors | table | see **colors**
 `notifications` | Notifications settings | table | see **notifications**
 
