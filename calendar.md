@@ -37,4 +37,7 @@ You can also call it defining a notification screen with a third argument like t
 
     awful.key({ altkey }, "c", function () lain.widgets.calendar:show(7, 0, my_scr_number) end),
 
-**Note that** naughty notification requires `font` to be monospaced, in order to correctly display the output.
+
+### Note
+
+Naughty notification requires `font` to be **monospaced**, in order to correctly display the output.
