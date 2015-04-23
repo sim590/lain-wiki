@@ -56,7 +56,7 @@ You can control the widget with key bindings like these:
 
 where `altkey = "Mod1"`.
 
-If you have problems when toggling mute/unmute (`altkey+m` keybinding) then use this instead:
+If you have problems when toggling mute/unmute (`altkey + m`) then use this keybinding:
 
 ```lua
     awful.key({ altkey }, "m",
