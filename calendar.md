@@ -12,6 +12,7 @@ Attaches a calendar notification to a widget.
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `cal` | custom call for `cal` \* | string | "/usr/bin/cal"
+`post_cal` | post `cal` processing, if needed | string | ""
 `icons` | Path to calendar icons | string | [lain/icons/cal/white](https://github.com/copycat-killer/lain/tree/master/icons/cal/white)
 `font` | Calendar font | string | `beautiful.font`
 `font_size` | Calendar font size | int | 12
