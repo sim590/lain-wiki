@@ -13,7 +13,7 @@ Variable | Meaning | Type | Default
 `channel` | Mixer channel | string | "Master" 
 `settings` | User settings | function | empty function
 
-`command` is useful if you require additional arguments to amixer. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
+`command` is useful if you need to pass additional arguments to amixer. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
 
 `settings` can use the following variables:
 
