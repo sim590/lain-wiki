@@ -20,6 +20,8 @@ You need a file like this
 
 in the album folder in order to show album art too.
 
+**Note:** if MPD is turned off or not set correctly, the widget will constantly display "N/A N/A".
+
 ### input table
 
 Variable | Meaning | Type | Default
