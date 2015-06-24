@@ -36,12 +36,12 @@ You can control the widget with key bindings like these:
     -- ALSA volume control
     awful.key({ altkey }, "Up",
         function ()
-            os.execute(string.format("amixer -c %s set %s 1%%+", volumewidget.card, volumewidget.channel))
+            os.execute(string.format("amixer set %s 1%%+", volumewidget.channel))
             volumewidget.update()
         end),
     awful.key({ altkey }, "Down",
         function ()
-            os.execute(string.format("amixer -c %s set %s 1%%-", volumewidget.card, volumewidget.channel))
+            os.execute(string.format("amixer set %s 1%%-", volumewidget.channel))
             volumewidget.update()
         end),
     awful.key({ altkey }, "m",
