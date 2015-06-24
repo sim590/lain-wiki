@@ -69,35 +69,24 @@ You can control the widget with key bindings like these:
     -- ALSA volume control
     awful.key({ altkey }, "Up",
         function ()
-            os.execute(string.format("amixer -c %s set %s %s+", volume.card, volume.channel, volume.step))
+            os.execute(string.format("amixer set %s %s+", volume.channel, volume.step))
             volume.update()
         end),
     awful.key({ altkey }, "Down",
         function ()
-            os.execute(string.format("amixer -c %s set %s %s-", volume.card, volume.channel, volume.step))
+            os.execute(string.format("amixer set %s %s-", volume.channel, volume.step))
             volume.update()
         end),
-    awful.key({ altkey }, "m",
-        function ()
-            os.execute(string.format("amixer -c %s set %s toggle", volume.card, volume.channel))
-            volume.update()
-        end),
-    awful.key({ altkey, "Control" }, "m",
-        function ()
-            os.execute(string.format("amixer -c %s set %s 100", volume.card, volume.channel))
-            volume.update()
-        end),
-```
-
-where `altkey = "Mod1"`.
-
-
-If you have problems when toggling mute/unmute (`altkey + m`) then use this keybinding:
-
-```lua
     awful.key({ altkey }, "m",
         function ()
             os.execute(string.format("amixer set %s toggle", volume.channel))
             volume.update()
         end),
+    awful.key({ altkey, "Control" }, "m",
+        function ()
+            os.execute(string.format("amixer set %s 100%%", volume.channel))
+            volume.update()
+        end),
 ```
+
+where `altkey = "Mod1"`.
