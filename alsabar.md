@@ -25,7 +25,7 @@ Variable | Meaning | Type | Default
 `colors` | Bar colors | table | see **colors**
 `notifications` | Notifications settings | table | see **notifications**
 
-`command` is useful if you require additional arguments to amixer. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
+`command` is useful if you need to pass additional arguments to amixer. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
 
 ### colors
 
