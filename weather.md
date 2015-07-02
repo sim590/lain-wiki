@@ -92,7 +92,7 @@ Hovering over ``obj`` will display the notification.
 
     lain.widgets.weather.update()
 
-Force fetching of of current weather status data. Useful when combined with other widgets workflow (i.e. called from net widget when the internet connection is restored).
+Force fetching of current weather status data. Useful when combined with other widgets workflow (i.e. called from net widget when the internet connection is restored).
 
 ### forecast_update
 
