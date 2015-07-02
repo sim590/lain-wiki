@@ -2,8 +2,6 @@
 
 Shows in a textbox the current prices of Bitcoin to USD and Dogecoin to USD using Coinbase and Cryptsy's APIs.
 
-You will need [dkjson](http://dkolf.de/src/dkjson-lua.fsl/home) library. A simple way of installing is to download the `dksjon.lua` file and place it in your `~/.config/awesome` directory.
-
 	ccurrwidget = lain.widgets.contrib.ccurr()
 
 ### input table
