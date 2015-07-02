@@ -27,7 +27,7 @@ Variable | Meaning | Type | Default
 
     "curl -s 'http://api.openweathermap.org/data/2.5/weather?id=%s&units=%s&lang=%s'"
 
-    You can rewrote it using any fetcher solution you like.
+    You can rewrite it using any fetcher solution you like.
 
 - ``default_forecast_call``
  
