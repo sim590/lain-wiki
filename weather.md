@@ -77,7 +77,7 @@ Variable | Meaning | Type | Default
 - ``settings``
 
     In your `settings` function, you can use `widget` variable to refer to the textbox, and the dictionary `weather_now` to refer to data retrieved by `current_call`. The dictionary is built with [dkjson library](http://dkolf.de/src/dkjson-lua.fsl/home), and its structure is defined [here](http://openweathermap.org/weather-data).
-    For instance, you can retrieve current weather status and temperature in this way.
+    For instance, you can retrieve current weather status and temperature [in this way](https://github.com/copycat-killer/awesome-copycats/blob/master/rc.lua.multicolor#L139-140).
 
 ## Usage
 The module creates an imagebox icon and a textbox widget. Add them to you wibox like this:
