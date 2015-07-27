@@ -19,6 +19,7 @@ Variable | Meaning | Type | Default
 `fg` | Calendar foreground color | string | `beautiful.fg_normal`
 `bg` | Calendar background color | string | `beautiful.bg_normal`
 `position` | Calendar position | string | "top_right"
+`followmouse` | Notification behavior | bool | false
 `scr_pos` | Notification screen | int | 1
 
 \* `cal` program options may vary depending on the operating system: you may need to set this variable properly (`/usr/bin/cal -h` [for instance](https://github.com/copycat-killer/lain/pull/34)) in order to display the current day highlighting.
@@ -38,6 +39,7 @@ You can also call it defining a notification screen with a third argument like t
 
     awful.key({ altkey }, "c", function () lain.widgets.calendar:show(7, 0, my_scr_number) end),
 
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
 ### Note
 
