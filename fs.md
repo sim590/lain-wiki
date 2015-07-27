@@ -12,6 +12,7 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds -| int | 600
 `partition` | Partition to monitor | string | "/"
+`followmouse` | Notification behavior | bool | false
 `settings` | User settings | function | empty function
 
 `settings` can use the following `partition` related float values: `fs_now.used`, `fs_now.available`, `fs_now.size_mb`, `fs_now.size_gb`.
@@ -28,6 +29,8 @@ just like the variables of `fs_now`. See [here](https://github.com/copycat-kille
 Also, `settings` can modify `fs_notification_preset` table. This table will be the preset for the naughty notifications. Check [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the list of variables it can contain. Default definition:
 
     fs_notification_preset = { fg = beautiful.fg_normal }
+
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
 ### output table
 
