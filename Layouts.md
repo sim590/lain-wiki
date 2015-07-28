@@ -96,7 +96,9 @@ For example:
     lain.layout.centerfair.nmaster = 3
     lain.layout.centerfair.ncol = 1
 
-Want to invert master window position? Check [here](https://github.com/copycat-killer/lain/issues/123).
+Want to invert master window position? Use [this](https://gist.github.com/copycat-killer/c59dc59c9f99d98218eb) version. You can set `single_gap` with `width` and `height` in your `theme.lua`, in order to define the window geometry when there's only one client, otherwise it goes maximized. An example:
+
+    theme.single_gamp = { width = 600, height = 100 }
 
 cascade
 -------
