@@ -96,6 +96,8 @@ For example:
     lain.layout.centerfair.nmaster = 3
     lain.layout.centerfair.ncol = 1
 
+Want to invert master window position? Check [here](https://github.com/copycat-killer/lain/issues/123).
+
 cascade
 -------
 
