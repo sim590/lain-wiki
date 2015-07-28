@@ -98,7 +98,7 @@ For example:
 
 Want to invert master window position? Use [this](https://gist.github.com/copycat-killer/c59dc59c9f99d98218eb) version. You can set `single_gap` with `width` and `height` in your `theme.lua`, in order to define the window geometry when there's only one client, otherwise it goes maximized. An example:
 
-    theme.single_gamp = { width = 600, height = 100 }
+    theme.single_gap = { width = 600, height = 100 }
 
 cascade
 -------
