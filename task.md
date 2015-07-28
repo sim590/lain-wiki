@@ -21,9 +21,9 @@ Notification will show the output of `task` command.
 
 You can call the notification with a key binding like this:
 
-    awful.key({ modkey, altkey }, "t", lain.widgets.contrib.task.show),
+    awful.key({ modkey, altkey }, "t", lain.widgets.contrib.task.show(scr)),
 
-where ``altkey = "Mod1"``.
+where ``altkey = "Mod1"`` and `scr` indicates the screen which you want the notification in.
 
 And you can prompt to add/search a task with key bindings like these:
 
