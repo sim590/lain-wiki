@@ -41,8 +41,11 @@ Variable | Meaning | Type
 
 You can display the notification with a key binding like this:
 
-    awful.key({ altkey }, "h", function () mypartition.show(7) end),
+    awful.key({ altkey }, "h", function () mypartition.show(seconds, scr) end),
 
-where ``altkey = "Mod1"`` and ``show`` argument is an optional integer, meaning timeout seconds.
+where ``altkey = "Mod1"`` and ``show`` arguments, both optional, are:
+
+* `seconds`, notification time in seconds;
+* `screen`, screen in which display the notification.
 
 **Note that** naughty notification requires `beautiful.font` or `fs_notification_preset.font` to be monospaced, in order to correctly display the output.
