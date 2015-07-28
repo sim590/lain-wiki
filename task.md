@@ -24,7 +24,7 @@ Notification will show the output of `task` command.
 You can call the notification with a key binding like this:
 
 ```lua
-    awful.key({ modkey, altkey }, "t", function () lain.widgets.contrib.task.show(scr) end),
+awful.key({ modkey, altkey }, "t", function () lain.widgets.contrib.task.show(scr) end),
 ```
 
 where ``altkey = "Mod1"`` and `scr` indicates the screen which you want the notification in.
@@ -32,6 +32,6 @@ where ``altkey = "Mod1"`` and `scr` indicates the screen which you want the noti
 And you can prompt to add/search a task with key bindings like these:
 
 ```lua
-    awful.key({ modkey,         }, "t", lain.widgets.contrib.task.prompt_add),
-    awful.key({ modkey, "Shift" }, "t", lain.widgets.contrib.task.prompt_search),
+awful.key({ modkey,         }, "t", lain.widgets.contrib.task.prompt_add),
+awful.key({ modkey, "Shift" }, "t", lain.widgets.contrib.task.prompt_search),
 ```
