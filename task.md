@@ -2,7 +2,9 @@
 
 Attaches a [taskwarrior](http://taskwarrior.org) notification to a widget, and lets to add/search tasks from the promptbox.
 
+```lua
     lain.widgets.contrib.task:attach(widget, args)
+```
 
 `args` is an optional table which can contain:
 
@@ -21,11 +23,15 @@ Notification will show the output of `task` command.
 
 You can call the notification with a key binding like this:
 
-    awful.key({ modkey, altkey }, "t", lain.widgets.contrib.task.show(scr)),
+```lua
+    awful.key({ modkey, altkey }, "t", function () lain.widgets.contrib.task.show(scr) end),
+```
 
 where ``altkey = "Mod1"`` and `scr` indicates the screen which you want the notification in.
 
 And you can prompt to add/search a task with key bindings like these:
 
+```lua
     awful.key({ modkey,         }, "t", lain.widgets.contrib.task.prompt_add),
     awful.key({ modkey, "Shift" }, "t", lain.widgets.contrib.task.prompt_search),
+```
