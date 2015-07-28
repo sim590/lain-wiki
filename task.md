@@ -13,6 +13,7 @@ Variable | Meaning | Type | Default
 `bg` | Notification popu background color | string | `beautiful.bg_normal`
 `position` | Notification popup position | string | "top_right"
 `timeout` | Notification timeout seconds | int | 7
+`scr_pos` | Notification screen | int | 1
 
 `position` possible values are defined [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify).
 
