@@ -96,10 +96,6 @@ For example:
     lain.layout.centerfair.nmaster = 3
     lain.layout.centerfair.ncol = 1
 
-Want to invert master window position? Use [this](https://gist.github.com/copycat-killer/c59dc59c9f99d98218eb) version. You can set `single_gap` with `width` and `height` in your `theme.lua`, in order to define the window geometry when there's only one client, otherwise it goes maximized. An example:
-
-    theme.single_gap = { width = 600, height = 100 }
-
 cascade
 -------
 
@@ -281,11 +277,20 @@ Example:
 
 	theme.useless_gap_width = 10
 
-xmonad-like uselesstile
-=======================
+`uselesstile` patches
+=====================
+
+xmonad-like
+-----------
 
 If you want to have uselesstile behave like xmonad, with internal gaps two times wider than external ones, replace `lain/layout/uselesstile` with [this](https://gist.github.com/copycat-killer/9e56dcfbe66bfe14967c).
 
+inverted master
+---------------
+
+Want to invert master window position? Use [this](https://gist.github.com/copycat-killer/c59dc59c9f99d98218eb) version. You can set `single_gap` with `width` and `height` in your `theme.lua`, in order to define the window geometry when there's only one client, otherwise it goes maximized. An example:
+
+    theme.single_gap = { width = 600, height = 100 }
 
 What about layout icons?
 ========================
