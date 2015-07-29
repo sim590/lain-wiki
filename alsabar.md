@@ -24,6 +24,7 @@ Variable | Meaning | Type | Default
 `step` | Step at which volume is increased/decreased | string | "2%"
 `colors` | Bar colors | table | see **colors**
 `notifications` | Notifications settings | table | see **notifications**
+`followmouse` | Notification behaviour | bool | false
 
 `command` is useful if you need to pass additional arguments to amixer. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
 
@@ -62,6 +63,8 @@ Variable | Meaning | Type
 `card` | Alsa card | string
 `step` | Increase/decrease step | string
 `notify` | The notification | function
+
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
 You can control the widget with key bindings like these:
 
