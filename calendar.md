@@ -20,7 +20,7 @@ Variable | Meaning | Type | Default
 `bg` | Calendar background color | string | `beautiful.bg_normal`
 `position` | Calendar position | string | "top_right"
 `followmouse` | Notification behavior | bool | false
-`scr_pos` | Notification screen | int | `mouse.screen`
+`scr_pos` | Notification screen | int | 1
 
 \* `cal` program options may vary depending on the operating system: you may need to set this variable properly (`/usr/bin/cal -h` [for instance](https://github.com/copycat-killer/lain/pull/34)) in order to display the current day highlighting.
 
