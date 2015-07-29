@@ -33,6 +33,7 @@ Variable | Meaning | Type | Default
 `music_dir` | Music directory | string | "~/Music"
 `cover_size` | Album art notification size | int | 100
 `default_art` | Default art | string | ""
+`followmouse` | Notification behaviour | boolean | false
 `settings` | User settings | function | empty function
 
 Pay attention to case sensitivity when defining `music_dir`.
