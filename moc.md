@@ -52,7 +52,7 @@ and can modify `moc_notification_preset` table, which will be the preset for the
                  moc_now.album, moc_now.elapsed, moc_now.title)
     }
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
 ### output table
 
