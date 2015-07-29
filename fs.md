@@ -12,6 +12,8 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds -| int | 600
 `partition` | Partition to monitor | string | "/"
+`notification_preset` | Notification preset | table | {fg = beautiful.fg_normal}
+`followmouse` | Display the notification on mouse screen | boolean | false
 `settings` | User settings | function | empty function
 
 `settings` can use the following `partition` related float values: `fs_now.used`, `fs_now.available`, `fs_now.size_mb`, `fs_now.size_gb`.
