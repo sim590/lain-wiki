@@ -21,6 +21,7 @@ Variable | Meaning | Type | Default
 `date_cmd` | Forecast notification format style | string | "date -u -d @%d +'%%a %%d'"
 `icons_path` | Icons path | string | `lain/icons/openweathermap`
 `notification_preset` | Preset for notifications | table | empty table
+`followmouse` | Notification behaviour | boolean | false
 `settings` | User settings | function | empty function
 
 - ``default_current_call`` 
@@ -78,6 +79,8 @@ Variable | Meaning | Type | Default
 
     In your `settings` function, you can use `widget` variable to refer to the textbox, and the dictionary `weather_now` to refer to data retrieved by `current_call`. The dictionary is built with [dkjson library](http://dkolf.de/src/dkjson-lua.fsl/home), and its structure is defined [here](http://openweathermap.org/weather-data).
     For instance, you can retrieve current weather status and temperature [in this way](https://github.com/copycat-killer/awesome-copycats/blob/master/rc.lua.multicolor#L139-140).
+
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
 ## Usage
 The module creates an imagebox icon and a textbox widget. Add them to you wibox like this:
