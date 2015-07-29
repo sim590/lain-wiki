@@ -22,7 +22,7 @@ Variable | Meaning | Type | Default
 
 Notification will show the output of `task` command.
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
 You can call the notification with a key binding like this:
 
