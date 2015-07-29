@@ -20,7 +20,7 @@ Variable | Meaning | Type | Default
 `cnt` | Forecast days interval | int | 7
 `date_cmd` | Forecast notification format style | string | "date -u -d @%d +'%%a %%d'"
 `icons_path` | Icons path | string | `lain/icons/openweathermap`
-`w_notification_preset` | Preset for notifications | table | empty table
+`notification_preset` | Preset for notifications | table | empty table
 `settings` | User settings | function | empty function
 
 - ``default_current_call`` 
