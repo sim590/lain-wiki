@@ -16,10 +16,13 @@ Variable | Meaning | Type | Default
 `position` | Notification popup position | string | "top_right"
 `timeout` | Notification timeout seconds | int | 7
 `scr_pos` | Notification screen | int | 1
+`followmouse` | Notificaiton behaviour | boolean | false
 
 `position` possible values are defined [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify).
 
 Notification will show the output of `task` command.
+
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
 You can call the notification with a key binding like this:
 
