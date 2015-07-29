@@ -34,7 +34,10 @@ Variable | Meaning | Type | Default
 `cover_size` | Album art notification size | int | 100
 `default_art` | Default art | string | ""
 `followmouse` | Notification behaviour | boolean | false
+`echo_cmd` | custom call for `echo`* | string | "echo"
 `settings` | User settings | function | empty function
+
+* `echo` implementation is shell dependent, you may need to set this variable properly (`echo -e` [for instance](https://github.com/copycat-killer/lain/issues/112)) in order for the widget to fetch the data correctly.
 
 Pay attention to case sensitivity when defining `music_dir`.
 
