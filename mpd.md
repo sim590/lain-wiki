@@ -58,7 +58,7 @@ and can modify `mpd_notification_preset` table, which will be the preset for the
                  mpd_now.album, mpd_now.date, mpd_now.title)
     }
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the current mouse screen.
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followmouse` to `true` it will be shown on the current mouse screen.
 
 ### output table
 
