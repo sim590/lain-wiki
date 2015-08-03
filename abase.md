@@ -1,6 +1,6 @@
 [<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
 
-The asynchronous version of `base`:
+The [asynchronous](https://github.com/copycat-killer/lain/issues/128) version of `base`:
 
 	myasyncbase = lain.widgets.abase()
 
