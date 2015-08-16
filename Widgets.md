@@ -50,8 +50,9 @@ Index
 Users contributed
 ----------------
 
+- [ccurr](https://github.com/copycat-killer/lain/wiki/ccurr)
+- [kbdlayout](https://github.com/copycat-killer/lain/wiki/kbdlayout)
+- [moc](https://github.com/copycat-killer/lain/wiki/moc)
+- [redshift](https://github.com/copycat-killer/lain/wiki/redshift)
 - [task](https://github.com/copycat-killer/lain/wiki/task)
 - [tpbat](https://github.com/copycat-killer/lain/wiki/tpbat)
-- [ccurr](https://github.com/copycat-killer/lain/wiki/ccurr)
-- [redshift](https://github.com/copycat-killer/lain/wiki/redshift)
-- [moc](https://github.com/copycat-killer/lain/wiki/moc)
