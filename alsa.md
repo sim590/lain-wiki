@@ -9,11 +9,11 @@ Shows and controls alsa volume with a textbox.
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 5
-`command` | Alsa mixer command | string | "amixer"
+`cmd` | Alsa mixer command | string | "amixer"
 `channel` | Mixer channel | string | "Master" 
 `settings` | User settings | function | empty function
 
-`command` is useful if you need to pass additional arguments to amixer. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
+`cmd` is useful if you need to pass additional arguments to amixer. For instance, users with multiple sound cards may define `cmd = "amixer -c X"` in order to set amixer with card `X`.
 
 `settings` can use the following variables:
 
