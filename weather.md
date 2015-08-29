@@ -21,6 +21,7 @@ Variable | Meaning | Type | Default
 `date_cmd` | Forecast notification format style | string | "date -u -d @%d +'%%a %%d'"
 `icons_path` | Icons path | string | `lain/icons/openweathermap`
 `notification_preset` | Preset for notifications | table | empty table
+`notification_text_fun` | Function to customize notification strings | function | [link](https://github.com/copycat-killer/lain/blob/master/widgets/weather.lua#L45-L47)
 `followmouse` | Notification behaviour | boolean | false
 `settings` | User settings | function | empty function
 
@@ -71,9 +72,17 @@ Variable | Meaning | Type | Default
 
     You can set your own icons path if you don't wish to use `lain/icons/openweathermap`. Just be sure that your icons are PNGs and named exactly like [OpenWeatherMap ones](http://openweathermap.org/weather-conditions).
 
-- ``w_notification_preset``
+- ``notification_preset``
 
    Notifications preset table. See [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the details.
+
+- ``notification_text_fun``
+
+   A function to customize notification lines. Its arguments are the day as returned by date_cmd, the description, the minimum temperature, and the maximum temperature, and should return a string representing the weather forecast for that day. 
+   The default function returns
+   ```lua
+    string.format("<b>%s</b>: %s, %d - %d ", day, desc, tmin, tmax).
+    ```
 
 - ``settings``
 
