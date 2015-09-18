@@ -7,6 +7,7 @@ Currently, there are **8** layouts.
     |-- cascade
     |-- cascadetile
     |-- centerwork
+    |-- centerhwork
     |-- uselessfair
     |-- uselesspiral
     `-- uselesstile
@@ -242,6 +243,14 @@ Here's an example:
 	        end),
 	    ...
 	)
+
+centerhwork
+-----------
+
+Same as `centerwork`, except that the main
+window expands horizontally, and the 4 additional windows
+are put ontop/below it, thus using the huge vertical space
+much better. Useful if you have a screen turned 90°.
 
 uselessfair, uselesspiral & uselesstile
 ---------------------------------------
