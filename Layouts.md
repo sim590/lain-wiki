@@ -1,4 +1,4 @@
-Currently, there are **8** layouts.
+Currently, there are **9** layouts.
 
     lain/layout
     .
@@ -7,6 +7,7 @@ Currently, there are **8** layouts.
     |-- cascade
     |-- cascadetile
     |-- centerwork
+    |-- centerhwork
     |-- uselessfair
     |-- uselesspiral
     `-- uselesstile
