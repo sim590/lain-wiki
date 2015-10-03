@@ -93,3 +93,6 @@ You can control the widget with key bindings like these:
 ```
 
 where `altkey = "Mod1"`.
+
+
+Problems unmuting PCM? Check [here](https://github.com/copycat-killer/awesome-copycats/issues/95).
