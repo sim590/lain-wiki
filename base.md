@@ -10,7 +10,7 @@ Basically, all it does is to execute an input `cmd`, and to fill its textbox wit
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 5
+`timeout` | Refresh timeout seconds | int | 1
 `cmd` | The command to execute | string | empty string
 `settings` | User settings | function | empty function
 
