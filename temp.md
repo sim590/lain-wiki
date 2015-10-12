@@ -10,7 +10,7 @@ Reads from `/sys/class/thermal`, so value is expressed in Celsius.
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 2
+`timeout` | Refresh timeout seconds | int | 1
 `tempfile` | Path of file which stores core temperature value | string | "/sys/class/thermal/thermal_zone0/temp"
 `settings` | User settings | function | empty function
 
