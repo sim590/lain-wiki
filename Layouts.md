@@ -1,4 +1,4 @@
-Currently, there are **8** layouts.
+Currently, there are **9** layouts.
 
     lain/layout
     .
@@ -134,7 +134,7 @@ Usage example:
 	lain.layout.cascadetile.cascade_offset_y = 32
 	lain.layout.cascadetile.extra_padding = 5
     lain.layout.cascadetile.nmaster = 5
-    lain.layout.ncol = 1
+    lain.layout.cascadetile.ncol = 1
 
 `extra_padding` reduces the size of the master window if "overlapping
 slave column" is activated. This allows you to see if there are any

@@ -25,6 +25,11 @@ Here follows an example:
 
 If you want to see more complex applications, check [awesome-copycats](https://github.com/copycat-killer/awesome-copycats).
 
+Note
+----
+
+Some widgets use [asyncshell](https://github.com/copycat-killer/lain/blob/master/asyncshell.lua), which is based on `/bin/sh`. If you use multiple shells and [experience problems](https://github.com/copycat-killer/lain/issues/145), try re-setting your shell [here](https://github.com/copycat-killer/lain/blob/master/asyncshell.lua#L18).
+
 Index
 -----
 

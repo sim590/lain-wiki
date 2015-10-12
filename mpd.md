@@ -47,6 +47,7 @@ Pay attention to case sensitivity when defining `music_dir`.
 - file
 - artist
 - title
+- [name](https://github.com/copycat-killer/lain/pull/142)
 - album
 - date
 - [time](https://github.com/copycat-killer/lain/pull/90)
