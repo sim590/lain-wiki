@@ -8,7 +8,7 @@ Shows in a textbox the average CPU usage percent for a given amount of time.
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 2
+`timeout` | Refresh timeout seconds | int | 1
 `settings` | User settings | function | empty function
 
 `settings` can use the string `cpu_now.usage`, which is the cpu use percentage.
