@@ -11,7 +11,7 @@ Displays a notification when battery is low or critical.
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 30
+`timeout` | Refresh timeout seconds | int | 1
 `battery` | Identifier of the battery | string | "BAT0"
 `notify` | Enable notifications | string | "on"
 `settings` | User settings | function | empty function

@@ -26,7 +26,7 @@ in the album folder in order to show album art too.
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 2
+`timeout` | Refresh timeout seconds | int | 1
 `password` | MPD password | string | ""
 `host` | MPD server | string | "127.0.0.1"
 `port` | MPD port | string | "6600"

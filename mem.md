@@ -8,7 +8,7 @@ Shows memory status (in MiB) in a textbox.
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 2
+`timeout` | Refresh timeout seconds | int | 1
 `settings` | User settings | function | empty function
 
 `settings` can use the strings `mem_now.used` (memory used MB) and `mem_now.swapused` (swap used MB).
