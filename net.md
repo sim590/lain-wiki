@@ -8,7 +8,7 @@ Monitors network interfaces and shows current traffic in a textbox.
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 2
+`timeout` | Refresh timeout seconds | int | 1
 `iface` | Network device | string | autodetected
 `units` | Units | int | 1024 (kilobytes) 
 `notify` | Display "no carrier" notifications | string | "on"
