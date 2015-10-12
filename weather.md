@@ -2,20 +2,26 @@
 
 Provides current weather status widgets and X-days forecast popup notifications.
 
-Uses [OpenWeatherMap](http://openweathermap.org/api) API.
+Uses [OpenWeatherMap](http://openweathermap.org/api) API. It is **mandatory** to [obtain a free API key](http://openweathermap.org/appid) and declare it in `APPID` argument:
 
-    myweather = lain.widgets.weather()
+```lua
+myweather = lain.widgets.weather({
+    APPID = "myappid",
+        -- [...]
+        })
+```
 
 ## input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
+`APPID` | API key ([mandatory](https://github.com/copycat-killer/lain/issues/146))| string | none
 `timeout` | Refresh timeout seconds for current weather status | int | 900 (15 min)
 `timeout_forecast` | Refresh timeout seconds for forecast notification | int | 86400 (24 hrs)
 `current_call` | Command to fetch weather status data from the API | string | see `default_current_call`
 `forecast_call` | Command to fetch forecast data from the API | string | see `default_forecast_call`
 `city_id` | API city code | int | not set
-`units` | Temperature units system | string | "metric" 
+`units` | Temperature units system | string | "metric"
 `lang` | API data localization | string | "en"
 `cnt` | Forecast days interval | int | 7
 `date_cmd` | Forecast notification format style | string | "date -u -d @%d +'%%a %%d'"
@@ -25,14 +31,14 @@ Variable | Meaning | Type | Default
 `followmouse` | Notification behaviour | boolean | false
 `settings` | User settings | function | empty function
 
-- ``default_current_call`` 
+- ``default_current_call``
 
     "curl -s 'http://api.openweathermap.org/data/2.5/weather?id=%s&units=%s&lang=%s'"
 
     You can rewrite it using any fetcher solution you like.
 
 - ``default_forecast_call``
- 
+
     "curl -s 'http://api.openweathermap.org/data/2.5/forecast/daily?id=%s&units=%s&lang=%s&cnt=%s'"
 
     Like above.
@@ -78,7 +84,7 @@ Variable | Meaning | Type | Default
 
 - ``notification_text_fun``
 
-   A function to customize notification lines. Its arguments are the day as returned by date_cmd, the description, the minimum temperature, and the maximum temperature, and should return a string representing the weather forecast for that day. 
+   A function to customize notification lines. Its arguments are the day as returned by date_cmd, the description, the minimum temperature, and the maximum temperature, and should return a string representing the weather forecast for that day.
    The default function returns
    ```lua
     string.format("<b>%s</b>: %s, %d - %d ", day, desc, tmin, tmax).

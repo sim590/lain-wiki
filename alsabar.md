@@ -12,7 +12,7 @@ The function takes a table as optional argument, which can contain:
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 5
+`timeout` | Refresh timeout seconds | int | 1
 `settings` | User settings | function | empty function
 `width` | Bar width | int | 63
 `height` | Bar height | int | 1
