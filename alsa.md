@@ -8,7 +8,7 @@ Shows and controls alsa volume with a textbox.
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 5
+`timeout` | Refresh timeout seconds | int | 1
 `cmd` | Alsa mixer command | string | "amixer"
 `channel` | Mixer channel | string | "Master" 
 `settings` | User settings | function | empty function
