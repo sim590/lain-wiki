@@ -37,6 +37,6 @@ If the widget [spawns a "no carrier" notification and you are sure to have an ac
 ip link show
 ```
 
-### Two widgets for upload/download rates
+### Two widgets for upload/download rates from the same `iface`
 
 [Read here](https://github.com/copycat-killer/lain/issues/61).
