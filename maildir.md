@@ -31,6 +31,7 @@ Variable | Meaning | Type | Default
 `timeout` | Refresh timeout seconds | int | 60
 `mailpath` | Path to your maildir | string | "~/Mail"
 `ignore_boxes` | Boxes to ignore | table of strings | empty table
+`external_mail_cmd` | External mail update command | string | empty string
 `settings` | User settings | function | empty function
 
 `settings` can use the string `newmail`, which format will be something like defined above, or "no mail".
