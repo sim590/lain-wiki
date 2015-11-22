@@ -35,6 +35,14 @@ Variable | Meaning | Type | Default
 `settings` | User settings | function | empty function
 
 `settings` can use the string `newmail`, which format will be something like defined above, or "no mail".
+`external_mail_cmd` can be used to run a mail update command, for instance:
+
+```lua
+mailwidget = lain.widgets.maildir({
+    external_mail_cmd = "mbsync -q ndev revthefox foxbnc foxdev",
+    -- [...]
+})
+```
 
 ### output
 
