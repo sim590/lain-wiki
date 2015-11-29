@@ -25,13 +25,6 @@ To disable warning notifications, set `notify` to `"off"`.
 - `time`;
 - `watt`.
 
-`settings` can use the `bat_now` table, which contains the following strings:
-
-- `status` ("Not present", "Charging", "Discharging");
-- `perc`;
-- `time`;
-- `watt`.
-
 and can modify the following two tables, which will be the preset for the naughty notifications: 
 * `bat_notification_low_preset`(used if battery charge level <= 15)
 * `bat_notification_critical_preset` (used if battery charge level <= 5)
