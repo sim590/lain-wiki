@@ -60,3 +60,4 @@ Users contributed
 - [redshift](https://github.com/copycat-killer/lain/wiki/redshift)
 - [task](https://github.com/copycat-killer/lain/wiki/task)
 - [tpbat](https://github.com/copycat-killer/lain/wiki/tpbat)
+- [pulseaudio](https://github.com/copycat-killer/lain/wiki/pulseaudio)
