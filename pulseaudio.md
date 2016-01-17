@@ -10,7 +10,7 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 5
 `sink` | PulseAudio sink | int | 0 
-`cmd` | PulseAudio command | string | "pacmd list-sinks | grep -e 'index: #SINK' -e 'volume: front' -e 'muted'"
+`cmd` | PulseAudio command | string | `"pacmd list-sinks | grep -e 'index: #SINK' -e 'volume: front' -e 'muted'"`
 `settings` | User settings | function | empty function
 
 `cmd` is useful in case you want to use a custom fetch command.
