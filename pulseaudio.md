@@ -32,14 +32,7 @@ Variable | Meaning | Type
 `update` | Update `widget` | function
 
 You can control the widget with key bindings like these:
-os.execute(pactl .. " set-sink-volume " .. default_sink .. " -10%")
-+      pulseaudio.update()
-+      return pulseaudio.level 
-+   end
-+
-+   function pulseaudio.toggle()
-+      if pulseaudio.status == "off" then
-+         os.execute(pactl .. " set-sink-mute " .. default_sink .. " no")
+
 ```lua
     -- ALSA volume control
     awful.key({ altkey }, "Up",
