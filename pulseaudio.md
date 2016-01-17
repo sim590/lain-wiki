@@ -1,43 +1,66 @@
-A pulseaudio widget. It's using pacmd and pactl.
+[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
 
-Shows and controls pulseaudio volume with a textbox.
-```lua
-volpulse = lain.widgets.contrib.pulseaudio()
-```
+Shows and controls PulseAudio volume with a textbox.
+
+	volumewidget = lain.widgets.pulseaudio()
+
+### input table
+
+Variable | Meaning | Type | Default
+--- | --- | --- | ---
+`timeout` | Refresh timeout seconds | int | 5
+`sink` | PulseAudio sink | int | 0 
+`cmd` | PulseAudio command | string | "pacmd list-sinks | grep -e 'index: #SINK' -e 'volume: front' -e 'muted'"
+`settings` | User settings | function | empty function
+
+`cmd` is useful in case you want to use a custom fetch command.
+
+`settings` can use the following variables:
 
 Variable | Meaning | Type | Values
 --- | --- | --- | ---
-`volume_now.level` | Volume level | int | 0-100
-`volume_now.status` | Mute status | string | "on", "off"
+`volume_now.left` | Front left level | int | 0-100
+`volume_now.right` | Front right level | int | 0-100
+`volume_now.muted` | Sink mute status | string | "yes", "no"
 
-Available functions
+### output table
 
-Function | Meaning | Output Value  
---- | --- | ---
-`volpulse.up()` | To increase a sound by 10 percent  | Volume level 
-`volpulse.down()` | To decrease a sound by 10 percent | Volume level
-`volpulse.toggle()` | Mute or unmute volume | Volume level
-
-You can customize widget
-```lua
-volicon = wibox.widget.imagebox()
-volpulse = lain.widgets.contrib.pulseaudio({
-                                      settings = function()
-                                         if volume_now.status == "off" then
-                                            volicon:set_image(VOLUME_MUTEOFF_ICON)
-                                         else
-                                            volicon:set_image(VOLUME_ICON)
-                                         end
-                                      end
-                                   })
-```
+Variable | Meaning | Type
+--- | --- | --- 
+`widget` | The widget | `wibox.widget.textbox`
+`sink` | PulseAudio sink | int
+`update` | Update `widget` | function
 
 You can control the widget with key bindings like these:
-
+os.execute(pactl .. " set-sink-volume " .. default_sink .. " -10%")
++      pulseaudio.update()
++      return pulseaudio.level 
++   end
++
++   function pulseaudio.toggle()
++      if pulseaudio.status == "off" then
++         os.execute(pactl .. " set-sink-mute " .. default_sink .. " no")
 ```lua
-  -- Configure the hotkeys of PulseAudio.
-   awful.key({ }, "XF86AudioRaiseVolume", function () volpulse.up() end ),
-   
-   awful.key({ }, "XF86AudioLowerVolume", function () volpulse.down() end ),
-   awful.key({ }, "XF86AudioMute", function () volpulse.toggle() end)
+    -- ALSA volume control
+    awful.key({ altkey }, "Up",
+        function ()
+            os.execute(string.format("pactl set-sink-volume %d +1%", volumewidget.sink))
+            volumewidget.update()
+        end),
+    awful.key({ altkey }, "Down",
+        function ()
+            os.execute(string.format("pactl set-sink-volume %d -1%", volumewidget.sink))
+            volumewidget.update()
+        end),
+    awful.key({ altkey }, "m",
+        function ()
+            if volumewidget.muted == "yes" then
+                os.execute(string.format("pactl set-sink-mute %d no", volumewidget.sink))
+            else
+                os.execute(string.format("pactl set-sink-mute %d yes", volumewidget.sink))
+            end
+            volumewidget.update()
+        end),
 ```
+
+where `altkey = "Mod1"`.
