@@ -3,19 +3,15 @@
 Provides current weather status widgets and X-days forecast popup notifications.
 
 Uses [OpenWeatherMap](http://openweathermap.org/api) API.
-It's **mandatory** to [obtain a free API key](http://openweathermap.org/appid) and to declare it in `APPID` argument:
+
 ```lua
-myweather = lain.widgets.weather({
-    APPID = "myappid",
-    -- [...]
-})
+myweather = lain.widgets.weather()
 ```
 
 ## input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`APPID` | API key ([mandatory](https://github.com/copycat-killer/lain/issues/146)) | string | none
 `timeout` | Refresh timeout seconds for current weather status | int | 900 (15 min)
 `timeout_forecast` | Refresh timeout seconds for forecast notification | int | 86400 (24 hrs)
 `current_call` | Command to fetch weather status data from the API | string | see `default_current_call`
