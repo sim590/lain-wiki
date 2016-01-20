@@ -34,7 +34,7 @@ Variable | Meaning | Type
 You can control the widget with key bindings like these:
 
 ```lua
-    -- ALSA volume control
+    -- PulseAudio volume control
     awful.key({ altkey }, "Up",
         function ()
             os.execute(string.format("pactl set-sink-volume %d +1%", volumewidget.sink))
