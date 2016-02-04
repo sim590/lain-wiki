@@ -1,4 +1,3 @@
-Currently, there are **9** layouts.
 
     lain/layout
     .
