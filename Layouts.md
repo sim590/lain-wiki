@@ -8,6 +8,7 @@ Currently, there are **9** layouts.
     |-- cascadetile
     |-- centerwork
     |-- centerhwork
+    |-- centerworkd
     |-- uselessfair
     |-- uselesspiral
     `-- uselesstile
