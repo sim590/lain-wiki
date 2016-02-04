@@ -253,6 +253,11 @@ window expands horizontally, and the 4 additional windows
 are put ontop/below it, thus using the huge vertical space
 much better. Useful if you have a screen turned 90°.
 
+centerworkd
+-----------
+
+Same as `centerwork`, except that this version fills the slave-columns regardless of how many slave-clients are present.
+
 uselessfair, uselesspiral & uselesstile
 ---------------------------------------
 These are duplicates of the stock `fair`, `spiral` and `tile` layouts.
