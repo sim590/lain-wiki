@@ -7,7 +7,7 @@ Package | Requested by | Reason of choice
 --- | --- | ---
 alsa-utils | ALSA widgets | /
 curl | widgets accessing network resources | Simpler to install and use than LuaSocket. 
-imagemagick | album arts in [mpd](https://github.com/copycat-killer/lain/wiki/mpd) notifications | Cairo doesn't do high quality filtering.
+imagemagick | album arts in [MPD](https://github.com/copycat-killer/lain/wiki/mpd) notifications | Cairo doesn't do high quality filtering.
 
 Installation
 ---------------
