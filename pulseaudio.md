@@ -10,7 +10,7 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 5
 `sink` | PulseAudio sink index | int | 0 
-`cmd` | PulseAudio command | string | `"pacmd list-sinks | grep -e 'index: #SINK' -e 'volume: front' -e 'muted'"`
+`cmd` | PulseAudio command | string | ``` pacmd list-sinks | sed -n -e '/base volume/d' -e '/index: #SINK/p' -e '/volume:/p' -e '/muted:/p' | sed -n -e '/index: #SINK/,+2p' ```
 `settings` | User settings | function | empty function
 
 To check which number your default `sink` is, just look for the index labeled with `*` in `pacmd list-sinks` command. For instance, in my case the default sink is 0:
