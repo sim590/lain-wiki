@@ -54,26 +54,26 @@ Variable | Meaning | Type
 You can control the widget with key bindings like these:
 
 ```lua
-    -- PulseAudio volume control
-    awful.key({ altkey }, "Up",
-        function ()
-            os.execute(string.format("pactl set-sink-volume %d -- +1%%", volumewidget.sink))
-            volumewidget.update()
-        end),
-    awful.key({ altkey }, "Down",
-        function ()
-            os.execute(string.format("pactl set-sink-volume %d -- -1%%", volumewidget.sink))
-            volumewidget.update()
-        end),
-    awful.key({ altkey }, "m",
-        function ()
-            if volumewidget.muted == "yes" then
-                os.execute(string.format("pactl set-sink-mute %d no", volumewidget.sink))
-            else
-                os.execute(string.format("pactl set-sink-mute %d yes", volumewidget.sink))
-            end
-            volumewidget.update()
-        end),
+-- PulseAudio volume control
+awful.key({ altkey }, "Up",
+    function ()
+        os.execute(string.format("pactl set-sink-volume %d -- +1%%", volumewidget.sink))
+        volumewidget.update()
+    end),
+awful.key({ altkey }, "Down",
+    function ()
+        os.execute(string.format("pactl set-sink-volume %d -- -1%%", volumewidget.sink))
+        volumewidget.update()
+    end),
+awful.key({ altkey }, "m",
+    function ()
+        if volumewidget.muted == "yes" then
+            os.execute(string.format("pactl set-sink-mute %d no", volumewidget.sink))
+        else
+            os.execute(string.format("pactl set-sink-mute %d yes", volumewidget.sink))
+        end
+        volumewidget.update()
+    end),
 ```
 
 where `altkey = "Mod1"`.
