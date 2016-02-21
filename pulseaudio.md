@@ -13,7 +13,27 @@ Variable | Meaning | Type | Default
 `cmd` | PulseAudio command | string | `"pacmd list-sinks | grep -e 'index: #SINK' -e 'volume: front' -e 'muted'"`
 `settings` | User settings | function | empty function
 
-`cmd` is useful in case you want to use a custom fetch command.
+To check which number your default `sink` is, just look for the index labeled with `*` in `pacmd list-sinks` command. For instance, in my case the default sink is 0:
+
+```shell
+$ pacmd list-sinks | grep index
+  * index: 0
+    index: 1
+```
+
+`cmd` is useful in case you want to use a custom command or default one doesn't work as expected. In both cases, be sure that the ouput is something like this:
+
+```shell
+  * index: 0
+	volume: 0:  100% 1:  100%
+	muted: no
+```
+
+If the default `sed` command doesn't work, you can try with `grep`:
+
+```shell
+pacmd list-sinks | grep -e $(pactl info | grep -e 'ink' | cut -d' ' -f3) -e 'volume: front' -e 'muted'
+```
 
 `settings` can use the following variables:
 
