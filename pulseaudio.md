@@ -9,19 +9,10 @@ Shows and controls PulseAudio volume with a textbox.
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 5
-`sink` | PulseAudio sink index | int | 0 
-`cmd` | PulseAudio command | string | ```pacmd list-sinks | sed -n -e '/base volume/d' -e '/index: #SINK/p' -e '/volume:/p' -e '/muted:/p' | sed -n -e '/index: #SINK/,+2p'```
+`cmd` | PulseAudio command | string | ```pacmd list-sinks | sed -n -e '0,/*/d' -e '/base volume/d' -e '/volume:/p' -e '/muted:/p'```
 `settings` | User settings | function | empty function
 
-To check which number your default `sink` is, just look for the index labeled with `*` in `pacmd list-sinks` command. For instance, in my case the default sink is 0:
-
-```shell
-$ pacmd list-sinks | grep index
-  * index: 0
-    index: 1
-```
-
-`cmd` is useful in case you want to use a custom command or default one doesn't work as expected. In both cases, be sure that the ouput is something like this:
+`cmd` tries to catch infos from current used sink. You can redefine it, being sure that the ouput is something like this:
 
 ```shell
   * index: 0
@@ -29,7 +20,7 @@ $ pacmd list-sinks | grep index
 	muted: no
 ```
 
-If the default `sed` command doesn't work, you can try with `grep`:
+If `sed` doesn't work, you can try with `grep`:
 
 ```shell
 pacmd list-sinks | grep -e $(pactl info | grep -e 'ink' | cut -d' ' -f3) -e 'volume: front' -e 'muted'
