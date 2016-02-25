@@ -12,7 +12,7 @@ Variable | Meaning | Type | Default
 `cmd` | PulseAudio command | string | ```pacmd list-sinks | sed -n -e '0,/*/d' -e '/base volume/d' -e '/volume:/p' -e '/muted:/p'```
 `settings` | User settings | function | empty function
 
-`cmd` tries to catch infos from current used sink. You can redefine it, being sure that the ouput is something like this:
+`cmd` catch infos from current used sink. You can redefine it, being sure that the ouput is something like this:
 
 ```shell
   * index: 0
