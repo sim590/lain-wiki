@@ -10,6 +10,7 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 5
 `cmd` | PulseAudio command | string | ```pacmd list-sinks | sed -n -e '0,/*/d' -e '/base volume/d' -e '/volume:/p' -e '/muted:/p'```
+`scallback` | PulseAudio Sink callback | function | nil  
 `settings` | User settings | function | empty function
 
 `cmd` catch infos from current used sink. You can redefine it, being sure that the ouput is something like this:
@@ -25,6 +26,8 @@ If `sed` doesn't work, you can try with `grep`:
 ```shell
 pacmd list-sinks | grep -e $(pactl info | grep -e 'ink' | cut -d' ' -f3) -e 'volume: front' -e 'muted'
 ```
+
+`scallback` is a callback function to update `cmd`, in case you switch between audio channels and therefore PulseAudio sink changes.
 
 `settings` can use the following variables:
 
