@@ -27,7 +27,13 @@ If `sed` doesn't work, you can try with `grep`:
 pacmd list-sinks | grep -e $(pactl info | grep -e 'ink' | cut -d' ' -f3) -e 'volume: front' -e 'muted'
 ```
 
-`scallback` is a callback function to update `cmd`, in case you switch between audio channels and therefore PulseAudio sink changes.
+`scallback` is a callback function to update `cmd`, in case you switch between audio channels and therefore PulseAudio sink changes. If default `cmd` works for you, you can tell `scallback` to work in the same way:
+
+```lua
+scallback = function()
+    return "pacmd list-sinks | sed -n -e '0,/*/d' -e '/base volume/d' -e '/volume:/p' -e '/muted:/p'"
+end
+```
 
 `settings` can use the following variables:
 
