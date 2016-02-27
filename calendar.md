@@ -43,4 +43,5 @@ In multiple screen setups, the default behaviour is to show a visual notificatio
 
 ### Note
 
-Naughty notification requires `font` to be **monospaced**, in order to correctly display the output.
+* Naughty notification requires `font` to be **monospaced**, in order to correctly display the output.
+* If you have UTF-8 rendering issues in the popup, it's probably because `cal` always colors the output. Try setting `post_cal = "--color=never"`
