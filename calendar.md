@@ -12,7 +12,6 @@ Attaches a calendar notification to a widget.
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `cal` | custom call for `cal` \* | string | "/usr/bin/cal"
-`post_cal` | post `cal` processing, if needed | string | ""
 `icons` | Path to calendar icons | string | [lain/icons/cal/white](https://github.com/copycat-killer/lain/tree/master/icons/cal/white)
 `font` | Calendar font | string | `beautiful.font`
 `font_size` | Calendar font size | int | 12
@@ -44,4 +43,4 @@ In multiple screen setups, the default behaviour is to show a visual notificatio
 ### Note
 
 * Naughty notification requires `font` to be **monospaced**, in order to correctly display the output.
-* If you have UTF-8 rendering issues in the popup, it's probably because `cal` always colors the output. Try setting `post_cal = "--color=never"`
+* If you have UTF-8 rendering issues in the popup, it's probably because `cal` always colors the output. Try setting `cal = "/usr/bin/cal --color=never"`
