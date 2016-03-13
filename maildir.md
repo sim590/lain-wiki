@@ -39,7 +39,7 @@ Variable | Meaning | Type | Default
 
 ```lua
 mailwidget = lain.widgets.maildir({
-    external_mail_cmd = "mbsync -q ndev revthefox foxbnc foxdev",
+    external_mail_cmd = "mbsync -q account1 account2 account3",
     -- [...]
 })
 ```
