@@ -13,6 +13,7 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 30
 `battery` | Identifier of the battery | string | "BAT0"
+`ac` | AC | string | "AC0"
 `notify` | Enable notifications | string | "on"
 `settings` | User settings | function | empty function
 
@@ -55,17 +56,15 @@ bat_notification_critical_preset = {
 
 A textbox.
 
-### Note
-
-If your widget is always on "N/A" with default settings, then `BAT0` is not your battery file. Locate the right one in  `/sys/class/power_supply/` and set `battery` properly. 
+### Notes
+* Another common identifier for `ac` is `ACAD`.
+* If your widget is always on "N/A" with default settings, then `BAT0` is not your battery file. Locate the right one in  `/sys/class/power_supply/` and set `battery` properly. 
 For instance, with `BAT1`:
 
 ```lua
 batwidget = lain.widgets.bat({
     battery = "BAT1",
-    settings = function()
-        -- do stuff
-    end
+    -- [...]
 })
 
 ```
