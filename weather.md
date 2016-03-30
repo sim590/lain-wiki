@@ -3,6 +3,7 @@
 Provides current weather status widgets and X-days forecast popup notifications.
 
 Uses [OpenWeatherMap](http://openweathermap.org/api) API.
+
 By default, it uses [current](http://openweathermap.org/current) for current weather data and [forecast16](http://openweathermap.org/forecast16) for 16 day/daily forecast.
 
 ```lua
