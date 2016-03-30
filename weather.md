@@ -21,7 +21,7 @@ Variable | Meaning | Type | Default
 `city_id` | API city code | int | not set
 `units` | Temperature units system | string | "metric" 
 `lang` | API data localization | string | "en"
-`cnt` | Forecast days interval | int | 7
+`cnt` | Forecast days interval | int | 5
 `date_cmd` | Forecast notification format style | string | "date -u -d @%d +'%%a %%d'"
 `icons_path` | Icons path | string | `lain/icons/openweathermap`
 `notification_preset` | Preset for notifications | table | empty table
