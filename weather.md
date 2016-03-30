@@ -25,6 +25,8 @@ Variable | Meaning | Type | Default
 `date_cmd` | Forecast notification format style | string | "date -u -d @%d +'%%a %%d'"
 `icons_path` | Icons path | string | `lain/icons/openweathermap`
 `notification_preset` | Preset for notifications | table | empty table
+`notification_text_fun` | Function to format forecast notifications | function | see `notification_text_fun`
+`weather_na_markup` | Markup to be used when weather textbox is not available | text | " N/A " 
 `followmouse` | Notification behaviour | boolean | false
 `settings` | User settings | function | empty function
 
@@ -80,6 +82,23 @@ Variable | Meaning | Type | Default
 - ``notification_preset``
 
    Notifications preset table. See [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the details.
+
+- ``notification_text_fun``
+   ```lua
+   function (wn)
+       local day = string.gsub(read_pipe(string.format(date_cmd, wn["dt"])), "\n", "")
+       local tmin = math.floor(wn["temp"]["min"])
+       local tmax = math.floor(wn["temp"]["max"])
+       local desc = wn["weather"][1]["description"]
+
+       return string.format("<b>%s</b>: %s, %d - %d ", day, desc, tmin, tmax)
+   end
+   ```
+   See [here](https://github.com/copycat-killer/lain/issues/186#issuecomment-203400918) for a complete customization example.
+
+- ``followmouse``
+
+   In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting followmouse to true it will be shown on the same screen containing the widget.
 
 - ``settings``
 
