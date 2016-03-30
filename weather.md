@@ -75,7 +75,7 @@ Variable | Meaning | Type | Default
 
     You can set your own icons path if you don't wish to use `lain/icons/openweathermap`. Just be sure that your icons are PNGs and named exactly like [OpenWeatherMap ones](http://openweathermap.org/weather-conditions).
 
-- ``w_notification_preset``
+- ``notification_preset``
 
    Notifications preset table. See [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the details.
 
