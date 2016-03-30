@@ -30,15 +30,17 @@ Variable | Meaning | Type | Default
 
 - ``default_current_call`` 
 
-    "curl -s 'http://api.openweathermap.org/data/2.5/weather?id=%s&units=%s&lang=%s'"
+    `"curl -s 'http://api.openweathermap.org/data/2.5/weather?id=%s&units=%s&lang=%s'"`
 
     You can rewrite it using any fetcher solution you like.
 
 - ``default_forecast_call``
  
-    "curl -s 'http://api.openweathermap.org/data/2.5/forecast/daily?id=%s&units=%s&lang=%s&cnt=%s'"
+    `"curl -s 'http://api.openweathermap.org/data/2.5/forecast/daily?id=%s&units=%s&lang=%s&cnt=%s'"`
 
     Like above.
+    If you want to use [forecast5](http://openweathermap.org/forecast5), use this API call string:
+    `http://api.openweathermap.org/data/2.5/forecast?id=%s&units=%s&lang=%s&cnt=%s`
 
 - ``city_id``
 
