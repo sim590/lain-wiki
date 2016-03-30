@@ -61,7 +61,7 @@ Variable | Meaning | Type | Default
 
 - ``cnt``
 
-    Determines how many days to show in the forecast notification.
+    Determines how many days to show in the forecast notification. Up to 16 if you use [forecast16](http://openweathermap.org/forecast16)  (default), and up to 5 if you use [forecast5](http://openweathermap.org/forecast5).
 
 - ``date_cmd``
 
