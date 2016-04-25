@@ -4,15 +4,15 @@ Attaches a calendar notification to a widget.
 
     lain.widgets.calendar:attach(widget, args)
 
-- Left click: switch to previous month.
-- Right click: switch to next month.
+- Left click / scroll down: switch to previous month.
+- Right click / scroll up: switch to next month.
 
 `args` is an optional table which can contain:
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `cal` | custom call for `cal` \* | string | "/usr/bin/cal"
-`cal_format` | notification format \*\* | function | [see here](https://github.com/copycat-killer/lain/blob/master/widgets/calendar.lua#L104-105)
+`cal_format` | notification format \*\* | function | [see here](https://github.com/copycat-killer/lain/blob/master/widgets/calendar.lua#L103-106)
 `icons` | Path to calendar icons | string | [lain/icons/cal/white](https://github.com/copycat-killer/lain/tree/master/icons/cal/white)
 `font` | Calendar font | string | `beautiful.font`
 `font_size` | Calendar font size | int | 12
