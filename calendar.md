@@ -12,6 +12,7 @@ Attaches a calendar notification to a widget.
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `cal` | custom call for `cal` \* | string | "/usr/bin/cal"
+`cal_format` | notification format \*\* | function | [see here](https://github.com/copycat-killer/lain/blob/master/widgets/calendar.lua#L104-105)
 `icons` | Path to calendar icons | string | [lain/icons/cal/white](https://github.com/copycat-killer/lain/tree/master/icons/cal/white)
 `font` | Calendar font | string | `beautiful.font`
 `font_size` | Calendar font size | int | 12
@@ -22,6 +23,8 @@ Variable | Meaning | Type | Default
 `followmouse` | Notification behaviour | boolean | false
 
 \* `cal` program options may vary depending on the operating system: you may need to set this variable properly (`/usr/bin/cal -h` [for instance](https://github.com/copycat-killer/lain/pull/34)) in order to display the current day highlighting.
+
+\*\* `cal_format` can be used in case you need to fix the format [because you have more than one occurence of `today` number](https://github.com/copycat-killer/lain/pull/194).
 
 `position` possible values are defined [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify).
 
@@ -43,4 +46,4 @@ In multiple screen setups, the default behaviour is to show a visual notificatio
 ### Note
 
 * Naughty notification requires `font` to be **monospaced**, in order to correctly display the output.
-* If you have UTF-8 rendering issues in the popup, it's probably because `cal` always colors the output. Try setting `cal = "/usr/bin/cal --color=never"`
+* If you have UTF-8 rendering issues in the popup, it's probably because `cal` always colors the output. Try setting `args.cal = "/usr/bin/cal --color=never"`
