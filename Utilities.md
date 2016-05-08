@@ -154,6 +154,8 @@ the currently used layout. Use it with a client keybinding like this:
 
 If you want to "de-magnify" it, just retype the keybinding.
 
+If you want magnified client to respond to `incmwfact`, read [here](https://github.com/copycat-killer/lain/issues/195).
+
 niceborder\_{focus, unfocus}
 ----------------------------
 
