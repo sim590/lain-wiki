@@ -48,6 +48,7 @@ Index
 - [mpd](https://github.com/copycat-killer/lain/wiki/mpd)
 - [net](https://github.com/copycat-killer/lain/wiki/net)
 - [pulseaudio](https://github.com/copycat-killer/lain/wiki/pulseaudio)
+- [*pulsebar*](https://github.com/copycat-killer/lain/issues/200)
 - [sysload](https://github.com/copycat-killer/lain/wiki/sysload)
 - [temp](https://github.com/copycat-killer/lain/wiki/temp)
 - [weather](https://github.com/copycat-killer/lain/wiki/weather)
