@@ -1,6 +1,6 @@
 [<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
 
-Shows and controls alsa volume with a progressbar; provides tooltips, notifications, and color changes at mute/unmute switch.
+Shows and controls ALSA volume with a progressbar; provides tooltips, notifications, and color changes at mute/unmute switch.
 
 	volume = lain.widgets.alsabar()
 
@@ -26,7 +26,7 @@ Variable | Meaning | Type | Default
 `notifications` | Notifications settings | table | see **notifications**
 `followmouse` | Notification behaviour | bool | false
 
-`cmd` is useful if you need to pass additional arguments to amixer. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
+`cmd` is useful if you need to pass additional arguments to  `amixer`. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
 
 ### colors
 
