@@ -19,14 +19,14 @@ Variable | Meaning | Type | Default
 `ticks` | Set bar ticks on | boolean | false
 `ticks_size` | Ticks size | int | 7
 `vertical` | Set the bar vertical | boolean | false
-`command` | ALSA mixer command | string | "amixer"
+`cmd` | ALSA mixer command | string | "amixer"
 `channel` | Mixer channel | string | "Master" 
 `step` | Step at which volume is increased/decreased | string | "2%"
 `colors` | Bar colors | table | see **colors**
 `notifications` | Notifications settings | table | see **notifications**
 `followmouse` | Notification behaviour | bool | false
 
-`command` is useful if you need to pass additional arguments to amixer. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
+`cmd` is useful if you need to pass additional arguments to amixer. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
 
 ### colors
 
