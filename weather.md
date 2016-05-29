@@ -19,6 +19,7 @@ Variable | Meaning | Type | Default
 `current_call` | Command to fetch weather status data from the API | string | see `default_current_call`
 `forecast_call` | Command to fetch forecast data from the API | string | see `default_forecast_call`
 `city_id` | API city code | int | not set
+`utc` | UTC time offset | int | 0
 `units` | Temperature units system | string | "metric" 
 `lang` | API data localization | string | "en"
 `cnt` | Forecast days interval | int | 5
@@ -52,6 +53,13 @@ Variable | Meaning | Type | Default
         http://openweathermap.org/city/2643743
 
     your `city_id` is the number at the end.
+
+
+- ``utc``
+
+    Since OWM can (obviously) provide data only in UTC time, we have to adjust the weather icons in order to respect the local timezone day/night cycle.
+
+    Check [here](https://en.wikipedia.org/wiki/List_of_UTC_time_offsets) to know your UTC offset, and set `utc` accordingly. Note that it must be an integer.
 
 - ``units``
 
