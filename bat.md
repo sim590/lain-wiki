@@ -1,7 +1,7 @@
 [<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
 
 Shows in a textbox the remaining time and percentage capacity of your laptop battery, as well as
-the current wattage.
+the current wattage. [Multiple batteries are supported](https://github.com/copycat-killer/lain/pull/201).
 
 Displays a notification when battery is low or critical.
 
@@ -12,16 +12,19 @@ Displays a notification when battery is low or critical.
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 30
-`battery` | Identifier of the battery | string | "BAT0"
+`battery | Single battery id | string | "BAT0"
+`batteries` | Multiple batteries id table | string | {"BAT0"}
 `ac` | AC | string | "AC0"
 `notify` | Enable notifications | string | "on"
 `settings` | User settings | function | empty function
+
+If you have one battery, you can either use `args.battery = "BAT*"` or `args.batteries` = {"BAT*"}`. Of course, if you have multiple batteries, you need to use the latter option.
 
 To disable warning notifications, set `notify` to `"off"`.
 
 `settings` can use the `bat_now` table, which contains the following strings:
 
-- `status` ("Not present", "Charging", "Discharging");
+- `status[i]`, where `i` refers to the i-th battery ("Not present", "Charging", "Discharging");
 - `ac_status` (0 or 1, meaning absent/present);
 - `perc`;
 - `time`;
@@ -59,7 +62,7 @@ A textbox.
 
 ### Notes
 * Another common identifier for `ac` is `ACAD`.
-* If your widget is always on "N/A" with default settings, then `BAT0` is not your battery file. Locate the right one in  `/sys/class/power_supply/` and set `battery` properly. 
+* If your widget is always on "N/A" with default settings, and you have a single battery, then `BAT0` is not your battery file. Locate the right one in  `/sys/class/power_supply/` and set `battery` properly. 
 For instance, with `BAT1`:
 
 ```lua
