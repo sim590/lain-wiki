@@ -18,13 +18,16 @@ Variable | Meaning | Type | Default
 `notify` | Enable notifications | string | "on"
 `settings` | User settings | function | empty function
 
+You only have to define one between `battery` and `batteries`.
+
 If you have one battery, you can either use `args.battery = "BAT*"` or `args.batteries` = {"BAT*"}`. Of course, if you have multiple batteries, you need to use the latter option.
 
 To disable warning notifications, set `notify` to `"off"`.
 
 `settings` can use the `bat_now` table, which contains the following strings:
 
-- `status[i]`, where `i` refers to the i-th battery ("Not present", "Charging", "Discharging");
+- `status`, first battery status ("Not present", "Charging", "Discharging");
+- `n_status[i]`, i-th battery status (like above);
 - `ac_status` (0 or 1, meaning absent/present);
 - `perc`;
 - `time`;
