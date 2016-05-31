@@ -13,14 +13,14 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 30
 `battery | Single battery id | string | "BAT0"
-`batteries` | Multiple batteries id table | string | {"BAT0"}
+`batteries` | Multiple batteries id table | table of strings | {"BAT0"}
 `ac` | AC | string | "AC0"
 `notify` | Enable notifications | string | "on"
 `settings` | User settings | function | empty function
 
 You only have to define one between `battery` and `batteries`.
 
-If you have one battery, you can either use `args.battery = "BAT*"` or `args.batteries` = {"BAT*"}`. Of course, if you have multiple batteries, you need to use the latter option.
+If you have one battery, you can either use `args.battery = "BAT*"` or `args.batteries = {"BAT*"}`. Of course, if you have multiple batteries, you need to use the latter option.
 
 To disable warning notifications, set `notify` to `"off"`.
 
