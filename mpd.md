@@ -33,6 +33,7 @@ Variable | Meaning | Type | Default
 `music_dir` | Music directory | string | "~/Music"
 `cover_size` | Album art notification size | int | 100
 `default_art` | Default art | string | ""
+`notify` | Show notification popups | boolean | true
 `followmouse` | Notification behaviour | boolean | false
 `echo_cmd` | custom call for `echo`* | string | "echo"
 `settings` | User settings | function | empty function
