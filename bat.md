@@ -15,7 +15,7 @@ Variable | Meaning | Type | Default
 `battery | Single battery id | string | "BAT0"
 `batteries` | Multiple batteries id table | table of strings | {"BAT0"}
 `ac` | AC | string | "AC0"
-`notify` | Enable notifications | string | "on"
+`notify` | Show notification popups | boolean | true
 `settings` | User settings | function | empty function
 
 You only have to define one between `battery` and `batteries`.
