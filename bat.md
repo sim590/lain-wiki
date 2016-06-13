@@ -26,7 +26,7 @@ To disable warning notifications, set `notify` to `"off"`.
 
 `settings` can use the `bat_now` table, which contains the following strings:
 
-- `status`, first battery status ("Not present", "Charging", "Discharging");
+- `status`, first battery status ("N/A", "Discharging", "Charging", "Full");
 - `n_status[i]`, i-th battery status (like above);
 - `ac_status` (0 or 1, meaning absent/present);
 - `perc`;
