@@ -28,7 +28,7 @@ To disable warning notifications, set `notify` to `"off"`.
 
 - `status`, first battery status ("N/A", "Discharging", "Charging", "Full");
 - `n_status[i]`, i-th battery status (like above);
-- `ac_status` (0 or 1, meaning absent/present);
+- `ac_status` (0 or 1, meaning absent/present; "N/A" if uncorrectly set);
 - `perc`;
 - `time`;
 - `watt`.
