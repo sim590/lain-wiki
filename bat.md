@@ -29,9 +29,9 @@ To disable warning notifications, set `notify` to `"off"`.
 - `status`, first battery status ("N/A", "Discharging", "Charging", "Full");
 - `n_status[i]`, i-th battery status (like above);
 - `ac_status` (0 or 1, meaning absent/present; "N/A" if uncorrectly set);
-- `perc`;
-- `time`;
-- `watt`.
+- `perc` (integer between 0 and 100 or "N/A");
+- `time` (HH:SS string or "N/A");
+- `watt` (float with 2 decimals).
 
 and can modify the following two tables, which will be the preset for the naughty notifications: 
 * `bat_notification_low_preset`(used if battery charge level <= 15)
