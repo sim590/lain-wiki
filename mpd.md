@@ -42,8 +42,16 @@ Variable | Meaning | Type | Default
 
 Pay attention to case sensitivity when defining `music_dir`.
 
-`settings` can use `mpd_now` table, which contains the following string values:
+`settings` can use `mpd_now` table, which contains the following values:
 
+(**note:** the first four are boolean [flags](https://github.com/copycat-killer/lain/pull/205), the remaining are all strings) 
+
+- random_mode
+- single_mode
+- repeat_mode
+- consume_mode
+- pls_pos (playlist position)
+- pls_len (playlist length)
 - state (possible values: "play", "pause", "stop")
 - file
 - artist
