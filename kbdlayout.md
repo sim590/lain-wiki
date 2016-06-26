@@ -1,8 +1,8 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Shows and controls keyboard layouts and variants using `setxkbmap`.
 
-	mykbdlayout = lain.widgets.contrib.kbdlayout()
+```lua
+mykbdlayout = lain.widgets.contrib.kbdlayout()
+```
 
 ### input table
 
@@ -43,28 +43,35 @@ Variable | Meaning | Type
 
 The textbox can be added to the layout via standard means:
 
-    right_layout:add(mykbdlayout)
+```lua
+right_layout:add(mykbdlayout)
+```
 
 By default, left-clicking the textbox calls `next`, and right-clicking calls `prev`. You can set up additional key- or mouse-bindings. See the example below.
 
 ## example
 
-    -- Switch between US Dvorak and DE layouts.
-    mykbdlayout = lain.widgets.contrib.kbdlayout({
-                      layouts = {{ layout="us", variant="dvorak" },
-	                             { layout="de" }},
-			          settings = function ()
-                          if kbdlayout_now.variant then
-                              widget:set_text(" " .. kbdlayout_now.layout .. "/" .. kbdlayout_now.variant .. " ")
-                          else
-                              widget:set_text(" " .. kbdlayout_now.layout .. " ")
-                          end
-                      end
-    })
+```lua
+-- Switch between US Dvorak and DE layouts.
+mykbdlayout = lain.widgets.contrib.kbdlayout({
+    layouts = { { layout = "us", variant = "dvorak" },
+	        { layout = "de" } },
+    settings = function()
+        if kbdlayout_now.variant then
+            widget:set_text(" " .. kbdlayout_now.layout .. "/" .. kbdlayout_now.variant .. " ")
+        else
+            widget:set_text(" " .. kbdlayout_now.layout .. " ")
+        end
+    end
+})
 
-    -- Add to the layout.
-    right_layout:add(mykbdlayout)
+-- [...]
 
-    -- Add this key binding to your global keys to
-    -- add traditional Alt+Shift switching.
-    awful.key({ "Mod1" }, "Shift_L", function () mykbdlayout.next() end)
+-- Add widget to a layout
+right_layout:add(mykbdlayout)
+
+-- [...]
+
+-- Add key binding (traditional Alt+Shift switching)
+awful.key({ "Mod1" }, "Shift_L", function () mykbdlayout.next() end)
+```
