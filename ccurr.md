@@ -15,8 +15,8 @@ Variable | Meaning | Type | Default
 
 `settings` can use the `price_now` table, which contains the following strings:
 
-- `btc`;
-- `doge`.
+- `btc`
+- `doge`
 
 ### output
 
