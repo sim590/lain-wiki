@@ -1,16 +1,17 @@
 
-    lain/layout
-    .
-    |-- termfair
-    |-- centerfair
-    |-- cascade
-    |-- cascadetile
-    |-- centerwork
-    |-- centerhwork
-    |-- centerworkd
-    |-- uselessfair
-    |-- uselesspiral
-    `-- uselesstile
+***
+
+* [termfair](https://github.com/copycat-killer/lain/wiki/Layouts#termfair)
+* [centerfair](https://github.com/copycat-killer/lain/wiki/Layouts#centerfair)
+* [cascade](https://github.com/copycat-killer/lain/wiki/Layouts#cascade)
+* [cascadetile](https://github.com/copycat-killer/lain/wiki/Layouts#cascadetile)
+* [centerwork](https://github.com/copycat-killer/lain/wiki/Layouts#centerwork)
+* [centerworkd](https://github.com/copycat-killer/lain/wiki/Layouts#centerworkd)
+* [uselessfair](https://github.com/copycat-killer/lain/wiki/Layouts#uselessfair)
+* [uselesspiral](https://github.com/copycat-killer/lain/wiki/Layouts#uselesspiral)
+* [uselesstile](https://github.com/copycat-killer/lain/wiki/Layouts#uselesstile)
+
+===
 
 Just add your favourites to ``layouts`` table:
 
