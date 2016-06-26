@@ -17,11 +17,13 @@ You can feed `set_markup` with predefined arguments, see the sections for all th
 
 Here follows an example: 
 
-    mycpu = lain.widgets.cpu({
-        settings = function()
-            widget:set_markup("Cpu " .. cpu_now.usage)
-        end
-    })
+```lua
+mycpu = lain.widgets.cpu({
+    settings = function()
+        widget:set_markup("Cpu " .. cpu_now.usage)
+    end
+})
+```
 
 If you want to see more complex applications, check [awesome-copycats](https://github.com/copycat-killer/awesome-copycats).
 
