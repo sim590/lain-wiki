@@ -1,8 +1,8 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Shows in a textbox the current CPU usage, both in general and per core.
 
-	mycpuusage = lain.widgets.cpu()
+```lua
+mycpuusage = lain.widgets.cpu()
+```
 
 ### input table
 
