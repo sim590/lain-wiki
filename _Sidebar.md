@@ -49,4 +49,4 @@
     * [tag_view_non_empty](https://github.com/copycat-killer/lain/wiki/Utilities#)
     * [menu_clients_current_tags](https://github.com/copycat-killer/lain/wiki/Utilities#menu_clients_current_tags)
     * [magnify_client](https://github.com/copycat-killer/lain/wiki/Utilities#magnify_client)
-    * [niceborder_{focus, unfocus}](https://github.com/copycat-killer/lain/wiki/Utilities#niceborder_focus-unfocus)
+    * [niceborder](https://github.com/copycat-killer/lain/wiki/Utilities#niceborder_focus-unfocus)
