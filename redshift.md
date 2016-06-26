@@ -1,5 +1,3 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 ### What is Redshift? #
 
 [**Project homepage**](http://jonls.dk/redshift/)
@@ -25,56 +23,57 @@ You also need a valid config file. Please see the [project homepage](http://jonl
 
 **An example redshift.conf file:**
 
-    ; ~/.config/redshift.conf
-    ; Global settings for redshift
-    [redshift]
-    ; Set the day and night screen temperatures
-    temp-day=5700
-    temp-night=3500
+```
+; ~/.config/redshift.conf
+; Global settings for redshift
+[redshift]
+; Set the day and night screen temperatures
+temp-day=5700
+temp-night=3500
 
-    ; Enable/Disable a smooth transition between day and night
-    ; 0 will cause a direct change from day to night screen temperature. 
-    ; 1 will gradually increase or decrease the screen temperature
-    transition=1
+; Enable/Disable a smooth transition between day and night
+; 0 will cause a direct change from day to night screen temperature. 
+; 1 will gradually increase or decrease the screen temperature
+transition=1
 
-    ; Set the screen brightness. Default is 1.0
-    ;brightness=0.9
-    ; It is also possible to use different settings for day and night since version 1.8.
-    ;brightness-day=0.7
-    ;brightness-night=0.4
-    ; Set the screen gamma (for all colors, or each color channel individually)
-    gamma=0.8
-    ;gamma=0.8:0.7:0.8
+; Set the screen brightness. Default is 1.0
+;brightness=0.9
+; It is also possible to use different settings for day and night since version 1.8.
+;brightness-day=0.7
+;brightness-night=0.4
+; Set the screen gamma (for all colors, or each color channel individually)
+gamma=0.8
+;gamma=0.8:0.7:0.8
 
-    ; Set the location-provider: 'geoclue', 'gnome-clock', 'manual'
-    ; type 'redshift -l list' to see possible values
-    ; The location provider settings are in a different section.
-    location-provider=manual
+; Set the location-provider: 'geoclue', 'gnome-clock', 'manual'
+; type 'redshift -l list' to see possible values
+; The location provider settings are in a different section.
+location-provider=manual
 
-    ; Set the adjustment-method: 'randr', 'vidmode'
-    ; type 'redshift -m list' to see all possible values
-    ; 'randr' is the preferred method, 'vidmode' is an older API
-    ; but works in some cases when 'randr' does not.
-    ; The adjustment method settings are in a different section.
-    adjustment-method=randr
+; Set the adjustment-method: 'randr', 'vidmode'
+; type 'redshift -m list' to see all possible values
+; 'randr' is the preferred method, 'vidmode' is an older API
+; but works in some cases when 'randr' does not.
+; The adjustment method settings are in a different section.
+adjustment-method=randr
 
-    ; Configuration of the location-provider:
-    ; type 'redshift -l PROVIDER:help' to see the settings
-    ; ex: 'redshift -l manual:help'
-    [manual]
-    lat=32.0
-    lon=-40.0
+; Configuration of the location-provider:
+; type 'redshift -l PROVIDER:help' to see the settings
+; ex: 'redshift -l manual:help'
+[manual]
+lat=32.0
+lon=-40.0
 
-    ; Configuration of the adjustment-method
-    ; type 'redshift -m METHOD:help' to see the settings
-    ; ex: 'redshift -m randr:help'
-    ; In this example, vidmode is configured to adjust screen 1. 
-    ; Note that the numbering starts from 0, so this is actually the second screen.
-    [vidmode]
-    screen=0
+; Configuration of the adjustment-method
+; type 'redshift -m METHOD:help' to see the settings
+; ex: 'redshift -m randr:help'
+; In this example, vidmode is configured to adjust screen 1. 
+; Note that the numbering starts from 0, so this is actually the second screen.
+[vidmode]
+screen=0
+```
 
-You have to match the location settings to your personal situation:    
-Adjust the `lat` and `lon` variables - You can use google maps or wikipedia to get the approximate coordinates.
+You have to match the location settings to your personal situation: adjust the `lat` and `lon` variables - You can use google maps or wikipedia to get the approximate coordinates.
 
 You might also want to modify the color temperatures to fit your preferences.
 
@@ -136,6 +135,6 @@ Then add the `myredshift` widget to your panel.
 Add this to the keybindings in your rc.lua:
 ```lua
 -- Toggle redshift with Mod+Shift+t
- awful.key({ modkey, "Shift"   }, "t",   function () redshift:toggle()   end) ,
+awful.key({ modkey, "Shift"   }, "t",   function () redshift:toggle()   end) ,
 ```
 
