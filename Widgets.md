@@ -58,7 +58,6 @@ Index
 Users contributed
 ----------------
 
-- [ccurr](https://github.com/copycat-killer/lain/wiki/ccurr)
 - [gpmdp](https://github.com/copycat-killer/lain/wiki/gpmdp)
 - [kbdlayout](https://github.com/copycat-killer/lain/wiki/kbdlayout)
 - [moc](https://github.com/copycat-killer/lain/wiki/moc)
