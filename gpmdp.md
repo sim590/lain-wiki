@@ -19,7 +19,7 @@ Now playing songs are notified like this:
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 2
-`notify` | Show notification popups | string | "on"
+`notify` | Show notification popups | string | "off"
 `followmouse` | Notification behaviour | boolean | false
 `settings` | User settings | function | empty function
 
