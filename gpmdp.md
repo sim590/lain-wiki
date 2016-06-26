@@ -1,8 +1,8 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Shows [Google Play Music Desktop Player](http://www.googleplaymusicdesktopplayer.com/) status in a textbox.
 
-	gpmdpwidget = lain.widgets.contrib.gpmdp()
+```lua
+gpmdpwidget = lain.widgets.contrib.gpmdp()
+```
 
 Now playing songs are notified like this:
 
@@ -33,12 +33,14 @@ Variable | Meaning | Type | Default
 
 and can modify `gpmdp_notification_preset` table, which will be the preset for the naughty notifications. Check [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the list of variables it can contain. Default definition:
 
-    gmpd_notification_preset = {
-       title   = "Now playing",
-       timeout = 6,
-       text    = string.format("%s (%s) - %s", gpm_now.artist, 
-                 gpm_now.album gpm_now.title)
-    }
+```lua
+gmpd_notification_preset = {
+   title   = "Now playing",
+   timeout = 6,
+   text    = string.format("%s (%s) - %s", gpm_now.artist, 
+             gpm_now.album gpm_now.title)
+}
+```
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followmouse` to `true` it will be shown on the current mouse screen.
 
