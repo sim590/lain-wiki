@@ -1,8 +1,8 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Shows the current system load.
 
-	mysysload = lain.widgets.sysload()
+```lua
+mysysload = lain.widgets.sysload()
+```
 
 ### input table
 
