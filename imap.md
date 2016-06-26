@@ -2,7 +2,9 @@
 
 Shows mail count in a textbox fetching over IMAP.
 
-	myimapcheck = lain.widgets.imap(args)
+```lua
+myimapcheck = lain.widgets.imap(args)
+```
 
 New mails are notified like this:
 
@@ -26,7 +28,7 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `port` | IMAP port | int | 993
 `timeout` | Refresh timeout seconds | int | 60
-`is_plain` | Define whether `password` is a plain password (true) or a function that retrieves it (false) | boolean | false
+`is_plain` | Define whether `password` is a plain password (true) or a command that retrieves it (false) | boolean | false
 `followmouse` | Notification behaviour | boolean | false
 `settings` | User settings | function | empty function
 
@@ -36,20 +38,22 @@ The reason why it's false by default is to discourage the habit of storing passw
 
 So you can set your password in plain like this:
 
-    myimapcheck = lain.widgets.imap({
-        is_plain = true,
-        password = "myplainpassword",
-        [...]
-    })
+```lua
+myimapcheck = lain.widgets.imap({
+    is_plain = true,
+    password = "myplainpassword",
+    -- [...]
+})
+```
 
 and you'll have the same security provided by `~/.netrc`.
 
 **Or** you can use a keyring, like [python keyring](https://pypi.python.org/pypi/keyring):
 
-    myimapcheck = lain.widgets.imap({
-        password = "keyring get mymail",
-        [...]
-    })
+myimapcheck = lain.widgets.imap({
+    password = "keyring get mymail",
+    -- [...]
+})
 
 When `is_plain == false`, it *executes* `password` before using it, so you can also use whatever password fetching solution you want.
 
@@ -57,10 +61,12 @@ When `is_plain == false`, it *executes* `password` before using it, so you can a
 
 Default definition:
 
-    mail_notification _preset = {
-       icon = lain/icons/mail.png,
-       position = "top_left"
-    }
+```lua
+mail_notification _preset = {
+    icon = lain/icons/mail.png,
+    position = "top_left"
+}
+```
 
 Note that `mailcount` is 0 either if there are no new mails or credentials are invalid, so make sure you get the right settings.
 
