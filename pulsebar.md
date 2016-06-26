@@ -1,8 +1,8 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Shows and controls PulseAudio volume with a progressbar; provides tooltips, notifications, and color changes at mute/unmute switch.
 
-	volume = lain.widgets.pulsebar()
+```lua
+volume = lain.widgets.pulsebar()
+```
 
 * Left click: Launch `pavucontrol`.
 
