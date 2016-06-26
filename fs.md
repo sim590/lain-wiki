@@ -1,10 +1,10 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Shows disk space usage for a set partition.
 
 Displays a notification when the partition is full or has low space.
 
-    mypartition = lain.widgets.fs()
+```lua
+mypartition = lain.widgets.fs()
+```
 
 ### input table
 
@@ -29,7 +29,9 @@ just like the variables of `fs_now`. See [here](https://github.com/copycat-kille
 
 Also, `settings` can modify `fs_notification_preset` table. This table will be the preset for the naughty notifications. Check [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the list of variables it can contain. Default definition:
 
-    fs_notification_preset = { fg = beautiful.fg_normal }
+```lua
+fs_notification_preset = { fg = beautiful.fg_normal }
+```
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
@@ -42,7 +44,9 @@ Variable | Meaning | Type
 
 You can display the notification with a key binding like this:
 
-    awful.key({ altkey }, "h", function () mypartition.show(seconds, scr) end),
+```lua
+awful.key({ altkey }, "h", function () mypartition.show(seconds, scr) end),
+```
 
 where ``altkey = "Mod1"`` and ``show`` arguments, both optional, are:
 
