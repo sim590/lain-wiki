@@ -36,7 +36,8 @@ and can modify `gpmdp_notification_preset` table, which will be the preset for t
     gmpd_notification_preset = {
        title   = "Now playing",
        timeout = 6,
-       text    = string.format("%s (%s) - %s", gpm_now.artist, gpm_now.album gpm_now.title)
+       text    = string.format("%s (%s) - %s", gpm_now.artist, 
+                 gpm_now.album gpm_now.title)
     }
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followmouse` to `true` it will be shown on the current mouse screen.
