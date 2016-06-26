@@ -4,7 +4,9 @@ Shows the current core temperature in a textbox.
 
 Reads from `/sys/class/thermal`, so value is expressed in Celsius.
 
-	mytemp = lain.widgets.temp()
+```lua
+mytemp = lain.widgets.temp()
+```
 
 ### input table
 
