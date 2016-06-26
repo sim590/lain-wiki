@@ -1,8 +1,8 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 A widget for showing the current song track's information from MOC (Music On Console). Also provides next track notifications using naughty
 
-	mocwidget = lain.widgets.contrib.moc()
+```lua
+mocwidget = lain.widgets.contrib.moc()
+```
 
 Now playing songs are notified like this:
 
@@ -45,12 +45,14 @@ Pay attention to case sensitivity when defining `music_dir`.
 
 and can modify `moc_notification_preset` table, which will be the preset for the naughty notifications. Check [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the list of variables it can contain. Default definition:
 
-    moc_notification_preset = {
-       title   = "Now playing",
-       timeout = 6,
-       text    = string.format("%s (%s) - %s\n%s", moc_now.artist,
-                 moc_now.album, moc_now.elapsed, moc_now.title)
-    }
+```lua
+moc_notification_preset = {
+    title   = "Now playing",
+    timeout = 6,
+    text    = string.format("%s (%s) - %s\n%s", moc_now.artist,
+              moc_now.album, moc_now.elapsed, moc_now.title)
+}
+```
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
@@ -63,26 +65,28 @@ Variable | Meaning | Type
 
 You can control the widget with key bindings like these:
 
-    -- MOC control
-    awful.key({ altkey, "Control" }, "Up",
-        function ()
-            awful.util.spawn_with_shell("mocp -G")
-            mocwidget.update()
-        end),
-    awful.key({ altkey, "Control" }, "Down",
-        function ()
-            awful.util.spawn_with_shell("mocp -s")
-            mocwidget.update()
-        end),
-    awful.key({ altkey, "Control" }, "Left",
-        function ()
-            awful.util.spawn_with_shell("mocp -r")
-            mocwidget.update()
-        end),
-    awful.key({ altkey, "Control" }, "Right",
-        function ()
-            awful.util.spawn_with_shell("mocp -f")
-            mocwidget.update()
-        end),
+```lua
+-- MOC control
+awful.key({ altkey, "Control" }, "Up",
+	function ()
+		awful.util.spawn_with_shell("mocp -G")
+		mocwidget.update()
+	end),
+awful.key({ altkey, "Control" }, "Down",
+	function ()
+		awful.util.spawn_with_shell("mocp -s")
+		mocwidget.update()
+	end),
+awful.key({ altkey, "Control" }, "Left",
+	function ()
+		awful.util.spawn_with_shell("mocp -r")
+		mocwidget.update()
+	end),
+awful.key({ altkey, "Control" }, "Right",
+	function ()
+		awful.util.spawn_with_shell("mocp -f")
+		mocwidget.update()
+	end),
+```
 
 where `altkey = "Mod1"`.
