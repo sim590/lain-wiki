@@ -18,7 +18,9 @@ Now playing songs are notified like this:
 
 You need a file like this
 
-     (Front|front|Cover|cover|Art|art|Folder|folder)\.(jpg|jpeg|png|gif)
+```
+(Front|front|Cover|cover|Art|art|Folder|folder)\.(jpg|jpeg|png|gif)
+```
 
 in the album folder in order to show album art too.
 
