@@ -2,7 +2,9 @@
 
 Monitors network interfaces and shows current traffic in a textbox. 
 
-    mynet = lain.widgets.net()
+```lua
+mynet = lain.widgets.net()
+```
 
 ### input table
 
@@ -37,7 +39,8 @@ With the **new** API:
 
 A textbox.
 
--------------------------------
+---
+
 ### Setting `iface` manually
 
 If the widget [spawns a "no carrier" notification and you are sure to have an active network device](https://github.com/copycat-killer/lain/issues/102), then autodetection is probably not working. In this case you can set `iface` manually. You can see which device is **UP** with the following command:
