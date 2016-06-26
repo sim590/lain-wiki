@@ -15,8 +15,8 @@ List of functions:
 
      +-- separators
      |
-     |`-- arrow_right()        Draw a right arrow.
-     |`-- arrow_left()         Draw a left arrow.
+     |`-- arrow_right()    Draw a right arrow.
+     |`-- arrow_left()     Draw a left arrow.
 
 markup
 ------
