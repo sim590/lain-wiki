@@ -1,6 +1,8 @@
 Shows and controls ALSA volume with a progressbar; provides tooltips, notifications, and color changes at mute/unmute switch.
 
-	volume = lain.widgets.alsabar()
+```lua
+volume = lain.widgets.alsabar()
+```
 
 * Left click: Launch `alsamixer` in your `terminal`.
 * Right click: Mute/unmute.
@@ -67,27 +69,27 @@ In multiple screen setups, the default behaviour is to show a visual notificatio
 You can control the widget with key bindings like these:
 
 ```lua
-    -- ALSA volume control
-    awful.key({ altkey }, "Up",
-        function ()
-            os.execute(string.format("amixer set %s %s+", volume.channel, volume.step))
-            volume.update()
-        end),
-    awful.key({ altkey }, "Down",
-        function ()
-            os.execute(string.format("amixer set %s %s-", volume.channel, volume.step))
-            volume.update()
-        end),
-    awful.key({ altkey }, "m",
-        function ()
-            os.execute(string.format("amixer set %s toggle", volume.channel))
-            volume.update()
-        end),
-    awful.key({ altkey, "Control" }, "m",
-        function ()
-            os.execute(string.format("amixer set %s 100%%", volume.channel))
-            volume.update()
-        end),
+-- ALSA volume control
+awful.key({ altkey }, "Up",
+	function ()
+		os.execute(string.format("amixer set %s %s+", volume.channel, volume.step))
+		volume.update()
+	end),
+awful.key({ altkey }, "Down",
+	function ()
+		os.execute(string.format("amixer set %s %s-", volume.channel, volume.step))
+		volume.update()
+	end),
+awful.key({ altkey }, "m",
+	function ()
+		os.execute(string.format("amixer set %s toggle", volume.channel))
+		volume.update()
+	end),
+awful.key({ altkey, "Control" }, "m",
+	function ()
+		os.execute(string.format("amixer set %s 100%%", volume.channel))
+		volume.update()
+	end),
 ```
 
 where `altkey = "Mod1"`.
