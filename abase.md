@@ -42,8 +42,8 @@ bitcoin
 ccurrwidget = lain.widgets.abase({
     cmd = "curl -m5 -s 'https://coinbase.com/api/v1/prices/buy'",
     settings = function()
-		    local btc, pos, err = require("lain.util").dkjson.decode(output, 1, nil)
-				local btc_price = (not err and btc and btc["subtotal"]["amount"]) or "N/A"
+        local btc, pos, err = require("lain.util").dkjson.decode(output, 1, nil)
+        local btc_price = (not err and btc and btc["subtotal"]["amount"]) or "N/A"
         widget:set_text(btc_price)
     end
 })
