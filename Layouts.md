@@ -74,8 +74,10 @@ and `ncol` values in `awful.tag`, but you can set your own.
 
 For example, this sets `termfair` to 3 columns and at least 1 row:
 
-    lain.layout.termfair.nmaster = 3
-    lain.layout.termfair.ncol = 1
+```lua
+lain.layout.termfair.nmaster = 3
+lain.layout.termfair.ncol = 1
+```
 
 centerfair
 ----------
@@ -101,8 +103,10 @@ and `ncol` values in `awful.tag`, but you can set your own.
 
 For example:
 
-    lain.layout.centerfair.nmaster = 3
-    lain.layout.centerfair.ncol = 1
+```lua
+lain.layout.centerfair.nmaster = 3
+lain.layout.centerfair.ncol = 1
+```
 
 cascade
 -------
@@ -111,12 +115,16 @@ Cascade all windows of a tag.
 
 You can control the offsets by setting these two variables:
 
-	lain.layout.cascade.cascade_offset_x = 64
-	lain.layout.cascade.cascade_offset_y = 16
+```lua
+lain.layout.cascade.cascade_offset_x = 64
+lain.layout.cascade.cascade_offset_y = 16
+```
 
 The following reserves space for 5 windows:
 
-	lain.layout.cascade.nmaster = 5
+```lua
+lain.layout.cascade.nmaster = 5
+```
 
 That is, no window will get resized upon the creation of a new window,
 unless there's more than 5 windows.
@@ -304,7 +312,9 @@ you have to add an item called `useless_gap_width` in your `theme.lua`.
 If it doesn't exist, the width will default to 0.
 Example:
 
-	theme.useless_gap_width = 10
+```lua
+theme.useless_gap_width = 10
+```
 
 `uselesstile` patches
 =====================
@@ -328,11 +338,13 @@ They are located in ``lain/icons/layout``.
 
 To use them, add lines to your ``theme.lua`` like this:
 
-	theme.lain_icons         = os.getenv("HOME") .. "/.config/awesome/lain/icons/layout/default/"
-	theme.layout_termfair    = theme.lain_icons .. "termfairw.png"
-	theme.layout_cascade     = theme.lain_icons .. "cascadew.png"
-	theme.layout_cascadetile = theme.lain_icons .. "cascadetilew.png"
-	theme.layout_centerwork  = theme.lain_icons .. "centerworkw.png"
+```lua
+theme.lain_icons         = os.getenv("HOME") .. "/.config/awesome/lain/icons/layout/default/"
+theme.layout_termfair    = theme.lain_icons .. "termfairw.png"
+theme.layout_cascade     = theme.lain_icons .. "cascadew.png"
+theme.layout_cascadetile = theme.lain_icons .. "cascadetilew.png"
+theme.layout_centerwork  = theme.lain_icons .. "centerworkw.png"
+```
 
 Credits goes to [Nicolas Estibals](https://github.com/nestibal) for creating
 layout icons for default theme.
