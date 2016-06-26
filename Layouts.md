@@ -1,6 +1,4 @@
 
-***
-
 * [termfair](https://github.com/copycat-killer/lain/wiki/Layouts#termfair)
 * [centerfair](https://github.com/copycat-killer/lain/wiki/Layouts#centerfair)
 * [cascade](https://github.com/copycat-killer/lain/wiki/Layouts#cascade)
