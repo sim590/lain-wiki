@@ -1,6 +1,8 @@
 The [asynchronous](https://github.com/copycat-killer/lain/issues/128) version of `base`:
 
-	myasyncbase = lain.widgets.abase()
+```lua
+myasyncbase = lain.widgets.abase()
+```
 
 Read [here](https://github.com/copycat-killer/lain/wiki/base) for the rest.
 
