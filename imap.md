@@ -1,5 +1,3 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Shows mail count in a textbox fetching over IMAP.
 
 ```lua
