@@ -1,8 +1,8 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Shows in a textbox the current prices of Bitcoin to USD and Dogecoin to USD using Coinbase and Cryptsy's APIs.
 
-	ccurrwidget = lain.widgets.contrib.ccurr()
+```lua
+ccurrwidget = lain.widgets.contrib.ccurr()
+```
 
 ### input table
 
