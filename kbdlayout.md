@@ -58,7 +58,8 @@ mykbdlayout = lain.widgets.contrib.kbdlayout({
 	        { layout = "de" } },
     settings = function()
         if kbdlayout_now.variant then
-            widget:set_text(" " .. kbdlayout_now.layout .. "/" .. kbdlayout_now.variant .. " ")
+            widget:set_text(" " .. kbdlayout_now.layout .. 
+                            "/" .. kbdlayout_now.variant .. " ")
         else
             widget:set_text(" " .. kbdlayout_now.layout .. " ")
         end
