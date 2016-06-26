@@ -1,8 +1,8 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Shows MPD status in a textbox.
 
-	mpdwidget = lain.widgets.mpd()
+```lua
+mpdwidget = lain.widgets.mpd()
+```
 
 Now playing songs are notified like this:
 
@@ -64,12 +64,14 @@ Pay attention to case sensitivity when defining `music_dir`.
 
 and can modify `mpd_notification_preset` table, which will be the preset for the naughty notifications. Check [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the list of variables it can contain. Default definition:
 
-    mpd_notification_preset = {
-       title   = "Now playing",
-       timeout = 6,
-       text    = string.format("%s (%s) - %s\n%s", mpd_now.artist,
-                 mpd_now.album, mpd_now.date, mpd_now.title)
-    }
+```lua
+mpd_notification_preset = {
+   title   = "Now playing",
+   timeout = 6,
+   text    = string.format("%s (%s) - %s\n%s", mpd_now.artist,
+             mpd_now.album, mpd_now.date, mpd_now.title)
+}
+```
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followmouse` to `true` it will be shown on the current mouse screen.
 
@@ -82,26 +84,28 @@ Variable | Meaning | Type
 
 You can control the widget with key bindings like these:
 
-    -- MPD control
-    awful.key({ altkey, "Control" }, "Up",
-        function ()
-            awful.util.spawn_with_shell("mpc toggle || ncmpcpp toggle || ncmpc toggle || pms toggle")
-            mpdwidget.update()
-        end),
-    awful.key({ altkey, "Control" }, "Down",
-        function ()
-            awful.util.spawn_with_shell("mpc stop || ncmpcpp stop || ncmpc stop || pms stop")
-            mpdwidget.update()
-        end),
-    awful.key({ altkey, "Control" }, "Left",
-        function ()
-            awful.util.spawn_with_shell("mpc prev || ncmpcpp prev || ncmpc prev || pms prev")
-            mpdwidget.update()
-        end),
-    awful.key({ altkey, "Control" }, "Right",
-        function ()
-            awful.util.spawn_with_shell("mpc next || ncmpcpp next || ncmpc next || pms next")
-            mpdwidget.update()
-        end),
+```lua
+-- MPD control
+awful.key({ altkey, "Control" }, "Up",
+	function ()
+		awful.util.spawn_with_shell("mpc toggle || ncmpcpp toggle || ncmpc toggle || pms toggle")
+		mpdwidget.update()
+	end),
+awful.key({ altkey, "Control" }, "Down",
+	function ()
+		awful.util.spawn_with_shell("mpc stop || ncmpcpp stop || ncmpc stop || pms stop")
+		mpdwidget.update()
+	end),
+awful.key({ altkey, "Control" }, "Left",
+	function ()
+		awful.util.spawn_with_shell("mpc prev || ncmpcpp prev || ncmpc prev || pms prev")
+		mpdwidget.update()
+	end),
+awful.key({ altkey, "Control" }, "Right",
+	function ()
+		awful.util.spawn_with_shell("mpc next || ncmpcpp next || ncmpc next || pms next")
+		mpdwidget.update()
+	end),
+```
 
 where `altkey = "Mod1"`.
