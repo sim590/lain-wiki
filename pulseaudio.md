@@ -1,8 +1,8 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Shows and controls PulseAudio volume with a textbox.
 
-	volumewidget = lain.widgets.pulseaudio()
+```lua
+volumewidget = lain.widgets.pulseaudio()
+```
 
 ### input table
 
@@ -77,3 +77,19 @@ awful.key({ altkey }, "m",
 ```
 
 where `altkey = "Mod1"`.
+
+### Widget example
+
+```lua
+-- PulseAudio volume (based on multicolor theme)
+volumewidget = lain.widgets.pulseaudio({
+    settings = function()
+        vlevel = volume_now.left .. "-" .. volume_now.right .. "%"
+        if volume_now.muted == "yes" then
+            vlevel = vlevel .. " M"
+        end
+
+        widget:set_markup(markup("#7493d2", vlevel))
+    end
+})
+```
