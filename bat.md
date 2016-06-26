@@ -1,11 +1,11 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Shows in a textbox the remaining time and percentage capacity of your laptop battery, as well as
 the current wattage. [Multiple batteries are supported](https://github.com/copycat-killer/lain/pull/201).
 
 Displays a notification when battery is low or critical.
 
-	mybattery = lain.widgets.bat()
+```lua
+mybattery = lain.widgets.bat()
+```
 
 ### input table
 
