@@ -1,9 +1,9 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Attaches a calendar notification to a widget.
+
 ```lua
-    lain.widgets.calendar:attach(widget, args)
+lain.widgets.calendar:attach(widget, args)
 ```
+
 - Left click / scroll down: switch to previous month.
 - Right click / scroll up: switch to next month.
 
@@ -32,19 +32,23 @@ Notification will show an icon displaying current day, and formatted output
 from ``cal`` with current day highlighted.
 
 You can call the notification with a key binding like this:
+
 ```lua
-    awful.key({ altkey }, "c", function ()
-        lain.widgets.calendar:show(7)
-    end),
+awful.key({ altkey }, "c", function ()
+    lain.widgets.calendar:show(7)
+end),
 ```
+
 where ``altkey = "Mod1"`` and ``show`` argument is an optional integer, meaning timeout seconds.
 
 You can also call it defining a notification screen with a third argument like this:
+
 ```lua
-    awful.key({ altkey }, "c", function ()
-        lain.widgets.calendar:show(7, 0, my_scr_number)
-    end),
+awful.key({ altkey }, "c", function ()
+    lain.widgets.calendar:show(7, 0, my_scr_number)
+end),
 ```
+
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
 ### Note
