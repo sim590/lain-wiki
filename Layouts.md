@@ -17,17 +17,21 @@ Usage
 
 Just add your favourites to ``layouts`` table:
 
-    layouts =
-    {
-        ...
-        lain.layout.termfair,
-        lain.layout.uselesstile,
-        ...
-    }
+```lua
+layouts =
+{
+    --[...]
+   lain.layout.termfair,
+   lain.layout.uselesstile,
+   -- [...]
+}
+```
 
 Or set them on specific tags like this:
 
-	awful.layout.set(lain.layout.uselessfair, tags[1][7])
+```lua
+awful.layout.set(lain.layout.uselessfair, tags[1][7])
+```
 
 How do layouts work?
 ====================
