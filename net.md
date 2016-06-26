@@ -1,5 +1,3 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Monitors network interfaces and shows current traffic in a textbox. 
 
 ```lua
