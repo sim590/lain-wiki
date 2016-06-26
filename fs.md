@@ -12,7 +12,7 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds -| int | 600
 `partition` | Partition to monitor | string | "/"
-`notification_preset` | Notification preset | table | {fg = beautiful.fg_normal}
+`notification_preset` | Notification preset | table | `{ fg = beautiful.fg_normal }`
 `followmouse` | Display the notification on mouse screen | boolean | false
 `settings` | User settings | function | empty function
 
