@@ -3,7 +3,9 @@ separators
 
 Adds Cairo separators.
 
-    local separators = lain.util.separators
+```lua
+local separators = lain.util.separators
+```
 
 A separator function `separators.separator` takes two color arguments, defined as strings. `"alpha"` argument is allowed. [Example](https://github.com/copycat-killer/awesome-copycats/blob/master/rc.lua.powerarrow-darker#L254-255). 
 
@@ -21,7 +23,9 @@ markup
 
 Mades markup easier.
 
-    local markup = lain.util.markup
+```lua
+local markup = lain.util.markup
+```
 
 List of functions:
 
@@ -56,9 +60,11 @@ List of functions:
 
 they all take one argument, which is the text to markup, except `font`, `fg.color` and `bg.color`:
 
-    markup.font(font, text)
-    markup.fg.color(color, text)
-    markup.bg.color(color, text)
+```lua
+markup.font(font, text)
+markup.fg.color(color, text)
+markup.bg.color(color, text)
+```
 
 `focus`, `normal` and `urgent` use `beautiful` variables.
 
@@ -76,11 +82,13 @@ If you delete a tag, any rule set on it shall be broken, so be careful.
 
 Use it with key bindings like these:
 
-    awful.key({ modkey, "Shift" }, "n", function () lain.util.add_tag(mypromptbox) end),
-    awful.key({ modkey, "Shift" }, "r", function () lain.util.rename_tag(mypromptbox) end),
-    awful.key({ modkey, "Shift" }, "Left", function () lain.util.move_tag(1) end),  -- move to next tag
-    awful.key({ modkey, "Shift" }, "Right", function () lain.util.move_tag(-1) end), -- move to previous tag
-    awful.key({ modkey, "Shift" }, "d", function () lain.util.remove_tag() end),
+```lua
+awful.key({ modkey, "Shift" }, "n", function () lain.util.add_tag(mypromptbox) end),
+awful.key({ modkey, "Shift" }, "r", function () lain.util.rename_tag(mypromptbox) end),
+awful.key({ modkey, "Shift" }, "Left", function () lain.util.move_tag(1) end),  -- move to next tag
+awful.key({ modkey, "Shift" }, "Right", function () lain.util.move_tag(-1) end), -- move to previous tag
+awful.key({ modkey, "Shift" }, "d", function () lain.util.remove_tag() end),
+```
 
 **Note** that these function won't work properly with [Copland theme](https://github.com/copycat-killer/awesome-copycats) or any other configuration that already uses a dynamic tagging module like [Eminent](https://github.com/copycat-killer/awesome-copycats/tree/master/eminent).
 
@@ -93,17 +101,21 @@ The function takes an integer argument, being the amount of pixel to add/remove 
 
 You could use it with these keybindings:
 
-    -- On the fly useless gaps change
-    awful.key({ altkey, "Control" }, "+", function () lain.util.useless_gaps_resize(1) end),
-    awful.key({ altkey, "Control" }, "-", function () lain.util.useless_gaps_resize(-1) end),
+```lua
+-- On the fly useless gaps change
+awful.key({ altkey, "Control" }, "+", function () lain.util.useless_gaps_resize(1) end),
+awful.key({ altkey, "Control" }, "-", function () lain.util.useless_gaps_resize(-1) end),
+```
 
 where `altkey=Mod1`, or you could use it like this:
 
-    mywidget:buttons(awful.util.table.join (
-          awful.button({}, 4, function() lain.util.useless_gaps_resize(-1) end),
-          awful.button({}, 5, function() lain.util.useless_gaps_resize(1) end)
-          end)
-    ))
+```lua
+mywidget:buttons(awful.util.table.join (
+        awful.button({}, 4, function() lain.util.useless_gaps_resize(-1) end),
+        awful.button({}, 5, function() lain.util.useless_gaps_resize(1) end)
+    end)
+))
+```
 
 so when hovering the mouse over `mywidget`, you can adjust useless gaps size by scrolling with the mouse wheel.
 
@@ -119,9 +131,11 @@ It takes two arguments:
 
 You can use it with key bindings like these:
 
-    -- Non-empty tag browsing
-    awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end),
-    awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end),
+```lua
+-- Non-empty tag browsing
+awful.key({ altkey }, "Left", function () lain.util.tag_view_nonempty(-1) end),
+awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end),
+```
 
 where `altkey = "Mod1"`.
 
@@ -131,12 +145,13 @@ menu\_clients\_current\_tags
 Similar to `awful.menu.clients`, but this menu only shows the clients
 of currently visible tags. Use it with a key binding like this:
 
-    awful.key({ "Mod1" }, "Tab",
-    function()
-        awful.menu.menu_keys.down = { "Down", "Alt_L", "Tab", "j" }
-        awful.menu.menu_keys.up = { "Up", "k" }
-        lain.util.menu_clients_current_tags({ width = 350 }, { keygrabber = true })
-    end),
+```lua
+awful.key({ "Mod1" }, "Tab", function()
+    awful.menu.menu_keys.down = { "Down", "Alt_L", "Tab", "j" }
+    awful.menu.menu_keys.up = { "Up", "k" }
+    lain.util.menu_clients_current_tags({ width = 350 }, { keygrabber = true })
+end),
+```
 
 magnify\_client
 ---------------
@@ -146,11 +161,13 @@ layout does it. Place it on the "current" screen (derived from the mouse
 position). This allows you to magnify any client you wish, regardless of
 the currently used layout. Use it with a client keybinding like this:
 
-	clientkeys = awful.util.table.join(
-		...
-		awful.key({ modkey, "Control" }, "m", lain.util.magnify_client),
-		...
-	)
+```lua
+clientkeys = awful.util.table.join(
+    -- [...]
+    awful.key({ modkey, "Control" }, "m", lain.util.magnify_client),
+    -- [...]
+)
+```
 
 If you want to "de-magnify" it, just retype the keybinding.
 
@@ -161,13 +178,17 @@ niceborder\_{focus, unfocus}
 
 By default, your `rc.lua` contains something like this:
 
-	client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
-	client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+```lua
+client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
+client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+```
 
 You can change it to this:
 
-	client.connect_signal("focus", lain.util.niceborder_focus(c))
-	client.connect_signal("unfocus", lain.util.niceborder_unfocus(c))
+```lua
+client.connect_signal("focus", lain.util.niceborder_focus(c))
+client.connect_signal("unfocus", lain.util.niceborder_unfocus(c))
+```
 
 Now, when a client is focused or unfocused, Awesome will look up its
 nice value in `/proc/<pid>/stat`. If it's less than 0, the client is
@@ -177,8 +198,9 @@ happens.
 
 This requires to define additional colors in your `theme.lua`. For example:
 
-	theme.border_focus_highprio  = "#FF0000"
-	theme.border_normal_highprio = "#A03333"
-
-	theme.border_focus_lowprio   = "#3333FF"
-	theme.border_normal_lowprio  = "#333366"
+```lua
+theme.border_focus_highprio  = "#FF0000"
+theme.border_normal_highprio = "#A03333"
+theme.border_focus_lowprio   = "#3333FF"
+theme.border_normal_lowprio  = "#333366"
+```
