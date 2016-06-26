@@ -10,7 +10,7 @@ for s = 1, screen.count() do
 end
 ```
 
-Input table:
+**Input table**
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -27,7 +27,11 @@ Variable | Meaning | Type | Default
 
 `height` and `width` express a fraction of the workspace.
 
-*Note*: if your application right border exceeds workspace, try setting `width = 0.999`.
+**Notes**
+
+* If your application right border exceeds workspace, try setting `width = 0.999`.
+* If your application is a terminal and you have a rule like `awful.client.setslave` for your terminals, ensure you use an exception for `QuakeDD` (or your defined `name`). Otherwise, you may run into problems with focus.
+
 
 separators
 ----------
