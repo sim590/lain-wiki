@@ -1,15 +1,19 @@
+* [Usage](https://github.com/copycat-killer/lain/wiki/Layouts#Usage)
+* How do layouts work?
+  * [termfair](https://github.com/copycat-killer/lain/wiki/Layouts#termfair)
+  * [centerfair](https://github.com/copycat-killer/lain/wiki/Layouts#centerfair)
+  * [cascade](https://github.com/copycat-killer/lain/wiki/Layouts#cascade)
+  * [cascadetile](https://github.com/copycat-killer/lain/wiki/Layouts#cascadetile)
+  * [centerwork](https://github.com/copycat-killer/lain/wiki/Layouts#centerwork)
+  * [centerworkd](https://github.com/copycat-killer/lain/wiki/Layouts#centerworkd)
+  * [uselessfair](https://github.com/copycat-killer/lain/wiki/Layouts#uselessfair)
+  * [uselesspiral](https://github.com/copycat-killer/lain/wiki/Layouts#uselesspiral)
+  * [uselesstile](https://github.com/copycat-killer/lain/wiki/Layouts#uselesstile)
+* [Useless gaps](https://github.com/copycat-killer/lain/wiki/Layouts#useless-gaps)
+* [What about icons?](https://github.com/copycat-killer/lain/wiki/Layouts#what-about-icons)
 
-* [termfair](https://github.com/copycat-killer/lain/wiki/Layouts#termfair)
-* [centerfair](https://github.com/copycat-killer/lain/wiki/Layouts#centerfair)
-* [cascade](https://github.com/copycat-killer/lain/wiki/Layouts#cascade)
-* [cascadetile](https://github.com/copycat-killer/lain/wiki/Layouts#cascadetile)
-* [centerwork](https://github.com/copycat-killer/lain/wiki/Layouts#centerwork)
-* [centerworkd](https://github.com/copycat-killer/lain/wiki/Layouts#centerworkd)
-* [uselessfair](https://github.com/copycat-killer/lain/wiki/Layouts#uselessfair)
-* [uselesspiral](https://github.com/copycat-killer/lain/wiki/Layouts#uselesspiral)
-* [uselesstile](https://github.com/copycat-killer/lain/wiki/Layouts#uselesstile)
-
-===
+Usage
+=====
 
 Just add your favourites to ``layouts`` table:
 
@@ -26,7 +30,7 @@ Or set them on specific tags like this:
 	awful.layout.set(lain.layout.uselessfair, tags[1][7])
 
 How do layouts work?
-=========================
+====================
 
 termfair
 --------
@@ -129,11 +133,13 @@ and anything else means "don't overlap windows".
 
 Usage example:
 
-	lain.layout.cascadetile.cascade_offset_x = 2
-	lain.layout.cascadetile.cascade_offset_y = 32
-	lain.layout.cascadetile.extra_padding = 5
-    lain.layout.cascadetile.nmaster = 5
-    lain.layout.cascadetile.ncol = 1
+```lua
+lain.layout.cascadetile.cascade_offset_x = 2
+lain.layout.cascadetile.cascade_offset_y = 32
+lain.layout.cascadetile.extra_padding = 5
+lain.layout.cascadetile.nmaster = 5
+lain.layout.cascadetile.ncol = 1
+```
 
 `extra_padding` reduces the size of the master window if "overlapping
 slave column" is activated. This allows you to see if there are any
@@ -183,10 +189,12 @@ floating mode. **This is intentional**.
 You can set the order of the four auxiliary windows. This is the default
 configuration:
 
-	lain.layout.centerwork.top_left = 0
-	lain.layout.centerwork.top_right = 1
-	lain.layout.centerwork.bottom_left = 2
-	lain.layout.centerwork.bottom_right = 3
+```lua
+lain.layout.centerwork.top_left = 0
+lain.layout.centerwork.top_right = 1
+lain.layout.centerwork.bottom_left = 2
+lain.layout.centerwork.bottom_right = 3
+```
 
 This means: The bottom left slot will be occupied by the third window
 (not counting the main window). Suppose you want your windows to appear
@@ -207,10 +215,12 @@ in this order:
 
 This would require you to use these settings:
 
-	lain.layout.centerwork.top_left = 3
-	lain.layout.centerwork.top_right = 0
-	lain.layout.centerwork.bottom_left = 2
-	lain.layout.centerwork.bottom_right = 1
+```lua
+lain.layout.centerwork.top_left = 3
+lain.layout.centerwork.top_right = 0
+lain.layout.centerwork.bottom_left = 2
+lain.layout.centerwork.bottom_right = 1
+```
 
 *Please note:* If you use Awesome's default configuration, navigation in
 this layout may be very confusing. How do you get from the main window
@@ -218,30 +228,32 @@ to satellite ones depends on the order in which the windows are opened.
 Thus, use of `awful.client.focus.bydirection()` is suggested.
 Here's an example:
 
-	globalkeys = awful.util.table.join(
-        ...
-	    awful.key({ modkey }, "j",
-	        function()
-	            awful.client.focus.bydirection("down")
-	            if client.focus then client.focus:raise() end
-	        end),
-	    awful.key({ modkey }, "k",
-	        function()
-	            awful.client.focus.bydirection("up")
-	            if client.focus then client.focus:raise() end
-	        end),
-	    awful.key({ modkey }, "h",
-	        function()
-	            awful.client.focus.bydirection("left")
-	            if client.focus then client.focus:raise() end
-	        end),
-	    awful.key({ modkey }, "l",
-	        function()
-	            awful.client.focus.bydirection("right")
-	            if client.focus then client.focus:raise() end
-	        end),
-	    ...
-	)
+```lua
+globalkeys = awful.util.table.join(
+    -- [...]
+    awful.key({ modkey }, "j",
+        function()
+            awful.client.focus.bydirection("down")
+            if client.focus then client.focus:raise() end
+        end),
+    awful.key({ modkey }, "k",
+        function()
+            awful.client.focus.bydirection("up")
+            if client.focus then client.focus:raise() end
+        end),
+    awful.key({ modkey }, "h",
+        function()
+            awful.client.focus.bydirection("left")
+            if client.focus then client.focus:raise() end
+        end),
+    awful.key({ modkey }, "l",
+        function()
+            awful.client.focus.bydirection("right")
+            if client.focus then client.focus:raise() end
+        end),
+    -- [...]
+)
+```
 
 centerhwork
 -----------
