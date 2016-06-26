@@ -196,7 +196,7 @@ classified as "high priority"; if it's greater than 0, the client is
 classified as "low priority". If it's equal to 0, nothing special
 happens.
 
-This requires to define additional colors in your `theme.lua`. For example:
+This requires to define additional colors in your `theme.lua`:
 
 ```lua
 theme.border_focus_highprio  = "#FF0000"
