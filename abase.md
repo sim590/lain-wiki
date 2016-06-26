@@ -39,7 +39,7 @@ bitcoin
 
 ```lua
 -- Bitconin to USD current price, using Coinbase V1 API
-ccurrwidget = lain.widgets.abase({
+bitcoinwidget = lain.widgets.abase({
     cmd = "curl -m5 -s 'https://coinbase.com/api/v1/prices/buy'",
     settings = function()
         local btc, pos, err = require("lain.util").dkjson.decode(output, 1, nil)
