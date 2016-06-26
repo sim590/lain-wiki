@@ -1,5 +1,3 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Shows and controls ALSA volume with a progressbar; provides tooltips, notifications, and color changes at mute/unmute switch.
 
 	volume = lain.widgets.alsabar()
