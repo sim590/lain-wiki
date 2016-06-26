@@ -15,6 +15,7 @@
   * [What about icons?](https://github.com/copycat-killer/lain/wiki/Layouts#what-about-icons)
 * [Widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
 * [Utilities](https://github.com/copycat-killer/lain/wiki/Utilities)
+    * [quake](https://github.com/copycat-killer/lain/wiki/Utilities#quake)
     * [separators](https://github.com/copycat-killer/lain/wiki/Utilities#separators)
     * [markup](https://github.com/copycat-killer/lain/wiki/Utilities#)
     * [dynamic tagging](https://github.com/copycat-killer/lain/wiki/Utilities#)
