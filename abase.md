@@ -44,6 +44,8 @@ bitcoinwidget = lain.widgets.abase({
     settings = function()
         local btc, pos, err = require("lain.util").dkjson.decode(output, 1, nil)
         local btc_price = (not err and btc and btc["subtotal"]["amount"]) or "N/A"
+
+        -- customize here
         widget:set_text(btc_price)
     end
 })
