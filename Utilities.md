@@ -4,6 +4,12 @@ quake
 Quake-like dropdown applications.
 
 ```lua
+lain.util.quake()
+```
+
+**Usage**
+
+```lua
 local quakeapp = {}
 for s = 1, screen.count() do
    quakeapp[s] = lain.util.quake()
