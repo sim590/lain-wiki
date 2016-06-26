@@ -1,10 +1,10 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 This is a simple template widget.
 
 Basically, all it does is to execute an input `cmd`, and to fill its textbox with the output.
 
-	mybase = lain.widgets.base()
+```lua
+mybase = lain.widgets.base()
+```
 
 ### input table
 
