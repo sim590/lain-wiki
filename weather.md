@@ -1,5 +1,3 @@
-[<- widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-
 Provides current weather status widgets and X-days forecast popup notifications.
 
 Uses [OpenWeatherMap](http://openweathermap.org/api) API.
@@ -118,25 +116,33 @@ In multiple screen setups, the default behaviour is to show a visual notificatio
 ## Usage
 The module creates an imagebox icon and a textbox widget. Add them to you wibox like this:
 
-    right_layout:add(myweather)
-    right_layout:add(myweather.icon)
+```lua
+right_layout:add(myweather)
+right_layout:add(myweather.icon)
+```
 
 ### attach
 You can attach the forecast notification to any widget like this:
 
-    myweather.attach(obj)
+```lua
+myweather.attach(obj)
+```
 
 Hovering over ``obj`` will display the notification.
 
 ### update
 
-    myweather.update()
+```lua
+myweather.update()
+```
 
 Force fetching of current weather status data. Useful when combined with other widgets workflow (for instance, it can be called from net widget when the internet connection is restored).
 
 ### forecast_update
 
-    myweather.forecast_update()
+```lua
+myweather.forecast_update()
+```
 
 Like above, but for the forecast notification.
 
@@ -144,6 +150,8 @@ Like above, but for the forecast notification.
 
 You can also create a keybinding for the weather popup like this:
 
-    awful.key( { "Mod1" }, "w", function () myweather.show(5) end )
+```lua
+awful.key( { "Mod1" }, "w", function () myweather.show(5) end )
+```
 
 where ``show`` argument is an integer defining timeout seconds.
