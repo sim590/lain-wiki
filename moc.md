@@ -1,4 +1,6 @@
-A widget for showing the current song track's information from MOC (Music On Console). Also provides next track notifications using naughty
+A widget for showing the current song track's information from MOC (Music On Console). 
+
+It also provides next track notifications using Naughty.
 
 ```lua
 mocwidget = lain.widgets.contrib.moc()
