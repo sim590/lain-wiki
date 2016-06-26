@@ -339,7 +339,8 @@ They are located in ``lain/icons/layout``.
 To use them, add lines to your ``theme.lua`` like this:
 
 ```lua
-theme.lain_icons         = os.getenv("HOME") .. "/.config/awesome/lain/icons/layout/default/"
+theme.lain_icons         = os.getenv("HOME") .. 
+                           "/.config/awesome/lain/icons/layout/default/"
 theme.layout_termfair    = theme.lain_icons .. "termfairw.png"
 theme.layout_cascade     = theme.lain_icons .. "cascadew.png"
 theme.layout_cascadetile = theme.lain_icons .. "cascadetilew.png"
