@@ -1,6 +1,8 @@
 Shows and controls ALSA volume with a textbox.
 
-	volumewidget = lain.widgets.alsa()
+```lua
+volumewidget = lain.widgets.alsa()
+```
 
 ### input table
 
