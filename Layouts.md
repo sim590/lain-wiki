@@ -323,5 +323,3 @@ Credits goes to [Nicolas Estibals](https://github.com/nestibal) for creating
 layout icons for default theme.
 
 You can use them as a template for your custom versions.
-
-[<- home](https://github.com/copycat-killer/lain/wiki)
