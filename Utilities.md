@@ -49,7 +49,7 @@ Adds Cairo separators.
 local separators = lain.util.separators
 ```
 
-A separator function `separators.separator` takes two color arguments, defined as strings. `"alpha"` argument is allowed. [Example](https://github.com/copycat-killer/awesome-copycats/blob/master/rc.lua.powerarrow-darker#L254-255). 
+A separator function `separators.separator` takes two color arguments, defined as strings. `"alpha"` argument is allowed. [Example](https://github.com/copycat-killer/awesome-copycats/blob/master/rc.lua.powerarrow-darker#L261-262). 
 
 You can customize height and width by setting `awful_widget_height` and `separators_width` in your `theme.lua`. Default values are 0 and 9, respectively.
 
