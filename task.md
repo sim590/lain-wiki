@@ -15,6 +15,7 @@ Variable | Meaning | Type | Default
 `timeout` | Notification timeout seconds | int | 7
 `scr_pos` | Notification screen | int | 1
 `followmouse` | Notification behaviour | boolean | false
+`cmdline` | Taskwarrior command | string | "next"
 
 `position` possible values are defined [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify).
 
