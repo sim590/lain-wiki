@@ -14,6 +14,8 @@ Variable | Meaning | Type | Default
 `partition` | Partition to monitor | string | "/"
 `notification_preset` | Notification preset | table | `{ fg = beautiful.fg_normal }`
 `followmouse` | Display the notification on mouse screen | boolean | false
+`notify` | Display "partition is empty" notifications | string | "on"
+`showpopup` | Display pop-up window with df output | string | "on"
 `settings` | User settings | function | empty function
 
 `settings` can use the following `partition` related float values: `fs_now.used`, `fs_now.available`, `fs_now.size_mb`, `fs_now.size_gb`.
