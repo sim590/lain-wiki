@@ -16,6 +16,7 @@ Variable | Meaning | Type | Default
 `scr_pos` | Notification screen | int | 1
 `followmouse` | Notification behaviour | boolean | false
 `cmdline` | Taskwarrior command to show in the popup | string | "next"
+`font` | Pop-up font | string | `beautiful.font`
 
 The tasks are shown in a notification popup when the mouse is moved over the attached `widget`, and the popup is hidden when the mouse is moved away. By default the notification will show the output of `task next`. With `cmdline`, the parameters for the `task` process can be customized, for example if you want to [filter the tasks](https://taskwarrior.org/docs/filter.html) or show a [custom report](https://github.com/copycat-killer/lain/pull/213).
 
