@@ -27,7 +27,9 @@ Usage
 
 First, include it into your `rc.lua`:
 
-    local lain = require("lain")
+```lua
+local lain = require("lain")
+```
 
 Then check out the submodules you want:
 
