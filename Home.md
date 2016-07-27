@@ -19,7 +19,7 @@ Installation
 ### Other distributions
 
 ```shell
-git clone https://github.com/copycat-killer/lain.git ~/.config/awesome/lain
+git clone --recursive https://github.com/copycat-killer/lain.git ~/.config/awesome/lain
 ```
 
 Usage
