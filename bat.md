@@ -28,7 +28,7 @@ To disable warning notifications, set `notify` to `"off"`.
 
 - `status`, first battery status ("N/A", "Discharging", "Charging", "Full");
 - `n_status[i]`, i-th battery status (like above);
-- `ac_status`, AC-plug flag (0 or 1, meaning cable plugged/not plugged; "N/A" if uncorrectly set);
+- `ac_status`, AC-plug flag (0 for cable unplugged, 1 for plugged, "N/A" otherwise);
 - `perc`, charge percentage (integer between 0 and 100 or "N/A");
 - `time`, time remaining until charge if charging, until discharge if discharging (HH:SS string or "N/A");
 - `watt`, battery watts (float with 2 decimals).
