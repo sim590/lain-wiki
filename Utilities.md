@@ -38,8 +38,6 @@ Variable | Meaning | Type | Default
 * If your application right border exceeds workspace, try setting `width = 0.999`.
 * If your application is a terminal and you have a rule like `awful.client.setslave` for your terminals, ensure you use an exception for `QuakeDD` (or your defined `name`). Otherwise, you may run into problems with focus.
 * Are you using a GTK+ application like termite? Be sure to set [`argname = "--name %s"`](https://github.com/copycat-killer/lain/issues/211).
-* In case it's not obvious, being this a drop-down container, [it shouldn't be used with drop-down already applications like Guake](https://github.com/copycat-killer/awesome-copycats/issues/117).
-
 
 separators
 ----------
