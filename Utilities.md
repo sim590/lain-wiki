@@ -23,8 +23,10 @@ Variable | Meaning | Type | Default
 `app` | application to spawn | string | "xterm"
 `name` | window name | string | "QuakeDD"
 `argname` | how to specify window name | string | "-name %s"
+`extra` | extra `app` arguments | string | empty string
 `visible` | initially visible | boolean | false
 `screen` | screen | int | `capi.mouse.screen`
+`border` | border width | int | 1
 `wibox_height` | statusbar weight | int | 18
 `height` | dropdown window height | float in [0,1] | 0.25  
 `width` | dropdown window width | float in [0,1] | 1
