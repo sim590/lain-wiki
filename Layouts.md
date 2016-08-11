@@ -347,7 +347,7 @@ theme.layout_cascadetile = theme.lain_icons .. "cascadetilew.png"
 theme.layout_centerwork  = theme.lain_icons .. "centerworkw.png"
 ```
 
-Credits goes to [Nicolas Estibals](https://github.com/nestibal) for creating
+Credits go to [Nicolas Estibals](https://github.com/nestibal) for creating
 layout icons for default theme.
 
 You can use them as a template for your custom versions.
