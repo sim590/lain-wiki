@@ -28,8 +28,8 @@ Variable | Meaning | Type | Default
 `screen` | screen | int | `capi.mouse.screen`
 `border` | border width | int | 1
 `wibox_height` | statusbar weight | int | 18
-`height` | dropdown window height | float in [0,1] | 0.25  
-`width` | dropdown window width | float in [0,1] | 1
+`height` | dropdown window height | float in [0,1] or exact pixel size | 0.25  
+`width` | dropdown window width | float in [0,1] or exact pixel size | 1
 `vert` | vertical position | string, possible values: "top", "bottom", "center" | "top"
 `horiz` | horizontal position | string, possible values: "left", "right", "center" | "center"
 
