@@ -12,7 +12,7 @@ mybattery = lain.widgets.bat()
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 30
-`battery | Single battery id | string | "BAT0"
+`battery` | Single battery id | string | "BAT0"
 `batteries` | Multiple batteries id table | table of strings | {"BAT0"}
 `ac` | AC | string | "AC0"
 `notify` | Show notification popups | string | "on"
@@ -29,7 +29,8 @@ To disable warning notifications, set `notify` to `"off"`.
 - `status`, first battery status ("N/A", "Discharging", "Charging", "Full");
 - `n_status[i]`, i-th battery status (like above);
 - `ac_status`, AC-plug flag (0 if cable is unplugged, 1 if plugged, "N/A" otherwise);
-- `perc`, charge percentage (integer between 0 and 100 or "N/A");
+- `perc`, total charge percentage (integer between 0 and 100 or "N/A");
+- `n_perc`, i-th battery charge percentage (like above);
 - `time`, time remaining until charge if charging, until discharge if discharging (HH:SS string or "N/A");
 - `watt`, battery watts (float with 2 decimals).
 
