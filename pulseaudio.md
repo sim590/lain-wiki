@@ -72,6 +72,11 @@ awful.key({ altkey }, "m",
         os.execute(string.format("pactl set-sink-mute %d toggle", volumewidget.sink))
         volumewidget.update()
     end),
+awful.key({ altkey, "Control" }, "m",
+    function ()
+	os.execute(string.format("amixer set %s 100%%", volume.sink))
+	volume.update()
+    end),
 ```
 
 where `altkey = "Mod1"`.
