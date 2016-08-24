@@ -61,3 +61,31 @@ Variable | Meaning | Type
 `notify` | The notification | function
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
+
+You can control the widget with key bindings like these:
+
+```lua
+-- PulseAudio volume control
+awful.key({ altkey }, "Up",
+	function ()
+		os.execute(string.format("pactl set-sink-volume %s +1%%", volume.sink))
+		volume.update()
+	end),
+awful.key({ altkey }, "Down",
+	function ()
+		os.execute(string.format("pactl set-sink-volume %s -1%%", volume.sink))
+		volume.update()
+	end),
+awful.key({ altkey }, "m",
+	function ()
+		os.execute(string.format("pactl set-sink-mute %s toggle", volume.sink))
+		volume.update()
+	end),
+awful.key({ altkey, "Control" }, "m",
+	function ()
+		os.execute(string.format("amixer set %s 100%%", volume.sink))
+		volume.update()
+	end),
+```
+
+where `altkey = "Mod1"`.
