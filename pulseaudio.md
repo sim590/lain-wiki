@@ -67,11 +67,7 @@ awful.key({ altkey }, "Down",
     end),
 awful.key({ altkey }, "m",
     function ()
-        if volumewidget.muted == "yes" then
-            os.execute(string.format("pactl set-sink-mute %d no", volumewidget.sink))
-        else
-            os.execute(string.format("pactl set-sink-mute %d yes", volumewidget.sink))
-        end
+        os.execute(string.format("pactl set-sink-mute %d toggle", volumewidget.sink))
         volumewidget.update()
     end),
 ```
