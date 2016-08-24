@@ -21,7 +21,7 @@ Variable | Meaning | Type | Default
 	muted: no
 ```
 
-**Note:** if current default sink is not your actual used sink, you can reset it like this: `pacmd set-default-sink #sink`.
+**Note:** you can set PulseAudio default sink like this: `pacmd set-default-sink #sink`.
 
 If `sed` doesn't work, you can try with `grep`:
 
