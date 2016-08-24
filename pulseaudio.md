@@ -74,8 +74,8 @@ awful.key({ altkey }, "m",
     end),
 awful.key({ altkey, "Control" }, "m",
     function ()
-	os.execute(string.format("amixer set %s 100%%", volume.sink))
-	volume.update()
+        os.execute(string.format("amixer set %s 100%%", volume.sink))
+        volume.update()
     end),
 ```
 
