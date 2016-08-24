@@ -13,13 +13,15 @@ Variable | Meaning | Type | Default
 `scallback` | PulseAudio Sink callback | function | nil  
 `settings` | User settings | function | empty function
 
-`cmd` catch infos from current used sink. You can redefine it, being sure that the ouput is something like this:
+`cmd` catch infos from current default sink. You can redefine it, being sure that the ouput is something like this:
 
 ```shell
   * index: 0
 	volume: 0:  100% 1:  100%
 	muted: no
 ```
+
+Note: ff current default sink is not your actual used sink, you can reset it like this: `pacmd set-default-sink #sink`.
 
 If `sed` doesn't work, you can try with `grep`:
 
