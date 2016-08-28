@@ -22,7 +22,7 @@ Variable | Meaning | Type | Default
 `cmd` | ALSA mixer command | string | "amixer"
 `channel` | Mixer channel | string | "Master"
 `togglechannel` | Toggle channel | string | `nil`
-`step` | Step at which volume is increased/decreased | string | "2%"
+`step` | Step at which volume is increased/decreased | string | "1%"
 `colors` | Bar colors | table | see **colors**
 `notifications` | Notifications settings | table | see **notifications**
 `followmouse` | Notification behaviour | bool | false
