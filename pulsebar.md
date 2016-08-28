@@ -59,6 +59,7 @@ Variable | Meaning | Type
 `card` | pulse card | string
 `step` | Increase/decrease step | string
 `notify` | The notification | function
+`update` | Update state | function
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
