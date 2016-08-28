@@ -20,13 +20,47 @@ Variable | Meaning | Type | Default
 `ticks_size` | Ticks size | int | 7
 `vertical` | Set the bar vertical | boolean | false
 `cmd` | ALSA mixer command | string | "amixer"
-`channel` | Mixer channel | string | "Master" 
+`channel` | Mixer channel | string | "Master"
+`togglechannel` | Toggle channel | string | `nil`
 `step` | Step at which volume is increased/decreased | string | "2%"
 `colors` | Bar colors | table | see **colors**
 `notifications` | Notifications settings | table | see **notifications**
 `followmouse` | Notification behaviour | bool | false
 
 `cmd` is useful if you need to pass additional arguments to  `amixer`. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
+
+In case you are using an HDMI output, and mute toggling can't be mapped to `Master`, define `togglechannel` argument as your S/PDIF device. You can know the correct ID device with `amixer`'s `scontents` command. 
+
+For instance, if card number is 1 and S/PDF number is 3:
+
+```shell
+$ amixer -c1 scontents
+Simple mixer control 'Master',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 255
+  Front Left: 255 [100%]
+  Front Right: 255 [100%]
+Simple mixer control 'IEC958',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',1
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',2
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',3
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+```
+
+you have to set `togglechannel = "IEC958,3"`.
 
 ### colors
 
@@ -63,6 +97,7 @@ Variable | Meaning | Type
 `card` | Alsa card | string
 `step` | Increase/decrease step | string
 `notify` | The notification | function
+`update` | Update state | function
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
@@ -90,11 +125,11 @@ awful.key({ altkey, "Control" }, "m",
 		os.execute(string.format("amixer set %s 100%%", volume.channel))
 		volume.update()
 	end),
+awful.key({ altkey, "Control" }, "0",
+	function ()
+		os.execute(string.format("amixer set %s 0%%", volume.channel))
+		volume.update()
+	end),
 ```
 
 where `altkey = "Mod1"`.
-
-Toggle mute issue
------------------
-
-Problems unmuting PCM? Check [here](https://github.com/copycat-killer/awesome-copycats/issues/95).
