@@ -83,7 +83,12 @@ awful.key({ altkey }, "m",
 	end),
 awful.key({ altkey, "Control" }, "m",
 	function ()
-		os.execute(string.format("amixer set %s 100%%", volume.sink))
+		os.execute(string.format("pactl set-sink-volume %s 100%%", volume.sink))
+		volume.update()
+	end),
+awful.key({ altkey, "Control" }, "m",
+	function ()
+		os.execute(string.format("pactl set-sink-volume %s 0%%", volume.sink))
 		volume.update()
 	end),
 ```
