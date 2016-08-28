@@ -86,7 +86,7 @@ awful.key({ altkey, "Control" }, "m",
 		os.execute(string.format("pactl set-sink-volume %s 100%%", volume.sink))
 		volume.update()
 	end),
-awful.key({ altkey, "Control" }, "m",
+awful.key({ altkey, "Control" }, "0",
 	function ()
 		os.execute(string.format("pactl set-sink-volume %s 0%%", volume.sink))
 		volume.update()
