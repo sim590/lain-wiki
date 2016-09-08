@@ -46,10 +46,10 @@ myimapcheck = lain.widgets.imap({
 
 and you'll have the same security provided by `~/.netrc`.
 
-**Or** you can use a keyring, like [python keyring](https://pypi.python.org/pypi/keyring):
+**Or** you can use a keyring, like [spm](https://notabug.org/kl3/spm) or [pass](https://www.passwordstore.org):
 
 myimapcheck = lain.widgets.imap({
-    password = "keyring get mymail",
+    password = "spm show mymail",
     -- [...]
 })
 
