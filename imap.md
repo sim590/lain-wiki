@@ -46,7 +46,7 @@ myimapcheck = lain.widgets.imap({
 
 and you'll have the same security provided by `~/.netrc`.
 
-**Or** you can use a password manager, like [spm](https://notabug.org/kl3/spm) or [pass](https://www.passwordstore.org):
+**Or you can use a password manager**, like [spm](https://notabug.org/kl3/spm) or [pass](https://www.passwordstore.org):
 
 myimapcheck = lain.widgets.imap({
     password = "spm show mymail",
