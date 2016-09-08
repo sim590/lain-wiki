@@ -48,10 +48,12 @@ and you'll have the same security provided by `~/.netrc`.
 
 **Or you can use a password manager**, like [spm](https://notabug.org/kl3/spm) or [pass](https://www.passwordstore.org):
 
+```lua
 myimapcheck = lain.widgets.imap({
     password = "spm show mymail",
     -- [...]
 })
+```
 
 When `is_plain == false`, it *executes* `password` before using it, so you can also use whatever password fetching solution you want.
 
