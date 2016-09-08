@@ -39,7 +39,7 @@ So you can set your password in plain like this:
 ```lua
 myimapcheck = lain.widgets.imap({
     is_plain = true,
-    password = "myplainpassword",
+    password = "mymailpassword",
     -- [...]
 })
 ```
