@@ -55,7 +55,7 @@ myimapcheck = lain.widgets.imap({
 })
 ```
 
-When `is_plain == false`, it *executes* `password` before using it, so you can also use whatever password fetching solution you want.
+When `is_plain == false` (default), it *executes* `password` before using it, so you can also use whatever password fetching solution you want.
 
 `settings` can use the value `mailcount`, an integer greater or equal to zero, and can modify `mail_notification_preset` table, which will be the preset for the naughty notifications. Check [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the list of variables it can contain. 
 
