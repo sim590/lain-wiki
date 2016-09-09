@@ -99,10 +99,10 @@ local rs_on = icons_dir .. "/redshift/redshift_on.png"
 local rs_off = icons_dir .. "/redshift/redshift_off.png"
 
 myredshift = wibox.widget.imagebox(rs_on)
-redshift:attach(
+lain.widgets.contrib.redshift:attach(
     myredshift,
     function ()
-        if redshift:is_active() then
+        if lain.widgets.contrib.redshift:is_active() then
             myredshift:set_image(rs_on)
         else
             myredshift:set_image(rs_off)
@@ -117,10 +117,10 @@ Then add the `myredshift` widget to your panel.
 ```lua
 -- Redshift widget
 myredshift = wibox.widget.textbox("RS")
-redshift:attach(
+lain.widgets.contrib.redshift:attach(
     myredshift,
     function ()
-        if redshift:is_active() then
+        if lain.widgets.contrib.redshift:is_active() then
             myredshift:set_text("RS on")
         else
             myredshift:set_text("RS off")
@@ -135,6 +135,6 @@ Then add the `myredshift` widget to your panel.
 Add this to the keybindings in your rc.lua:
 ```lua
 -- Toggle redshift with Mod+Shift+t
-awful.key({ modkey, "Shift"   }, "t",   function () redshift:toggle()   end) ,
+awful.key({ modkey, "Shift"   }, "t",   function () lain.widgets.contrib.redshift:toggle()   end) ,
 ```
 
