@@ -41,7 +41,7 @@ A textbox.
 
 ### Setting `iface` manually
 
-If the widget [spawns a "no carrier" notification and you are sure to have an active network device](https://github.com/copycat-killer/lain/issues/102), then autodetection is probably not working. In this case you can set `iface` manually. You can see which device is **UP** with the following command:
+If the widget [spawns a "no carrier" notification and you are sure to have an active network device](https://github.com/copycat-killer/lain/issues/102), then autodetection is probably not working. This may due to [`ip` and your user privileges](https://github.com/copycat-killer/lain/issues/102#issuecomment-246470526). In this case you can set `iface` manually. You can see which device is **UP** with the following command:
 
 ```shell
 ip link show
