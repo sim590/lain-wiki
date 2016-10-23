@@ -22,6 +22,8 @@ Installation
 git clone https://github.com/copycat-killer/lain.git ~/.config/awesome/lain
 ```
 
+Also available via [LuaRocks](https://luarocks.org/modules/aajjbb/lain).
+
 Usage
 --------
 
