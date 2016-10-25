@@ -10,6 +10,7 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 5
 `cmd` | PulseAudio command | string | ```pacmd list-sinks | sed -n -e '0,/*/d' -e '/base volume/d' -e '/volume:/p' -e '/muted:/p'```
+`sink_cmd` | Command to 'grep' the current audio sink from pulseaudio | string | `pacmd list-sinks | gawk \'{\nif ($0 ~ /\\*\\ index/) {\nwhile ($0 !~ /device\\.string/) {\ngetline\n}\nprint gensub(/\\\"/,\"\",\"g\",$3)\nnext\n}\n}\'`
 `scallback` | PulseAudio Sink callback | function | nil  
 `settings` | User settings | function | empty function
 
@@ -44,6 +45,7 @@ Variable | Meaning | Type | Values
 `volume_now.left` | Front left level | int | 0-100
 `volume_now.right` | Front right level | int | 0-100
 `volume_now.muted` | Sink mute status | string | "yes", "no"
+`volume_now.sink` | Sink name as printed by `pacmd` | string | varies
 
 ### output table
 
@@ -92,12 +94,12 @@ where `altkey = "Mod1"`.
 -- PulseAudio volume (based on multicolor theme)
 volumewidget = lain.widgets.pulseaudio({
     settings = function()
-        vlevel = volume_now.left .. "-" .. volume_now.right .. "%"
+        vlevel = volume_now.left .. "-" .. volume_now.right .. "% | " .. volume_now.sink
         if volume_now.muted == "yes" then
             vlevel = vlevel .. " M"
         end
 
-        widget:set_markup(markup("#7493d2", vlevel))
+        widget:set_markup(lain.util.markup("#7493d2", vlevel))
     end
 })
 ```
