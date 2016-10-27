@@ -41,9 +41,15 @@ end
 
 Variable | Meaning | Type | Values
 --- | --- | --- | ---
+`volume_now.index` | Sink index | int | >= 0
+`volume_now.muted` | Sink mute status | string | "yes", "no"
+`volume_now.channel` | Sink channels | table of integers | volume_now.channel[i], with i >= 1
 `volume_now.left` | Front left level | int | 0-100
 `volume_now.right` | Front right level | int | 0-100
-`volume_now.muted` | Sink mute status | string | "yes", "no"
+
+`volume_now.channel` is a table of your pulseaudio sink channels. Fetch a channel level like this: `volume_now.channel[i]`, where i >= 1.
+
+`volume_now.{left,right}` are pointers for `volume_now.{channel[1], channel[2]}` (stereo).
 
 ### output table
 
