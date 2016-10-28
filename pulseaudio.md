@@ -17,8 +17,9 @@ Variable | Meaning | Type | Default
 
 ```shell
   * index: 0
-	volume: 0:  100% 1:  100%
-	muted: no
+	volume: front-left: 18340 /  28% / -33.18 dB,   front-right: 18340 /  28% / -33.18 dB
+        muted: no
+        device.string = "front:1"
 ```
 
 **Note:** you can set PulseAudio default sink like this: `pacmd set-default-sink #sink`.
