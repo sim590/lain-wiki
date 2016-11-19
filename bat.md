@@ -67,6 +67,8 @@ Variable | Meaning | Type
 `widget` | The widget | `wibox.widget.textbox`
 `update` | Update `widget` | function
 
+The `update` function can be used to [refresh the widget before `timeout` expires](https://github.com/copycat-killer/lain/issues/236).
+
 ### Notes
 * Another common identifier for `ac` is `ACAD`.
 * If your widget is always on "N/A" with default settings, and you have a single battery, then `BAT0` is not your battery file. Locate the right one in  `/sys/class/power_supply/` and set `battery` properly. 
