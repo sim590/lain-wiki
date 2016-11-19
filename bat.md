@@ -60,9 +60,12 @@ bat_notification_critical_preset = {
 }
 ```
 
-### output
+### output table
 
-A textbox.
+Variable | Meaning | Type
+--- | --- | ---
+`widget` | The widget | `wibox.widget.textbox`
+`update` | Update `widget` | function
 
 ### Notes
 * Another common identifier for `ac` is `ACAD`.
