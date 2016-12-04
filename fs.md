@@ -47,12 +47,16 @@ Variable | Meaning | Type
 You can display the notification with a key binding like this:
 
 ```lua
-awful.key({ altkey }, "h", function () mypartition.show(seconds, scr) end),
+awful.key({ altkey }, "h", function () mypartition.show(seconds, args, scr) end),
 ```
 
-where ``altkey = "Mod1"`` and ``show`` arguments, both optional, are:
+where ``altkey = "Mod1"`` and ``show`` arguments, all optionals, are:
 
 * `seconds`, notification time in seconds;
-* `screen`, screen in which display the notification.
+* `options`, additional options to pass to [`dfs`](https://github.com/copycat-killer/lain/blob/master/scripts/dfs), in the form `--type='fstype' | --exclude-type='fstype'`;
+* `scr`, screen in which display the notification.
+
+If unsure or don't want to set an an argument, set it to `nil`. For instance, if you want to set 5 timeout seconds and screen 1: `mypartition.show(5, nil, 1)`.
+
 
 **Note that** naughty notification requires `beautiful.font` or `fs_notification_preset.font` to be monospaced, in order to correctly display the output.
