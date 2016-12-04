@@ -1,7 +1,7 @@
 Attaches a calendar notification to a widget.
 
 ```lua
-lain.widgets.calendar:attach(widget, args)
+lain.widgets.calendar.attach(widget, args)
 ```
 
 - Left click / scroll down: switch to previous month.
