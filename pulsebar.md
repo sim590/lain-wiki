@@ -4,9 +4,9 @@ Shows and controls PulseAudio volume with a progressbar; provides tooltips, noti
 volume = lain.widgets.pulsebar()
 ```
 
-* Left click: Launch `pavucontrol`.
-* Right click: Mute/unmute.
-* Scroll wheel: Increase/decrase volume.
+* Left click: launch `pavucontrol`.
+* Right click: mute/unmute.
+* Scroll wheel: increase/decrase volume.
 * Middle click: set volume to 100%.
 
 The function takes a table as optional argument, which can contain:
@@ -22,6 +22,7 @@ Variable | Meaning | Type | Default
 `vertical` | Set the bar vertical | boolean | false
 `cmd` | pulseaudio command | string | same as [here](https://github.com/copycat-killer/lain/wiki/pulseaudio)
 `sink` | Mixer sink | int | 0 
+`step` | Step at which volume is increased/decreased | string | "1%"
 `colors` | Bar colors | table | see **colors**
 `notifications` | Notifications settings | table | see **notifications**
 `followmouse` | Notification behaviour | bool | false
