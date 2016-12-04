@@ -4,9 +4,10 @@ Shows and controls ALSA volume with a progressbar; provides tooltips, notificati
 volume = lain.widgets.alsabar()
 ```
 
-* Left click: Launch `alsamixer` in your `terminal`.
-* Right click: Mute/unmute.
-* Scroll wheel: Increase/decrase volume.
+* Left click: launch `alsamixer` in your `terminal`.
+* Right click: mute/unmute.
+* Scroll wheel: increase/decrase volume.
+* Middle click: set volume to 100%.
 
 The function takes a table as optional argument, which can contain:
 
