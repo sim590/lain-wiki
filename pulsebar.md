@@ -5,6 +5,9 @@ volume = lain.widgets.pulsebar()
 ```
 
 * Left click: Launch `pavucontrol`.
+* Right click: Mute/unmute.
+* Scroll wheel: Increase/decrase volume.
+* Middle click: set volume to 100%.
 
 The function takes a table as optional argument, which can contain:
 
