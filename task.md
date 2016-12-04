@@ -1,7 +1,7 @@
 Attaches a [taskwarrior](http://taskwarrior.org) notification to a widget, and lets you add/search tasks from the promptbox.
 
 ```lua
-lain.widgets.contrib.task:attach(widget, args)
+lain.widgets.contrib.task.attach(widget, args)
 ```
 
 `args` is an optional table which can contain:
