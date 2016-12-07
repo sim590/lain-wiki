@@ -1,4 +1,4 @@
-The [asynchronous](https://github.com/copycat-killer/lain/issues/128) version of `base`:
+The [asynchronous](https://github.com/copycat-killer/lain/issues/128) version of [`base`](https://github.com/copycat-killer/lain/wiki/base):
 
 ```lua
 myasyncbase = lain.widgets.abase()
