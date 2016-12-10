@@ -55,7 +55,8 @@ mpris
 -----
 
 ```lua
--- Infos from mpris clients such as spotify and VLC, based on https://github.com/acrisci/playerctl
+-- Infos from mpris clients such as spotify and VLC
+-- Based on https://github.com/acrisci/playerctl
 mpriswidget = lain.widgets.abase({
     cmd = "playerctl status && playerctl metadata",
     settings = function()
@@ -72,7 +73,8 @@ mpriswidget = lain.widgets.abase({
          mpris_now.state = string.match(output, "Playing") or
                            string.match(output, "Paused")  or "N/A"
 
-         for k, v in string.gmatch(output, "'[^:]+:([^']+)':[%s]<%[?'([^']+)'%]?>") do
+         for k, v in string.gmatch(output, "'[^:]+:([^']+)':[%s]<%[?'([^']+)'%]?>")
+         do
              if     k == "artUrl"      then mpris_now.art_url      = v
              elseif k == "artist"      then mpris_now.artist       = escape_f(v)
              elseif k == "title"       then mpris_now.title        = escape_f(v)
