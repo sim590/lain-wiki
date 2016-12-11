@@ -60,6 +60,8 @@ Pay attention to case sensitivity when defining `music_dir`.
 - title
 - [name](https://github.com/copycat-killer/lain/pull/142)
 - album
+- track
+- genre
 - date
 - [time](https://github.com/copycat-killer/lain/pull/90) (length of current song, in seconds)
 - [elapsed](https://github.com/copycat-killer/lain/pull/90) (elapsed time of current song, in seconds)
