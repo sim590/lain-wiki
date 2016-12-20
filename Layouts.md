@@ -116,8 +116,8 @@ Cascade all windows of a tag.
 You can control the offsets by setting these two variables:
 
 ```lua
-lain.layout.cascade.cascade_offset_x = 64
-lain.layout.cascade.cascade_offset_y = 16
+lain.layout.cascade.offset_x = 64
+lain.layout.cascade.offset_y = 16
 ```
 
 The following reserves space for 5 windows:
@@ -146,8 +146,8 @@ and anything else means "don't overlap windows".
 Usage example:
 
 ```lua
-lain.layout.cascadetile.cascade_offset_x = 2
-lain.layout.cascadetile.cascade_offset_y = 32
+lain.layout.cascadetile.offset_x = 2
+lain.layout.cascadetile.offset_y = 32
 lain.layout.cascadetile.extra_padding = 5
 lain.layout.cascadetile.nmaster = 5
 lain.layout.cascadetile.ncol = 1
