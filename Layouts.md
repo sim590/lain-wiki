@@ -157,7 +157,7 @@ lain.layout.cascadetile.ncol = 1
 slave column" is activated. This allows you to see if there are any
 windows in your slave column.
 
-Setting `cascade_offset_x` to a very small value or even 0 is reccommended to avoid wasting space.
+Setting `offset_x` to a very small value or even 0 is recommended to avoid wasting space.
 
 centerwork
 ----------
