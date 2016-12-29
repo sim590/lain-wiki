@@ -11,7 +11,7 @@ lain.util.quake()
 
 ```lua
 local quakeapp = {}
-for s = 1, screen.count() do
+for s in screen do
    quakeapp[s] = lain.util.quake()
 end
 ```
