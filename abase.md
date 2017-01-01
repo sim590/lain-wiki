@@ -55,8 +55,8 @@ mpris
 -----
 
 ```lua
--- Infos from mpris clients such as spotify and VLC
--- Based on https://github.com/acrisci/playerctl
+-- infos from mpris clients such as spotify and VLC
+-- based on https://github.com/acrisci/playerctl
 mpriswidget = lain.widgets.abase({
     cmd = "playerctl status && playerctl metadata",
     settings = function()
@@ -85,6 +85,34 @@ mpriswidget = lain.widgets.abase({
 
         -- customize here
         widget:set_text(mpris_now.artist .. " - " .. mpris_now.title)
+    end
+})
+```
+
+upower
+------
+
+```lua
+mybattery = lain.widgets.abase({
+    cmd = "upower -i /org/freedesktop/UPower/devices/battery_BAT | sed -n '/present/,/icon-name/p'",
+    settings = function()
+        bat_now = {}
+        for k, v in string.gmatch(output, '([%a]+[%a|-]+):%s*([%a|%d]+[,|%a|%d]+)') do
+            if     k == "present"       then bat_now.present      = v
+            elseif k == "state"         then bat_now.state        = v
+            elseif k == "warning-level" then bat_now.warninglevel = v
+            elseif k == "energy"        then bat_now.energy       = string.gsub(v, ",", ".") -- Wh
+            elseif k == "energy-full"   then bat_now.energyfull   = string.gsub(v, ",", ".") -- Wh
+            elseif k == "energy-rate"   then bat_now.energyrate   = string.gsub(v, ",", ".") -- W
+            elseif k == "voltage"       then bat_now.voltage      = string.gsub(v, ",", ".") -- V
+            elseif k == "percentage"    then bat_now.percentage   = tonumber(v)              -- %
+            elseif k == "capacity"      then bat_now.capacity     = string.gsub(v, ",", ".") -- %
+            elseif k == "icon-name"     then bat_now.icon         = v
+            end
+        end
+
+        -- customize here
+        widget:set_text("Bat: " .. bat_now.percentage .. " " .. bat_now.state)
     end
 })
 ```
