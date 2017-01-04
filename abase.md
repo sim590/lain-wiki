@@ -16,7 +16,7 @@ cmus
 cmuswidget = lain.widgets.abase({
     cmd = "cmus-remote -Q",
     settings = function()
-        cmus_now = {
+        local cmus_now = {
             state   = "N/A",
             artist  = "N/A",
             title   = "N/A",
@@ -60,8 +60,8 @@ mpris
 mpriswidget = lain.widgets.abase({
     cmd = "playerctl status && playerctl metadata",
     settings = function()
-         escape_f  = require("awful.util").escape
-         mpris_now = {
+         local escape_f  = require("awful.util").escape
+         local mpris_now = {
              state        = "N/A",
              artist       = "N/A",
              title        = "N/A",
@@ -96,7 +96,19 @@ upower
 mybattery = lain.widgets.abase({
     cmd = "upower -i /org/freedesktop/UPower/devices/battery_BAT | sed -n '/present/,/icon-name/p'",
     settings = function()
-        bat_now = {}
+        local bat_now = {
+            present      = "N/A",
+            state        = "N/A",
+            warninglevel = "N/A",
+            energy       = "N/A",
+            energyfull   = "N/A",
+            energyrate   = "N/A",
+            voltage      = "N/A",
+            percentage   = "N/A",
+            capacity     = "N/A",
+            icon         = "N/A"
+        }
+
         for k, v in string.gmatch(output, '([%a]+[%a|-]+):%s*([%a|%d]+[,|%a|%d]+)') do
             if     k == "present"       then bat_now.present      = v
             elseif k == "state"         then bat_now.state        = v
