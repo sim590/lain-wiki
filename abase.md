@@ -13,6 +13,7 @@ cmus
 ----
 
 ```lua
+-- cmus audio player
 cmuswidget = lain.widgets.abase({
     cmd = "cmus-remote -Q",
     settings = function()
@@ -93,6 +94,7 @@ upower
 ------
 
 ```lua
+-- battery infos from freedesktop upower
 mybattery = lain.widgets.abase({
     cmd = "upower -i /org/freedesktop/UPower/devices/battery_BAT | sed -n '/present/,/icon-name/p'",
     settings = function()
