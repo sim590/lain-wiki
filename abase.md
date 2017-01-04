@@ -111,7 +111,7 @@ mybattery = lain.widgets.abase({
             icon         = "N/A"
         }
 
-        for k, v in string.gmatch(output, '([%a]+[%a|-]+):%s*([%a|%d]+[,|%a|%d]+)') do
+        for k, v in string.gmatch(output, '([%a]+[%a|-]+):%s*([%a|%d]+[,|%a|%d]-)') do
             if     k == "present"       then bat_now.present      = v
             elseif k == "state"         then bat_now.state        = v
             elseif k == "warning-level" then bat_now.warninglevel = v
