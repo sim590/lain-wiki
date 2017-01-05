@@ -26,7 +26,7 @@ Variable | Meaning | Type | Default
 
 \*\* `cal_format` can be used in case you need to fix the format [because you have more than one occurence of `today` number](https://github.com/copycat-killer/lain/pull/194).
 
-`position` possible values are defined [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify).
+`position` possible values are defined [here](https://awesomewm.org/doc/api/libraries/naughty.html#notify).
 
 Notification will show an icon displaying current day, and formatted output
 from ``cal`` with current day highlighted.
