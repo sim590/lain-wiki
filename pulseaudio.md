@@ -16,10 +16,10 @@ Variable | Meaning | Type | Default
 `cmd` catch infos from current default sink. You can redefine it, being sure that the ouput is something like this:
 
 ```shell
-  * index: 0
-	volume: front-left: 18340 /  28% / -33.18 dB,   front-right: 18340 /  28% / -33.18 dB
-        muted: no
-        device.string = "front:1"
+* index: 0
+    volume: front-left: 18340 /  28% / -33.18 dB,   front-right: 18340 /  28% / -33.18 dB
+    muted: no
+    device.string = "front:1"
 ```
 
 **Note:** you can set PulseAudio default sink like this: `pacmd set-default-sink #sink`.
