@@ -38,7 +38,7 @@ and can modify the following two tables, which will be the preset for the naught
 * `bat_notification_low_preset`(used if battery charge level <= 15)
 * `bat_notification_critical_preset` (used if battery charge level <= 5)
 
-Check [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the list of variables they can contain.  
+Check [here](https://awesomewm.org/doc/api/libraries/naughty.html#notify) for the list of variables they can contain.  
 
 **Default definition:**
 ```lua
