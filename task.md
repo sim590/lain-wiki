@@ -20,7 +20,7 @@ Variable | Meaning | Type | Default
 
 The tasks are shown in a notification popup when the mouse is moved over the attached `widget`, and the popup is hidden when the mouse is moved away. By default the notification will show the output of `task next`. With `cmdline`, the parameters for the `task` process can be customized, for example if you want to [filter the tasks](https://taskwarrior.org/docs/filter.html) or show a [custom report](https://github.com/copycat-killer/lain/pull/213).
 
-Possible values for `position` are defined [by awesome's `naughty` library](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify).
+Possible values for `position` are defined [by awesome's `naughty` library](https://awesomewm.org/doc/api/libraries/naughty.html#notify).
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
