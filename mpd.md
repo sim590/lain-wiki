@@ -92,22 +92,22 @@ You can control the widget with key bindings like these:
 -- MPD control
 awful.key({ altkey, "Control" }, "Up",
 	function ()
-		awful.util.spawn_with_shell("mpc toggle || ncmpcpp toggle || ncmpc toggle || pms toggle")
+		awful.spawn_with_shell("mpc toggle || ncmpcpp toggle || ncmpc toggle || pms toggle")
 		mpdwidget.update()
 	end),
 awful.key({ altkey, "Control" }, "Down",
 	function ()
-		awful.util.spawn_with_shell("mpc stop || ncmpcpp stop || ncmpc stop || pms stop")
+		awful.spawn_with_shell("mpc stop || ncmpcpp stop || ncmpc stop || pms stop")
 		mpdwidget.update()
 	end),
 awful.key({ altkey, "Control" }, "Left",
 	function ()
-		awful.util.spawn_with_shell("mpc prev || ncmpcpp prev || ncmpc prev || pms prev")
+		awful.spawn_with_shell("mpc prev || ncmpcpp prev || ncmpc prev || pms prev")
 		mpdwidget.update()
 	end),
 awful.key({ altkey, "Control" }, "Right",
 	function ()
-		awful.util.spawn_with_shell("mpc next || ncmpcpp next || ncmpc next || pms next")
+		awful.spawn_with_shell("mpc next || ncmpcpp next || ncmpc next || pms next")
 		mpdwidget.update()
 	end),
 ```
