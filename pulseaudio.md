@@ -9,7 +9,7 @@ volumewidget = lain.widgets.pulseaudio()
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 5
-`cmd` | PulseAudio command | string | [link](https://github.com/copycat-killer/lain/blob/master/widgets/pulseaudio.lua#L28)
+`cmd` | PulseAudio command | string | [link](https://github.com/copycat-killer/lain/blob/master/widgets/pulseaudio.lua#L29)
 `scallback` | PulseAudio Sink callback | function | nil  
 `settings` | User settings | function | empty function
 
