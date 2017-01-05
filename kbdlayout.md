@@ -33,7 +33,7 @@ Variable | Meaning | Type | Default
 
 Variable | Meaning | Type
 --- | --- | ---
-`widget` | The widget (textbox) | `awful.widget.textbox`
+`widget` | The widget (textbox) | `wibox.widget.textbox`
 `update` | Function to update the widget and call `settings` | function
 `set` | Function taking an index as an argument to manually set the layout given by that index | function
 `next` | Change to the next layout | function
