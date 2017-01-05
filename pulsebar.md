@@ -45,7 +45,7 @@ Variable | Meaning | Type | Default
 `bar_size` | Wibox height | int | 18
 `screen` | Notifications screen | int | 1
 
-It's **crucial** to set `notifications.bar_size` to your `mywibox[s]` height.
+It's **crucial** to set `notifications.bar_size` to your wibox height.
 
 `settings` can use the following variables:
 
@@ -58,7 +58,7 @@ Variable | Meaning | Type | Values
 
 Variable | Meaning | Type
 --- | --- | ---
-`bar` | The widget | `awful.widget.progressbar`
+`bar` | The widget | `wibox.widget.progressbar`
 `channel` | pulse channel | string
 `card` | pulse card | string
 `step` | Increase/decrease step | string
