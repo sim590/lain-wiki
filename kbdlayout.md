@@ -8,7 +8,7 @@ mykbdlayout = lain.widgets.contrib.kbdlayout()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`layouts` | Keyboard layouts and variants to switch between | table | **none**
+`layouts` | Keyboard layouts and variants to switch between | table | **nil**
 `add_us_secondary` | Whether to add `us` as a secondary layout | boolean | true
 `timeout` | Refresh timeout (in seconds) | int | 10
 `settings` | User settings | function | empty function
@@ -41,11 +41,7 @@ Variable | Meaning | Type
 
 ## usage
 
-The textbox can be added to the layout via standard means:
-
-```lua
-right_layout:add(mykbdlayout)
-```
+The textbox can be added to the layout via standard means.
 
 By default, left-clicking the textbox calls `next`, and right-clicking calls `prev`. You can set up additional key- or mouse-bindings. See the example below.
 
@@ -58,18 +54,12 @@ mykbdlayout = lain.widgets.contrib.kbdlayout({
 	        { layout = "de" } },
     settings = function()
         if kbdlayout_now.variant then
-            widget:set_text(" " .. kbdlayout_now.layout .. 
-                            "/" .. kbdlayout_now.variant .. " ")
+            widget:set_text(string.format("%s/%s", kbdlayout_now.layout, kbdlayout_now.variant) 
         else
-            widget:set_text(" " .. kbdlayout_now.layout .. " ")
+            widget:set_text(kbdlayout_now.layout)
         end
     end
 })
-
--- [...]
-
--- Add widget to a layout
-right_layout:add(mykbdlayout)
 
 -- [...]
 
