@@ -50,7 +50,7 @@ Variable | Meaning | Type | Default
 `bar_size` | Wibox height | int | 18
 `screen` | Notifications screen | int | 1
 
-It's **crucial** to set `notifications.bar_size` to your `mywibox[s]` height.
+It's **crucial** to set `notifications.bar_size` to your wibox height.
 
 `settings` can use the following variables:
 
