@@ -62,7 +62,7 @@ Variable | Meaning | Type | Values
 
 Variable | Meaning | Type
 --- | --- | ---
-`bar` | The widget | `awful.widget.progressbar`
+`bar` | The widget | `wibox.widget.progressbar`
 `channel` | Alsa channel | string
 `card` | Alsa card | string
 `step` | Increase/decrease step | string
