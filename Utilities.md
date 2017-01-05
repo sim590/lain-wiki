@@ -49,9 +49,14 @@ Adds Cairo separators.
 local separators = lain.util.separators
 ```
 
-A separator function `separators.separator` takes two color arguments, defined as strings. `"alpha"` argument is allowed. [Example](https://github.com/copycat-killer/awesome-copycats/blob/master/rc.lua.powerarrow-darker#L261-262). 
+A separator function `separators.separator` takes two color arguments, defined as strings. `"alpha"` argument is allowed. Example:
 
-You can customize height and width by setting `awful_widget_height` and `separators_width` in your `theme.lua`. Default values are 0 and 9, respectively.
+```lua
+arrl_dl = separators.arrow_left(beautiful.bg_focus, "alpha")
+arrl_ld = separators.arrow_left("alpha", beautiful.bg_focus)
+`` 
+
+You can customize height and width by setting `separators_height` and `separators_width` in your `theme.lua`. Default values are 0 and 9, respectively.
 
 List of functions:
 
@@ -137,7 +142,7 @@ awful.key({ modkey, "Shift" }, "d", function () lain.util.delete_tag() end),
 useless\_gaps\_resize
 ---------------------
 
-Changes `beautiful.useless_gaps_width` on the fly.
+Changes `beautiful.useless_gaps` on the fly.
 
 The function takes an integer argument, being the amount of pixel to add/remove to gaps.
 
@@ -149,7 +154,7 @@ awful.key({ altkey, "Control" }, "+", function () lain.util.useless_gaps_resize(
 awful.key({ altkey, "Control" }, "-", function () lain.util.useless_gaps_resize(-1) end),
 ```
 
-where `altkey=Mod1`, or you could use it like this:
+where `altkey = Mod1`, or you could use it like this:
 
 ```lua
 mywidget:buttons(awful.util.table.join (
