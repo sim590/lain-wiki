@@ -66,7 +66,7 @@ Pay attention to case sensitivity when defining `music_dir`.
 - [time](https://github.com/copycat-killer/lain/pull/90) (length of current song, in seconds)
 - [elapsed](https://github.com/copycat-killer/lain/pull/90) (elapsed time of current song, in seconds)
 
-and can modify `mpd_notification_preset` table, which will be the preset for the naughty notifications. Check [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the list of variables it can contain. Default definition:
+and can modify `mpd_notification_preset` table, which will be the preset for the naughty notifications. Check [here](https://awesomewm.org/doc/api/libraries/naughty.html#notify) for the list of variables it can contain. Default definition:
 
 ```lua
 mpd_notification_preset = {
