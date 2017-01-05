@@ -110,10 +110,10 @@ Variable | Meaning | Type | Default
 
     In your `settings` function, you can use `widget` variable to refer to the textbox, and the dictionary `weather_now` to refer to data retrieved by `current_call`. The dictionary is built with [dkjson library](http://dkolf.de/src/dkjson-lua.fsl/home), and its structure is defined [here](http://openweathermap.org/weather-data).
     For instance, you can retrieve current weather status and temperature in this way: 
-```lua
-descr = weather_now["weather"][1]["description"]:lower()
-units = math.floor(weather_now["main"]["temp"])
-```
+    ```lua
+    descr = weather_now["weather"][1]["description"]:lower()
+    units = math.floor(weather_now["main"]["temp"])
+    ```
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
