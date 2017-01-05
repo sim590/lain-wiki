@@ -40,7 +40,6 @@ Index
 - [alsabar](https://github.com/copycat-killer/lain/wiki/alsabar)
 - [base](https://github.com/copycat-killer/lain/wiki/base)
 - [bat](https://github.com/copycat-killer/lain/wiki/bat)
-- [borderbox](https://github.com/copycat-killer/lain/wiki/borderbox)
 - [calendar](https://github.com/copycat-killer/lain/wiki/calendar)
 - [cpu](https://github.com/copycat-killer/lain/wiki/cpu)
 - [fs](https://github.com/copycat-killer/lain/wiki/fs)
