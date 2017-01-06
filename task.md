@@ -14,7 +14,7 @@ Variable | Meaning | Type | Default
 `position` | Notification popup position | string | "top_right"
 `timeout` | Notification timeout seconds | int | 7
 `scr_pos` | Notification screen | int | 1
-`followmouse` | Notification behaviour | boolean | false
+`followtag` | Display the notification on currently focused screen | boolean | false
 `cmdline` | Taskwarrior command to show in the popup | string | "next"
 `font` | Pop-up font | string | `beautiful.font`
 
@@ -22,7 +22,7 @@ The tasks are shown in a notification popup when the mouse is moved over the att
 
 Possible values for `position` are defined [by awesome's `naughty` library](https://awesomewm.org/doc/api/libraries/naughty.html#notify).
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
 You can call the notification with a key binding like this:
 

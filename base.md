@@ -6,7 +6,7 @@ Basically, all it does is to execute an input `cmd`, and to fill its textbox wit
 mybase = lain.widgets.base()
 ```
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -16,7 +16,7 @@ Variable | Meaning | Type | Default
 
 `settings` can use the string `output`, which is the output of `cmd`.
 
-### output table
+### Output table
 
 Variable | Meaning | Type
 --- | --- | ---

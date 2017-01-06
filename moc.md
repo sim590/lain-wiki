@@ -1,4 +1,4 @@
-A widget for showing the current song track's information from MOC (Music On Console). 
+A widget for showing the current song track's information from MOC (Music On Console).
 
 It also provides next track notifications using Naughty.
 
@@ -24,7 +24,7 @@ You need a file like this
 
 in the album folder in order to show album art too.
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -32,7 +32,7 @@ Variable | Meaning | Type | Default
 `music_dir` | Music directory | string | "~/Music"
 `cover_size` | Album art notification size | int | 100
 `default_art` | Default art | string | ""
-`followmouse` | Notification behaviour | boolean | false
+`followtag` | Display the notification on currently focused screen | boolean | false
 `settings` | User settings | function | empty function
 
 Pay attention to case sensitivity when defining `music_dir`.
@@ -58,9 +58,9 @@ moc_notification_preset = {
 }
 ```
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
-### output table
+### Output table
 
 Variable | Meaning | Type
 --- | --- | ---

@@ -4,7 +4,7 @@ Shows and controls ALSA volume with a textbox.
 volumewidget = lain.widgets.alsa()
 ```
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -16,7 +16,7 @@ Variable | Meaning | Type | Default
 
 `cmd` is useful if you need to pass additional arguments to amixer. For instance, users with multiple sound cards may define `cmd = "amixer -c X"` in order to set amixer with card `X`.
 
-In case you are using an HDMI output, and mute toggling can't be mapped to `Master`, define `togglechannel` argument as your S/PDIF device. You can know the correct ID device with `amixer`'s `scontents` command. 
+In case you are using an HDMI output, and mute toggling can't be mapped to `Master`, define `togglechannel` argument as your S/PDIF device. You can know the correct ID device with `amixer`'s `scontents` command.
 
 For instance, if card number is 1 and S/PDF number is 3:
 
@@ -56,10 +56,10 @@ Variable | Meaning | Type | Values
 `volume_now.level` | Volume level | int | 0-100
 `volume_now.status` | Device status | string | "on", "off"
 
-### output table
+### Output table
 
 Variable | Meaning | Type
---- | --- | --- 
+--- | --- | ---
 `widget` | The widget | `wibox.widget.textbox`
 `channel` | Alsa channel | string
 `update` | Update `widget` | function

@@ -24,7 +24,7 @@ in the album folder in order to show album art too.
 
 **Note:** if MPD is turned off or not set correctly, the widget will constantly display "N/A" values.
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -36,7 +36,7 @@ Variable | Meaning | Type | Default
 `cover_size` | Album art notification size | int | 100
 `default_art` | Default art | string | ""
 `notify` | Show notification popups | string | "on"
-`followmouse` | Notification behaviour | boolean | false
+`followtag` | Notification behaviour | boolean | false
 `echo_cmd` | custom call for `echo`* | string | "echo"
 `settings` | User settings | function | empty function
 
@@ -46,7 +46,7 @@ Pay attention to case sensitivity when defining `music_dir`.
 
 `settings` can use `mpd_now` table, which contains the following values:
 
-(**note:** the first four are boolean [flags](https://github.com/copycat-killer/lain/pull/205), the remaining are all strings) 
+(**note:** the first four are boolean [flags](https://github.com/copycat-killer/lain/pull/205), the remaining are all strings)
 
 - random_mode
 - single_mode
@@ -77,9 +77,9 @@ mpd_notification_preset = {
 }
 ```
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followmouse` to `true` it will be shown on the current mouse screen.
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
-### output table
+### Output table
 
 Variable | Meaning | Type
 --- | --- | ---

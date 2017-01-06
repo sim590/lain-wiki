@@ -24,7 +24,7 @@ If there's new mails, the textbox will say something like "mail: bugs(3), system
 mymaildir = lain.widgets.maildir(args)
 ```
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -44,6 +44,6 @@ mailwidget = lain.widgets.maildir({
 })
 ```
 
-### output
+### Output
 
 A textbox.

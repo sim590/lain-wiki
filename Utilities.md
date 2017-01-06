@@ -1,4 +1,4 @@
-quake
+Quake
 -----
 
 A Quake-like dropdown container for your favourite application.
@@ -21,15 +21,15 @@ end
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `app` | application to spawn | string | "xterm"
-`name` | window name | string | "QuakeDD"
-`argname` | how to specify window name | string | "-name %s"
+`name` | client name | string | "QuakeDD"
+`argname` | how to specify client name | string | "-name %s"
 `extra` | extra `app` arguments | string | empty string
 `visible` | initially visible | boolean | false
-`screen` | screen | int | `capi.mouse.screen`
 `border` | border width | int | 1
-`wibox_height` | statusbar weight | int | 18
-`height` | dropdown window height | float in [0,1] or exact pixel size | 0.25  
-`width` | dropdown window width | float in [0,1] or exact pixel size | 1
+`followtag` | always spawn on currently focused screen | boolean | true
+`screen` | screen | int | `awful.screen.focused()`
+`height` | dropdown client height | float in [0,1] or exact pixel size | 0.25
+`width` | dropdown client width | float in [0,1] or exact pixel size | 1
 `vert` | vertical position | string, possible values: "top", "bottom", "center" | "top"
 `horiz` | horizontal position | string, possible values: "left", "right", "center" | "center"
 
@@ -38,9 +38,10 @@ Variable | Meaning | Type | Default
 **Notes**
 
 * If your application is a terminal and you have a rule like `awful.client.setslave` for your terminals, ensure you use an exception for `QuakeDD` (or your defined `name`). Otherwise, you may run into problems with focus.
+* If `followtag` is set to `false`, the client will dropdown always on `args.screen`.
 * Are you using a GTK+ application like termite? Be sure to set [`argname = "--name %s"`](https://github.com/copycat-killer/lain/issues/211).
 
-separators
+Separators
 ----------
 
 Adds Cairo separators.
@@ -54,7 +55,7 @@ A separator function `separators.separator` takes two color arguments, defined a
 ```lua
 arrl_dl = separators.arrow_left(beautiful.bg_focus, "alpha")
 arrl_ld = separators.arrow_left("alpha", beautiful.bg_focus)
-`` 
+``
 
 You can customize height and width by setting `separators_height` and `separators_width` in your `theme.lua`. Default values are 0 and 9, respectively.
 
@@ -115,7 +116,7 @@ markup.bg.color(color, text)
 
 `focus`, `normal` and `urgent` use `beautiful` variables.
 
-dynamic tagging
+Dynamic tagging
 ---------------
 
 That is:
@@ -139,7 +140,7 @@ awful.key({ modkey, "Shift" }, "d", function () lain.util.delete_tag() end),
 
 **Note** that these function won't work properly with [Copland theme](https://github.com/copycat-killer/awesome-copycats) or any other configuration that already uses a dynamic tagging module like [Eminent](https://github.com/copycat-killer/awesome-copycats/tree/master/eminent).
 
-useless\_gaps\_resize
+Useless gaps resize
 ---------------------
 
 Changes `beautiful.useless_gaps` on the fly.

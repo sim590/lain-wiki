@@ -4,7 +4,7 @@ Shows in a textbox the current CPU usage, both in general and per core.
 mycpuusage = lain.widgets.cpu()
 ```
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -16,6 +16,6 @@ Variable | Meaning | Type | Default
 * `cpu_now.usage`, the general use percentage;
 * `cpu_now[i].usage`, the i-th core use percentage, with `i` starting from 1.
 
-### output
+### Output
 
 A textbox.

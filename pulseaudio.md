@@ -4,13 +4,13 @@ Shows and controls PulseAudio volume with a textbox.
 volumewidget = lain.widgets.pulseaudio()
 ```
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 5
 `cmd` | PulseAudio command | string | [link](https://github.com/copycat-killer/lain/blob/master/widgets/pulseaudio.lua#L29)
-`scallback` | PulseAudio Sink callback | function | nil  
+`scallback` | PulseAudio Sink callback | function | nil
 `settings` | User settings | function | empty function
 
 `cmd` catch infos from current default sink. You can redefine it, being sure that the ouput is something like this:
@@ -53,10 +53,10 @@ Variable | Meaning | Type | Values
 
 `volume_now.{left,right}` are pointers for `volume_now.{channel[1], channel[2]}` (stereo).
 
-### output table
+### Output table
 
 Variable | Meaning | Type
---- | --- | --- 
+--- | --- | ---
 `widget` | The widget | `wibox.widget.textbox`
 `update` | Update `widget` | function
 
@@ -93,7 +93,7 @@ awful.key({ altkey, "Control" }, "0",
 
 where `altkey = "Mod1"`.
 
-### Widget example
+### Example
 
 ```lua
 -- PulseAudio volume (based on multicolor theme)

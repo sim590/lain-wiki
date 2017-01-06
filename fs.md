@@ -6,14 +6,14 @@ Displays a notification when the partition is full or has low space.
 mypartition = lain.widgets.fs()
 ```
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds -| int | 600
 `partition` | Partition to monitor | string | "/"
 `notification_preset` | Notification preset | table | `{ fg = beautiful.fg_normal }`
-`followmouse` | Display the notification on mouse screen | boolean | false
+`followtag` | Display the notification on currently focused screen | boolean | false
 `notify` | Display "partition is empty" notifications | string | "on"
 `showpopup` | Display pop-up window with df output | string | "on"
 `settings` | User settings | function | empty function
@@ -35,9 +35,9 @@ Also, `settings` can modify `fs_notification_preset` table. This table will be t
 fs_notification_preset = { fg = beautiful.fg_normal }
 ```
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
-### output table
+### Output table
 
 Variable | Meaning | Type
 --- | --- | ---

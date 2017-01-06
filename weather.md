@@ -18,25 +18,25 @@ Variable | Meaning | Type | Default
 `forecast_call` | Command to fetch forecast data from the API | string | see `default_forecast_call`
 `city_id` | API city code | int | not set
 `utc_offset` | UTC time offset | function | see [here](https://github.com/copycat-killer/lain/blob/master/widgets/weather.lua#L44-L47)
-`units` | Temperature units system | string | "metric" 
+`units` | Temperature units system | string | "metric"
 `lang` | API data localization | string | "en"
 `cnt` | Forecast days interval | int | 5
 `date_cmd` | Forecast notification format style | string | "date -u -d @%d +'%%a %%d'"
 `icons_path` | Icons path | string | `lain/icons/openweathermap`
 `notification_preset` | Preset for notifications | table | empty table
 `notification_text_fun` | Function to format forecast notifications | function | see `notification_text_fun`
-`weather_na_markup` | Markup to be used when weather textbox is not available | text | " N/A " 
-`followmouse` | Notification behaviour | boolean | false
+`weather_na_markup` | Markup to be used when weather textbox is not available | text | " N/A "
+`followtag` | Display the notification on currently focused screen | boolean | false
 `settings` | User settings | function | empty function
 
-- ``default_current_call`` 
+- ``default_current_call``
 
     `"curl -s 'http://api.openweathermap.org/data/2.5/weather?id=%s&units=%s&lang=%s'"`
 
     You can rewrite it using any fetcher solution you like.
 
 - ``default_forecast_call``
- 
+
     `"curl -s 'http://api.openweathermap.org/data/2.5/forecast/daily?id=%s&units=%s&lang=%s&cnt=%s'"`
 
     Like above.
@@ -102,20 +102,18 @@ Variable | Meaning | Type | Default
    ```
    See [here](https://github.com/copycat-killer/lain/issues/186#issuecomment-203400918) for a complete customization example.
 
-- ``followmouse``
+- ``followtag``
 
-   In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting followmouse to true it will be shown on the same screen containing the widget.
+   In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
 - ``settings``
 
     In your `settings` function, you can use `widget` variable to refer to the textbox, and the dictionary `weather_now` to refer to data retrieved by `current_call`. The dictionary is built with [dkjson library](http://dkolf.de/src/dkjson-lua.fsl/home), and its structure is defined [here](http://openweathermap.org/weather-data).
-    For instance, you can retrieve current weather status and temperature in this way: 
+    For instance, you can retrieve current weather status and temperature in this way:
     ```lua
     descr = weather_now["weather"][1]["description"]:lower()
     units = math.floor(weather_now["main"]["temp"])
     ```
-
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
 
 ## Usage
 The module creates a textbox widget (`myweather`) and an imagebox icon (`myweather.icon`). Add them to you wibox like usual.

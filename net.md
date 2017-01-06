@@ -1,16 +1,16 @@
-Monitors network interfaces and shows current traffic in a textbox. 
+Monitors network interfaces and shows current traffic in a textbox.
 
 ```lua
 mynet = lain.widgets.net()
 ```
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 2
 `iface` | Network device(s) | array (new api) or string (old api) | autodetected
-`units` | Units | int | 1024 (kilobytes) 
+`units` | Units | int | 1024 (kilobytes)
 `notify` | Display "no carrier" notifications | string | "on"
 `screen` | Notifications screen | int | 1
 `settings` | User settings | function | empty function
@@ -33,7 +33,7 @@ With the **new** API:
 - `net_now.devices["interface"]` contains the same attributes as the old api for each interface. More on this in the "Multiple devices" section below.
 - For compatibility reasons if multiple devices are given `net_now.carrier` and `net_now.state` correspond to the last interface in the iface array and should not be relied upon (deprecated).
 
-### output
+### Output
 
 A textbox.
 

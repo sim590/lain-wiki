@@ -4,7 +4,7 @@ Shows the current system load.
 mysysload = lain.widgets.sysload()
 ```
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -13,6 +13,6 @@ Variable | Meaning | Type | Default
 
 `settings` can use strings `load_1`, `load_5` and `load_15`, which are the load averages over 1, 5, and 15 minutes.
 
-### output
+### Output
 
 A textbox.

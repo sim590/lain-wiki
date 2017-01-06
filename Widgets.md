@@ -15,7 +15,7 @@ You can feed `set_markup` with predefined arguments, see the sections for all th
 
 `widget` is a textbox, so you can treat it like any other `wibox.widget.textbox`.
 
-Here follows an example: 
+Here follows an example:
 
 ```lua
 mycpu = lain.widgets.cpu({

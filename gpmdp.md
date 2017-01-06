@@ -14,13 +14,13 @@ Now playing songs are notified like this:
 	| +-------+                                              |
 	+--------------------------------------------------------+
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 2
 `notify` | Show notification popups | string | "off"
-`followmouse` | Notification behaviour | boolean | false
+`followtag` | Display the notification on currently focused screen | boolean | false
 `settings` | User settings | function | empty function
 
 `settings` can use `gpm_now` table, which contains the following *strings*:
@@ -37,14 +37,14 @@ and can modify `gpmdp_notification_preset` table, which will be the preset for t
 gmpd_notification_preset = {
    title   = "Now playing",
    timeout = 6,
-   text    = string.format("%s (%s) - %s", gpm_now.artist, 
+   text    = string.format("%s (%s) - %s", gpm_now.artist,
              gpm_now.album gpm_now.title)
 }
 ```
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followmouse` to `true` it will be shown on the current mouse screen.
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
-### output table
+### Output table
 
 Variable | Meaning | Type
 --- | --- | ---

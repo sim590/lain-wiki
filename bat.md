@@ -7,7 +7,7 @@ Displays a notification when battery is low or critical.
 mybattery = lain.widgets.bat()
 ```
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -34,11 +34,11 @@ To disable warning notifications, set `notify` to `"off"`.
 - `time`, time remaining until charge if charging, until discharge if discharging (HH:SS string or "N/A");
 - `watt`, battery watts (float with 2 decimals).
 
-and can modify the following two tables, which will be the preset for the naughty notifications: 
+and can modify the following two tables, which will be the preset for the naughty notifications:
 * `bat_notification_low_preset`(used if battery charge level <= 15)
 * `bat_notification_critical_preset` (used if battery charge level <= 5)
 
-Check [here](https://awesomewm.org/doc/api/libraries/naughty.html#notify) for the list of variables they can contain.  
+Check [here](https://awesomewm.org/doc/api/libraries/naughty.html#notify) for the list of variables they can contain.
 
 **Default definition:**
 ```lua
@@ -60,7 +60,7 @@ bat_notification_critical_preset = {
 }
 ```
 
-### output table
+### Output table
 
 Variable | Meaning | Type
 --- | --- | ---
@@ -71,7 +71,7 @@ The `update` function can be used to [refresh the widget before `timeout` expire
 
 ### Notes
 * Another common identifier for `ac` is `ACAD`.
-* If your widget is always on "N/A" with default settings, and you have a single battery, then `BAT0` is not your battery file. Locate the right one in  `/sys/class/power_supply/` and set `battery` properly. 
+* If your widget is always on "N/A" with default settings, and you have a single battery, then `BAT0` is not your battery file. Locate the right one in  `/sys/class/power_supply/` and set `battery` properly.
 For instance, with `BAT1`:
 
 ```lua

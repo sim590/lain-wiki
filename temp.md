@@ -6,7 +6,7 @@ Reads from `/sys/class/thermal`, so value is expressed in Celsius.
 mytemp = lain.widgets.temp()
 ```
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -16,10 +16,10 @@ Variable | Meaning | Type | Default
 
 `settings` can use the string `coretemp_now`, which means current core temperature, expressed in Celsius (linux standard).
 
-### output 
+### Output
 
 A textbox.
 
-### note
+### Note
 
 Depending on the architecture, keep in mind that your temp files location [might change](https://github.com/copycat-killer/lain/issues/84#issuecomment-72751763).

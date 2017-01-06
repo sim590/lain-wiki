@@ -4,7 +4,7 @@ Shows memory status (in MiB) in a textbox.
 mymem = lain.widgets.mem()
 ```
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -19,6 +19,6 @@ Variable | Meaning | Type
 `mem_now.swapused` | Swap memory used (in MB) | string
 `mem_now.perc` | Memory percentage | int
 
-### output
+### Output
 
 A textbox.

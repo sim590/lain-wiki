@@ -9,7 +9,9 @@ volume = lain.widgets.pulsebar()
 * Scroll wheel: increase/decrase volume.
 * Middle click: set volume to 100%.
 
-The function takes a table as optional argument, which can contain:
+### Input table
+
+The table and all of its variables are optional.
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -21,13 +23,13 @@ Variable | Meaning | Type | Default
 `ticks_size` | Ticks size | int | 7
 `vertical` | Set the bar vertical | boolean | false
 `cmd` | pulseaudio command | string | same as [here](https://github.com/copycat-killer/lain/wiki/pulseaudio)
-`sink` | Mixer sink | int | 0 
+`sink` | Mixer sink | int | 0
 `step` | Step at which volume is increased/decreased | string | "1%"
 `colors` | Bar colors | table | see **colors**
 `notifications` | Notifications settings | table | see **notifications**
-`followmouse` | Notification behaviour | bool | false
+`followtag` | Display the notification on currently focused screen | boolean | false
 
-### colors
+### Colors
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -35,17 +37,13 @@ Variable | Meaning | Type | Default
 `mute` | Bar mute color | string | "#EB8F8F"
 `unmute` | Bar unmute color | string | "#A4CE8A"
 
-### notifications
+### Notifications
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `font` | Notifications font | string | The one defined in `beautiful.font`
 `font_size` | Notifications font size | string | "11"
 `color` | Notifications color | string | `beautiful.fg_normal`
-`bar_size` | Wibox height | int | 18
-`screen` | Notifications screen | int | 1
-
-It's **crucial** to set `notifications.bar_size` to your wibox height.
 
 `settings` can use the following variables:
 
@@ -65,7 +63,7 @@ Variable | Meaning | Type
 `notify` | The notification | function
 `update` | Update state | function
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen when the widget is hovered with the mouse. By setting `followmouse` to `true` it will be shown on the same screen containing the widget.
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
 You can control the widget with key bindings like these:
 

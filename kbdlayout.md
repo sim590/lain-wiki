@@ -4,7 +4,7 @@ Shows and controls keyboard layouts and variants using `setxkbmap`.
 mykbdlayout = lain.widgets.contrib.kbdlayout()
 ```
 
-### input table
+### Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -27,9 +27,9 @@ Variable | Meaning | Type | Default
 
 - `settings`
 
-    A "callback" function in which the user is expected to set the text widget up. The widget itself is available as the global variable `widget`, while layout information is available as `kbdlayout_now`. `kbdlayout_now` contains two keys, `layout` containing the primary layout, and `variant`, containing the variant. If there is no variant, `variant` is `nil`. 
+    A "callback" function in which the user is expected to set the text widget up. The widget itself is available as the global variable `widget`, while layout information is available as `kbdlayout_now`. `kbdlayout_now` contains two keys, `layout` containing the primary layout, and `variant`, containing the variant. If there is no variant, `variant` is `nil`.
 
-## output table
+## Output table
 
 Variable | Meaning | Type
 --- | --- | ---
@@ -39,13 +39,13 @@ Variable | Meaning | Type
 `next` | Change to the next layout | function
 `prev` | Change to the prev layout | function
 
-## usage
+## Usage
 
 The textbox can be added to the layout via standard means.
 
 By default, left-clicking the textbox calls `next`, and right-clicking calls `prev`. You can set up additional key- or mouse-bindings. See the example below.
 
-## example
+## Example
 
 ```lua
 -- Switch between US Dvorak and DE layouts.
@@ -54,8 +54,8 @@ mykbdlayout = lain.widgets.contrib.kbdlayout({
 	        { layout = "de" } },
     settings = function()
         if kbdlayout_now.variant then
-            widget:set_text(string.format("%s/%s", kbdlayout_now.layout, 
-            kbdlayout_now.variant) 
+            widget:set_text(string.format("%s/%s", kbdlayout_now.layout,
+            kbdlayout_now.variant)
         else
             widget:set_text(kbdlayout_now.layout)
         end
