@@ -31,7 +31,7 @@ Variable | Meaning | Type | Default
 `height` | dropdown client height | float in [0,1] or exact pixel size | 0.25
 `width` | dropdown client width | float in [0,1] or exact pixel size | 1
 `vert` | vertical position | string, possible values: "top", "bottom", "center" | "top"
-`horiz` | horizontal position | string, possible values: "left", "right", "center" | "center"
+`horiz` | horizontal position | string, possible values: "left", "right", "center" | "left"
 
 `height` and `width` express a fraction of the workspace.
 
