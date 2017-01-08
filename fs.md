@@ -48,7 +48,7 @@ fsroothome = lain.widgets.fs({
 })
 ```
 
-Also, `settings` can modify `_notification_preset` table. This table will be the preset for the naughty notifications. Check [here](https://awesomewm.org/doc/api/libraries/naughty.html#notify) for the list of variables it can contain. Default definition:
+Also, `settings` can modify `notification_preset` table. This table will be the preset for the naughty notifications. Check [here](https://awesomewm.org/doc/api/libraries/naughty.html#notify) for the list of variables it can contain. Default definition:
 
 ```lua
 notification_preset = { fg = beautiful.fg_normal }
