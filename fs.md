@@ -77,4 +77,4 @@ where ``altkey = "Mod1"`` and ``show`` arguments, all optionals, are:
 
 If unsure or don't want to set an an argument, set it to `nil`. For instance, if you want to set 5 timeout seconds and screen 1: `mypartition.show(5, nil, 1)`.
 
-**Note that** naughty notification requires `beautiful.font` or `notification_preset.font` to be monospaced, in order to correctly display the output.
+**Note that** naughty notifications requires `beautiful.font` or `notification_preset.font` to be monospaced, in order to correctly display the output.
