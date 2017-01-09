@@ -30,7 +30,7 @@ layouts =
 Or set them on specific tags like this:
 
 ```lua
-awful.layout.set(lain.layout.uselessfair, tags[1][7])
+awful.layout.set(lain.layout.uselessfair, tag)
 ```
 
 How do layouts work?
