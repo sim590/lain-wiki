@@ -268,7 +268,7 @@ Same as `centerwork`, except that this version fills the slave-columns regardles
 Old `uselesstile` patches
 =========================
 
-Useless gaps have been finally integrated in Awesome 4.0, so the `useless*` layouts have been removed.
+Useless gaps have been integrated in Awesome 4.0, so the `useless*` layouts have been removed.
 
 Following are a couple of `uselesstile` variants that were not part of lain: they are kept only for reference.
 
