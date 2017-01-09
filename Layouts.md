@@ -8,9 +8,6 @@
     |-- centerwork
     |-- centerhwork
     |-- centerworkd
-    |-- uselessfair
-    |-- uselesspiral
-    `-- uselesstile
 
 Usage
 =====
