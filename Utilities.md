@@ -183,18 +183,6 @@ awful.key({ altkey }, "Right", function () lain.util.tag_view_nonempty(1) end),
 
 where `altkey = "Mod1"`.
 
-menu\_clients\_current\_tags
-----------------------------
-
-Similar to `awful.menu.clients`, but this menu only shows the clients
-of currently visible tags. Use it with a key binding like this:
-
-```lua
-awful.key({ "Mod1" }, "Tab", function()
-    lain.util.menu_clients_current_tags({ width = 350 }, { keygrabber = true })
-end),
-```
-
 magnify\_client
 ---------------
 
@@ -214,3 +202,15 @@ clientkeys = awful.util.table.join(
 If you want to "de-magnify" it, just retype the keybinding.
 
 If you want magnified client to respond to `incmwfact`, read [here](https://github.com/copycat-killer/lain/issues/195).
+
+menu\_clients\_current\_tags
+----------------------------
+
+Similar to `awful.menu.clients`, but this menu only shows the clients
+of currently visible tags. Use it with a key binding like this:
+
+```lua
+awful.key({ "Mod1" }, "Tab", function()
+    lain.util.menu_clients_current_tags({ width = 350 }, { keygrabber = true })
+end),
+```
