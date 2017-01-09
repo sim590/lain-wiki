@@ -134,8 +134,6 @@ awful.key({ modkey, "Shift" }, "Right", function () lain.util.move_tag(-1) end),
 awful.key({ modkey, "Shift" }, "d", function () lain.util.delete_tag() end),
 ```
 
-**Note** that, apart from `rename_tag`, these function may not work properly with [Copland theme](https://github.com/copycat-killer/awesome-copycats) or any other configuration that already uses a dynamic tagging module like [Eminent](https://github.com/copycat-killer/awesome-copycats/tree/master/eminent).
-
 Useless gaps resize
 ---------------------
 
