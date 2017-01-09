@@ -265,12 +265,6 @@ centerworkd
 
 Same as `centerwork`, except that this version fills the slave-columns regardless of how many slave-clients are present.
 
-uselessfair, uselesspiral & uselesstile
----------------------------------------
-These are duplicates of the stock `fair`, `spiral` and `tile` layouts.
-
-However, "useless gaps" (see below) have been added.
-
 Old `uselesstile` patches
 =========================
 
