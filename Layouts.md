@@ -76,7 +76,7 @@ For example, this sets `termfair` to 3 columns and at least 1 row:
 
 ```lua
 lain.layout.termfair.nmaster = 3
-lain.layout.termfair.ncol = 1
+lain.layout.termfair.ncol    = 1
 ```
 
 centerfair
@@ -105,7 +105,7 @@ For example:
 
 ```lua
 lain.layout.centerfair.nmaster = 3
-lain.layout.centerfair.ncol = 1
+lain.layout.centerfair.ncol    = 1
 ```
 
 cascade
