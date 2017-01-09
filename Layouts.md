@@ -12,7 +12,7 @@
 Usage
 =====
 
-Just set your favourites like usual, or set them on specific tags like this:
+Just specify your favourites like usual, or set them on specific tags like this:
 
 ```lua
 awful.layout.set(lain.layout.uselessfair, tag)
