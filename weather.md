@@ -8,7 +8,7 @@ By default, it uses [current](http://openweathermap.org/current) for current wea
 myweather = lain.widgets.weather()
 ```
 
-## input table
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
