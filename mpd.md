@@ -114,4 +114,7 @@ awful.key({ altkey, "Control" }, "Right",
 
 where `altkey = "Mod1"`.
 
-**Note that** if you use `widget:set_text`, [it will ignore Pango markup](https://github.com/copycat-killer/lain/issues/258), so be sure to always use `widget:set_markup`.
+Notes
+-----
+
+- In `settings`, if you use `widget:set_text`, [it will ignore Pango markup](https://github.com/copycat-killer/lain/issues/258), so be sure to always use `widget:set_markup`.
