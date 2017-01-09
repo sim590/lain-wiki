@@ -55,7 +55,7 @@ A separator function `separators.separator` takes two color arguments, defined a
 ```lua
 arrl_dl = separators.arrow_left(beautiful.bg_focus, "alpha")
 arrl_ld = separators.arrow_left("alpha", beautiful.bg_focus)
-``
+```
 
 You can customize height and width by setting `separators_height` and `separators_width` in your `theme.lua`. Default values are 0 and 9, respectively.
 
