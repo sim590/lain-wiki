@@ -3,10 +3,6 @@ Quake
 
 A Quake-like dropdown container for your favourite application.
 
-```lua
-lain.util.quake()
-```
-
 **Usage**
 
 ```lua
