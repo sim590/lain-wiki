@@ -15,19 +15,7 @@
 Usage
 =====
 
-Just add your favourites to ``layouts`` table:
-
-```lua
-layouts =
-{
-    --[...]
-   lain.layout.termfair,
-   lain.layout.uselesstile,
-   -- [...]
-}
-```
-
-Or set them on specific tags like this:
+Just add your favourites to ``layouts`` table, or set them on specific tags like this:
 
 ```lua
 awful.layout.set(lain.layout.uselessfair, tag)
@@ -36,7 +24,7 @@ awful.layout.set(lain.layout.uselessfair, tag)
 How do layouts work?
 ====================
 
-termfair
+Termfair
 --------
 
 I do a lot of work on terminals. The common tiling algorithms usually
@@ -79,7 +67,7 @@ lain.layout.termfair.nmaster = 3
 lain.layout.termfair.ncol    = 1
 ```
 
-centerfair
+Centerfair
 ----------
 
 Similar to `termfair`, but with fixed number of vertical columns. Cols are centerded until there are `nmaster` columns, then windows are stacked as slaves, with possibly `ncol` clients per column at most.
@@ -108,7 +96,7 @@ lain.layout.centerfair.nmaster = 3
 lain.layout.centerfair.ncol    = 1
 ```
 
-cascade
+Cascade
 -------
 
 Cascade all windows of a tag.
@@ -129,7 +117,7 @@ lain.layout.cascade.nmaster = 5
 That is, no window will get resized upon the creation of a new window,
 unless there's more than 5 windows.
 
-cascadetile
+Cascadetile
 -----------
 
 Similar to `awful.layout.suit.tile` layout, however, clients in the slave
@@ -146,11 +134,11 @@ and anything else means "don't overlap windows".
 Usage example:
 
 ```lua
-lain.layout.cascadetile.offset_x = 2
-lain.layout.cascadetile.offset_y = 32
+lain.layout.cascadetile.offset_x      = 2
+lain.layout.cascadetile.offset_y      = 32
 lain.layout.cascadetile.extra_padding = 5
-lain.layout.cascadetile.nmaster = 5
-lain.layout.cascadetile.ncol = 1
+lain.layout.cascadetile.nmaster       = 5
+lain.layout.cascadetile.ncol          = 1
 ```
 
 `extra_padding` reduces the size of the master window if "overlapping
@@ -202,9 +190,9 @@ You can set the order of the four auxiliary windows. This is the default
 configuration:
 
 ```lua
-lain.layout.centerwork.top_left = 0
-lain.layout.centerwork.top_right = 1
-lain.layout.centerwork.bottom_left = 2
+lain.layout.centerwork.top_left     = 0
+lain.layout.centerwork.top_right    = 1
+lain.layout.centerwork.bottom_left  = 2
 lain.layout.centerwork.bottom_right = 3
 ```
 
@@ -228,9 +216,9 @@ in this order:
 This would require you to use these settings:
 
 ```lua
-lain.layout.centerwork.top_left = 3
-lain.layout.centerwork.top_right = 0
-lain.layout.centerwork.bottom_left = 2
+lain.layout.centerwork.top_left     = 3
+lain.layout.centerwork.top_right    = 0
+lain.layout.centerwork.bottom_left  = 2
 lain.layout.centerwork.bottom_right = 1
 ```
 
@@ -286,45 +274,19 @@ These are duplicates of the stock `fair`, `spiral` and `tile` layouts.
 
 However, "useless gaps" (see below) have been added.
 
-Useless gaps
-============
+Old `uselesstile` patches
+=========================
 
-Useless gaps are gaps between windows. They are "useless" because they
-serve no special purpose despite increasing overview. I find it easier
-to recognize window boundaries if windows are set apart a little bit.
+Useless gaps have been integrated in Awesome 4.0, so the lain `useless*` layouts have been removed.
 
-The `uselessfair` layout, for example, looks like this:
+Following are a couple of `uselesstile` variants that were not part of lain: they are kept only for reference.
 
-	+================+
-	#                #
-	#  +---+  +---+  #
-	#  | 1 |  |   |  #
-	#  +---+  |   |  #
-	#         | 3 |  #
-	#  +---+  |   |  #
-	#  | 2 |  |   |  #
-	#  +---+  +---+  #
-	#                #
-	+================+
-
-All of lain layouts provide useless gaps. To set the width of the gaps,
-you have to add an item called `useless_gap_width` in your `theme.lua`.
-If it doesn't exist, the width will default to 0.
-Example:
-
-```lua
-theme.useless_gap_width = 10
-```
-
-`uselesstile` patches
-=====================
-
-xmonad-like
+Xmonad-like
 -----------
 
-If you want to have uselesstile behave like xmonad, with internal gaps two times wider than external ones, replace `lain/layout/uselesstile` with [this](https://gist.github.com/copycat-killer/9e56dcfbe66bfe14967c).
+If you want to have `awful.layout.suit.tile` behave like xmonad, with internal gaps two times wider than external ones, download [this](https://gist.github.com/copycat-killer/9e56dcfbe66bfe14967c) as `lain/layout/uselesstile`.
 
-inverted master
+Inverted master
 ---------------
 
 Want to invert master window position? Use [this](https://gist.github.com/copycat-killer/c59dc59c9f99d98218eb) version. You can set `single_gap` with `width` and `height` in your `theme.lua`, in order to define the window geometry when there's only one client, otherwise it goes maximized. An example:
