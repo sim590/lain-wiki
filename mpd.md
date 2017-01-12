@@ -33,7 +33,7 @@ Variable | Meaning | Type | Default
 `echo_cmd` | custom call for `echo`** | string | "echo"
 `settings` | User settings | function | empty function
 
-\* In Lua, "\\" means "\" escaped.
+\* In Lua, "\\\\" means "\" escaped.
 
 \*\* `echo` implementation is shell dependent, you may need to set this variable properly (`echo -e` [for instance](https://github.com/copycat-killer/lain/issues/112)) in order for the widget to fetch the data correctly.
 
