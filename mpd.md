@@ -37,7 +37,7 @@ Variable | Meaning | Type | Default
 
 \*\* `echo` implementation is shell dependent, you may need to set this variable properly (`echo -e` [for instance](https://github.com/copycat-killer/lain/issues/112)) in order for the widget to fetch the data correctly.
 
-Default `cover_pattern` definition will made the widget set the first jpg, jpeg, png or gif image file found in the directory as the album art.
+Default `cover_pattern` definition will made the widget set the first jpg, jpeg, png or gif file found in the directory as the album art.
 
 Pay attention to case sensitivity when defining `music_dir`.
 
