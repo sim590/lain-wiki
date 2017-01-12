@@ -1,11 +1,11 @@
 Welcome to the Lain wiki!
 
-Dependency
+Dependencies
 ------------
 
 Package | Requested by | Reason of choice
 --- | --- | ---
-[curl](https://curl.haxx.se) | widgets accessing network resources | faster and simpler to use than [LuaSocket](https://github.com/diegonehab/luasocket); also, it's in the core of almost every distro
+[curl](https://curl.haxx.se) | IMAP and weather widgets | faster and simpler to use than [LuaSocket](https://github.com/diegonehab/luasocket); also, it's in the core of almost every distro
 
 Installation
 ------------
