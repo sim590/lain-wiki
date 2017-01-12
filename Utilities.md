@@ -28,6 +28,7 @@ Variable | Meaning | Type | Default
 `visible` | initially visible | boolean | false
 `border` | border width | int | 1
 `followtag` | always spawn on currently focused screen | boolean | true
+`skip_wibox` | Either made client position skip the wibox or not | boolean | true
 `screen` | screen where to spawn the client | int | `awful.screen.focused()`
 `height` | dropdown client height | float in [0,1] or exact pixel size | 0.25
 `width` | dropdown client width | float in [0,1] or exact pixel size | 1
