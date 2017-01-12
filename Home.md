@@ -1,11 +1,11 @@
 Welcome to the Lain wiki!
 
-Dependencies
+Dependency
 ------------
 
 Package | Requested by | Reason of choice
 --- | --- | ---
-curl | widgets accessing network resources | Faster and simpler to install/use than LuaSocket.
+[curl](https://curl.haxx.se) | widgets accessing network resources | Faster and simpler to install/use than LuaSocket.
 
 Installation
 ------------
