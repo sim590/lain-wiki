@@ -14,14 +14,6 @@ Now playing songs are notified like this:
 	| +-------+                                              |
 	+--------------------------------------------------------+
 
-You need a file like this
-
-```
-(Front|front|Cover|cover|Art|art|Folder|folder)\.(jpg|jpeg|png|gif)
-```
-
-in the album folder in order to show album art too.
-
 **Note:** if MPD is turned off or not set correctly, the widget will constantly display "N/A" values.
 
 ### Input table
@@ -34,13 +26,18 @@ Variable | Meaning | Type | Default
 `port` | MPD port | string | "6600"
 `music_dir` | Music directory | string | "~/Music"
 `cover_size` | Album art notification size | int | 100
+`cover_pattern` | Pattern for the album art file | string | `*\\.(jpg|jpeg|png|gif)`*
 `default_art` | Default art | string | ""
 `notify` | Show notification popups | string | "on"
 `followtag` | Notification behaviour | boolean | false
-`echo_cmd` | custom call for `echo`* | string | "echo"
+`echo_cmd` | custom call for `echo`** | string | "echo"
 `settings` | User settings | function | empty function
 
-\* `echo` implementation is shell dependent, you may need to set this variable properly (`echo -e` [for instance](https://github.com/copycat-killer/lain/issues/112)) in order for the widget to fetch the data correctly.
+\* In Lua, "\\" means "\" escaped.
+
+\*\* `echo` implementation is shell dependent, you may need to set this variable properly (`echo -e` [for instance](https://github.com/copycat-killer/lain/issues/112)) in order for the widget to fetch the data correctly.
+
+Default `cover_pattern` definition will made the widget set the first jpg, jpeg, png or gif image file found in the directory as the album art.
 
 Pay attention to case sensitivity when defining `music_dir`.
 
