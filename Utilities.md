@@ -42,7 +42,7 @@ Variable | Meaning | Type | Default
 
 **Notes**
 
-* Set `followtag=true` if experiencing issue with multiscreen setups
+* Set `followtag = true` if experiencing issue with multiscreen setups
 * If your client is a terminal and you have a rule like `awful.client.setslave` for your terminals, ensure you use an exception for `QuakeDD` (or your defined `name`). Otherwise, you may run into problems with focus.
 * If you are using a GTK+ application like termite, be sure to set [`argname = "--name %s"`](https://github.com/copycat-killer/lain/issues/211).
 
