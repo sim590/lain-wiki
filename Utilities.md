@@ -6,10 +6,15 @@ A Quake-like dropdown container for your favourite application.
 **Usage**
 
 ```lua
-local quakeapp = {}
 for s in screen do
-   quakeapp[s] = lain.util.quake()
+   s.quake = lain.util.quake()
 end
+```
+
+**Keybinding**
+
+```lua
+awful.key({ modkey, }, "z", function () awful.screen.focused().quake:toggle() end),
 ```
 
 **Input table**
@@ -22,7 +27,7 @@ Variable | Meaning | Type | Default
 `extra` | extra `app` arguments | string | empty string
 `visible` | initially visible | boolean | false
 `border` | border width | int | 1
-`followtag` | always spawn on currently focused screen | boolean | false
+`followtag` | always spawn on currently focused screen | boolean | true
 `screen` | screen where to spawn the client | int | `awful.screen.focused()`
 `height` | dropdown client height | float in [0,1] or exact pixel size | 0.25
 `width` | dropdown client width | float in [0,1] or exact pixel size | 1
@@ -34,7 +39,6 @@ Variable | Meaning | Type | Default
 **Notes**
 
 * If your client is a terminal and you have a rule like `awful.client.setslave` for your terminals, ensure you use an exception for `QuakeDD` (or your defined `name`). Otherwise, you may run into problems with focus.
-* If `followtag` is set to `true`, the client will always dropdown on currently focused tag screen (can be preferable with multiple screens).
 * If you are using a GTK+ application like termite, be sure to set [`argname = "--name %s"`](https://github.com/copycat-killer/lain/issues/211).
 
 Separators
