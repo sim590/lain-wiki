@@ -7,8 +7,17 @@ A Quake-like dropdown container for your favourite application.
 
 ```lua
 for s in screen do
-   s.quake = lain.util.quake()
+    s.quake = lain.util.quake()
 end
+```
+
+Or define it in `connect_for_each_screen` function:
+
+```lua
+awful.screen.connect_for_each_screen(function(s)
+    -- Quake application
+    s.quake = lain.util.quake()
+    -- [...]
 ```
 
 **Keybinding**
