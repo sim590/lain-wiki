@@ -5,7 +5,7 @@ Dependency
 
 Package | Requested by | Reason of choice
 --- | --- | ---
-[curl](https://curl.haxx.se) | widgets accessing network resources | Faster and simpler to install/use than LuaSocket.
+[curl](https://curl.haxx.se) | widgets accessing network resources | faster and simpler to use than LuaSocket
 
 Installation
 ------------
