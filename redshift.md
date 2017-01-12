@@ -136,5 +136,5 @@ Then add the `myredshift` widget to your wibox.
 Add this to the keybindings in your rc.lua:
 ```lua
 -- Toggle redshift with Mod+Shift+t
-awful.key({ modkey, "Shift"   }, "t",   function () lain.widgets.contrib.redshift:toggle()   end) ,
+awful.key({ modkey, "Shift" }, "t", function () lain.widgets.contrib.redshift:toggle() end),
 ```
