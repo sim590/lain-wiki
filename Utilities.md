@@ -28,10 +28,10 @@ Variable | Meaning | Type | Default
 `name` | client name | string | "QuakeDD"
 `argname` | how to specify client name | string | "-name %s"
 `extra` | extra `app` arguments | string | empty string
-`visible` | initially visible | boolean | false
 `border` | border width | int | 1
-`followtag` | always spawn on currently focused screen | boolean | true
-`skip_wibox` | Either made client position skip the wibox or not | boolean | true
+`visible` | initially visible | boolean | false
+`followtag` | always spawn on currently focused screen\* | boolean | false
+`overlap` | Overlap the wibox or not | boolean | false
 `screen` | screen where to spawn the client | int | `awful.screen.focused()`
 `height` | dropdown client height | float in [0,1] or exact pixel size | 0.25
 `width` | dropdown client width | float in [0,1] or exact pixel size | 1
@@ -42,6 +42,7 @@ Variable | Meaning | Type | Default
 
 **Notes**
 
+* Set `followtag=true` if experiencing issue with multiscreen setups
 * If your client is a terminal and you have a rule like `awful.client.setslave` for your terminals, ensure you use an exception for `QuakeDD` (or your defined `name`). Otherwise, you may run into problems with focus.
 * If you are using a GTK+ application like termite, be sure to set [`argname = "--name %s"`](https://github.com/copycat-killer/lain/issues/211).
 
