@@ -215,9 +215,9 @@ are put ontop/below it. Useful if you have a screen turned 90°.
 Pre 4.0 `uselesstile` patches
 =============================
 
-Useless gaps have been integrated in Awesome 4.0, so the `useless*` layouts have been removed.
+In branch 3.5, this module provided useless gaps layouts. Since useless gaps have been implemented in Awesome 4.0, those layouts have been removed.
 
-Following are a couple of `uselesstile` variants that were not part of lain: they are kept for reference.
+Following are a couple of `uselesstile` variants that were not part of lain. They are kept only for reference and are not supported.
 
 Xmonad-like
 -----------
