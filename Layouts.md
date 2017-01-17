@@ -85,6 +85,7 @@ For example, this sets `termfair.center` to 3 columns and at least 1 row:
 ```lua
 lain.layout.termfair.center.nmaster = 3
 lain.layout.termfair.center.ncol    = 1
+```
 
 `cascade`
 -------
