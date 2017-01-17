@@ -15,13 +15,13 @@ Usage
 Just specify your favourites like usual, or set them on specific tags like this:
 
 ```lua
-awful.layout.set(lain.layout.uselessfair, tag)
+awful.layout.set(lain.layout.termfair, tag)
 ```
 
 How do layouts work?
 ====================
 
-Termfair
+`termfair`
 --------
 
 I do a lot of work on terminals. The common tiling algorithms usually
@@ -64,7 +64,13 @@ lain.layout.termfair.nmaster = 3
 lain.layout.termfair.ncol    = 1
 ```
 
-Centerfair
+You can also set a global border:
+
+```lua
+lain.layout.termfair.global_border_width = 1 -- default is 0
+```
+
+`termfair.center`
 ----------
 
 Similar to `termfair`, but with fixed number of vertical columns. Cols are centerded until there are `nmaster` columns, then windows are stacked as slaves, with possibly `ncol` clients per column at most.
@@ -86,14 +92,15 @@ Similar to `termfair`, but with fixed number of vertical columns. Cols are cente
 Like `termfair`, default number of columns and rows are respectively taken from `nmaster`
 and `ncol` values in `awful.tag`, but you can set your own.
 
-For example:
+For example, this sets `termfair.center` to 3 columns and at least 1 row:
 
 ```lua
-lain.layout.centerfair.nmaster = 3
-lain.layout.centerfair.ncol    = 1
-```
+lain.layout.termfair.center.nmaster = 3
+lain.layout.termfair.center.ncol    = 1
 
-Cascade
+Also, `lain.layout.termfair.global_border_width` will be applied here too.
+
+`cascade`
 -------
 
 Cascade all windows of a tag.
@@ -114,7 +121,13 @@ lain.layout.cascade.nmaster = 5
 That is, no window will get resized upon the creation of a new window,
 unless there's more than 5 windows.
 
-Cascadetile
+You can also set a global border:
+
+```lua
+lain.layout.cascade.global_border_width = 1 -- default is 0
+```
+
+`cascade.tile`
 -----------
 
 Similar to `awful.layout.suit.tile` layout, however, clients in the slave
@@ -131,11 +144,11 @@ and anything else means "don't overlap windows".
 Usage example:
 
 ```lua
-lain.layout.cascadetile.offset_x      = 2
-lain.layout.cascadetile.offset_y      = 32
-lain.layout.cascadetile.extra_padding = 5
-lain.layout.cascadetile.nmaster       = 5
-lain.layout.cascadetile.ncol          = 1
+lain.layout.cascade.tile.offset_x      = 2
+lain.layout.cascade.tile.offset_y      = 32
+lain.layout.cascade.tile.extra_padding = 5
+lain.layout.cascade.tile.nmaster       = 5
+lain.layout.cascade.tile.ncol          = 1
 ```
 
 `extra_padding` reduces the size of the master window if "overlapping
@@ -143,6 +156,8 @@ slave column" is activated. This allows you to see if there are any
 windows in your slave column.
 
 Setting `offset_x` to a very small value or even 0 is recommended to avoid wasting space.
+
+Also, `lain.layout.cascade.global_border_width` will be applied here too.
 
 centerwork
 ----------
@@ -295,9 +310,13 @@ To use them, add lines to your ``theme.lua`` like this:
 theme.lain_icons         = os.getenv("HOME") ..
                            "/.config/awesome/lain/icons/layout/default/"
 theme.layout_termfair    = theme.lain_icons .. "termfairw.png"
+theme.layout_centerfair  = thema.lain_icons .. "centerfairw.png"
 theme.layout_cascade     = theme.lain_icons .. "cascadew.png"
 theme.layout_cascadetile = theme.lain_icons .. "cascadetilew.png"
 theme.layout_centerwork  = theme.lain_icons .. "centerworkw.png"
+theme.layout_centerwork  = theme.lain_icons .. "centerworkw.png"
+theme.layout_centerhwork = theme.lain_icons .. "centerhworkw.png"
+theme.layout_centerworkd = theme.lain_icons .. "centerworkdw.png"
 ```
 
 Credits go to [Nicolas Estibals](https://github.com/nestibal) for creating
