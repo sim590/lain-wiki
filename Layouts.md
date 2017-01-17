@@ -7,7 +7,6 @@
     |-- cascade.tile
     |-- centerwork
     |-- centerwork.horizontal
-    |-- centerworkd
 
 Usage
 =====
@@ -178,61 +177,20 @@ You start with one window, centered horizontally:
 	+--------------------------+
 
 This is your main working window. You do most of the work right here.
-Sometimes, you may want to open up additional windows. They're put in
-the following four slots:
+Sometimes, you may want to open up additional windows. They're put on left and right, alternately.
 
 	+--------------------------+
 	| +---+ +----------+ +---+ |
 	| |   | |          | |   | |
-	| | 0 | |          | | 1 | |
+	| |   | |          | |   | |
 	| |   | |          | |   | |
 	| +---+ |   MAIN   | +---+ |
 	| +---+ |          | +---+ |
 	| |   | |          | |   | |
-	| | 2 | |          | | 3 | |
+	| |   | |          | |   | |
 	| |   | |          | |   | |
 	| +---+ +----------+ +---+ |
 	+--------------------------+
-
-Yes, the number "four" is fixed. In total, you can only have five open
-windows with this layout. Additional windows are not managed and set to
-floating mode. **This is intentional**.
-
-You can set the order of the four auxiliary windows. This is the default
-configuration:
-
-```lua
-lain.layout.centerwork.top_left     = 0
-lain.layout.centerwork.top_right    = 1
-lain.layout.centerwork.bottom_left  = 2
-lain.layout.centerwork.bottom_right = 3
-```
-
-This means: The bottom left slot will be occupied by the third window
-(not counting the main window). Suppose you want your windows to appear
-in this order:
-
-	+--------------------------+
-	| +---+ +----------+ +---+ |
-	| |   | |          | |   | |
-	| | 3 | |          | | 0 | |
-	| |   | |          | |   | |
-	| +---+ |   MAIN   | +---+ |
-	| +---+ |          | +---+ |
-	| |   | |          | |   | |
-	| | 2 | |          | | 1 | |
-	| |   | |          | |   | |
-	| +---+ +----------+ +---+ |
-	+--------------------------+
-
-This would require you to use these settings:
-
-```lua
-lain.layout.centerwork.top_left     = 3
-lain.layout.centerwork.top_right    = 0
-lain.layout.centerwork.bottom_left  = 2
-lain.layout.centerwork.bottom_right = 1
-```
 
 *Please note:* If you use Awesome's default configuration, navigation in
 this layout may be very confusing. How do you get from the main window
@@ -271,21 +229,15 @@ globalkeys = awful.util.table.join(
 -----------
 
 Same as `centerwork`, except that the main
-window expands horizontally, and the 4 additional windows
-are put ontop/below it, thus using the huge vertical space
-much better. Useful if you have a screen turned 90°.
-
-`centerworkd`
------------
-
-Same as `centerwork`, except that this version fills the slave-columns regardless of how many slave-clients are present.
+window expands horizontally, and the additional windows
+are put ontop/below it. Useful if you have a screen turned 90°.
 
 Pre 4.0 `uselesstile` patches
 =============================
 
 Useless gaps have been integrated in Awesome 4.0, so the `useless*` layouts have been removed.
 
-Following are a couple of `uselesstile` variants that were not part of lain: they are kept only for reference.
+Following are a couple of `uselesstile` variants that were not part of lain: they are kept for reference.
 
 Xmonad-like
 -----------
@@ -304,7 +256,7 @@ What about layout icons?
 
 They are located in ``lain/icons/layout``.
 
-To use them, add lines to your ``theme.lua`` like this:
+To use them, define new `layout_*` variables in your ``theme.lua``. For instance:
 
 ```lua
 theme.lain_icons         = os.getenv("HOME") ..
@@ -314,7 +266,7 @@ theme.layout_centerfair  = thema.lain_icons .. "centerfair.png"  -- termfair.cen
 theme.layout_cascade     = theme.lain_icons .. "cascade.png"
 theme.layout_cascadetile = theme.lain_icons .. "cascadetile.png" -- cascade.tile
 theme.layout_centerwork  = theme.lain_icons .. "centerwork.png"
-theme.layout_centerhwork = theme.lain_icons .. "centerhwork.png" -- centerwork.horizontal
+theme.layout_centerhwork = theme.lain_icons .. "centerworkh.png" -- centerwork.horizontal
 ```
 
 Credits go to [Nicolas Estibals](https://github.com/nestibal) for creating
