@@ -2,7 +2,7 @@
     lain/layout
     .
     |-- termfair
-    |-- centerfair
+    |-- termfair.center
     |-- cascade
     |-- cascadetile
     |-- centerwork
