@@ -23,11 +23,6 @@ How do layouts work?
 `termfair`
 --------
 
-I do a lot of work on terminals. The common tiling algorithms usually
-maximize windows, so you'll end up with a terminal that has about 200
-columns or more. That's way too much. Have you ever read a manpage in a
-terminal of this size?
-
 This layout restricts the size of each window. Each window will have the
 same width but is variable in height. Furthermore, windows are
 left-aligned. The basic workflow is as follows (the number above the
