@@ -11,7 +11,7 @@
 Usage
 =====
 
-Just specify your favourites like usual, or set them on specific tags like this:
+Just specify your favourites in the usual way, or set them on specific tags like this:
 
 ```lua
 awful.layout.set(lain.layout.termfair, tag)
