@@ -4,9 +4,9 @@
     |-- termfair
     |-- termfair.center
     |-- cascade
-    |-- cascadetile
+    |-- cascade.tile
     |-- centerwork
-    |-- centerhwork
+    |-- centerwork.horizontal
     |-- centerworkd
 
 Usage
@@ -267,7 +267,7 @@ globalkeys = awful.util.table.join(
 )
 ```
 
-centerhwork
+`centerwork.horizontal`
 -----------
 
 Same as `centerwork`, except that the main
@@ -315,8 +315,8 @@ theme.layout_cascade     = theme.lain_icons .. "cascadew.png"
 theme.layout_cascadetile = theme.lain_icons .. "cascadetilew.png"
 theme.layout_centerwork  = theme.lain_icons .. "centerworkw.png"
 theme.layout_centerwork  = theme.lain_icons .. "centerworkw.png"
-theme.layout_centerhwork = theme.lain_icons .. "centerhworkw.png"
-theme.layout_centerworkd = theme.lain_icons .. "centerworkdw.png"
+theme.layout_centerhwork = theme.lain_icons .. "centerhworkw.png" -- centerwork.horizontal
+theme.layout_centerworkd = theme.lain_icons .. "centerworkdw.png" -- centerwork.dynamic
 ```
 
 Credits go to [Nicolas Estibals](https://github.com/nestibal) for creating
