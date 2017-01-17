@@ -159,7 +159,7 @@ Setting `offset_x` to a very small value or even 0 is recommended to avoid wasti
 
 Also, `lain.layout.cascade.global_border_width` will be applied here too.
 
-centerwork
+`centerwork`
 ----------
 
 You start with one window, centered horizontally:
@@ -275,13 +275,13 @@ window expands horizontally, and the 4 additional windows
 are put ontop/below it, thus using the huge vertical space
 much better. Useful if you have a screen turned 90°.
 
-centerworkd
+`centerworkd`
 -----------
 
 Same as `centerwork`, except that this version fills the slave-columns regardless of how many slave-clients are present.
 
-Old `uselesstile` patches
-=========================
+Pre 4.0 `uselesstile` patches
+=============================
 
 Useless gaps have been integrated in Awesome 4.0, so the `useless*` layouts have been removed.
 
