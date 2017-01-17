@@ -309,14 +309,12 @@ To use them, add lines to your ``theme.lua`` like this:
 ```lua
 theme.lain_icons         = os.getenv("HOME") ..
                            "/.config/awesome/lain/icons/layout/default/"
-theme.layout_termfair    = theme.lain_icons .. "termfairw.png"
-theme.layout_centerfair  = thema.lain_icons .. "centerfairw.png"
-theme.layout_cascade     = theme.lain_icons .. "cascadew.png"
-theme.layout_cascadetile = theme.lain_icons .. "cascadetilew.png"
-theme.layout_centerwork  = theme.lain_icons .. "centerworkw.png"
-theme.layout_centerwork  = theme.lain_icons .. "centerworkw.png"
-theme.layout_centerhwork = theme.lain_icons .. "centerhworkw.png" -- centerwork.horizontal
-theme.layout_centerworkd = theme.lain_icons .. "centerworkdw.png" -- centerwork.dynamic
+theme.layout_termfair    = theme.lain_icons .. "termfair.png"
+theme.layout_centerfair  = thema.lain_icons .. "centerfair.png"  -- termfair.center
+theme.layout_cascade     = theme.lain_icons .. "cascade.png"
+theme.layout_cascadetile = theme.lain_icons .. "cascadetile.png" -- cascade.tile
+theme.layout_centerwork  = theme.lain_icons .. "centerwork.png"
+theme.layout_centerhwork = theme.lain_icons .. "centerhwork.png" -- centerwork.horizontal
 ```
 
 Credits go to [Nicolas Estibals](https://github.com/nestibal) for creating
