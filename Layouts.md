@@ -63,12 +63,6 @@ lain.layout.termfair.nmaster = 3
 lain.layout.termfair.ncol    = 1
 ```
 
-You can also set a global border:
-
-```lua
-lain.layout.termfair.global_border_width = 1 -- default is 0
-```
-
 `termfair.center`
 ----------
 
@@ -97,8 +91,6 @@ For example, this sets `termfair.center` to 3 columns and at least 1 row:
 lain.layout.termfair.center.nmaster = 3
 lain.layout.termfair.center.ncol    = 1
 
-Also, `lain.layout.termfair.global_border_width` will be applied here too.
-
 `cascade`
 -------
 
@@ -119,12 +111,6 @@ lain.layout.cascade.nmaster = 5
 
 That is, no window will get resized upon the creation of a new window,
 unless there's more than 5 windows.
-
-You can also set a global border:
-
-```lua
-lain.layout.cascade.global_border_width = 1 -- default is 0
-```
 
 `cascade.tile`
 -----------
@@ -155,8 +141,6 @@ slave column" is activated. This allows you to see if there are any
 windows in your slave column.
 
 Setting `offset_x` to a very small value or even 0 is recommended to avoid wasting space.
-
-Also, `lain.layout.cascade.global_border_width` will be applied here too.
 
 `centerwork`
 ----------
