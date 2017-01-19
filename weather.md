@@ -33,7 +33,11 @@ Variable | Meaning | Type | Default
 
     `"curl -s 'http://api.openweathermap.org/data/2.5/weather?id=%s&units=%s&lang=%s'"`
 
-    You can rewrite it using any fetcher solution you like, or you can modify it in order to [fetch small settlements weather](https://github.com/copycat-killer/awesome-copycats/issues/134).
+    You can rewrite it using any fetcher solution you like, or you can modify it in order to fetch data by city name, instead of ID: just replace `id` with `q`:
+
+    `"curl -s 'http://api.openweathermap.org/data/2.5/weather?q=%s&units=%s&lang=%s'"`
+
+    and set `city_id` with your city name, for instance `city_id = "London,UK"`.
 
 - ``default_forecast_call``
 
