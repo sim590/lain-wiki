@@ -33,7 +33,7 @@ Variable | Meaning | Type | Default
 
     `"curl -s 'http://api.openweathermap.org/data/2.5/weather?id=%s&units=%s&lang=%s'"`
 
-    You can rewrite it using any fetcher solution you like.
+    You can rewrite it using any fetcher solution you like, or you can modify it in order to [fetch small settlements weather](https://github.com/copycat-killer/awesome-copycats/issues/134).
 
 - ``default_forecast_call``
 
