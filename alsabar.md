@@ -83,7 +83,7 @@ awful.key({ altkey }, "Down",
 	end),
 awful.key({ altkey }, "m",
 	function ()
-		os.execute(string.format("amixer set %s toggle", volume.togglechannel or volume.channel))
+		os.execute(string.format("amixer set %s toggle", volume.channel))
 		volume.update()
 	end),
 awful.key({ altkey, "Control" }, "m",
