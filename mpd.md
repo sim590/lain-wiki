@@ -30,12 +30,9 @@ Variable | Meaning | Type | Default
 `default_art` | Default art | string | ""
 `notify` | Show notification popups | string | "on"
 `followtag` | Notification behaviour | boolean | false
-`echo_cmd` | custom call for `echo`** | string | "echo"
 `settings` | User settings | function | empty function
 
 \* In Lua, "\\\\" means "\" escaped.
-
-\*\* `echo` implementation is shell dependent, you may need to set this variable properly (`echo -e` [for instance](https://github.com/copycat-killer/lain/issues/112)) in order for the widget to fetch the data correctly.
 
 Default `cover_pattern` definition will made the widget set the first jpg, jpeg, png or gif file found in the directory as the album art.
 
