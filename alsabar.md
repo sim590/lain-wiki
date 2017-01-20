@@ -24,15 +24,12 @@ Variable | Meaning | Type | Default
 `vertical` | Set the bar vertical | boolean | false
 `cmd` | ALSA mixer command | string | "amixer"
 `channel` | Mixer channel | string | "Master"
-`togglechannel` | Toggle channel | string | `nil`
 `step` | Step at which volume is increased/decreased | string | "1%"
 `colors` | Bar colors | table | see **colors**
 `notifications` | Notifications settings | table | see **notifications**
 `followtag` | Display the notification on currently focused screen | boolean | false
 
 `cmd` is useful if you need to pass additional arguments to  `amixer`. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
-
-In case you are using an HDMI output, and mute toggling can't be mapped to `Master`, define `togglechannel` argument as your S/PDIF device. Read [alsa widget](https://github.com/copycat-killer/lain/wiki/alsa) page to know how.
 
 ### Colors
 
