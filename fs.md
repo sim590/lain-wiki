@@ -16,7 +16,7 @@ Variable | Meaning | Type | Default
 `notification_preset` | Notification preset | table | `{ fg = beautiful.fg_normal }`
 `followtag` | Display the notification on currently focused screen | boolean | false
 `notify` | Display notifications | string | "on"
-`showpopup` | Display df popups with mouse hovering | string, possible values: "on", "off" | "on"
+`showpopup` | Display popups with mouse hovering | string, possible values: "on", "off" | "on"
 `settings` | User settings | function | empty function
 
 `settings` can use the following `partition` related strings:
