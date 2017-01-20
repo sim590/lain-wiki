@@ -11,43 +11,9 @@ Variable | Meaning | Type | Default
 `timeout` | Refresh timeout seconds | int | 5
 `cmd` | Alsa mixer command | string | "amixer"
 `channel` | Mixer channel | string | "Master"
-`togglechannel` | Toggle channel | string | `nil`
 `settings` | User settings | function | empty function
 
 `cmd` is useful if you need to pass additional arguments to amixer. For instance, users with multiple sound cards may define `cmd = "amixer -c X"` in order to set amixer with card `X`.
-
-In case you are using an HDMI output, and mute toggling can't be mapped to `Master`, define `togglechannel` argument as your S/PDIF device. You can know the correct ID device with `amixer`'s `scontents` command.
-
-For instance, if card number is 1 and S/PDF number is 3:
-
-```shell
-$ amixer -c1 scontents
-Simple mixer control 'Master',0
-  Capabilities: volume
-  Playback channels: Front Left - Front Right
-  Capture channels: Front Left - Front Right
-  Limits: 0 - 255
-  Front Left: 255 [100%]
-  Front Right: 255 [100%]
-Simple mixer control 'IEC958',0
-  Capabilities: pswitch pswitch-joined
-  Playback channels: Mono
-  Mono: Playback [on]
-Simple mixer control 'IEC958',1
-  Capabilities: pswitch pswitch-joined
-  Playback channels: Mono
-  Mono: Playback [on]
-Simple mixer control 'IEC958',2
-  Capabilities: pswitch pswitch-joined
-  Playback channels: Mono
-  Mono: Playback [on]
-Simple mixer control 'IEC958',3
-  Capabilities: pswitch pswitch-joined
-  Playback channels: Mono
-  Mono: Playback [on]
-```
-
-you have to set `togglechannel = "IEC958,3"`.
 
 `settings` can use the following variables:
 
@@ -80,7 +46,7 @@ awful.key({ altkey }, "Down",
 	end),
 awful.key({ altkey }, "m",
 	function ()
-		os.execute(string.format("amixer set %s toggle", volumewidget.togglechannel or volumewidget.channel))
+		os.execute(string.format("amixer set %s toggle", volumewidget.channel))
 		volumewidget.update()
 	end),
 awful.key({ altkey, "Control" }, "m",
