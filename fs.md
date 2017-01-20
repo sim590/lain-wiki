@@ -19,23 +19,27 @@ Variable | Meaning | Type | Default
 `showpopup` | Display df popups with mouse hovering | string, possible values: "on", "off" | "on"
 `settings` | User settings | function | empty function
 
-`settings` can use the following `partition` related float values:
+`settings` can use the following `partition` related strings:
 
-* `fs_now.available`
 * `fs_now.size_mb`
 * `fs_now.size_gb`
 * `fs_now.used`
 * `fs_now.used_mb`
 * `fs_now.used_gb`
+* `fs_now.available`
+* `fs_now.available_mb`
+* `fs_now.available_gb`
 
 Within `settings`, you can obtain other partition values from internal `fs_info` table. For each partition, the following indexes are available:
 
-*  `fs_info[other_partition .. " avail_p"]`
 *  `fs_info[other_partition .. " size_mb"]`
 *  `fs_info[other_partition .. " size_gb"]`
 *  `fs_info[other_partition .. " used_p"]`
 *  `fs_info[other_partition .. " used_mb"]`
 *  `fs_info[other_partition .. " used_gb"]`
+*  `fs_info[other_partition .. " avail_p"]`
+*  `fs_info[other_partition .. " avail_mb"]`
+*  `fs_info[other_partition .. " avail_gb"]`
 
 just like the variables of `fs_now`. Example:
 
