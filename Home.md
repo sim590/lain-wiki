@@ -5,7 +5,7 @@ Dependency
 
 Package | Requested by | Reason of choice
 --- | --- | ---
-[curl](https://curl.haxx.se) | widgets accessing network resources | faster and simpler to use than [LuaSocket](https://github.com/diegonehab/luasocket); also, it's in the core of almost every distro
+[curl](https://curl.haxx.se) | widgets accessing network resources | 1. faster and simpler to use than [LuaSocket](https://github.com/diegonehab/luasocket); 2. it's in the core of almost every distro; 3. can be called [asynchronously](https://awesomewm.org/doc/api/libraries/awful.spawn.html#easy_async)
 
 Installation
 ------------
