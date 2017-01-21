@@ -51,7 +51,7 @@ By default, left-clicking the textbox calls `next`, and right-clicking calls `pr
 -- Switch between US Dvorak and DE layouts.
 mykbdlayout = lain.widgets.contrib.kbdlayout({
     layouts = { { layout = "us", variant = "dvorak" },
-	        { layout = "de" } },
+	            { layout = "de" } },
     settings = function()
         if kbdlayout_now.variant then
             widget:set_text(string.format("%s/%s", kbdlayout_now.layout,
