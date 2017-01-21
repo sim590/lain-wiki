@@ -24,7 +24,7 @@ Variable | Meaning | Type | Default
 
 \* `cal` program options may vary depending on the operating system: you may need to set this variable properly (`/usr/bin/cal -h` [for instance](https://github.com/copycat-killer/lain/pull/34)) in order to display the current day highlighting.
 
-\*\* `cal_format` can be used in case you need to fix the format [because you have more than one occurence of `today` number](https://github.com/copycat-killer/lain/pull/194).
+\*\* `format` can be used in case you need to fix the format [because you have more than one occurence of `today` number](https://github.com/copycat-killer/lain/pull/194).
 
 `position` possible values are defined [here](https://awesomewm.org/doc/api/libraries/naughty.html#notify).
 
