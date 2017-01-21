@@ -13,7 +13,7 @@ Variable | Meaning | Type | Default
 `timeout` | Refresh timeout seconds -| int | 600
 `partition` | Partition to monitor | string | "/"
 `options` | Additional options to pass to [`dfs`](https://github.com/copycat-killer/lain/blob/master/scripts/dfs) | string, in the form `--type='fstype' | --exclude-type='fstype'` | nil
-`notification_preset` | Notification preset | table | `{ fg = beautiful.fg_normal }`
+`notification_preset` | Notification preset | table | `{}`
 `followtag` | Display the notification on currently focused screen | boolean | false
 `notify` | Display notifications | string | "on"
 `showpopup` | Display popups with mouse hovering | string, possible values: "on", "off" | "on"
@@ -53,11 +53,7 @@ fsroothome = lain.widgets.fs({
 })
 ```
 
-Also, `settings` can modify `notification_preset` table. This table will be the preset for the naughty notifications. Check [here](https://awesomewm.org/doc/api/libraries/naughty.html#notify) for the list of variables it can contain. Default definition:
-
-```lua
-notification_preset = { fg = beautiful.fg_normal }
-```
+Also, `settings` can modify `notification_preset` table. This table will be the preset for the naughty notifications. Check [here](https://awesomewm.org/doc/api/libraries/naughty.html#notify) for the list of variables it can contain.
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
