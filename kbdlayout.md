@@ -55,7 +55,7 @@ mykbdlayout = lain.widgets.contrib.kbdlayout({
     settings = function()
         if kbdlayout_now.variant then
             widget:set_text(string.format("%s/%s", kbdlayout_now.layout,
-            kbdlayout_now.variant)
+            kbdlayout_now.variant))
         else
             widget:set_text(kbdlayout_now.layout)
         end
