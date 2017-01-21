@@ -29,7 +29,7 @@ This widget provides the following functions:
 | function | meaning |
 | --- | --- |
 | `redshift:toggle()` | Toggles Redshift adjustments on or off, and also restarts it if terminates. |
-| `redshift:attach(widget, update_function)` | Attach to a widget. Click on the widget to toggle redshift on or off. `update_function` can be used to modify the icon/text and will be triggered each time redshift changes its status. (See the examples below.) |
+| `redshift:attach(widget, update_function)` | Attach to a widget. Click on the widget to toggle redshift on or off. `update_function` is a callback function which will be triggered each time Redshift changes its status. (See the examples below.) |
 
 ### Usage examples
 
