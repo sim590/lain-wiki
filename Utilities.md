@@ -69,7 +69,7 @@ List of functions:
      +-- separators
      |
      |`-- arrow_right()    Draw a right arrow.
-     |`-- arrow_left()     Draw a left arrow.
+      `-- arrow_left()     Draw a left arrow.
 
 markup
 ------
@@ -92,34 +92,21 @@ List of functions:
      |`-- big()         Set bigger text.
      |`-- small()       Set smaller text.
      |`-- font()        Set the font of the text.
-     |
-     |`--+ bg
-     |   |
-     |   |`-- color()   Set background color.
-     |   |`-- focus()   Set focus  background color.
-     |   |`-- normal()  Set normal background color.
-     |    `-- urgent()  Set urgent background color.
-     |
-     |`--+ fg
-     |   |
-     |   |`-- color()   Set foreground color.
-     |   |`-- focus()   Set focus  foreground color.
-     |   |`-- normal()  Set normal foreground color.
-     |    `-- urgent()  Set urgent foreground color.
-     |
-     |`-- focus()       Set both foreground and background focus  colors.
-     |`-- normal()      Set both foreground and background normal colors.
-      `-- urgent()      Set both foreground and background urgent colors.
+     |`-- font()        Set the font of the text.
+     |`--+ fgcolor()    Set foreground color.
+     |`--+ bgcolor()    Set background color.
+     |`-- color()       Set background and foreground color. 
+     `-- fontcolor()    Set font, plus background and foreground colors.
 
-they all take one argument, which is the text to markup, except `font`, `fg.color` and `bg.color`:
+they all take one argument, which is the text to markup, except the following:
 
 ```lua
 markup.font(font, text)
-markup.fg.color(color, text)
-markup.bg.color(color, text)
+markup.fgcolor(color, text)
+markup.bgcolor(color, text)
+markup.color(fg, bg, text)
+markup.fontcolor(font, fg, bg, text)
 ```
-
-`focus`, `normal` and `urgent` use `beautiful` variables.
 
 Dynamic tagging
 ---------------
