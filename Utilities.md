@@ -93,19 +93,25 @@ List of functions:
      |`-- small()       Set smaller text.
      |`-- font()        Set the font of the text.
      |`-- font()        Set the font of the text.
-     |`--+ fgcolor()    Set foreground color.
-     |`--+ bgcolor()    Set background color.
      |`-- color()       Set background and foreground color. 
      `-- fontcolor()    Set font, plus background and foreground colors.
+     |
+     |`--+ bg
+     |   |
+     |    `-- color()   Set background color.
+     |
+      `--+ fg
+         |
+          `-- color()   Set foreground color.
 
 they all take one argument, which is the text to markup, except the following:
 
 ```lua
 markup.font(font, text)
-markup.fgcolor(color, text)
-markup.bgcolor(color, text)
 markup.color(fg, bg, text)
 markup.fontcolor(font, fg, bg, text)
+markup.fg.color(color, text)
+markup.bg.color(color, text)
 ```
 
 Dynamic tagging
