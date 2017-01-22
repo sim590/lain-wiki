@@ -9,7 +9,7 @@
     * [centerwork](https://github.com/copycat-killer/lain/wiki/Layouts#centerwork)
     * [centerworkh](https://github.com/copycat-killer/lain/wiki/Layouts#centerworkhorizontal)
   * [Pre 4.0 uselesstile patches](https://github.com/copycat-killer/lain/wiki/Layouts#pre-40-uselesstile-patches)
-  * [What about icons?](https://github.com/copycat-killer/lain/wiki/Layouts#what-about-icons)
+  * [What about layout icons?](https://github.com/copycat-killer/lain/wiki/Layouts#what-about-layout-icons)
 * [Widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
 * [Utilities](https://github.com/copycat-killer/lain/wiki/Utilities)
     * [quake](https://github.com/copycat-killer/lain/wiki/Utilities#quake)
