@@ -11,6 +11,7 @@ Variable | Meaning | Type | Default
 `timeout` | Refresh timeout seconds | int | 5
 `cmd` | Alsa mixer command | string | "amixer"
 `channel` | Mixer channel | string | "Master"
+`togglechannel` | Toggle channel | string | `nil`
 `settings` | User settings | function | empty function
 
 `cmd` is useful if you need to pass additional arguments to amixer. For instance, users with multiple sound cards may define `cmd = "amixer -c X"` in order to set amixer with card `X`.
