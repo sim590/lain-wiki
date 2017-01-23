@@ -10,7 +10,7 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 5
 `cmd` | PulseAudio command | string | [link](https://github.com/copycat-killer/lain/blob/master/widgets/pulseaudio.lua#L29)
-`scallback` | PulseAudio Sink callback | function | `nil`
+`scallback` | PulseAudio sink callback | function | `nil`
 `settings` | User settings | function | empty function
 
 `cmd` catch infos from current default sink. You can redefine it, being sure that the ouput is something like this:
