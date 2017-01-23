@@ -19,11 +19,14 @@ Variable | Meaning | Type | Default
 `vertical` | Set the bar vertical | boolean | false
 `cmd` | ALSA mixer command | string | "amixer"
 `channel` | Mixer channel | string | "Master"
+`togglechannel` | Toggle channel | string | `nil`
 `colors` | Bar colors | table | see [Default colors](https://github.com/copycat-killer/lain/wiki/alsabar#default-colors)
 `notification_preset` | Notifications settings | table | [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
 `followtag` | Display the notification on currently focused screen | boolean | false
 
 `cmd` is useful if you need to pass additional arguments to  `amixer`. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
+
+In case mute toggling can't be mapped to master channel (this happens, for instance, if you are using an HDMI output), define `togglechannel` as your S/PDIF device. Read [`alsa`](https://github.com/copycat-killer/lain/wiki/alsabar) page to know how.
 
 `settings` can use the following variables:
 
