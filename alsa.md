@@ -27,7 +27,7 @@ Variable | Meaning | Type | Values
 Variable | Meaning | Type
 --- | --- | ---
 `widget` | The widget | `wibox.widget.textbox`
-`channel` | Alsa channel | string
+`channel` | ALSA channel | string
 `update` | Update `widget` | function
 
 
