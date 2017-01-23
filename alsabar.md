@@ -19,8 +19,7 @@ Variable | Meaning | Type | Default
 `vertical` | Set the bar vertical | boolean | false
 `cmd` | ALSA mixer command | string | "amixer"
 `channel` | Mixer channel | string | "Master"
-`step` | Step at which volume is increased/decreased | string | "1%"
-`colors` | Bar colors | table | see [colors](https://github.com/copycat-killer/lain/wiki/alsabar#colors)
+`colors` | Bar colors | table | see [Colors](https://github.com/copycat-killer/lain/wiki/alsabar#colors)
 `notification_preset` | Notifications settings | table | [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
 `notify` | Display notifications | string | "on"
 `followtag` | Display the notification on currently focused screen | boolean | false
