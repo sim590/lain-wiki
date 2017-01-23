@@ -32,6 +32,7 @@ Variable | Meaning | Type | Default
 `visible` | initially visible | boolean | false
 `followtag` | always spawn on currently focused screen\* | boolean | false
 `overlap` | Overlap the wibox or not | boolean | false
+`settings` Additional settings to make on the client | function | empty function
 `screen` | screen where to spawn the client | int | `awful.screen.focused()`
 `height` | dropdown client height | float in [0,1] or exact pixel size | 0.25
 `width` | dropdown client width | float in [0,1] or exact pixel size | 1
@@ -39,6 +40,12 @@ Variable | Meaning | Type | Default
 `horiz` | horizontal position | string, possible values: "left", "right", "center" | "left"
 
 `height` and `width` express a fraction of the workspace.
+
+`settings` is a function which takes the client as input, and can be used to add more settings on it. For instance:
+
+```lua
+s.quake = lain.util.quake({ settings = function(c) c.sticky = true end })
+```
 
 **Notes**
 
