@@ -21,7 +21,6 @@ Variable | Meaning | Type | Default
 `channel` | Mixer channel | string | "Master"
 `colors` | Bar colors | table | see [Default colors](https://github.com/copycat-killer/lain/wiki/alsabar#default-colors)
 `notification_preset` | Notifications settings | table | [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
-`notify` | Display notifications | string | "on"
 `followtag` | Display the notification on currently focused screen | boolean | false
 
 `cmd` is useful if you need to pass additional arguments to  `amixer`. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
