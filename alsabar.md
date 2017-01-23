@@ -32,7 +32,7 @@ In case mute toggling can't be mapped to master channel (this happens, for insta
 
 Variable | Meaning | Type | Values
 --- | --- | --- | ---
-`volume_now.level` | Self explained | int | 0-100
+`volume_now.level` | Volume level | int | 0-100
 `volume_now.status` | Device status | string | "on", "off"
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
@@ -50,9 +50,9 @@ Variable | Meaning | Type | Default
 Variable | Meaning | Type
 --- | --- | ---
 `bar` | The widget | `wibox.widget.progressbar`
-`channel` | Alsa channel | string
+`channel` | ALSA channel | string
 `notify` | The notification | function
-`update` | Update state | function
+`update` | Update `bar` | function
 
 ### Keybindings
 
