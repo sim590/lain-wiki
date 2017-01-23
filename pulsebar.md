@@ -17,7 +17,8 @@ Variable | Meaning | Type | Default
 `ticks` | Set bar ticks on | boolean | false
 `ticks_size` | Ticks size | int | 7
 `vertical` | Set the bar vertical | boolean | false
-`cmd` | pulseaudio command | string | same as [here](https://github.com/copycat-killer/lain/wiki/pulseaudio)
+`cmd` | PulseAudio command | string | same as [here](https://github.com/copycat-killer/lain/wiki/pulseaudio)
+`scallback` | [PulseAudio sink callback](https://github.com/copycat-killer/lain/wiki/pulseaudio/) | function | `nil`
 `sink` | Mixer sink | int | 0
 `colors` | Bar colors | table | see [Default colors](https://github.com/copycat-killer/lain/wiki/pulsebar#default-colors)
 `notification_preset` | Notifications settings | table | [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
