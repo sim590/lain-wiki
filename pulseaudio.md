@@ -38,6 +38,8 @@ scallback = function()
 end
 ```
 
+### `settings` variables
+
 `settings` can use the following variables:
 
 Variable | Meaning | Type | Values
