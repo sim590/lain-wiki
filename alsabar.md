@@ -21,7 +21,7 @@ Variable | Meaning | Type | Default
 `channel` | Mixer channel | string | "Master"
 `step` | Step at which volume is increased/decreased | string | "1%"
 `colors` | Bar colors | table | see **colors**
-`notification_preset` | Notifications settings | table | see [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
+`notification_preset` | Notifications settings | table | [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
 `notify` | Display notifications | string | "on"
 `followtag` | Display the notification on currently focused screen | boolean | false
 
