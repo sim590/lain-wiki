@@ -23,13 +23,7 @@ Variable | Meaning | Type | Default
 `notification_preset` | Notifications settings | table | [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
 `followtag` | Display the notification on currently focused screen | boolean | false
 
-`settings` can use the following variables:
-
-Variable | Meaning | Type | Values
---- | --- | --- | ---
-`volume_now.left` | Left volume | int | 0-100
-`volume_now.right` | Right volume | int | 0-100
-`volume_now.muted` | Muted status | string | "yes", "no"
+`settings` can use [these variables](https://github.com/copycat-killer/lain/wiki/pulseaudio#settings-variables).
 
 ### Default colors
 
@@ -52,4 +46,4 @@ In multiple screen setups, the default behaviour is to show a visual notificatio
 
 ### Keybindings
 
-Read [here](https://github.com/copycat-killer/lain/wiki/alsa#keybindings). If you want notifications, use `volume.notify()` instead of `volume.update()`.
+Read [here](https://github.com/copycat-killer/lain/wiki/pulseaudio#keybindings). If you want notifications, use `volume.notify()` instead of `volume.update()`.
