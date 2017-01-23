@@ -67,5 +67,5 @@ mykbdlayout = lain.widgets.contrib.kbdlayout({
 -- [...]
 
 -- Add key binding (traditional Alt+Shift switching)
-awful.key({ "Mod1" }, "Shift_L", function () mykbdlayout.next() end)
+awful.key({ "Mod1" }, "Shift_L", function () mykbdlayout.next() end),
 ```
