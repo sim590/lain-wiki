@@ -1,7 +1,7 @@
 Shows and controls PulseAudio volume with a textbox.
 
 ```lua
-volumewidget = lain.widgets.pulseaudio()
+volume = lain.widgets.pulseaudio()
 ```
 
 ### Input table
@@ -71,27 +71,27 @@ You can control the widget with key bindings like these:
 awful.key({ altkey }, "Up",
     function ()
         os.execute(string.format("pactl set-sink-volume %d +1%%", volumewidget.sink))
-        volumewidget.update()
+        volume.update()
     end),
 awful.key({ altkey }, "Down",
     function ()
         os.execute(string.format("pactl set-sink-volume %d -1%%", volumewidget.sink))
-        volumewidget.update()
+        volume.update()
     end),
 awful.key({ altkey }, "m",
     function ()
         os.execute(string.format("pactl set-sink-mute %d toggle", volumewidget.sink))
-        volumewidget.update()
+        volume.update()
     end),
 awful.key({ altkey, "Control" }, "m",
     function ()
         os.execute(string.format("pactl set-sink-volume %d 100%%", volume.sink))
-        volumewidget.update()
+        volume.update()
     end),
 awful.key({ altkey, "Control" }, "0",
     function ()
         os.execute(string.format("pactl set-sink-volume %d 0%%", volume.sink))
-        volumewidget.update()
+        volume.update()
     end),
 ```
 
