@@ -33,32 +33,10 @@ This widget provides the following functions:
 
 ### Usage examples
 
-#### Imagebox status widget
-
-```lua
-local icons_dir = require("lain.helpers").icons_dir
-local rs_on = icons_dir .. "/redshift/redshift_on.png"
-local rs_off = icons_dir .. "/redshift/redshift_off.png"
-
-myredshift = wibox.widget.imagebox(rs_on)
-lain.widgets.contrib.redshift:attach(
-    myredshift,
-    function (active)
-        if active then
-            myredshift:set_image(rs_on)
-        else
-            myredshift:set_image(rs_off)
-        end
-    end
-)
-```
-
-Then add the `myredshift` widget to your wibox.
-
 #### Textbox status widget
 
 ```lua
-myredshift = wibox.widget.textbox("RS")
+myredshift = wibox.widget.textbox()
 lain.widgets.contrib.redshift:attach(
     myredshift,
     function (active)
