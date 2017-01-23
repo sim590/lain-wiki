@@ -32,7 +32,7 @@ Variable | Meaning | Type | Default
 `visible` | initially visible | boolean | false
 `followtag` | always spawn on currently focused screen\* | boolean | false
 `overlap` | Overlap the wibox or not | boolean | false
-`settings` Additional settings to make on the client | function | empty function
+`settings` Additional settings to make on the client | function | nil
 `screen` | screen where to spawn the client | int | `awful.screen.focused()`
 `height` | dropdown client height | float in [0,1] or exact pixel size | 0.25
 `width` | dropdown client width | float in [0,1] or exact pixel size | 1
@@ -48,7 +48,7 @@ Variable | Meaning | Type | Default
 s.quake = lain.util.quake({ settings = function(c) c.sticky = true end })
 ```
 
-Read [here](https://awesomewm.org/doc/api/classes/client.html#Object_properties) for the complete properties list.
+Read [here](https://awesomewm.org/doc/api/classes/client.html#Object_properties) for the complete list of properties.
 
 **Notes**
 
