@@ -27,6 +27,13 @@ Variable | Meaning | Type | Default
 
 `cmd` is useful if you need to pass additional arguments to  `amixer`. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
 
+`settings` can use the following variables:
+
+Variable | Meaning | Type | Values
+--- | --- | --- | ---
+`volume_now.level` | Self explained | int | 0-100
+`volume_now.status` | Device status | string | "on", "off"
+
 ### Colors
 
 Variable | Meaning | Type | Default
@@ -34,13 +41,6 @@ Variable | Meaning | Type | Default
 `background` | Bar backgrund color | string | "#000000"
 `mute` | Bar mute color | string | "#EB8F8F"
 `unmute` | Bar unmute color | string | "#A4CE8A"
-
-`settings` can use the following variables:
-
-Variable | Meaning | Type | Values
---- | --- | --- | ---
-`volume_now.level` | Self explained | int | 0-100
-`volume_now.status` | Device status | string | "on", "off"
 
 ### Output table
 
