@@ -84,7 +84,7 @@ awful.key({ altkey }, "Down",
 	end),
 awful.key({ altkey }, "m",
 	function ()
-		os.execute(string.format("amixer set %s toggle", volume.channel))
+		os.execute(string.format("amixer set %s toggle", volume.togglechannel or volume.channel))
 		volume.update()
 	end),
 awful.key({ altkey, "Control" }, "m",
@@ -100,15 +100,3 @@ awful.key({ altkey, "Control" }, "0",
 ```
 
 where `altkey = "Mod1"`.
-
-
-
-you have to set
-
-```lua
-awful.key({ altkey }, "m",
-	function ()
-		os.execute("amixer set IEC958,3 toggle")
-		volume.update()
-	end),
-```
