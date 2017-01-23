@@ -26,7 +26,7 @@ Variable | Meaning | Type | Default
 
 `cmd` is useful if you need to pass additional arguments to  `amixer`. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
 
-In case mute toggling can't be mapped to master channel (this happens, for instance, if you are using an HDMI output), define `togglechannel` as your S/PDIF device. Read [`alsa`](https://github.com/copycat-killer/lain/wiki/alsabar) page to know how.
+In case mute toggling can't be mapped to master channel (this happens, for instance, when you are using an HDMI output), define `togglechannel` as your S/PDIF device. Read [`alsa`](https://github.com/copycat-killer/lain/wiki/alsabar) page to know how.
 
 `settings` can use the following variables:
 
