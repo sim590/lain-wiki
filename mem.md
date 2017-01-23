@@ -1,4 +1,4 @@
-Shows memory status (in MiB) in a textbox.
+Shows memory status (in MiB).
 
 ```lua
 mymem = lain.widgets.mem()
@@ -15,8 +15,8 @@ in `settings` you can use the following variables:
 
 Variable | Meaning | Type
 --- | --- | --- | ---
-`mem_now.used` | Memory used (in MB) | string
-`mem_now.swapused` | Swap memory used (in MB) | string
+`mem_now.used` | Memory used (MiB) | string
+`mem_now.swapused` | Swap memory used (MiB) | string
 `mem_now.perc` | Memory percentage | int
 
 ### Output
