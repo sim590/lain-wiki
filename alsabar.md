@@ -1,4 +1,4 @@
-Shows and controls ALSA volume with a progressbar; provides tooltips, notifications, and color changes at mute/unmute switch.
+Shows ALSA volume with a progressbar; provides tooltips and notifications.
 
 ```lua
 volume = lain.widgets.alsabar()
