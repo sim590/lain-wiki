@@ -30,6 +30,42 @@ Variable | Meaning | Type
 `channel` | Alsa channel | string
 `update` | Update `widget` | function
 
+
+### Toggle channel
+
+In case mute toggling can't be mapped to master channel (this happens, for instance, when you are using an HDMI output), define togglechannel as your S/PDIF device. You can get the device ID with `scontents` command.
+
+For instance, if card number is 1 and S/PDIF number is 3:
+
+```shell
+$ amixer -c 1 scontents
+Simple mixer control 'Master',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 255
+  Front Left: 255 [100%]
+  Front Right: 255 [100%]
+Simple mixer control 'IEC958',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',1
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',2
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',3
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+```
+
+you have to set `togglechannel = "IEC958,3"`.
+
 ### Keybindings
 
 You can control the widget with keybindings like these:
@@ -65,36 +101,7 @@ awful.key({ altkey, "Control" }, "0",
 
 where `altkey = "Mod1"`.
 
-In case you are using an HDMI output, and mute can't be mapped to Master, redefine toggle keybinding with your S/PDIF device. You can get the correct ID device with `scontents` command.
 
-For instance, if card number is 1 and S/PDF number is 3:
-
-```shell
-$ amixer -c1 scontents
-Simple mixer control 'Master',0
-  Capabilities: volume
-  Playback channels: Front Left - Front Right
-  Capture channels: Front Left - Front Right
-  Limits: 0 - 255
-  Front Left: 255 [100%]
-  Front Right: 255 [100%]
-Simple mixer control 'IEC958',0
-  Capabilities: pswitch pswitch-joined
-  Playback channels: Mono
-  Mono: Playback [on]
-Simple mixer control 'IEC958',1
-  Capabilities: pswitch pswitch-joined
-  Playback channels: Mono
-  Mono: Playback [on]
-Simple mixer control 'IEC958',2
-  Capabilities: pswitch pswitch-joined
-  Playback channels: Mono
-  Mono: Playback [on]
-Simple mixer control 'IEC958',3
-  Capabilities: pswitch pswitch-joined
-  Playback channels: Mono
-  Mono: Playback [on]
-```
 
 you have to set
 
