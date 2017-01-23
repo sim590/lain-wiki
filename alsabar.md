@@ -33,7 +33,9 @@ Variable | Meaning | Type | Values
 `volume_now.level` | Self explained | int | 0-100
 `volume_now.status` | Device status | string | "on", "off"
 
-### Colors
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
+
+### Default colors
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -50,9 +52,9 @@ Variable | Meaning | Type
 `notify` | The notification | function
 `update` | Update state | function
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
+### Keybindings
 
-You can control the widget with key bindings like these:
+You can control the widget with keybindings like these:
 
 ```lua
 -- ALSA volume control
