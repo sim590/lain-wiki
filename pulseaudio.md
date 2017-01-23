@@ -62,6 +62,8 @@ Variable | Meaning | Type
 `widget` | The widget | `wibox.widget.textbox`
 `update` | Update `widget` | function
 
+### Keybindings
+
 You can control the widget with key bindings like these:
 
 ```lua
