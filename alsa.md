@@ -30,33 +30,78 @@ Variable | Meaning | Type
 `channel` | Alsa channel | string
 `update` | Update `widget` | function
 
-You can control the widget with key bindings like these:
+### Keybindings
+
+You can control the widget with keybindings like these:
 
 ```lua
 -- ALSA volume control
 awful.key({ altkey }, "Up",
 	function ()
-		os.execute(string.format("amixer set %s 1%%+", volumewidget.channel))
-		volumewidget.update()
+		os.execute(string.format("amixer set %s 1%%+", volume.channel))
+		volume.update()
 	end),
 awful.key({ altkey }, "Down",
 	function ()
-		os.execute(string.format("amixer set %s 1%%-", volumewidget.channel))
-		volumewidget.update()
+		os.execute(string.format("amixer set %s 1%%-", volume.channel))
+		volume.update()
 	end),
 awful.key({ altkey }, "m",
 	function ()
-		os.execute(string.format("amixer set %s toggle", volumewidget.channel))
-		volumewidget.update()
+		os.execute(string.format("amixer set %s toggle", volume.channel))
+		volume.update()
 	end),
 awful.key({ altkey, "Control" }, "m",
 	function ()
-		os.execute(string.format("amixer set %s 100%%", volumewidget.channel))
-		volumewidget.update()
+		os.execute(string.format("amixer set %s 100%%", volume.channel))
+		volume.update()
 	end),
 awful.key({ altkey, "Control" }, "0",
 	function ()
-		os.execute(string.format("amixer set %s 0%%", volumewidget.channel))
-		volumewidget.update()
+		os.execute(string.format("amixer set %s 0%%", volume.channel))
+		volume.update()
+	end),
+```
+
+where `altkey = "Mod1"`.
+
+In case you are using an HDMI output, and mute can't be mapped to Master, redefine toggle keybinding with your S/PDIF device. You can get the correct ID device with `scontents` command.
+
+For instance, if card number is 1 and S/PDF number is 3:
+
+```shell
+$ amixer -c1 scontents
+Simple mixer control 'Master',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 255
+  Front Left: 255 [100%]
+  Front Right: 255 [100%]
+Simple mixer control 'IEC958',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',1
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',2
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',3
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+```
+
+you have to set
+
+```lua
+awful.key({ altkey }, "m",
+	function ()
+		os.execute("amixer set IEC958,3 toggle")
+		volume.update()
 	end),
 ```
