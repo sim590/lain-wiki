@@ -1,4 +1,4 @@
-Shows and controls ALSA volume with a textbox.
+Shows ALSA volume with a textbox.
 
 ```lua
 volumewidget = lain.widgets.alsa()
