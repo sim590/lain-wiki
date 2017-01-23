@@ -242,7 +242,7 @@ To use them, define new `layout_*` variables in your ``theme.lua``. For instance
 theme.lain_icons         = os.getenv("HOME") ..
                            "/.config/awesome/lain/icons/layout/default/"
 theme.layout_termfair    = theme.lain_icons .. "termfair.png"
-theme.layout_centerfair  = thema.lain_icons .. "centerfair.png"  -- termfair.center
+theme.layout_centerfair  = theme.lain_icons .. "centerfair.png"  -- termfair.center
 theme.layout_cascade     = theme.lain_icons .. "cascade.png"
 theme.layout_cascadetile = theme.lain_icons .. "cascadetile.png" -- cascade.tile
 theme.layout_centerwork  = theme.lain_icons .. "centerwork.png"
