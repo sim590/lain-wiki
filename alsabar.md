@@ -35,14 +35,6 @@ Variable | Meaning | Type | Default
 `mute` | Bar mute color | string | "#EB8F8F"
 `unmute` | Bar unmute color | string | "#A4CE8A"
 
-### Notifications
-
-Variable | Meaning | Type | Default
---- | --- | --- | ---
-`font` | Notifications font | string | The one defined in `beautiful.font`
-`font_size` | Notifications font size | string | "11"
-`color` | Notifications color | string | `beautiful.fg_normal`
-
 `settings` can use the following variables:
 
 Variable | Meaning | Type | Values
@@ -56,8 +48,6 @@ Variable | Meaning | Type
 --- | --- | ---
 `bar` | The widget | `wibox.widget.progressbar`
 `channel` | Alsa channel | string
-`card` | Alsa card | string
-`step` | Increase/decrease step | string
 `notify` | The notification | function
 `update` | Update state | function
 
@@ -69,12 +59,12 @@ You can control the widget with key bindings like these:
 -- ALSA volume control
 awful.key({ altkey }, "Up",
 	function ()
-		os.execute(string.format("amixer set %s %s+", volume.channel, volume.step))
+		os.execute(string.format("amixer set %s 1%%+", volume.channel))
 		volume.update()
 	end),
 awful.key({ altkey }, "Down",
 	function ()
-		os.execute(string.format("amixer set %s %s-", volume.channel, volume.step))
+		os.execute(string.format("amixer set %s 1%%-", volume.channel))
 		volume.update()
 	end),
 awful.key({ altkey }, "m",
