@@ -86,3 +86,44 @@ awful.key({ altkey, "Control" }, "0",
 ```
 
 where `altkey = "Mod1"`.
+
+In case you are using an HDMI output, and mute can't be mapped to Master, redefine toggle keybinding with your S/PDIF device. You can get the correct ID device with `scontents` command.
+
+For instance, if card number is 1 and S/PDF number is 3:
+
+```shell
+$ amixer -c1 scontents
+Simple mixer control 'Master',0
+  Capabilities: volume
+  Playback channels: Front Left - Front Right
+  Capture channels: Front Left - Front Right
+  Limits: 0 - 255
+  Front Left: 255 [100%]
+  Front Right: 255 [100%]
+Simple mixer control 'IEC958',0
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',1
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',2
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+Simple mixer control 'IEC958',3
+  Capabilities: pswitch pswitch-joined
+  Playback channels: Mono
+  Mono: Playback [on]
+```
+
+you have to set
+
+```lua
+awful.key({ altkey }, "m",
+	function ()
+		os.execute("amixer set IEC958,3 toggle")
+		volume.update()
+	end),
+```
