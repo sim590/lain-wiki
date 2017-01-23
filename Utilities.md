@@ -41,11 +41,14 @@ Variable | Meaning | Type | Default
 
 `height` and `width` express a fraction of the workspace.
 
-`settings` is a function which takes the client as input, and can be used to add more settings on it. For instance:
+`settings` is a function which takes the client as input, and can be used to customize its properties. For instance:
 
 ```lua
+-- set the client sticky
 s.quake = lain.util.quake({ settings = function(c) c.sticky = true end })
 ```
+
+Read [here](https://awesomewm.org/doc/api/classes/client.html#Object_properties) for the complete properties list.
 
 **Notes**
 
