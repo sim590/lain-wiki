@@ -21,7 +21,8 @@ Variable | Meaning | Type | Default
 `channel` | Mixer channel | string | "Master"
 `step` | Step at which volume is increased/decreased | string | "1%"
 `colors` | Bar colors | table | see **colors**
-`notifications` | Notifications settings | table | see **notifications**
+`notification_preset` | Notifications settings | table | see [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
+`notify` | Display notifications | string | "on"
 `followtag` | Display the notification on currently focused screen | boolean | false
 
 `cmd` is useful if you need to pass additional arguments to  `amixer`. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
@@ -30,7 +31,7 @@ Variable | Meaning | Type | Default
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`background` | Bar backgrund color | string | `beautiful.bg_normal`
+`background` | Bar backgrund color | string | "#000000"
 `mute` | Bar mute color | string | "#EB8F8F"
 `unmute` | Bar unmute color | string | "#A4CE8A"
 
