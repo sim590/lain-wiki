@@ -30,11 +30,9 @@ Variable | Meaning | Type | Default
 `followtag` | Notification behaviour | boolean | false
 `settings` | User settings | function | empty function
 
-Let's focus better on `is_plain`.
+The reason why `is_plain` is false by default is to discourage the habit of storing passwords in plain.
 
-The reason why it's false by default is to discourage the habit of storing passwords in plain.
-
-So you can set your password in plain like this:
+So, you can set your password in plain like this:
 
 ```lua
 myimapcheck = lain.widgets.imap({
@@ -57,7 +55,7 @@ myimapcheck = lain.widgets.imap({
 
 When `is_plain == false` (default), it *executes* `password` before using it, so you can also use whatever password fetching solution you want.
 
-`settings` can use the value `mailcount`, an integer greater or equal to zero, and can modify `mail_notification_preset` table, which will be the preset for the naughty notifications. Check [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the list of variables it can contain.
+`settings` can use the value `mailcount`, an integer greater or equal to zero, and can modify `mail_notification_preset` table, which will be the preset for the naughty notifications. Check [here](https://awesomewm.org/apidoc/libraries/naughty.html#notify) for the list of variables it can contain.
 
 Default definition:
 
@@ -72,7 +70,7 @@ Note that `mailcount` is 0 either if there are no new mails or credentials are i
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
-***This widget is asynchronous***, so you can have multiple instances at the same time.
+You can have multiple instances of this widget at the same time.
 
 ### Output
 
