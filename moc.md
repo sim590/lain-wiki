@@ -1,7 +1,5 @@
 A widget for showing the current song track's information from MOC (Music On Console).
 
-It also provides next track notifications using Naughty.
-
 ```lua
 mocwidget = lain.widgets.contrib.moc()
 ```
@@ -16,14 +14,6 @@ Now playing songs are notified like this:
 	| +-------+                                              |
 	+--------------------------------------------------------+
 
-You need a file like this
-
-```
-(Front|front|Cover|cover|Art|art|Folder|folder)\.(jpg|jpeg|png|gif)
-```
-
-in the album folder in order to show album art too.
-
 ### Input table
 
 Variable | Meaning | Type | Default
@@ -31,9 +21,14 @@ Variable | Meaning | Type | Default
 `timeout` | Refresh timeout seconds | int | 1
 `music_dir` | Music directory | string | "~/Music"
 `cover_size` | Album art notification size | int | 100
+`cover_pattern` | Pattern for the album art file | string | `*\\.(jpg|jpeg|png|gif)`*
 `default_art` | Default art | string | ""
 `followtag` | Display the notification on currently focused screen | boolean | false
 `settings` | User settings | function | empty function
+
+\* In Lua, "\\\\" means "\" escaped.
+
+Default `cover_pattern` definition will made the widget set the first jpg, jpeg, png or gif file found in the directory as the album art.
 
 Pay attention to case sensitivity when defining `music_dir`.
 
@@ -47,7 +42,7 @@ Pay attention to case sensitivity when defining `music_dir`.
 - elapsed (Time elapsed for the current track)
 - total (The current track's total time)
 
-and can modify `moc_notification_preset` table, which will be the preset for the naughty notifications. Check [here](http://awesome.naquadah.org/doc/api/modules/naughty.html#notify) for the list of variables it can contain. Default definition:
+and can modify `moc_notification_preset` table, which will be the preset for the naughty notifications. Check [here](https://awesomewm.org/apidoc/libraries/naughty.html#notify) for the list of variables it can contain. Default definition:
 
 ```lua
 moc_notification_preset = {
@@ -59,6 +54,7 @@ moc_notification_preset = {
 ```
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
+
 ### Output table
 
 Variable | Meaning | Type
