@@ -26,6 +26,6 @@ Variable | Meaning | Type
 `update` | Update `widget` | function
 `timer` | The widget timer | [`gears.timer`](https://awesomewm.org/doc/api/classes/gears.timer.html) or `nil`
 
-The `update` function can be used to refresh the widget before `timeout` expires
+The `update` function can be used to refresh the widget before `timeout` expires.
 
 If `stoppable == true`, the widget will have an ad-hoc timer, which you can control though `timer` variable.
