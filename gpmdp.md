@@ -20,6 +20,7 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 2
 `notify` | Show notification popups | string | "off"
+`file_location` |
 `followtag` | Display the notification on currently focused screen | boolean | false
 `settings` | User settings | function | empty function
 
