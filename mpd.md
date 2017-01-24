@@ -78,9 +78,16 @@ In multiple screen setups, the default behaviour is to show a visual notificatio
 Variable | Meaning | Type
 --- | --- | ---
 `widget` | The textbox | `wibox.widget.textbox`
-`update` | The notification | function
+`update` | Update `widget` | function
+`timer` | The widget timer | [`gears.timer`](https://awesomewm.org/doc/api/classes/gears.timer.html)
 
-You can control the widget with key bindings like these:
+The `update` function can be used to refresh the widget before `timeout` expires.
+
+You can use `timer` to start/stop the widget as you like.
+
+### Keybindings
+
+You can control the widget with keybindings like these:
 
 ```lua
 -- MPD control
@@ -107,6 +114,24 @@ awful.key({ altkey, "Control" }, "Right",
 ```
 
 where `altkey = "Mod1"`.
+
+If you don't use the widget for long periods and wish to spare CPU, you can toggle it with a keybinding like this:
+
+```lua
+-- toggle MPD widget
+awful.key({ altkey }, "0",
+        function ()
+            local common = { text = "MPD widget ", position = "top_middle", timeout = 2 } 
+            if mpdwidget.timer.started then
+                mpdwidget.timer:stop()
+                common.text = common.text .. markup.bold("ON")
+            else
+                mpdwidget.timer:start()
+                common.text = common.text .. markup.bold("OFF")
+            end
+            naughty.notify(common)
+        end),
+```
 
 Notes
 -----
