@@ -120,9 +120,9 @@ Variable | Meaning | Type | Default
     ```
 
 ## Usage
-The module creates a textbox widget (`myweather`) and an imagebox icon (`myweather.icon`). Add them to you wibox like usual.
+The module creates a textbox widget (`myweather`) and an imagebox icon (`myweather.icon`). Add them to you wibox like usual. You can control timers for widget and notification updates: `myweather.timer` and `myweather.timer_forecast`, respectively.
 
-### attach
+### `attach`
 You can attach the forecast notification to any widget like this:
 
 ```lua
@@ -131,7 +131,7 @@ myweather.attach(obj)
 
 Hovering over ``obj`` will display the notification.
 
-### update
+### `update`
 
 ```lua
 myweather.update()
@@ -139,7 +139,7 @@ myweather.update()
 
 Force fetching of current weather status data. Useful when combined with other widgets workflow (for instance, it can be called from net widget when the internet connection is restored).
 
-### forecast_update
+### `forecast_update`
 
 ```lua
 myweather.forecast_update()
@@ -147,7 +147,7 @@ myweather.forecast_update()
 
 Like above, but for the forecast notification.
 
-### popup shortcut
+### Keybindings
 
 You can also create a keybinding for the weather popup like this:
 
