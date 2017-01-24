@@ -86,6 +86,6 @@ batwidget = lain.widgets.bat({
 
 ### The `N/A` battery percentage when discharging
 
-It has been reported ([#250](https://github.com/copycat-killer/lain/issues/250)) that, in some configurations, the file `/sys/class/power_supply/BAT*/current_now` could be missing. When this is the case, the widget can't calculate the battery percentage when discharging (other tools like `acpi` can't work properly too).
+It has been reported ([#250](https://github.com/copycat-killer/lain/issues/250) [awesome-copycats/#283](https://github.com/copycat-killer/lain/issues/283#issuecomment-274843558)) that, in some systems, the files `/sys/class/power_supply/BAT*/{current_now, power_now}` could be missing. When this is the case, the widget can't calculate the battery percentage when discharging (other tools like `acpi` can't work properly too).
 
-If you're missing `current_now`, you can use [this widget instead](https://github.com/copycat-killer/lain/wiki/abase#upower).
+If you're having such issue, you can use [this widget instead](https://github.com/copycat-killer/lain/wiki/abase#upower).
