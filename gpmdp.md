@@ -48,5 +48,10 @@ In multiple screen setups, the default behaviour is to show a visual notificatio
 
 Variable | Meaning | Type
 --- | --- | ---
-`widget` | The textbox | `wibox.widget.textbox`
-`update` | The notification | function
+`widget` | The widget | `wibox.widget.textbox`
+`update` | Update `widget` | function
+`timer` | The widget timer | [`gears.timer`](https://awesomewm.org/doc/api/classes/gears.timer.html)
+
+The `update` function can be used to refresh the widget before `timeout` expires.
+
+You can use `timer` to start/stop the widget as you like.
