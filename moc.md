@@ -59,13 +59,19 @@ moc_notification_preset = {
 ```
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
-
 ### Output table
 
 Variable | Meaning | Type
 --- | --- | ---
-`widget` | The textbox | `wibox.widget.textbox`
-`update` | The notification | function
+`widget` | The widget | `wibox.widget.textbox`
+`update` | Update `widget` | function
+`timer` | The widget timer | [`gears.timer`](https://awesomewm.org/doc/api/classes/gears.timer.html)
+
+The `update` function can be used to refresh the widget before `timeout` expires.
+
+You can use `timer` to start/stop the widget as you like.
+
+### Keybindings
 
 You can control the widget with key bindings like these:
 
@@ -94,3 +100,21 @@ awful.key({ altkey, "Control" }, "Right",
 ```
 
 where `altkey = "Mod1"`.
+
+If you don't use the widget for long periods and wish to spare CPU, you can toggle it with a keybinding like this:
+
+```lua
+-- toggle MOC widget
+awful.key({ altkey }, "0",
+        function ()
+            local common = { text = "MOC widget ", position = "top_middle", timeout = 2 } 
+            if mocwidget.timer.started then
+                mocwidget.timer:stop()
+                common.text = common.text .. markup.bold("ON")
+            else
+                mocwidget.timer:start()
+                common.text = common.text .. markup.bold("OFF")
+            end
+            naughty.notify(common)
+        end),
+```
