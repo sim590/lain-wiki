@@ -49,7 +49,7 @@ and you'll have the same security provided by `~/.netrc`.
 ```lua
 myimapcheck = lain.widgets.imap({
     password = function()
-        -- return the output of spm show mymail
+        -- return the output of "spm show mymail"
     end,
     -- [...]
 })
