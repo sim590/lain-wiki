@@ -129,7 +129,7 @@ lain.layout.cascade.tile.offset_x      = 2
 lain.layout.cascade.tile.offset_y      = 32
 lain.layout.cascade.tile.extra_padding = 5
 lain.layout.cascade.tile.nmaster       = 5
-lain.layout.cascade.tile.ncol          = 1
+lain.layout.cascade.tile.ncol          = 2
 ```
 
 `extra_padding` reduces the size of the master window if "overlapping
