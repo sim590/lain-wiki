@@ -27,7 +27,7 @@ Variable | Meaning | Type | Default
 `music_dir` | Music directory | string | "~/Music"
 `cover_size` | Album art notification size | int | 100
 `cover_pattern` | Pattern for the album art file | string | `*\\.(jpg|jpeg|png|gif)`*
-`default_art` | Default art | string | ""
+`default_art` | Default art | string | `nil`
 `notify` | Show notification popups | string | "on"
 `followtag` | Notification behaviour | boolean | false
 `settings` | User settings | function | empty function
@@ -52,7 +52,7 @@ Pay attention to case sensitivity when defining `music_dir`.
 - file
 - artist
 - title
-- [name](https://github.com/copycat-killer/lain/pull/142)
+- name
 - album
 - track
 - genre
