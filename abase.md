@@ -130,3 +130,18 @@ mybattery = lain.widgets.abase({
     end
 })
 ```
+
+btrfs
+-----
+
+```lua
+myrootfs = lain.widgets.abase({                                                 
+    timeout = 600,                                                              
+    cmd = "btrfs filesystem df -g /",                                           
+    settings  = function()                                                      
+        local total, used  = string.match(output, "Data.-total=(%d+%.%d+)GiB.-used=(%d+%.%d+)GiB")
+        local percent_used = math.ceil((tonumber(used) / tonumber(total)) * 100)
+        widget:set_text(" [/: " .. percent_used .. "%] ")                     
+    end                                                                         
+})
+```
