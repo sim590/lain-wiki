@@ -48,12 +48,14 @@ and you'll have the same security provided by `~/.netrc`.
 
 ```lua
 myimapcheck = lain.widgets.imap({
-    password = "spm show mymailpass",
+    password = function()
+        -- return the output of spm show mymail
+    end,
     -- [...]
 })
 ```
 
-When `is_plain == false` (default), it *executes* `password` before using it, so you can also use whatever password fetching solution you want.
+When `is_plain == false` (default), `password` can be either a string, a table or a function: the widget will execute it asynchronously in the first two cases.
 
 `settings` can use the value `mailcount`, an integer greater or equal to zero, and can modify `mail_notification_preset` table, which will be the preset for the naughty notifications. Check [here](https://awesomewm.org/apidoc/libraries/naughty.html#notify) for the list of variables it can contain.
 
