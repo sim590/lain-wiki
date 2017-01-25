@@ -135,6 +135,7 @@ btrfs
 -----
 
 ```lua
+-- btrfs root df
 myrootfs = lain.widgets.abase({                                                 
     timeout = 600,                                                              
     cmd = "btrfs filesystem df -g /",                                           
