@@ -141,6 +141,8 @@ myrootfs = lain.widgets.abase({
     settings  = function()                                                      
         local total, used  = string.match(output, "Data.-total=(%d+%.%d+)GiB.-used=(%d+%.%d+)GiB")
         local percent_used = math.ceil((tonumber(used) / tonumber(total)) * 100)
+
+        -- customize here
         widget:set_text(" [/: " .. percent_used .. "%] ")                     
     end                                                                         
 })
