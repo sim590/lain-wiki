@@ -1,19 +1,19 @@
 Usage
 -----
 
-Every widget is output by a `function`.
+Every widget is output by a `function`, which signature is found in the widget wiki entry.
 
-For some widgets, `function` returns a `wibox.widget.textbox`, for others a table to be used for notification and update purposes.
+The `function` returns a table to be used for notification and update purposes. To access the widget, use the field `widget`.
 
 Every widget may take either a table or a list of variables as argument.
 
 If it takes a table, you have to define a function variable called `settings` in it, in order to make your customizations.
 
-To markup the textbox, call `widget:set_markup(...)` within `settings`.
+To markup the textbox widget, call `widget:set_markup(...)` within `settings`.
 
 You can feed `set_markup` with predefined arguments, see the sections for all the details.
 
-`widget` is a textbox, so you can treat it like any other `wibox.widget.textbox`.
+`widget` is a `wibox.widget.textbox`, while `icon` (if available) is a `wibox.widget.iconbox`.
 
 Here follows an example:
 
@@ -23,6 +23,7 @@ mycpu = lain.widgets.cpu({
         widget:set_markup("Cpu " .. cpu_now.usage)
     end
 })
+-- to access the widget: mycpu.widget
 ```
 
 If you want to see more complex applications, check [awesome-copycats](https://github.com/copycat-killer/awesome-copycats).
