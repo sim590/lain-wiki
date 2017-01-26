@@ -1,5 +1,5 @@
-General usage
--------------
+Usage
+-----
 
 Every widget is output by a `function`.
 
@@ -50,7 +50,7 @@ Index
 - [weather](https://github.com/copycat-killer/lain/wiki/weather)
 
 Users contributed
-----------------
+-----------------
 
 - [gpmdp](https://github.com/copycat-killer/lain/wiki/gpmdp)
 - [kbdlayout](https://github.com/copycat-killer/lain/wiki/kbdlayout)
