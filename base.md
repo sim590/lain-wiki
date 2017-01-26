@@ -11,7 +11,7 @@ mybase = lain.widgets.base()
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 5
-`cmd` | The command to execute | string | empty string
+`cmd` | The command to execute | string | `nil`
 `nostart` | Widget timer doesn't start immediately | boolean | false
 `stoppable` | Widget timer is stoppable | boolean | false
 `settings` | User settings | function | empty function
