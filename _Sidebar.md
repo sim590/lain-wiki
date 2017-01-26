@@ -11,7 +11,7 @@
   * [Pre 4.0 uselesstile patches](https://github.com/copycat-killer/lain/wiki/Layouts#pre-40-uselesstile-patches)
   * [What about layout icons?](https://github.com/copycat-killer/lain/wiki/Layouts#what-about-layout-icons)
 * [Widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
-  * [General usage](https://github.com/copycat-killer/lain/wiki/Widgets#general-usage)
+  * [Usage](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
   * [Index](https://github.com/copycat-killer/lain/wiki/Widgets#index)
   * [Users contributed](https://github.com/copycat-killer/lain/wiki/Widgets#users-contributed)
 * [Utilities](https://github.com/copycat-killer/lain/wiki/Utilities)
