@@ -120,7 +120,7 @@ Variable | Meaning | Type | Default
     ```
 
 ## Usage
-The module creates a textbox widget (`myweather`) and an imagebox icon (`myweather.icon`). Add them to you wibox like usual. You can control timers for widget and notification updates: `myweather.timer` and `myweather.timer_forecast`, respectively.
+The module creates a textbox widget (`myweather.widget`) and an imagebox icon (`myweather.icon`). Add them to you wibox like usual. You can control timers for widget and notification updates: `myweather.timer` and `myweather.timer_forecast`, respectively.
 
 ### `attach`
 You can attach the forecast notification to any widget like this:
