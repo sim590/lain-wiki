@@ -44,7 +44,7 @@ Variable | Meaning | Type | Default
 `cmd` can be used to run a mail update command, for instance:
 
 ```lua
-mailwidget = lain.widgets.maildir({
+local mymaildir = lain.widgets.maildir({
     cmd = "mbsync -q account1 account2 account3",
     -- [...]
 })
