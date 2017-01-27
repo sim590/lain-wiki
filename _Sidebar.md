@@ -13,7 +13,7 @@
 * [Widgets](https://github.com/copycat-killer/lain/wiki/Widgets)
   * [Usage](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
   * [Index](https://github.com/copycat-killer/lain/wiki/Widgets#index)
-  * [Users contributed](https://github.com/copycat-killer/lain/wiki/Widgets#users-contributed)
+    * [Users contributed](https://github.com/copycat-killer/lain/wiki/Widgets#users-contributed)
 * [Utilities](https://github.com/copycat-killer/lain/wiki/Utilities)
     * [quake](https://github.com/copycat-killer/lain/wiki/Utilities#quake)
     * [separators](https://github.com/copycat-killer/lain/wiki/Utilities#separators)
