@@ -78,6 +78,7 @@ local cmus = lain.widgets.abase({
 -- checks whether there are files in the "new" directories of a mail dirtree
 local mailpath = "~/Mail"
 local mymaildir = lain.widgets.abase({
+    timeout = 60,
     cmd = { awful.util.shell, "-c", string.format("ls -1dr %s/*/new/*", mailpath) },
     settings = function()
         local inbox_now = { digest = "" }
@@ -139,6 +140,7 @@ local mpris = lain.widgets.abase({
 ```lua
 -- battery infos from freedesktop upower
 local mybattery = lain.widgets.abase({
+    timeout = 30,
     cmd = "upower -i /org/freedesktop/UPower/devices/battery_BAT | sed -n '/present/,/icon-name/p'",
     settings = function()
         local bat_now = {
