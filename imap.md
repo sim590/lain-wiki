@@ -4,7 +4,7 @@
 
 ### Description
 
-Shows mail count in a textbox fetching over IMAP.
+Shows mails count fetching over IMAP.
 
 ```lua
 local myimap = lain.widgets.imap(args)
