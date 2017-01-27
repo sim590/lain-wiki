@@ -4,7 +4,7 @@
 
 ### Description
 
-Shows in a textbox the remaining time and percentage capacity of your laptop battery, as well as
+Shows the remaining time and percentage capacity of your laptop battery, as well as
 the current wattage. Multiple batteries are supported.
 
 Displays a notification when battery is low or critical.
