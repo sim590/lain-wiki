@@ -1,3 +1,9 @@
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
 Attaches a [taskwarrior](http://taskwarrior.org) notifications to a widget, and lets you execute `task` commands from the promptbox.
 
 ```lua
