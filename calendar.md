@@ -48,4 +48,4 @@ In multiple screen setups, the default behaviour is to show a visual notificatio
 
 ## Note
 
-* Naughty notifications require `notification_preset.font` to be **monospaced**, in order to correctly display the output.
+Naughty notifications require `notification_preset.font` to be **monospaced**, in order to correctly display the output.
