@@ -1,6 +1,10 @@
-Shows the current core temperature.
+## Usage
 
-Reads from `/sys/class/thermal`, so value is expressed in Celsius.
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
+Shows the current CPU temperature.
 
 ```lua
 mytemp = lain.widgets.temp()
