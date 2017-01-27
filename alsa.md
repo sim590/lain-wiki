@@ -37,7 +37,7 @@ Variable | Meaning | Type
 `channel` | ALSA channel | string
 `update` | Update `widget` | function
 
-### Toggle channel
+## Toggle channel
 
 In case mute toggling can't be mapped to master channel (this happens, for instance, when you are using an HDMI output), define togglechannel as your S/PDIF device. You can get the device ID with `scontents` command.
 
