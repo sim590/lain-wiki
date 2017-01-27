@@ -27,7 +27,7 @@ If there's new mails, the textbox will say something like "mail: bugs(3), system
 "no mail".
 
 ```lua
-mymaildir = lain.widgets.maildir(args)
+local mymaildir = lain.widgets.maildir(args)
 ```
 
 ## Input table
