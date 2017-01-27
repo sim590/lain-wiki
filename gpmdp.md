@@ -1,4 +1,10 @@
-Shows [Google Play Music Desktop Player](http://www.googleplaymusicdesktopplayer.com/) status in a textbox.
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
+Shows [Google Play Music Desktop Player](http://www.googleplaymusicdesktopplayer.com) status.
 
 ```lua
 gpmdpwidget = lain.widgets.contrib.gpmdp()
@@ -14,7 +20,7 @@ Now playing songs are notified like this:
 	| +-------+                                              |
 	+--------------------------------------------------------+
 
-### Input table
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -45,7 +51,7 @@ gmpd_notification_preset = {
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
-### Output table
+## Output table
 
 Variable | Meaning | Type
 --- | --- | ---
