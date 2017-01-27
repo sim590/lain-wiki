@@ -1,4 +1,10 @@
-Shows maildirs status in a textbox.
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
+Shows maildirs status.
 
 Maildirs are structured as follows:
 
@@ -24,7 +30,7 @@ If there's new mails, the textbox will say something like "mail: bugs(3), system
 mymaildir = lain.widgets.maildir(args)
 ```
 
-### Input table
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -44,7 +50,7 @@ mailwidget = lain.widgets.maildir({
 })
 ```
 
-### Output table
+## Output table
 
 Variable | Meaning | Type
 --- | --- | ---
