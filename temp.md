@@ -1,4 +1,4 @@
-Shows the current core temperature in a textbox.
+Shows the current core temperature.
 
 Reads from `/sys/class/thermal`, so value is expressed in Celsius.
 
@@ -16,10 +16,13 @@ Variable | Meaning | Type | Default
 
 `settings` can use the string `coretemp_now`, which means current core temperature, expressed in Celsius (linux standard).
 
-### Output
+## Output table
 
-A textbox.
+Variable | Meaning | Type
+--- | --- | ---
+`widget` | The widget | `wibox.widget.textbox`
+`update` | Update `widget` | function
 
-### Note
+## Note
 
-Depending on the architecture, keep in mind that your temp files location [might change](https://github.com/copycat-killer/lain/issues/84#issuecomment-72751763).
+Depending on the architecture, note that your temp files location [might vary](https://github.com/copycat-killer/lain/issues/84#issuecomment-72751763).
