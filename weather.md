@@ -11,7 +11,7 @@ Uses [OpenWeatherMap](http://openweathermap.org/api) API.
 By default, it uses [current](http://openweathermap.org/current) for current weather data and [forecast16](http://openweathermap.org/forecast16) for forecasts.
 
 ```lua
-myweather = lain.widgets.weather()
+local myweather = lain.widgets.weather()
 ```
 
 ## Input table
