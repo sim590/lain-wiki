@@ -12,7 +12,7 @@ Executes an input command and makes the user feed its textbox with the output.
 local mybase = lain.widgets.base()
 ```
 
-### Input table
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -24,7 +24,7 @@ Variable | Meaning | Type | Default
 
 `settings` can use the string `output`, which is the output of `cmd`.
 
-### Output table
+## Output table
 
 Variable | Meaning | Type
 --- | --- | ---
