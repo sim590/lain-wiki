@@ -103,7 +103,7 @@ List of functions:
      |`-- small()       Set smaller text.
      |`-- font()        Set the font of the text.
      |`-- font()        Set the font of the text.
-     |`-- color()       Set background and foreground color. 
+     |`-- color()       Set background and foreground color.
      `-- fontcolor()    Set font, plus background and foreground colors.
      |
      |`--+ bg

@@ -109,7 +109,7 @@ If you don't use the widget for long periods and wish to spare CPU, you can togg
 -- toggle MOC widget
 awful.key({ altkey }, "0",
         function ()
-            local common = { text = "MOC widget ", position = "top_middle", timeout = 2 } 
+            local common = { text = "MOC widget ", position = "top_middle", timeout = 2 }
             if moc.timer.started then
                 moc.timer:stop()
                 common.text = common.text .. markup.bold("ON")
