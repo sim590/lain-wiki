@@ -1,10 +1,16 @@
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
 Shows ALSA volume with a progressbar; provides tooltips and notifications.
 
 ```lua
-volume = lain.widgets.alsabar()
+local volume = lain.widgets.alsabar()
 ```
 
-### Input table
+## Input table
 
 The table and all of its variables are optional.
 
@@ -24,7 +30,7 @@ Variable | Meaning | Type | Default
 `notification_preset` | Notifications settings | table | [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
 `followtag` | Display the notification on currently focused screen | boolean | false
 
-`cmd` is useful if you need to pass additional arguments to  `amixer`. For instance, users with multiple sound cards may define `command = "amixer -c X"` in order to set amixer with card `X`.
+`cmd` is useful if you need to pass additional arguments to  `amixer`. For instance, you may want to define `command = "amixer -c X"` in order to set amixer with card `X`.
 
 In case mute toggling can't be mapped to master channel (this happens, for instance, when you are using an HDMI output), define `togglechannel` as your S/PDIF device. Read [`alsa`](https://github.com/copycat-killer/lain/wiki/alsabar) page to know how.
 
@@ -45,7 +51,7 @@ Variable | Meaning | Type | Default
 `mute` | Bar mute color | string | "#EB8F8F"
 `unmute` | Bar unmute color | string | "#A4CE8A"
 
-### Output table
+## Output table
 
 Variable | Meaning | Type
 --- | --- | ---
@@ -54,6 +60,6 @@ Variable | Meaning | Type
 `notify` | The notification | function
 `update` | Update `bar` | function
 
-### Keybindings
+## Keybindings
 
 Read [here](https://github.com/copycat-killer/lain/wiki/alsa#keybindings). If you want notifications, use `volume.notify()` instead of `volume.update()`.
