@@ -1,3 +1,9 @@
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
 Provides current weather status widgets and X-days forecast popup notifications.
 
 Uses [OpenWeatherMap](http://openweathermap.org/api) API.
@@ -119,10 +125,18 @@ Variable | Meaning | Type | Default
     units = math.floor(weather_now["main"]["temp"])
     ```
 
-## Usage
-The module creates a textbox widget (`myweather.widget`) and an imagebox icon (`myweather.icon`). Add them to you wibox like usual. You can control timers for widget and notification updates: `myweather.timer` and `myweather.timer_forecast`, respectively.
+## Output table
 
-### `attach`
+Variable | Meaning | Type
+--- | --- | ---
+`widget` | The widget | `wibox.widget.textbox`
+`icon` | The icon | `wibox.widget.imagebox`
+`update` | Update `widget` | function
+`timer` | The widget timer | [`gears.timer`](https://awesomewm.org/doc/api/classes/gears.timer.html)
+`timer_forecast` | The forecast notification timer | [`gears.timer`](https://awesomewm.org/doc/api/classes/gears.timer.html)
+
+## Functions
+
 You can attach the forecast notification to any widget like this:
 
 ```lua
@@ -131,25 +145,9 @@ myweather.attach(obj)
 
 Hovering over ``obj`` will display the notification.
 
-### `update`
+## Keybindings
 
-```lua
-myweather.update()
-```
-
-Force fetching of current weather status data. Useful when combined with other widgets workflow (for instance, it can be called from net widget when the internet connection is restored).
-
-### `forecast_update`
-
-```lua
-myweather.forecast_update()
-```
-
-Like above, but for the forecast notification.
-
-### Keybindings
-
-You can also create a keybinding for the weather popup like this:
+You can create a keybinding for the weather popup like this:
 
 ```lua
 awful.key( { "Mod1" }, "w", function () myweather.show(5) end )
