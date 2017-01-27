@@ -1,10 +1,16 @@
-Shows in a textbox the current CPU usage, both in general and per core.
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
+Shows the current CPU usage, both in general and per core.
 
 ```lua
 mycpuusage = lain.widgets.cpu()
 ```
 
-### Input table
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -16,6 +22,9 @@ Variable | Meaning | Type | Default
 * `cpu_now.usage`, the general use percentage;
 * `cpu_now[i].usage`, the i-th core use percentage, with `i` starting from 1.
 
-### Output
+## Output table
 
-A textbox.
+Variable | Meaning | Type
+--- | --- | ---
+`widget` | The widget | `wibox.widget.textbox`
+`update` | Update `widget` | function
