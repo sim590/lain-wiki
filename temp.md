@@ -7,7 +7,7 @@
 Shows the current CPU temperature.
 
 ```lua
-mytemp = lain.widgets.temp()
+local mytemp = lain.widgets.temp()
 ```
 
 ## Input table
