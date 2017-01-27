@@ -1,15 +1,21 @@
-Monitors network interfaces and shows current traffic in a textbox.
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
+Monitors network interfaces and shows current traffic.
 
 ```lua
-mynet = lain.widgets.net()
+local mynet = lain.widgets.net()
 ```
 
-### Input table
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 2
-`iface` | Network device(s) | array (new api) or string (old api) | autodetected
+`iface` | Network device(s) | string (single interface) or table of strings (multiple interfaces) | autodetected
 `units` | Units | int | 1024 (kilobytes)
 `notify` | Display "no carrier" notifications | string | "on"
 `screen` | Notifications screen | int | 1
@@ -19,29 +25,27 @@ Possible other values for `units` are 1 (byte) or multiple of 1024: 1024^2 (mb),
 
 If `notify = "off"` is set, the widget won't display a notification when there's no carrier.
 
-`settings` can use the following `iface` related strings.
-
-With the **old** API:
+`settings` can use the following `iface` related strings:
 
 - `net_now.carrier` ("0", "1");
 - `net_now.state` ("up", "down");
-- `net_now.sent` and `net_now.received` (numbers).
-
-With the **new** API:
-
 - `net_now.sent` and `net_now.received` (numbers) will be the sum across all specified interfaces;
 - `net_now.devices["interface"]` contains the same attributes as the old api for each interface. More on this in the "Multiple devices" section below.
-- For compatibility reasons if multiple devices are given `net_now.carrier` and `net_now.state` correspond to the last interface in the iface array and should not be relied upon (deprecated).
 
-### Output
+For compatibility reasons, if multiple devices are given, `net_now.carrier` and `net_now.state` correspond to the last interface in the iface array and should not be relied upon (deprecated).
 
-A textbox.
+## Output table
 
----
+Variable | Meaning | Type
+--- | --- | ---
+`widget` | The widget | `wibox.widget.textbox`
+`update` | Update `widget` | function
+
+## Various
 
 ### Setting `iface` manually
 
-If the widget [spawns a "no carrier" notification and you are sure to have an active network device](https://github.com/copycat-killer/lain/issues/102), then autodetection is probably not working. This may due to [your user privileges](https://github.com/copycat-killer/lain/issues/102#issuecomment-246470526). In this case you can set `iface` manually. You can see which device is **UP** with the following command:
+If the widget [spawns a "no carrier" notification and you are sure to have an active network device](https://github.com/copycat-killer/lain/issues/102), then autodetection is probably not working. This may due to [your user privileges](https://github.com/copycat-killer/lain/issues/102#issuecomment-246470526). In this case you can set `iface` manually. You can see which device is **UP,LOWER_UP** with the following command:
 
 ```shell
 ip link show
