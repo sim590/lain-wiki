@@ -15,13 +15,18 @@ local mynet = lain.widgets.net()
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 2
-`iface` | Network device(s) | string (single interface) or table of strings (multiple interfaces) | autodetected
+`iface` | Network device(s) | string (single interface) or array of strings (multiple interfaces) | autodetected
 `units` | Units | int | 1024 (kilobytes)
 `notify` | Display "no carrier" notifications | string | "on"
 `screen` | Notifications screen | int | 1
 `settings` | User settings | function | empty function
 
-Possible other values for `units` are 1 (byte) or multiple of 1024: 1024^2 (mb), 1024^3 (gb), and so on.
+`iface` can be a string or an array of the form `{ "eth0", "eth1", ... }` containing a list of the devices to collect data on.
+
+If more than one device is included, `net_now.sent` and `net_now.received` will contain cumulative values over all given devices.
+Use `net_now.devices["eth0"]` to access `sent`, `received`, `state` or `carrier` per device.
+
+Possible alternative values for `units` are 1 (byte) or multiple of 1024: 1024^2 (mb), 1024^3 (gb), and so on.
 
 If `notify = "off"` is set, the widget won't display a notification when there's no carrier.
 
@@ -41,7 +46,7 @@ Variable | Meaning | Type
 `widget` | The widget | `wibox.widget.textbox`
 `update` | Update `widget` | function
 
-## Various
+## Notes
 
 ### Setting `iface` manually
 
@@ -50,13 +55,6 @@ If the widget [spawns a "no carrier" notification and you are sure to have an ac
 ```shell
 ip link show
 ```
-
-### Multiple devices
-
-Since May 2016 `iface` can now be an array of the form `{ "eth0", "eth1", ... }` containing a list of the devices to collect data on.
-
-If more than one device is included, `net_now.sent` and `net_now.received` will contain cumulative values over all given devices.
-Use `net_now.devices["eth0"]` to access `sent`, `received`, `state` or `carrier` per device.
 
 ### Two widgets for upload/download rates from the same `iface`
 
