@@ -1,7 +1,13 @@
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
 Shows mail count in a textbox fetching over IMAP.
 
 ```lua
-myimapcheck = lain.widgets.imap(args)
+local myimap = lain.widgets.imap(args)
 ```
 
 New mails are notified like this:
@@ -12,7 +18,9 @@ New mails are notified like this:
 	| +---+                                      |
 	+--------------------------------------------+
 
-The function takes a table as argument. Required table parameters are:
+## Input table
+
+Required parameters are:
 
 Variable | Meaning | Type
 --- | --- | ---
@@ -57,9 +65,7 @@ myimapcheck = lain.widgets.imap({
 
 When `is_plain == false` (default), `password` can be either a string, a table or a function: the widget will execute it asynchronously in the first two cases.
 
-`settings` can use the value `mailcount`, an integer greater or equal to zero, and can modify `mail_notification_preset` table, which will be the preset for the naughty notifications. Check [here](https://awesomewm.org/apidoc/libraries/naughty.html#notify) for the list of variables it can contain.
-
-Default definition:
+`settings` can use the value `mailcount`, an integer greater or equal to zero, and can modify `mail_notification_preset` table, which will be the preset for the naughty notifications. Check [here](https://awesomewm.org/apidoc/libraries/naughty.html#notify) for the list of variables it can contain. Default definition:
 
 ```lua
 mail_notification _preset = {
@@ -74,7 +80,7 @@ In multiple screen setups, the default behaviour is to show a visual notificatio
 
 You can have multiple instances of this widget at the same time.
 
-### Output table
+## Output table
 
 Variable | Meaning | Type
 --- | --- | ---
