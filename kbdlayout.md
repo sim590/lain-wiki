@@ -1,3 +1,9 @@
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
 Shows and controls keyboard layouts and variants using `setxkbmap`. This is a simpler but asynchronous alternative to [awful.widget.kbdlayout](https://awesomewm.org/apidoc/classes/awful.widget.keyboardlayout.html).
 
 ```lua
@@ -6,7 +12,7 @@ mykbdlayout = lain.widgets.contrib.kbdlayout()
 
 Left/right click switches to next/previous keyboard layout.
 
-### Input table
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -40,8 +46,6 @@ Variable | Meaning | Type
 `set` | Function taking an index as an argument to manually set the layout given by that index | function
 `next` | Change to the next layout | function
 `prev` | Change to the prev layout | function
-
-## Usage
 
 The textbox can be added to the layout via standard means.
 
