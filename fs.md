@@ -51,7 +51,7 @@ just like the variables of `fs_now`. Example:
 
 ```lua
 -- shows root and home partitions percentage used
-fsroothome = lain.widgets.fs({
+local fsroothome = lain.widgets.fs({
     settings  = function()
         local home_used = tonumber(fs_info["/home used_p"]) or 0
         widget:set_text("/ " .. fs_now.used .. "% | /home " .. home_used .. "% ")
