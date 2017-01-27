@@ -49,7 +49,7 @@ lain.widgets.contrib.redshift:attach(
 )
 ```
 
-Then add the `myredshift` widget to your wibox.
+Then add `myredshift.widget` to your wibox.
 
 #### Checkbox status widget
 
