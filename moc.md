@@ -1,7 +1,13 @@
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
 A widget for showing the current song track's information from MOC (Music On Console).
 
 ```lua
-mocwidget = lain.widgets.contrib.moc()
+local mymoc = lain.widgets.contrib.moc()
 ```
 
 Now playing songs are notified like this:
@@ -14,7 +20,7 @@ Now playing songs are notified like this:
 	| +-------+                                              |
 	+--------------------------------------------------------+
 
-### Input table
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -55,7 +61,7 @@ moc_notification_preset = {
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
-### Output table
+## Output table
 
 Variable | Meaning | Type
 --- | --- | ---
@@ -67,7 +73,7 @@ The `update` function can be used to refresh the widget before `timeout` expires
 
 You can use `timer` to start/stop the widget as you like.
 
-### Keybindings
+## Keybindings
 
 You can control the widget with key bindings like these:
 
@@ -76,22 +82,22 @@ You can control the widget with key bindings like these:
 awful.key({ altkey, "Control" }, "Up",
 	function ()
 		awful.spawn.with_shell("mocp -G")
-		mocwidget.update()
+		moc.update()
 	end),
 awful.key({ altkey, "Control" }, "Down",
 	function ()
 		awful.spawn.with_shell("mocp -s")
-		mocwidget.update()
+		moc.update()
 	end),
 awful.key({ altkey, "Control" }, "Left",
 	function ()
 		awful.spawn.with_shell("mocp -r")
-		mocwidget.update()
+		moc.update()
 	end),
 awful.key({ altkey, "Control" }, "Right",
 	function ()
 		awful.spawn.with_shell("mocp -f")
-		mocwidget.update()
+		moc.update()
 	end),
 ```
 
@@ -104,11 +110,11 @@ If you don't use the widget for long periods and wish to spare CPU, you can togg
 awful.key({ altkey }, "0",
         function ()
             local common = { text = "MOC widget ", position = "top_middle", timeout = 2 } 
-            if mocwidget.timer.started then
-                mocwidget.timer:stop()
+            if moc.timer.started then
+                moc.timer:stop()
                 common.text = common.text .. markup.bold("ON")
             else
-                mocwidget.timer:start()
+                moc.timer:start()
                 common.text = common.text .. markup.bold("OFF")
             end
             naughty.notify(common)
