@@ -40,7 +40,6 @@ If you want to see some applications, check [awesome-copycats](https://github.co
 - [cpu](https://github.com/copycat-killer/lain/wiki/cpu)
 - [fs](https://github.com/copycat-killer/lain/wiki/fs)
 - [imap](https://github.com/copycat-killer/lain/wiki/imap)
-- [maildir](https://github.com/copycat-killer/lain/wiki/maildir)
 - [mem](https://github.com/copycat-killer/lain/wiki/mem)
 - [mpd](https://github.com/copycat-killer/lain/wiki/mpd)
 - [net](https://github.com/copycat-killer/lain/wiki/net)
