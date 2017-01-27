@@ -10,7 +10,7 @@ Shows ALSA volume.
 local volume = lain.widgets.alsa()
 ```
 
-### Input table
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -29,7 +29,7 @@ Variable | Meaning | Type | Values
 `volume_now.level` | Volume level | int | 0-100
 `volume_now.status` | Device status | string | "on", "off"
 
-### Output table
+## Output table
 
 Variable | Meaning | Type
 --- | --- | ---
@@ -72,7 +72,7 @@ Simple mixer control 'IEC958',3
 
 you have to set `togglechannel = "IEC958,3"`.
 
-### Keybindings
+## Keybindings
 
 You can control the widget with keybindings like these:
 
