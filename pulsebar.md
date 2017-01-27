@@ -1,12 +1,16 @@
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
 Shows PulseAudio volume with a progressbar; provides tooltips and notifications.
 
 ```lua
 volume = lain.widgets.pulsebar()
 ```
 
-### Input table
-
-The table and all of its variables are optional.
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -34,7 +38,7 @@ Variable | Meaning | Type | Default
 `mute` | Bar mute color | string | "#EB8F8F"
 `unmute` | Bar unmute color | string | "#A4CE8A"
 
-### Output table
+## Output table
 
 Variable | Meaning | Type
 --- | --- | ---
@@ -45,6 +49,6 @@ Variable | Meaning | Type
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
-### Keybindings
+## Keybindings
 
 Read [here](https://github.com/copycat-killer/lain/wiki/pulseaudio#keybindings). If you want notifications, use `volume.notify()` instead of `volume.update()`.
