@@ -1,12 +1,18 @@
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
 Shows disk space usage for a set partition.
 
 Displays a notification when the partition is full or has low space.
 
 ```lua
-mypartition = lain.widgets.fs()
+local mypartition = lain.widgets.fs()
 ```
 
-### Input table
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -57,7 +63,7 @@ Also, `settings` can modify `notification_preset` table. This table will be the 
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
-### Output table
+## Output table
 
 Variable | Meaning | Type
 --- | --- | ---
@@ -75,4 +81,4 @@ where ``altkey = "Mod1"`` and ``show`` arguments, all optionals, are:
 * `seconds`, notification time in seconds
 * `scr`, screen in which display the notification
 
-**Note that** naughty notifications requires `beautiful.font` or `notification_preset.font` to be monospaced, in order to correctly display the output.
+**Note that** naughty notifications requires `notification_preset.font` to be monospaced, in order to correctly display the output.
