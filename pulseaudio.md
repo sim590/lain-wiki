@@ -1,10 +1,16 @@
-Shows and controls PulseAudio volume with a textbox.
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
+Shows and controls PulseAudio volume.
 
 ```lua
 volume = lain.widgets.pulseaudio()
 ```
 
-### Input table
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -55,14 +61,14 @@ Variable | Meaning | Type | Values
 
 `volume_now.{left,right}` are pointers for `volume_now.{channel[1], channel[2]}` (stereo).
 
-### Output table
+## Output table
 
 Variable | Meaning | Type
 --- | --- | ---
 `widget` | The widget | `wibox.widget.textbox`
 `update` | Update `widget` | function
 
-### Keybindings
+## Keybindings
 
 You can control the widget with key bindings like these:
 
@@ -97,11 +103,11 @@ awful.key({ altkey, "Control" }, "0",
 
 where `altkey = "Mod1"`.
 
-### Example
+## Example
 
 ```lua
 -- PulseAudio volume (based on multicolor theme)
-volumewidget = lain.widgets.pulseaudio({
+volume = lain.widgets.pulseaudio({
     settings = function()
         vlevel = volume_now.left .. "-" .. volume_now.right .. "% | " .. volume_now.sink
         if volume_now.muted == "yes" then
