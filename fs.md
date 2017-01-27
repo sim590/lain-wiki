@@ -81,4 +81,6 @@ where ``altkey = "Mod1"`` and ``show`` arguments, all optionals, are:
 * `seconds`, notification time in seconds
 * `scr`, screen in which display the notification
 
-**Note that** naughty notifications requires `notification_preset.font` to be monospaced, in order to correctly display the output.
+## Note
+
+* Naughty notifications require `notification_preset.font` to be **monospaced**, in order to correctly display the output.
