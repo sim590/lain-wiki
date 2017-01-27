@@ -83,4 +83,4 @@ where ``altkey = "Mod1"`` and ``show`` arguments, both optionals, are:
 
 ## Note
 
-* Naughty notifications require `notification_preset.font` to be **monospaced**, in order to correctly display the output.
+Naughty notifications require `notification_preset.font` to be **monospaced**, in order to correctly display the output.
