@@ -10,7 +10,7 @@ Shows the current CPU temperature.
 mytemp = lain.widgets.temp()
 ```
 
-### Input table
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
