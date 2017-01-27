@@ -1,20 +1,24 @@
-The [asynchronous](https://github.com/copycat-killer/lain/issues/128) version of [`base`](https://github.com/copycat-killer/lain/wiki/base):
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
+The [asynchronous](https://github.com/copycat-killer/lain/issues/128) version of [`base`](https://github.com/copycat-killer/lain/wiki/base).
 
 ```lua
-myasyncbase = lain.widgets.abase()
+local myasyncbase = lain.widgets.abase()
 ```
 
-Read [here](https://github.com/copycat-killer/lain/wiki/base) for the rest.
+Configuration is identical to [`base` one](https://github.com/copycat-killer/lain/wiki/base).
 
-Use case examples
-========
+## Use case examples
 
-cmus
-----
+### cmus
 
 ```lua
 -- cmus audio player
-cmuswidget = lain.widgets.abase({
+local cmus = lain.widgets.abase({
     cmd = "cmus-remote -Q",
     settings = function()
         local cmus_now = {
@@ -35,12 +39,11 @@ cmuswidget = lain.widgets.abase({
 })
 ```
 
-bitcoin
--------
+### bitcoin
 
 ```lua
 -- Bitcoin to USD current price, using Coinbase V1 API
-bitcoinwidget = lain.widgets.abase({
+local bitcoin = lain.widgets.abase({
     cmd = "curl -m5 -s 'https://coinbase.com/api/v1/prices/buy'",
     settings = function()
         local btc, pos, err = require("lain.util").dkjson.decode(output, 1, nil)
@@ -52,13 +55,12 @@ bitcoinwidget = lain.widgets.abase({
 })
 ```
 
-mpris
------
+### mpris
 
 ```lua
 -- infos from mpris clients such as spotify and VLC
 -- based on https://github.com/acrisci/playerctl
-mpriswidget = lain.widgets.abase({
+local mpris = lain.widgets.abase({
     cmd = "playerctl status && playerctl metadata",
     settings = function()
          local escape_f  = require("awful.util").escape
@@ -90,12 +92,11 @@ mpriswidget = lain.widgets.abase({
 })
 ```
 
-upower
-------
+### upower
 
 ```lua
 -- battery infos from freedesktop upower
-mybattery = lain.widgets.abase({
+local mybattery = lain.widgets.abase({
     cmd = "upower -i /org/freedesktop/UPower/devices/battery_BAT | sed -n '/present/,/icon-name/p'",
     settings = function()
         local bat_now = {
@@ -131,12 +132,11 @@ mybattery = lain.widgets.abase({
 })
 ```
 
-btrfs
------
+### btrfs
 
 ```lua
 -- btrfs root df
-myrootfs = lain.widgets.abase({                                                 
+local myrootfs = lain.widgets.abase({                                                 
     timeout = 600,                                                              
     cmd = "btrfs filesystem df -g /",                                           
     settings  = function()                                                      
