@@ -4,7 +4,7 @@
 
 ### Description
 
-The [asynchronous](https://github.com/copycat-killer/lain/issues/128) version of [`base`](https://github.com/copycat-killer/lain/wiki/base).
+The [asynchronous](https://github.com/copycat-killer/lain/issues/128) version of `base`.
 
 ```lua
 local myasyncbase = lain.widgets.abase()
