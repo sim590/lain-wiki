@@ -14,6 +14,39 @@ Configuration is identical to [`base` one](https://github.com/copycat-killer/lai
 
 ## Use case examples
 
+### bitcoin
+
+```lua
+-- Bitcoin to USD current price, using Coinbase V1 API
+local bitcoin = lain.widgets.abase({
+    cmd = "curl -m5 -s 'https://coinbase.com/api/v1/prices/buy'",
+    settings = function()
+        local btc, pos, err = require("lain.util").dkjson.decode(output, 1, nil)
+        local btc_price = (not err and btc and btc["subtotal"]["amount"]) or "N/A"
+
+        -- customize here
+        widget:set_text(btc_price)
+    end
+})
+```
+
+### btrfs
+
+```lua
+-- btrfs root df
+local myrootfs = lain.widgets.abase({
+    timeout = 600,
+    cmd = "btrfs filesystem df -g /",
+    settings  = function()
+        local total, used  = string.match(output, "Data.-total=(%d+%.%d+)GiB.-used=(%d+%.%d+)GiB")
+        local percent_used = math.ceil((tonumber(used) / tonumber(total)) * 100)
+
+        -- customize here
+        widget:set_text(" [/: " .. percent_used .. "%] ")
+    end
+})
+```
+
 ### cmus
 
 ```lua
@@ -39,18 +72,27 @@ local cmus = lain.widgets.abase({
 })
 ```
 
-### bitcoin
+### maildir
 
 ```lua
--- Bitcoin to USD current price, using Coinbase V1 API
-local bitcoin = lain.widgets.abase({
-    cmd = "curl -m5 -s 'https://coinbase.com/api/v1/prices/buy'",
+-- checks whether there are files in the "new" directories of a mail dirtree
+local mailpath = "~/Mail"
+local mymaildir = lain.widgets.abase({
+    cmd = { awful.util.shell, "-c", string.format("ls -1dr %s/*/new/*", mailpath) },
     settings = function()
-        local btc, pos, err = require("lain.util").dkjson.decode(output, 1, nil)
-        local btc_price = (not err and btc and btc["subtotal"]["amount"]) or "N/A"
+        local inbox_now = { digest = "" }
+
+        for dir in output:gmatch(".-/(%w+)/new") do
+            inbox_now[dir] = 1
+            for _ in output:gmatch(dir) do
+                inbox_now[dir] = inbox_now[dir] + 1
+            end
+            if #inbox_now.digest > 0 then inbox_now.digest = inbox_now.digest .. ", " end
+            inbox_now.digest = inbox_now.digest .. string.format("%s (%d)", dir, inbox_now[dir])
+        end
 
         -- customize here
-        widget:set_text(btc_price)
+        widget:set_text("mail: " .. inbox_now.digest)
     end
 })
 ```
@@ -128,23 +170,6 @@ local mybattery = lain.widgets.abase({
 
         -- customize here
         widget:set_text("Bat: " .. bat_now.percentage .. " " .. bat_now.state)
-    end
-})
-```
-
-### btrfs
-
-```lua
--- btrfs root df
-local myrootfs = lain.widgets.abase({
-    timeout = 600,
-    cmd = "btrfs filesystem df -g /",
-    settings  = function()
-        local total, used  = string.match(output, "Data.-total=(%d+%.%d+)GiB.-used=(%d+%.%d+)GiB")
-        local percent_used = math.ceil((tonumber(used) / tonumber(total)) * 100)
-
-        -- customize here
-        widget:set_text(" [/: " .. percent_used .. "%] ")
     end
 })
 ```
