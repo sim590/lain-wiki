@@ -7,7 +7,7 @@
 Shows and controls keyboard layouts and variants using `setxkbmap`. This is a simpler but asynchronous alternative to [awful.widget.kbdlayout](https://awesomewm.org/apidoc/classes/awful.widget.keyboardlayout.html).
 
 ```lua
-mykbdlayout = lain.widgets.contrib.kbdlayout()
+local mykbdlayout = lain.widgets.contrib.kbdlayout()
 ```
 
 Left/right click switches to next/previous keyboard layout.
