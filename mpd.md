@@ -1,7 +1,13 @@
-Shows MPD status in a textbox.
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
+Shows MPD status.
 
 ```lua
-mpdwidget = lain.widgets.mpd()
+local mympd = lain.widgets.mpd()
 ```
 
 Now playing songs are notified like this:
@@ -16,7 +22,7 @@ Now playing songs are notified like this:
 
 **Note:** if MPD is turned off or not set correctly, the widget will constantly display "N/A" values.
 
-### Input table
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -73,7 +79,7 @@ mpd_notification_preset = {
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
-### Output table
+## Output table
 
 Variable | Meaning | Type
 --- | --- | ---
@@ -85,7 +91,7 @@ The `update` function can be used to refresh the widget before `timeout` expires
 
 You can use `timer` to start/stop the widget as you like.
 
-### Keybindings
+## Keybindings
 
 You can control the widget with keybindings like these:
 
@@ -94,22 +100,22 @@ You can control the widget with keybindings like these:
 awful.key({ altkey, "Control" }, "Up",
 	function ()
 		awful.spawn.with_shell("mpc toggle || ncmpc toggle || pms toggle")
-		mpdwidget.update()
+		mympd.update()
 	end),
 awful.key({ altkey, "Control" }, "Down",
 	function ()
 		awful.spawn.with_shell("mpc stop || ncmpc stop || pms stop")
-		mpdwidget.update()
+		mympd.update()
 	end),
 awful.key({ altkey, "Control" }, "Left",
 	function ()
 		awful.spawn.with_shell("mpc prev || ncmpc prev || pms prev")
-		mpdwidget.update()
+		mympd.update()
 	end),
 awful.key({ altkey, "Control" }, "Right",
 	function ()
 		awful.spawn.with_shell("mpc next || ncmpc next || pms next")
-		mpdwidget.update()
+		mympd.update()
 	end),
 ```
 
@@ -123,17 +129,16 @@ awful.key({ altkey }, "0",
         function ()
             local common = { text = "MPD widget ", position = "top_middle", timeout = 2 } 
             if mpdwidget.timer.started then
-                mpdwidget.timer:stop()
+                mympd.timer:stop()
                 common.text = common.text .. markup.bold("ON")
             else
-                mpdwidget.timer:start()
+                mympd.timer:start()
                 common.text = common.text .. markup.bold("OFF")
             end
             naughty.notify(common)
         end),
 ```
 
-Notes
------
+## Note
 
-- In `settings`, if you use `widget:set_text`, [it will ignore Pango markup](https://github.com/copycat-killer/lain/issues/258), so be sure to always use `widget:set_markup`.
+* In `settings`, if you use `widget:set_text`, [it will ignore Pango markup](https://github.com/copycat-killer/lain/issues/258), so be sure to always use `widget:set_markup`.
