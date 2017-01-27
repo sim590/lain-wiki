@@ -12,8 +12,6 @@ local volume = lain.widgets.alsabar()
 
 ## Input table
 
-The table and all of its variables are optional.
-
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 5
