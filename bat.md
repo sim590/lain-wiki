@@ -72,7 +72,7 @@ Variable | Meaning | Type
 `widget` | The widget | `wibox.widget.textbox`
 `update` | Update `widget` | function
 
-The `update` function can be used to [refresh the widget before `timeout` expires](https://github.com/copycat-killer/lain/issues/236).
+The `update` function can be used to refresh the widget before `timeout` expires.
 
 ## Notes
 * Another common identifier for `ac` is `ACAD`.
