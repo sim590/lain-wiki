@@ -1,3 +1,9 @@
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
 Attaches a calendar notification to a widget.
 
 ```lua
@@ -40,6 +46,6 @@ end),
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
-### Note
+## Note
 
 * Naughty notifications require `notification_preset.font` to be **monospaced**, in order to correctly display the output.
