@@ -76,10 +76,10 @@ You can display the notification with a key binding like this:
 awful.key({ altkey }, "h", function () mypartition.show(seconds, scr) end),
 ```
 
-where ``altkey = "Mod1"`` and ``show`` arguments, all optionals, are:
+where ``altkey = "Mod1"`` and ``show`` arguments, both optionals, are:
 
 * `seconds`, notification time in seconds
-* `scr`, screen in which display the notification
+* `scr`, screen which to display the notification in
 
 ## Note
 
