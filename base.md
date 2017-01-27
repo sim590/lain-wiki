@@ -8,7 +8,7 @@ A simple, synchronous template widget.
 
 Executes an input command and makes the user feed its textbox with the output.
 
-[Here](https://github.com/copycat-killer/lain/wiki/abase) you can find the asynchronous version.
+[Here](https://github.com/copycat-killer/lain/wiki/abase) you can find the **a**synchronous version.
 
 ```lua
 local mybase = lain.widgets.base()
