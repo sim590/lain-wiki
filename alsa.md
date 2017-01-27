@@ -1,7 +1,13 @@
-Shows ALSA volume with a textbox.
+## Usage
+
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
+Shows ALSA volume.
 
 ```lua
-volumewidget = lain.widgets.alsa()
+local volume = lain.widgets.alsa()
 ```
 
 ### Input table
@@ -14,7 +20,7 @@ Variable | Meaning | Type | Default
 `togglechannel` | Toggle channel | string | `nil`
 `settings` | User settings | function | empty function
 
-`cmd` is useful if you need to pass additional arguments to amixer. For instance, users with multiple sound cards may define `cmd = "amixer -c X"` in order to set amixer with card `X`.
+`cmd` is useful if you need to pass additional arguments to amixer. For instance, you may want to define `cmd = "amixer -c X"` in order to set amixer with card `X`.
 
 `settings` can use the following variables:
 
@@ -30,7 +36,6 @@ Variable | Meaning | Type
 `widget` | The widget | `wibox.widget.textbox`
 `channel` | ALSA channel | string
 `update` | Update `widget` | function
-
 
 ### Toggle channel
 
