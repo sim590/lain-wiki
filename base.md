@@ -1,9 +1,15 @@
-This is a simple template widget.
+## Usage
 
-Basically, all it does is to execute an input `cmd`, and to fill its textbox with the output.
+[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+
+### Description
+
+A simple template widget.
+
+Executes an input command and makes the user feed its textbox with the output.
 
 ```lua
-mybase = lain.widgets.base()
+local mybase = lain.widgets.base()
 ```
 
 ### Input table
