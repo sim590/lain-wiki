@@ -46,6 +46,7 @@ Variable | Meaning | Type
 `sink` | PulseAudio sink | string
 `notify` | The notification | function
 `update` | Update state | function
+`tooltip` | The tooltip | `awful.tooltip`
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
