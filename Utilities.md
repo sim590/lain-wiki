@@ -104,7 +104,9 @@ List of functions:
      |`-- font()        Set the font of the text.
      |`-- font()        Set the font of the text.
      |`-- color()       Set background and foreground color.
-     `-- fontcolor()    Set font, plus background and foreground colors.
+     |`-- fontfg()      Set font and foreground color.
+     |`-- fontbg()      Set font and background color.
+     `--  fontcolor()   Set font, plus background and foreground colors.
      |
      |`--+ bg
      |   |
