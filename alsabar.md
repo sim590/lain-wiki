@@ -57,6 +57,7 @@ Variable | Meaning | Type
 `channel` | ALSA channel | string
 `notify` | The notification | function
 `update` | Update `bar` | function
+`tooltip` | The tooltip | `awful.tooltip`
 
 ## Buttons
 
