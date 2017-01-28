@@ -25,7 +25,7 @@ Variable | Meaning | Type | Default
 
 You can reset `cal` any way you like (using `-w` to display weeks as well, for instance), but **be always sure to have the flag `--color=always`**, otherwise the highlighting (which is basically an exploit of `cal`) will not work.
 
-You can set `attach_to` as the array of widgets you want to which you want to attach the calendar, for instance: `attach_to = { mytextclock }`, or `attach_to = { mytextclock, myotherwidget, ... }`.
+You can set `attach_to` as the array of widgets to which you want to attach the calendar, for instance: `attach_to = { mytextclock }`, or `attach_to = { mytextclock, myotherwidget, ... }`.
 
 The notification will show an icon of the current day number, and output from ``cal`` with current day highlighted.
 
