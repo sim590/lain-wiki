@@ -58,6 +58,34 @@ Variable | Meaning | Type
 `notify` | The notification | function
 `update` | Update `bar` | function
 
+## Buttons
+
+If you want buttons, just add the following after your widget in `rc.lua`.
+
+```lua
+volume.bar:buttons(awful.util.table.join (
+          awful.button({}, 1, function() -- left click
+            awful.spawn.with_shell(string.format("%s -e alsamixer", terminal))
+          end),
+          awful.button({}, 2, function() -- middle click
+            awful.spawn(string.format("%s set %s 100%%", volume.cmd, volume.channel))
+            volume.update()
+          end),
+          awful.button({}, 3, function() -- right click
+            awful.spawn(string.format("%s set %s toggle", volume.cmd, volume.togglechannel or volume.channel))
+            volume.update()
+          end),
+          awful.button({}, 4, function() -- scroll up
+            awful.spawn(string.format("%s set %s 1%%+", volume.cmd, volume.channel))
+            volume.update()
+          end),
+          awful.button({}, 5, function() -- scroll down
+            awful.spawn(string.format("%s set %s 1%%-", volume.cmd, volume.channel))
+            volume.update()
+          end)
+))
+```
+
 ## Keybindings
 
 Read [here](https://github.com/copycat-killer/lain/wiki/alsa#keybindings). If you want notifications, use `volume.notify()` instead of `volume.update()`.
