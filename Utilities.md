@@ -106,7 +106,7 @@ List of functions:
      |`-- color()       Set background and foreground color.
      |`-- fontfg()      Set font and foreground color.
      |`-- fontbg()      Set font and background color.
-     `--  fontcolor()   Set font, plus background and foreground colors.
+      `-- fontcolor()   Set font, plus background and foreground colors.
      |
      |`--+ bg
      |   |
