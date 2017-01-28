@@ -18,11 +18,14 @@ local calendar = lain.widgets.calendar()
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `cal` | custom call for `cal` | string | "/usr/bin/cal --color=always"
+`attach_to` | Array of widgets | array | empty array
 `followtag` | Display the notification on currently focused screen | boolean | false
 `icons` | Path to calendar icons | string | [lain/icons/cal/white](https://github.com/copycat-killer/lain/tree/master)
 `notification_preset` | Notification preset | table | [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
 
 You can reset `cal` any way you like (using `-w` to display weeks as well, for instance), but **be always sure to have the flag `--color=always`**, otherwise the highlighting (which is basically an exploit of `cal`) will not work.
+
+You can set `attach_to` as the array of widgets you want to which you want to attach the calendar, for instance: `attach_to = { mytextclock }`, or `attach_to = { mytextclock, myotherwidget, ... }`.
 
 The notification will show an icon of the current day number, and output from ``cal`` with current day highlighted.
 
