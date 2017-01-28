@@ -121,6 +121,8 @@ they all take one argument, which is the text to markup, except the following:
 ```lua
 markup.font(font, text)
 markup.color(fg, bg, text)
+markup.fontfg(font, fg, text)
+markup.fontbg(font, bg, text)
 markup.fontcolor(font, fg, bg, text)
 markup.fg.color(color, text)
 markup.bg.color(color, text)
