@@ -7,13 +7,13 @@
 Attaches a calendar notification to a widget.
 
 ```lua
-lain.widgets.calendar.attach(widget, args)
+local calendar = lain.widgets.calendar()
 ```
 
 - Left click / scroll down: switch to previous month.
 - Right click / scroll up: switch to next month.
 
-`args` is an optional table which can contain:
+## Input table
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
@@ -26,11 +26,25 @@ You can reset `cal` any way you like (using `-w` to display weeks as well, for i
 
 The notification will show an icon of the current day number, and output from ``cal`` with current day highlighted.
 
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
+
+## Output table
+
+Variable | Meaning | Type
+--- | --- | ---
+`attach` | Attach the calendar to an input widget | function
+`show` | Show calendar | function
+`hide` | Hide calendar | function
+
+`attach` takes as argument the widget you want to attach the calendar to: `calendar.attach(widget)`.
+
+## Keybindings
+
 You can call the notification with a key binding like this:
 
 ```lua
 awful.key({ altkey }, "c", function ()
-    lain.widgets.calendar:show(7)
+    calendar:show(7)
 end),
 ```
 
@@ -40,11 +54,9 @@ You can also call it defining a notification screen with a third argument like t
 
 ```lua
 awful.key({ altkey }, "c", function ()
-    lain.widgets.calendar:show(7, 0, my_scr_number)
+    calendar:show(7, 0, my_scr_number)
 end),
 ```
-
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
 ## Note
 
