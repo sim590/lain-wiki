@@ -6,7 +6,7 @@
 
 Template for custom asynchronous widgets.
 
-Executes an input command and makes the user feed its `wibox.widget` with the output.
+Executes an input command and makes the user feed a `wibox.widget` with the output.
 
 ```lua
 local mybase = lain.widgets.base()
