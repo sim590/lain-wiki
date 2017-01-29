@@ -18,6 +18,7 @@ This has been implemented in Awesome 4.0 as [`awful.widget.watch`](https://aweso
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
+`widget` | Widget to feed | `wibox.widget` | `wibox.widget.textbox`
 `timeout` | Refresh timeout seconds | int | 5
 `cmd` | The command to execute | string | `nil`
 `nostart` | Widget timer doesn't start immediately | boolean | false
