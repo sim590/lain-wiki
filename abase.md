@@ -22,7 +22,7 @@ Variable | Meaning | Type | Default
 `cmd` | The command to execute | string | `nil`
 `nostart` | Widget timer doesn't start immediately | boolean | false
 `stoppable` | Widget timer is stoppable | boolean | false
-`settings` | User settings | function | see Default `settings` function
+`settings` | User settings | function | see [Default `settings` function](https://github.com/copycat-killer/lain/wiki/abase#default-settings-function)
 
 `settings` can use the string `output`, which is the output of `cmd`.
 
@@ -35,7 +35,7 @@ settings = function() widget:set_text(output) end
 
 Variable | Meaning | Type
 --- | --- | ---
-`widget` | The widget | input widget or `wibox.widget.textbox`
+`widget` | The widget | input widget type or `wibox.widget.textbox`
 `update` | Update `widget` | function
 `timer` | The widget timer | [`gears.timer`](https://awesomewm.org/doc/api/classes/gears.timer.html) or `nil`
 
@@ -49,7 +49,7 @@ If `stoppable == true`, the widget will have an ad-hoc timer, which you can cont
 
 ```lua
 -- Bitcoin to USD current price, using Coinbase V1 API
-local bitcoin = lain.widgets.abase({
+local bitcoin = lain.widgets.base({
     cmd = "curl -m5 -s 'https://coinbase.com/api/v1/prices/buy'",
     settings = function()
         local btc, pos, err = require("lain.util").dkjson.decode(output, 1, nil)
@@ -65,7 +65,7 @@ local bitcoin = lain.widgets.abase({
 
 ```lua
 -- btrfs root df
-local myrootfs = lain.widgets.abase({
+local myrootfs = lain.widgets.base({
     timeout = 600,
     cmd = "btrfs filesystem df -g /",
     settings  = function()
@@ -82,7 +82,7 @@ local myrootfs = lain.widgets.abase({
 
 ```lua
 -- cmus audio player
-local cmus = lain.widgets.abase({
+local cmus = lain.widgets.base({
     cmd = "cmus-remote -Q",
     settings = function()
         local cmus_now = {
@@ -108,7 +108,7 @@ local cmus = lain.widgets.abase({
 ```lua
 -- checks whether there are files in the "new" directories of a mail dirtree
 local mailpath = "~/Mail"
-local mymaildir = lain.widgets.abase({
+local mymaildir = lain.widgets.base({
     timeout = 60,
     cmd = { awful.util.shell, "-c", string.format("ls -1dr %s/*/new/*", mailpath) },
     settings = function()
@@ -134,7 +134,7 @@ local mymaildir = lain.widgets.abase({
 ```lua
 -- infos from mpris clients such as spotify and VLC
 -- based on https://github.com/acrisci/playerctl
-local mpris = lain.widgets.abase({
+local mpris = lain.widgets.base({
     cmd = "playerctl status && playerctl metadata",
     settings = function()
          local escape_f  = require("awful.util").escape
@@ -170,7 +170,7 @@ local mpris = lain.widgets.abase({
 
 ```lua
 -- battery infos from freedesktop upower
-local mybattery = lain.widgets.abase({
+local mybattery = lain.widgets.base({
     timeout = 30,
     cmd = "upower -i /org/freedesktop/UPower/devices/battery_BAT | sed -n '/present/,/icon-name/p'",
     settings = function()
