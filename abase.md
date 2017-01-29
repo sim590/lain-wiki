@@ -12,7 +12,7 @@ Executes an input command and makes the user feed its `wibox.widget` with the ou
 local mybase = lain.widgets.base()
 ```
 
-This has been implemented in Awesome 4.0 as [`awful.widget.watch`](https://awesomewm.org/doc/api/classes/awful.widget.watch.html). But while `watch` returns only the widget, `abase` returns a table including its timer and internal update function too.
+This has been implemented in Awesome 4.0 as [`awful.widget.watch`](https://awesomewm.org/doc/api/classes/awful.widget.watch.html). But while `watch` returns only the widget, `base` returns a table including its timer and internal update function too.
 
 ## Input table
 
