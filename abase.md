@@ -51,6 +51,8 @@ If `stoppable == true`, the widget will have an ad-hoc timer, which you can cont
 ```lua
 -- Bitcoin to USD current price, using Coinbase V1 API
 local bitcoin = lain.widgets.base({
+    timeout = 43200, -- half day
+    stoppable = true,
     cmd = "curl -m5 -s 'https://coinbase.com/api/v1/prices/buy'",
     settings = function()
         local btc, pos, err = require("lain.util").dkjson.decode(output, 1, nil)
@@ -84,6 +86,8 @@ local myrootfs = lain.widgets.base({
 ```lua
 -- cmus audio player
 local cmus = lain.widgets.base({
+    timeout = 2,
+    stoppable = true,
     cmd = "cmus-remote -Q",
     settings = function()
         local cmus_now = {
@@ -111,6 +115,7 @@ local cmus = lain.widgets.base({
 local mailpath = "~/Mail"
 local mymaildir = lain.widgets.base({
     timeout = 60,
+    stoppable = true,
     cmd = { awful.util.shell, "-c", string.format("ls -1dr %s/*/new/*", mailpath) },
     settings = function()
         local inbox_now = { digest = "" }
@@ -137,6 +142,8 @@ local mymaildir = lain.widgets.base({
 -- based on https://github.com/acrisci/playerctl
 local mpris = lain.widgets.base({
     cmd = "playerctl status && playerctl metadata",
+    timeout = 2,
+    stoppable = true,
     settings = function()
          local escape_f  = require("awful.util").escape
          local mpris_now = {
