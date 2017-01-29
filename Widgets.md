@@ -34,7 +34,6 @@ If you want to see some applications, check [awesome-copycats](https://github.co
 - [abase](https://github.com/copycat-killer/lain/wiki/abase)
 - [alsa](https://github.com/copycat-killer/lain/wiki/alsa)
 - [alsabar](https://github.com/copycat-killer/lain/wiki/alsabar)
-- [base](https://github.com/copycat-killer/lain/wiki/base)
 - [bat](https://github.com/copycat-killer/lain/wiki/bat)
 - [calendar](https://github.com/copycat-killer/lain/wiki/calendar)
 - [cpu](https://github.com/copycat-killer/lain/wiki/cpu)
