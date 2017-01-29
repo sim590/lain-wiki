@@ -12,6 +12,8 @@ local myasyncbase = lain.widgets.abase()
 
 Configuration is identical to [`base` one](https://github.com/copycat-killer/lain/wiki/base).
 
+This has been implemented in Awesome 4.0 as [`awful.widget.watch`](https://awesomewm.org/doc/api/classes/awful.widget.watch.html). But while `watch` returns only the widget, `abase` returns a table including its timer and internal update function too.
+
 ## Use case examples
 
 ### bitcoin
