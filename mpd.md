@@ -130,10 +130,10 @@ awful.key({ altkey }, "0",
             local common = { text = "MPD widget ", position = "top_middle", timeout = 2 }
             if mympd.timer.started then
                 mympd.timer:stop()
-                common.text = common.text .. markup.bold("ON")
+                common.text = common.text .. markup.bold("OFF")
             else
                 mympd.timer:start()
-                common.text = common.text .. markup.bold("OFF")
+                common.text = common.text .. markup.bold("ON")
             end
             naughty.notify(common)
         end),
