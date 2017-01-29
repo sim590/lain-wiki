@@ -4,15 +4,44 @@
 
 ### Description
 
-The [asynchronous](https://github.com/copycat-killer/lain/issues/128) version of `base`.
+Template for custom asynchronous widgets.
+
+Executes an input command and makes the user feed its `wibox.widget` with the output.
 
 ```lua
-local myasyncbase = lain.widgets.abase()
+local mybase = lain.widgets.base()
 ```
 
-Configuration is identical to [`base` one](https://github.com/copycat-killer/lain/wiki/base).
-
 This has been implemented in Awesome 4.0 as [`awful.widget.watch`](https://awesomewm.org/doc/api/classes/awful.widget.watch.html). But while `watch` returns only the widget, `abase` returns a table including its timer and internal update function too.
+
+## Input table
+
+Variable | Meaning | Type | Default
+--- | --- | --- | ---
+`timeout` | Refresh timeout seconds | int | 5
+`cmd` | The command to execute | string | `nil`
+`nostart` | Widget timer doesn't start immediately | boolean | false
+`stoppable` | Widget timer is stoppable | boolean | false
+`settings` | User settings | function | see Default `settings` function
+
+`settings` can use the string `output`, which is the output of `cmd`.
+
+### Default `settings` function
+
+```lua
+settings = function() widget:set_text(output) end
+```
+## Output table
+
+Variable | Meaning | Type
+--- | --- | ---
+`widget` | The widget | input widget or `wibox.widget.textbox`
+`update` | Update `widget` | function
+`timer` | The widget timer | [`gears.timer`](https://awesomewm.org/doc/api/classes/gears.timer.html) or `nil`
+
+The `update` function can be used to refresh the widget before `timeout` expires.
+
+If `stoppable == true`, the widget will have an ad-hoc timer, which you can control though `timer` variable.
 
 ## Use case examples
 
