@@ -9,10 +9,10 @@ Template for custom asynchronous widgets.
 Executes an input command and makes the user feed a `wibox.widget` with the output.
 
 ```lua
-local mybase = lain.widgets.base()
+local mybase = lain.widgets.abase()
 ```
 
-This has been implemented in Awesome 4.0 as [`awful.widget.watch`](https://awesomewm.org/doc/api/classes/awful.widget.watch.html). But while `watch` returns only the widget, `base` returns a table including its timer and internal update function too.
+This has been implemented in Awesome 4.0 as [`awful.widget.watch`](https://awesomewm.org/doc/api/classes/awful.widget.watch.html). But while `watch` returns only the widget, `abase` returns a table including its timer and internal update function too.
 
 ## Input table
 
@@ -50,7 +50,7 @@ If `stoppable == true`, the widget will have an ad-hoc timer, which you can cont
 
 ```lua
 -- Bitcoin to USD current price, using Coinbase V1 API
-local bitcoin = lain.widgets.base({
+local bitcoin = lain.widgets.abase({
     timeout = 43200, -- half day
     stoppable = true,
     cmd = "curl -m5 -s 'https://coinbase.com/api/v1/prices/buy'",
@@ -68,7 +68,7 @@ local bitcoin = lain.widgets.base({
 
 ```lua
 -- btrfs root df
-local myrootfs = lain.widgets.base({
+local myrootfs = lain.widgets.abase({
     timeout = 600,
     cmd = "btrfs filesystem df -g /",
     settings  = function()
@@ -85,7 +85,7 @@ local myrootfs = lain.widgets.base({
 
 ```lua
 -- cmus audio player
-local cmus = lain.widgets.base({
+local cmus = lain.widgets.abase({
     timeout = 2,
     stoppable = true,
     cmd = "cmus-remote -Q",
@@ -113,7 +113,7 @@ local cmus = lain.widgets.base({
 ```lua
 -- checks whether there are files in the "new" directories of a mail dirtree
 local mailpath = "~/Mail"
-local mymaildir = lain.widgets.base({
+local mymaildir = lain.widgets.abase({
     timeout = 60,
     stoppable = true,
     cmd = { awful.util.shell, "-c", string.format("ls -1dr %s/*/new/*", mailpath) },
@@ -140,7 +140,7 @@ local mymaildir = lain.widgets.base({
 ```lua
 -- infos from mpris clients such as spotify and VLC
 -- based on https://github.com/acrisci/playerctl
-local mpris = lain.widgets.base({
+local mpris = lain.widgets.abase({
     cmd = "playerctl status && playerctl metadata",
     timeout = 2,
     stoppable = true,
@@ -178,7 +178,7 @@ local mpris = lain.widgets.base({
 
 ```lua
 -- battery infos from freedesktop upower
-local mybattery = lain.widgets.base({
+local mybattery = lain.widgets.abase({
     timeout = 30,
     cmd = "upower -i /org/freedesktop/UPower/devices/battery_BAT | sed -n '/present/,/icon-name/p'",
     settings = function()
