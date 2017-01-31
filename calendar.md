@@ -17,7 +17,7 @@ local calendar = lain.widgets.calendar()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`cal` | custom call for `cal` | string | "/usr/bin/cal --color=always"
+`cal` | custom call for `cal` | string | "/usr/bin/cal"
 `attach_to` | Array of widgets | array | empty array
 `followtag` | Display the notification on currently focused screen | boolean | false
 `icons` | Path to calendar icons | string | [lain/icons/cal/white](https://github.com/copycat-killer/lain/tree/master)
