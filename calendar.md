@@ -23,7 +23,7 @@ Variable | Meaning | Type | Default
 `icons` | Path to calendar icons | string | [lain/icons/cal/white](https://github.com/copycat-killer/lain/tree/master)
 `notification_preset` | Notification preset | table | [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
 
-You can reset `cal` any way you like (using `-w` to display weeks as well, for instance), but **be always sure to have the flag `--color=always`**, otherwise the highlighting (which is basically an exploit of `cal`) will not work.
+You can reset `cal` any way you like (using `-w` to display weeks as well, for instance), but **be always sure that your output is colorized**, otherwise the highlighting (which is basically an exploit of `cal`) will not work. If default `cal` command doesn't work for you, check `man cal` for the right settings. For instance, under Ubuntu, it's `/usr/bin/cal -h`.
 
 You can set `attach_to` as the array of widgets to which you want to attach the calendar, for instance: `attach_to = { mytextclock }`, or `attach_to = { mytextclock, myotherwidget, ... }`.
 
