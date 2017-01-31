@@ -25,7 +25,13 @@ Variable | Meaning | Type | Default
 
 You can reset `cal` any way you like (using `-w` to display weeks as well, for instance). If the current day is not highlighted, you can reset `cal` to also include the proper coloring flag. For instance, under Arch Linux it's `/usr/bin/cal --color=always`, while under Ubuntu it's `/usr/bin/cal -h`.
 
-You can set `attach_to` as the array of widgets to which you want to attach the calendar, for instance: `attach_to = { mytextclock }`, or `attach_to = { mytextclock, myotherwidget, ... }`.
+You can set `attach_to` as the array of widgets to which you want to attach the calendar, for instance: 
+```lua
+lain.widgets.calendar({
+    `attach_to = { mywidget1, mywidget2, ...  }`,
+    -- [...]
+})
+```
 
 The notification will show an icon of the current day number, and output from ``cal`` with current day highlighted.
 
