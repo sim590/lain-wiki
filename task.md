@@ -17,7 +17,7 @@ Variable | Meaning | Type | Default
 `show_cmd` | Taskwarrior command to show in the popup | string | "task next"
 `prompt_text` | Prompt text | string | "Enter task command: "
 `followtag` | Display the notification on currently focused screen | boolean | false
-`notification_preset` | Notification preset | table | [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
+`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/task#default-notification_preset)
 
 The tasks are shown in a notification popup when the mouse is moved over the attached `widget`, and the popup is hidden when the mouse is moved away. By default, the notification will show the output of `task next`. With `show_cmd`, the `task` popup command can be customized, for example if you want to [filter the tasks](https://taskwarrior.org/docs/filter.html) or show a [custom report](https://github.com/copycat-killer/lain/pull/213).
 
@@ -35,4 +35,14 @@ And you can prompt to input a `task` command with a keybinding like this:
 
 ```lua
 awful.key({ altkey }, "t", lain.widgets.contrib.task.prompt),
+```
+
+### Default `notification_preset`
+
+```lua
+notification_preset = {
+    font = "Monospace 10",
+    fg   = "#FFFFFF",
+    bg   = "#000000"
+}
 ```
