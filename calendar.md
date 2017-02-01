@@ -21,11 +21,12 @@ Variable | Meaning | Type | Default
 `attach_to` | Array of widgets | array | empty array
 `followtag` | Display the notification on currently focused screen | boolean | false
 `icons` | Path to calendar icons | string | [lain/icons/cal/white](https://github.com/copycat-killer/lain/tree/master)
-`notification_preset` | Notification preset | table | [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
+`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/calendar#default-notification_preset)
 
 You can reset `cal` any way you like (using `-w` to display weeks as well, for instance). If the current day is not highlighted, you can reset `cal` to also include the proper coloring flag. For instance, under Arch Linux it's `/usr/bin/cal --color=always`, while under Ubuntu it's `/usr/bin/cal -h`.
 
-You can set `attach_to` as the array of widgets to which you want to attach the calendar, for instance: 
+You can set `attach_to` as the array of widgets to which you want to attach the calendar, for instance:
+
 ```lua
 lain.widgets.calendar({
     `attach_to = { mywidget1, mywidget2, ...  }`,
@@ -36,6 +37,16 @@ lain.widgets.calendar({
 The notification will show an icon of the current day number, and output from ``cal`` with current day highlighted.
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
+
+### Default `notification_preset`
+
+```lua
+notification_preset = {
+    font = "Monospace 10",
+    fg   = "#FFFFFF",
+    bg   = "#000000"
+}
+```
 
 ## Output table
 
