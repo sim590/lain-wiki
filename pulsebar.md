@@ -25,7 +25,7 @@ Variable | Meaning | Type | Default
 `scallback` | [PulseAudio sink callback](https://github.com/copycat-killer/lain/wiki/pulseaudio/) | function | `nil`
 `sink` | Mixer sink | int | 0
 `colors` | Bar colors | table | see [Default colors](https://github.com/copycat-killer/lain/wiki/pulsebar#default-colors)
-`notification_preset` | Notifications settings | table | [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
+`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/pulsebar#default-notification_preset)
 `followtag` | Display the notification on currently focused screen | boolean | false
 
 `settings` can use [these variables](https://github.com/copycat-killer/lain/wiki/pulseaudio#settings-variables).
@@ -37,6 +37,14 @@ Variable | Meaning | Type | Default
 `background` | Bar backgrund color | string | "#000000"
 `mute` | Bar mute color | string | "#EB8F8F"
 `unmute` | Bar unmute color | string | "#A4CE8A"
+
+### Default `notification_preset`
+
+```lua
+notification_preset = {
+    font = "Monospace 10"
+}
+```
 
 ## Output table
 
