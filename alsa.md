@@ -76,6 +76,7 @@ you have to set `togglechannel = "IEC958,3"`.
 
 If you want buttons, just add the following after your widget in `rc.lua`.
 
+```lua
 volume.widget:buttons(awful.util.table.join(
     awful.button({}, 1, function() -- left click
         awful.spawn(string.format("%s -e alsamixer", terminal))
