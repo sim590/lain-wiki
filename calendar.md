@@ -78,6 +78,7 @@ awful.key({ altkey }, "c", function ()
 end),
 ```
 
-## Note
+## Notes
 
-Naughty notifications require `notification_preset.font` to be **monospaced**, in order to correctly display the output.
+* Naughty notifications require `notification_preset.font` to be **monospaced**, in order to correctly display the output.
+* In case current day is not being highlighted in notifications, try setting `cal` specifying your environment. For instance: `cal = "/usr/bin/env TERM=linux /usr/bin/cal --your-coloring-flag-here"`.
