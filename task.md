@@ -42,7 +42,6 @@ awful.key({ altkey }, "t", lain.widgets.contrib.task.prompt),
 ```lua
 notification_preset = {
     font = "Monospace 10",
-    fg   = "#FFFFFF",
-    bg   = "#000000"
+    icon = helpers.icons_dir .. "/taskwarrior.png"
 }
 ```
