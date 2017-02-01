@@ -19,7 +19,7 @@ Variable | Meaning | Type | Default
 `timeout` | Refresh timeout seconds -| int | 600
 `partition` | Partition to monitor | string | "/"
 `options` | Additional options to pass to [`dfs`](https://github.com/copycat-killer/lain/blob/master/scripts/dfs) | string, in the form `--type='fstype' | --exclude-type='fstype'` | nil
-`notification_preset` | Notification preset | table | [`naughty.config.defaults`](https://awesomewm.org/apidoc/libraries/naughty.html#config.defaults)
+`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/fs#default-notification_preset)
 `followtag` | Display the notification on currently focused screen | boolean | false
 `notify` | Display notifications | string | "on"
 `showpopup` | Display popups with mouse hovering | string, possible values: "on", "off" | "on"
