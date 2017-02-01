@@ -16,7 +16,7 @@
 
 Packages should be available for most distributions. Source code and build instructions can be found on Github [here](https://github.com/jonls/redshift).
 
-You also need a valid config file. Please see the [project homepage](http://jonls.dk/redshift/) for details. An example: [`~/config/redshift.conf`](https://github.com/jonls/redshift/blob/master/redshift.conf.sample).
+You also need a valid config file. Please see the [project homepage](http://jonls.dk/redshift/) for details. An example: [`~/.config/redshift.conf`](https://github.com/jonls/redshift/blob/master/redshift.conf.sample).
 
 You have to match the location settings to your personal situation: you can adjust the `lat` and `lon` variables using a [web service](https://encrypted.google.com/search?q=get+latitude+and+longitude).
 
