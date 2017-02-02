@@ -85,7 +85,6 @@ end),
 * In order to have [khal](https://github.com/pimutils/khal) agenda output combined with the widget you can use this script as `cal`
 ```
 #!/bin/bash
-#!/bin/bash
 days=3
 if [ $# -eq 0 ]; then
    # paste <(cal --color=always) <(khal list today $(date -d "+$days days" "+%d.%m.%Y"))|expand -t $(( $(/usr/bin/cal|wc -L) + 2 ))
