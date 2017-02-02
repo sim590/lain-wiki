@@ -82,7 +82,7 @@ end),
 
 * Naughty notifications require `notification_preset.font` to be **monospaced**, in order to correctly display the output.
 * In case current day is not being highlighted in notifications, try setting `cal` specifying your environment. For instance: `cal = "/usr/bin/env TERM=linux /usr/bin/cal --your-coloring-flag-here"`.
-* In order to have [khal](https://github.com/pimutils/khal) agenda output combined with the widget you can use this script as `cal` :
+* In order to have [khal](https://github.com/pimutils/khal) agenda output combined with the widget you can use this script as `cal`:
 
     ```shell
     #!/bin/bash
