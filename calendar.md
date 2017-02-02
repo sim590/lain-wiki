@@ -87,7 +87,7 @@ end),
 #!/bin/bash
 days=3
 if [ $# -eq 0 ]; then
-        awk '{max = 21}
+    awk '{max = 21}
     FNR==NR{s1[FNR]=$0; next}{s2[FNR]=$0}
     END { format = "%-" max "s\t%-" max "s\n";
     numlines=(NR-FNR)>FNR?NR-FNR:FNR;
