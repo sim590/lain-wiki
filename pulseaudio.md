@@ -31,7 +31,7 @@ Variable | Meaning | Type | Default
 
 **Note:** you can set PulseAudio default sink like this: `pacmd set-default-sink #sink`.
 
-If `sed` doesn't work, you can try with `grep`:
+If [`sed`](https://github.com/copycat-killer/lain/blob/master/widgets/pulseaudio.lua#L28) doesn't work, you can try with `grep`:
 
 ```shell
 pacmd list-sinks | grep -e $(pactl info | grep -e 'ink' | cut -d' ' -f3) -e 'volume: front' -e 'muted'
@@ -41,7 +41,8 @@ pacmd list-sinks | grep -e $(pactl info | grep -e 'ink' | cut -d' ' -f3) -e 'vol
 
 ```lua
 scallback = function()
-    return "pacmd list-sinks | sed -n -e '0,/*/d' -e '/base volume/d' -e '/volume:/p' -e '/muted:/p'"
+    devicetype = "sink"
+    return "pacmd list-" .. devicetype .. "s | sed -n -e '0,/*/d' -e '/base volume/d' -e '/volume:/p' -e '/muted:/p' -e '/device\\.string/p'"
 end
 ```
 
