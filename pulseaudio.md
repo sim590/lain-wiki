@@ -15,7 +15,8 @@ local volume = lain.widgets.pulseaudio()
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | int | 5
-`cmd` | PulseAudio command | string | [link](https://github.com/copycat-killer/lain/blob/master/widgets/pulseaudio.lua#L29)
+`devicetype | PulseAudio device type | string ("sink", "source") | "sink"
+`cmd` | PulseAudio command | string | [link](https://github.com/copycat-killer/lain/blob/master/widgets/pulseaudio.lua#L28)
 `scallback` | PulseAudio sink callback | function | `nil`
 `settings` | User settings | function | empty function
 
