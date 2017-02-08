@@ -31,7 +31,7 @@ If you want to see some applications, check [awesome-copycats](https://github.co
 
 # Index
 
-- [abase](https://github.com/copycat-killer/lain/wiki/abase)
+- [watch](https://github.com/copycat-killer/lain/wiki/watch)
 - [alsa](https://github.com/copycat-killer/lain/wiki/alsa)
 - [alsabar](https://github.com/copycat-killer/lain/wiki/alsabar)
 - [bat](https://github.com/copycat-killer/lain/wiki/bat)
