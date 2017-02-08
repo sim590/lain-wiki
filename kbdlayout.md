@@ -7,7 +7,7 @@
 Shows and controls keyboard layouts and variants using `setxkbmap`. This is a simpler but asynchronous alternative to [awful.widget.kbdlayout](https://awesomewm.org/apidoc/classes/awful.widget.keyboardlayout.html).
 
 ```lua
-local mykbdlayout = lain.widgets.contrib.kbdlayout()
+local mykbdlayout = lain.widget.contrib.kbdlayout()
 ```
 
 Left/right click switches to next/previous keyboard layout.
@@ -55,7 +55,7 @@ By default, left-clicking the textbox calls `next`, and right-clicking calls `pr
 
 ```lua
 -- Switch between US Dvorak and DE layouts.
-mykbdlayout = lain.widgets.contrib.kbdlayout({
+mykbdlayout = lain.widget.contrib.kbdlayout({
     layouts = { { layout = "us", variant = "dvorak" },
 	            { layout = "de" } },
     settings = function()

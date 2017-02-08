@@ -7,7 +7,7 @@
 Monitors network interfaces and shows current traffic.
 
 ```lua
-local mynet = lain.widgets.net()
+local mynet = lain.widget.net()
 ```
 
 ## Input table

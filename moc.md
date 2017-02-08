@@ -7,7 +7,7 @@
 A widget for showing the current song track's information from MOC (Music On Console).
 
 ```lua
-local mymoc = lain.widgets.contrib.moc()
+local mymoc = lain.widget.contrib.moc()
 ```
 
 Now playing songs are notified like this:

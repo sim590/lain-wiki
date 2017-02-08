@@ -9,7 +9,7 @@ Template for asynchronous watcher widgets.
 Executes an input command and makes the user feed a `wibox.widget` with the output.
 
 ```lua
-local mywatch = lain.widgets.watch()
+local mywatch = lain.widget.watch()
 ```
 
 This has been implemented in Awesome 4.0 as [`awful.widget.watch`](https://awesomewm.org/doc/api/classes/awful.widget.watch.html). But while Awesome `watch` returns only the widget, Lain one returns a table including its timer and internal update function too.
@@ -56,7 +56,7 @@ If `stoppable == true`, the widget will have an ad-hoc timer, which you can cont
 
 ```lua
 -- Bitcoin to USD current price, using Coinbase V1 API
-local bitcoin = lain.widgets.watch({
+local bitcoin = lain.widget.watch({
     timeout = 43200, -- half day
     stoppable = true,
     cmd = "curl -m5 -s 'https://coinbase.com/api/v1/prices/buy'",
@@ -74,7 +74,7 @@ local bitcoin = lain.widgets.watch({
 
 ```lua
 -- btrfs root df
-local myrootfs = lain.widgets.watch({
+local myrootfs = lain.widget.watch({
     timeout = 600,
     cmd = "btrfs filesystem df -g /",
     settings  = function()
@@ -91,7 +91,7 @@ local myrootfs = lain.widgets.watch({
 
 ```lua
 -- cmus audio player
-local cmus = lain.widgets.watch({
+local cmus = lain.widget.watch({
     timeout = 2,
     stoppable = true,
     cmd = "cmus-remote -Q",
@@ -119,7 +119,7 @@ local cmus = lain.widgets.watch({
 ```lua
 -- checks whether there are files in the "new" directories of a mail dirtree
 local mailpath = "~/Mail"
-local mymaildir = lain.widgets.watch({
+local mymaildir = lain.widget.watch({
     timeout = 60,
     stoppable = true,
     cmd = { awful.util.shell, "-c", string.format("ls -1dr %s/*/new/*", mailpath) },
@@ -146,7 +146,7 @@ local mymaildir = lain.widgets.watch({
 ```lua
 -- infos from mpris clients such as spotify and VLC
 -- based on https://github.com/acrisci/playerctl
-local mpris = lain.widgets.watch({
+local mpris = lain.widget.watch({
     cmd = "playerctl status && playerctl metadata",
     timeout = 2,
     stoppable = true,
@@ -184,7 +184,7 @@ local mpris = lain.widgets.watch({
 
 ```lua
 -- battery infos from freedesktop upower
-local mybattery = lain.widgets.watch({
+local mybattery = lain.widget.watch({
     timeout = 30,
     cmd = { awful.util.shell, "-c", "upower -i /org/freedesktop/UPower/devices/battery_BAT | sed -n '/present/,/icon-name/p'" },
     settings = function()

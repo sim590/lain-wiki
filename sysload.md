@@ -7,7 +7,7 @@
 Shows the current system load.
 
 ```lua
-mysysload = lain.widgets.sysload()
+mysysload = lain.widget.sysload()
 ```
 
 ## Input table

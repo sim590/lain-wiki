@@ -7,7 +7,7 @@
 Shows [Google Play Music Desktop Player](http://www.googleplaymusicdesktopplayer.com) status.
 
 ```lua
-local mygpmdp = lain.widgets.contrib.gpmdp()
+local mygpmdp = lain.widget.contrib.gpmdp()
 ```
 
 Now playing songs are notified like this:

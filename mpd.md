@@ -7,7 +7,7 @@
 Shows MPD status.
 
 ```lua
-local mympd = lain.widgets.mpd()
+local mympd = lain.widget.mpd()
 ```
 
 Now playing songs are notified like this:

@@ -7,7 +7,7 @@
 Shows the current CPU usage, both in general and per core.
 
 ```lua
-local mycpu = lain.widgets.cpu()
+local mycpu = lain.widget.cpu()
 ```
 
 ## Input table

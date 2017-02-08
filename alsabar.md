@@ -7,7 +7,7 @@
 Shows ALSA volume with a progressbar; provides tooltips and notifications.
 
 ```lua
-local volume = lain.widgets.alsabar()
+local volume = lain.widget.alsabar()
 ```
 
 ## Input table

@@ -7,7 +7,7 @@
 Attaches a calendar notification to a widget.
 
 ```lua
-local calendar = lain.widgets.calendar()
+local calendar = lain.widget.calendar()
 ```
 
 - Left click / scroll down: switch to previous month.
@@ -28,7 +28,7 @@ You can reset `cal` any way you like (using `-w` to display weeks as well, for i
 You can set `attach_to` as the array of widgets to which you want to attach the calendar, for instance:
 
 ```lua
-lain.widgets.calendar({
+lain.widget.calendar({
     `attach_to = { mywidget1, mywidget2, ...  }`,
     -- [...]
 })

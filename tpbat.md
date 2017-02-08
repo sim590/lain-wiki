@@ -9,7 +9,7 @@ A battery widget that works with Lenovo ThinkPad laptops using [tp_smapi](http:/
 Includes hover notification with more details.
 
 ```lua
-local mytpbat = lain.widgets.contrib.tpbat()
+local mytpbat = lain.widget.contrib.tpbat()
 ```
 
 ## Input table

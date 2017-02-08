@@ -7,7 +7,7 @@
 Shows PulseAudio volume with a progressbar; provides tooltips and notifications.
 
 ```lua
-local volume = lain.widgets.pulsebar()
+local volume = lain.widget.pulsebar()
 ```
 
 ## Input table

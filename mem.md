@@ -7,7 +7,7 @@
 Shows memory status (in MiB).
 
 ```lua
-local mymem = lain.widgets.mem()
+local mymem = lain.widget.mem()
 ```
 
 ## Input table

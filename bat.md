@@ -10,7 +10,7 @@ the current wattage. Multiple batteries are supported.
 Displays a notification when battery is low or critical.
 
 ```lua
-local mybattery = lain.widgets.bat()
+local mybattery = lain.widget.bat()
 ```
 
 ## Input table
@@ -79,7 +79,7 @@ The `update` function can be used to refresh the widget before `timeout` expires
 * If your widget is always on "N/A" with default settings, and you have a single battery, then `BAT0` is not your battery file. Locate the right one in  `/sys/class/power_supply/` and set `battery` properly. For instance, with `BAT1`:
 
     ```lua
-    batwidget = lain.widgets.bat({
+    batwidget = lain.widget.bat({
         battery = "BAT1",
     -- [...]
     })

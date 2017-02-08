@@ -9,7 +9,7 @@ Shows disk space usage for a set partition.
 Displays a notification when the partition is full or has low space.
 
 ```lua
-local mypartition = lain.widgets.fs()
+local mypartition = lain.widget.fs()
 ```
 
 ## Input table
@@ -51,7 +51,7 @@ just like the variables of `fs_now`. Example:
 
 ```lua
 -- shows root and home partitions percentage used
-local fsroothome = lain.widgets.fs({
+local fsroothome = lain.widget.fs({
     settings  = function()
         local home_used = tonumber(fs_info["/home used_p"]) or 0
         widget:set_text("/ " .. fs_now.used .. "% | /home " .. home_used .. "% ")

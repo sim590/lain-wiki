@@ -7,7 +7,7 @@
 Shows and controls PulseAudio volume.
 
 ```lua
-local volume = lain.widgets.pulseaudio()
+local volume = lain.widget.pulseaudio()
 ```
 
 ## Input table
@@ -137,7 +137,7 @@ where `altkey = "Mod1"`.
 
 ```lua
 -- PulseAudio volume (based on multicolor theme)
-local volume = lain.widgets.pulseaudio({
+local volume = lain.widget.pulseaudio({
     settings = function()
         vlevel = volume_now.left .. "-" .. volume_now.right .. "% | " .. volume_now.sink
         if volume_now.muted == "yes" then

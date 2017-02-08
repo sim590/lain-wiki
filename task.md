@@ -7,7 +7,7 @@
 Attaches a [taskwarrior](http://taskwarrior.org) notifications to a widget, and lets you execute `task` commands from the promptbox.
 
 ```lua
-lain.widgets.contrib.task.attach(widget, args)
+lain.widget.contrib.task.attach(widget, args)
 ```
 
 `args` is an optional table which can contain:
@@ -26,7 +26,7 @@ In multiple screen setups, the default behaviour is to show a visual notificatio
 You can call the notification with a keybinding like this:
 
 ```lua
-awful.key({ modkey, altkey }, "t", function () lain.widgets.contrib.task.show(scr) end),
+awful.key({ modkey, altkey }, "t", function () lain.widget.contrib.task.show(scr) end),
 ```
 
 where ``altkey = "Mod1"`` and `scr` (optional) indicates the screen which you want the notification in.
@@ -34,7 +34,7 @@ where ``altkey = "Mod1"`` and `scr` (optional) indicates the screen which you wa
 And you can prompt to input a `task` command with a keybinding like this:
 
 ```lua
-awful.key({ altkey }, "t", lain.widgets.contrib.task.prompt),
+awful.key({ altkey }, "t", lain.widget.contrib.task.prompt),
 ```
 
 ### Default `notification_preset`

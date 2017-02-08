@@ -7,7 +7,7 @@
 Shows mails count fetching over IMAP.
 
 ```lua
-local myimap = lain.widgets.imap(args)
+local myimap = lain.widget.imap(args)
 ```
 
 New mails are notified like this:
@@ -43,7 +43,7 @@ The reason why `is_plain` is false by default is to discourage the habit of stor
 So, you can set your password in plain like this:
 
 ```lua
-myimapcheck = lain.widgets.imap({
+myimapcheck = lain.widget.imap({
     is_plain = true,
     password = "mymailpassword",
     -- [...]
@@ -55,7 +55,7 @@ and you'll have the same security provided by `~/.netrc`.
 **Or you can use a password manager**, like [spm](https://notabug.org/kl3/spm) or [pass](https://www.passwordstore.org):
 
 ```lua
-myimapcheck = lain.widgets.imap({
+myimapcheck = lain.widget.imap({
     password = function()
         -- return the output of "spm show mymail"
     end,

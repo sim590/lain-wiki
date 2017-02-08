@@ -7,7 +7,7 @@
 Shows ALSA volume.
 
 ```lua
-local volume = lain.widgets.alsa()
+local volume = lain.widget.alsa()
 ```
 
 ## Input table
