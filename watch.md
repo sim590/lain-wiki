@@ -23,7 +23,7 @@ Variable | Meaning | Type | Default
 `cmd` | The command to execute | string **or** table | `nil`
 `nostart` | Widget timer doesn't start immediately | boolean | false
 `stoppable` | Widget timer is stoppable | boolean | false
-`settings` | User settings | function | see [Default `settings` function](https://github.com/copycat-killer/lain/wiki/abase#default-settings-function)
+`settings` | User settings | function | see [Default `settings` function](https://github.com/copycat-killer/lain/wiki/watch#default-settings-function)
 
 If your command needs a shell, you need to set `cmd` as an array of 3 strings, where the first contains the shell, the second contains `-c`, and the third contains the actual command. Example:
 
