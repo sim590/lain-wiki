@@ -143,12 +143,14 @@ If you delete a tag, any rule set on it shall be broken, so be careful.
 Use it with key bindings like these:
 
 ```lua
-awful.key({ modkey, "Shift" }, "n", function () lain.util.add_tag() end),
+awful.key({ modkey, "Shift" }, "n", function () lain.util.add_tag(mylayout) end),
 awful.key({ modkey, "Shift" }, "r", function () lain.util.rename_tag() end),
 awful.key({ modkey, "Shift" }, "Left", function () lain.util.move_tag(1) end),   -- move to next tag
 awful.key({ modkey, "Shift" }, "Right", function () lain.util.move_tag(-1) end), -- move to previous tag
 awful.key({ modkey, "Shift" }, "d", function () lain.util.delete_tag() end),
 ```
+
+The argument in `lain.util.add_tag` represents the tag layout, and is optional: if not present, it will be defaulted to `awful.layout.layouts[0]`.
 
 Useless gaps resize
 ---------------------
