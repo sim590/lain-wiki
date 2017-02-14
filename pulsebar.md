@@ -20,7 +20,6 @@ Variable | Meaning | Type | Default
 `height` | Bar height | int | 1
 `ticks` | Set bar ticks on | boolean | false
 `ticks_size` | Ticks size | int | 7
-`vertical` | Set the bar vertical | boolean | false
 `cmd` | PulseAudio command | string | same as [here](https://github.com/copycat-killer/lain/wiki/pulseaudio)
 `scallback` | [PulseAudio sink callback](https://github.com/copycat-killer/lain/wiki/pulseaudio/) | function | `nil`
 `sink` | Mixer sink | int | 0
