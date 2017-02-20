@@ -55,7 +55,7 @@ Read [here](https://awesomewm.org/doc/api/classes/client.html#Object_properties)
 * Set `followtag = true` if experiencing issue with multiscreen setups.
 * If your client is a terminal and you have a rule like `awful.client.setslave` for your terminals, ensure you use an exception for `QuakeDD` (or your defined `name`). Otherwise, you may run into problems with focus.
 * If you are using a GTK+ application like termite, be sure to set [`argname = "--name %s"`](https://github.com/copycat-killer/lain/issues/211).
-* If you are using `gnome-terminal`, you may be also need to add [`extra = "--disable-factory"`] option. This fixes gnome-terminal's unwanted existing windows reusing behavior.
+* If you are using `gnome-terminal`, you may be also need to add `extra = "--disable-factory"` option. This fixes gnome-terminal's unwanted existing windows reusing behavior.
 
 Separators
 ----------
