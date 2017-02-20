@@ -58,4 +58,12 @@ ip link show
 
 ### Two widgets for upload/download rates from the same `iface`
 
-[Read here](https://github.com/copycat-killer/lain/issues/61).
+```lua
+local mynetdown = wibox.widget.textbox()
+local mynetup = lain.widgets.net {
+    settings = function()
+        widget:set_markup(net_now.sent)
+        netdowninfo:set_markup(net_now.received)
+    end
+}
+```
