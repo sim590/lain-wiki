@@ -30,7 +30,7 @@ Variable | Meaning | Type | Default
 `extra` | extra `app` arguments | string | empty string
 `border` | border width | int | 1
 `visible` | initially visible | boolean | false
-`followtag` | always spawn on currently focused screen\* | boolean | false
+`followtag` | always spawn on currently focused screen | boolean | false
 `overlap` | Overlap the wibox or not | boolean | false
 `settings` | Additional settings to make on the client | function | nil
 `screen` | screen where to spawn the client | int | `awful.screen.focused()`
