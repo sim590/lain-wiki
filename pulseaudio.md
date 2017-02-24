@@ -75,7 +75,7 @@ Variable | Meaning | Type
 If you want buttons, just add the following after your widget in `rc.lua`.
 
 ```lua
-volume.bar:buttons(awful.util.table.join(
+volume.widget:buttons(awful.util.table.join(
     awful.button({}, 1, function() -- left click
         awful.spawn("pavucontrol")
     end),
