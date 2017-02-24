@@ -71,15 +71,15 @@ volume.bar:buttons(awful.util.table.join(
         volume.update()
     end),
     awful.button({}, 3, function() -- right click
-        awful.spawn(string.format("pactl set-sink-mute %d toggle", pulsebar.sink))
+        awful.spawn(string.format("pactl set-sink-mute %d toggle", volume.sink))
         volume.update()
     end),
     awful.button({}, 4, function() -- scroll up
-        awful.spawn(string.format("pactl set-sink-volume %d +1%%", pulsebar.sink))
+        awful.spawn(string.format("pactl set-sink-volume %d +1%%", volume.sink))
         volume.update()
     end),
     awful.button({}, 5, function() -- scroll down
-        awful.spawn(string.format("pactl set-sink-volume %d -1%%", pulsebar.sink))
+        awful.spawn(string.format("pactl set-sink-volume %d -1%%", volume.sink))
         volume.update()
     end)
 ))
