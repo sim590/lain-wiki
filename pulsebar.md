@@ -59,31 +59,7 @@ In multiple screen setups, the default behaviour is to show a visual notificatio
 
 ## Buttons
 
-If you want buttons, just add the following after your widget in `rc.lua`.
-
-```lua
-volume.bar:buttons(awful.util.table.join(
-    awful.button({}, 1, function() -- left click
-        awful.spawn("pavucontrol")
-    end),
-    awful.button({}, 2, function() -- middle click
-        awful.spawn(string.format("pactl set-sink-volume %d 100%%", volume.sink))
-        volume.update()
-    end),
-    awful.button({}, 3, function() -- right click
-        awful.spawn(string.format("pactl set-sink-mute %d toggle", volume.sink))
-        volume.update()
-    end),
-    awful.button({}, 4, function() -- scroll up
-        awful.spawn(string.format("pactl set-sink-volume %d +1%%", volume.sink))
-        volume.update()
-    end),
-    awful.button({}, 5, function() -- scroll down
-        awful.spawn(string.format("pactl set-sink-volume %d -1%%", volume.sink))
-        volume.update()
-    end)
-))
-```
+Read [here](https://github.com/copycat-killer/lain/wiki/pulseaudio#buttons).
 
 ## Keybindings
 
