@@ -124,19 +124,23 @@ where `altkey = "Mod1"`.
 If you don't use the widget for long periods and wish to spare CPU, you can toggle it with a keybinding like this:
 
 ```lua
--- toggle MPD widget
+-- disable MPD widget
 awful.key({ altkey }, "0",
-        function ()
-            local common = { text = "MPD widget ", position = "top_middle", timeout = 2 }
-            if mympd.timer.started then
-                mympd.timer:stop()
-                common.text = common.text .. markup.bold("OFF")
-            else
-                mympd.timer:start()
-                common.text = common.text .. markup.bold("ON")
-            end
-            naughty.notify(common)
-        end),
+    function ()
+        local common = { 
+            text = "MPD widget ", 
+            position = "top_middle",
+            timeout = 2
+        }
+        if mympd.timer.started then
+            mympd.timer:stop()
+            common.text = common.text .. markup.bold("OFF")
+        else
+            mympd.timer:start()
+            common.text = common.text .. markup.bold("ON")
+        end
+        naughty.notify(common)
+    end),
 ```
 
 ## Notes
@@ -158,12 +162,12 @@ Set your 1% decrease/increase commands [here](https://gist.github.com/copycat-ki
 
 ```lua
     -- MPD toggle with volume fading
-    awful.key({ "Shift" }, "Pause",
-        function()
-            awful.spawn.easy_async("mpc-fade 20 4", -- mpc-fade <percentage> <length in secs>
-            function(stdout, stderr, reason, exit_code)
-                --beautiful.mpd.update() -- if you use awesome-copycats structure, or
-                mympd.update()
-            end)
-        end),
+awful.key({ "Shift" }, "Pause",
+    function()
+        awful.spawn.easy_async("mpc-fade 20 4", -- mpc-fade <percentage> <length in secs>
+        function(stdout, stderr, reason, exit_code)
+            --beautiful.mpd.update() -- if you use awesome-copycats structure, or
+            mympd.update()
+        end)
+    end),
 ```
