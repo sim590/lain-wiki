@@ -161,7 +161,7 @@ $ chmod +x ~/bin/mpc-fade
 Set your 1% decrease/increase commands [here](https://gist.github.com/copycat-killer/76e315bc27c6cdf7edd5021964b88df1#file-mpd-fade-L8-L9), then use a keybinding like this:
 
 ```lua
-    -- MPD toggle with volume fading
+-- MPD toggle with volume fading
 awful.key({ "Shift" }, "Pause",
     function()
         awful.spawn.easy_async("mpc-fade 20 4", -- mpc-fade <percentage> <length in secs>
