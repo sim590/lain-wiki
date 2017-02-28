@@ -166,7 +166,6 @@ awful.key({ "Shift" }, "Pause",
     function()
         awful.spawn.easy_async("mpc-fade 20 4", -- mpc-fade <percentage> <length in secs>
         function(stdout, stderr, reason, exit_code)
-            --beautiful.mpd.update() -- if you use awesome-copycats structure, or
             mympd.update()
         end)
     end),
