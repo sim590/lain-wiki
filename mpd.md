@@ -139,6 +139,31 @@ awful.key({ altkey }, "0",
         end),
 ```
 
-## Note
+## Notes
 
-* In `settings`, if you use `widget:set_text`, [it will ignore Pango markup](https://github.com/copycat-killer/lain/issues/258), so be sure to always use `widget:set_markup`.
+### Always use `set_markup`
+
+In `settings`, if you use `widget:set_text`, [it will ignore Pango markup](https://github.com/copycat-killer/lain/issues/258), so be sure to always use `widget:set_markup`.
+
+### Volume fade in toggling MPD
+
+If you want a fade in/out in toggling MPD, you can put [this script](https://gist.github.com/copycat-killer/76e315bc27c6cdf7edd5021964b88df1) in your local `bin` directory:
+
+```shell
+$ curl https://gist.githubusercontent.com/copycat-killer/76e315bc27c6cdf7edd5021964b88df1/raw/97f7ba586418a4e07637cfbc91d2974278dfa623/mpd-fade -o ~/bin/mpc-fade
+$ chmod +x ~/bin/mpc-fade
+```
+
+Set your 1% decrease/increase commands [here](https://gist.github.com/copycat-killer/76e315bc27c6cdf7edd5021964b88df1#file-mpd-fade-L8-L9), then use a keybinding like this:
+
+```lua
+    -- MPD toggle with volume fading
+    awful.key({ "Shift" }, "Pause",
+        function()
+            awful.spawn.easy_async("mpc-fade 20 4", -- mpc-fade <percentage> <length in secs>
+            function(stdout, stderr, reason, exit_code)
+                --beautiful.mpd.update() -- if you use awesome-copycats structure, or
+                mympd.update()
+            end)
+        end),
+```
