@@ -14,9 +14,9 @@ local volume = lain.widget.pulseaudio()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 5
+`timeout` | Refresh timeout seconds | number | 5
 `devicetype | PulseAudio device type | string ("sink", "source") | "sink"
-`cmd` | PulseAudio command | string | [link](https://github.com/copycat-killer/lain/blob/master/widgets/pulseaudio.lua#L28)
+`cmd` | PulseAudio command | string | [link](https://github.com/copycat-killer/lain/blob/master/widget/pulseaudio.lua#L28)
 `scallback` | PulseAudio sink callback | function | `nil`
 `settings` | User settings | function | empty function
 
@@ -31,7 +31,7 @@ Variable | Meaning | Type | Default
 
 **Note:** you can set PulseAudio default sink like this: `pacmd set-default-sink #sink`.
 
-If [`sed`](https://github.com/copycat-killer/lain/blob/master/widgets/pulseaudio.lua#L28) doesn't work, you can try with `grep`:
+If [`sed`](https://github.com/copycat-killer/lain/blob/master/widget/pulseaudio.lua#L28) doesn't work, you can try with `grep`:
 
 ```shell
 pacmd list-sinks | grep -e $(pactl info | grep -e 'ink' | cut -d' ' -f3) -e 'volume: front' -e 'muted'

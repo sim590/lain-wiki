@@ -14,11 +14,11 @@ local mynet = lain.widget.net()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 2
+`timeout` | Refresh timeout seconds | number | 2
 `iface` | Network device(s) | string (single interface) or array of strings (multiple interfaces) | autodetected
-`units` | Units | int | 1024 (kilobytes)
+`units` | Units | number | 1024 (kilobytes)
 `notify` | Display "no carrier" notifications | string | "on"
-`screen` | Notifications screen | int | 1
+`screen` | Notifications screen | number | 1
 `settings` | User settings | function | empty function
 
 `iface` can be a string or an array of the form `{ "eth0", "eth1", ... }` containing a list of the devices to collect data on.

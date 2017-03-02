@@ -16,7 +16,7 @@ local mytpbat = lain.widget.contrib.tpbat()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 30
+`timeout` | Refresh timeout seconds | number | 30
 `battery` | Single battery id | string | "BAT0"
 `settings` | User settings | function | empty function
 

@@ -16,7 +16,7 @@ local mypartition = lain.widget.fs()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds -| int | 600
+`timeout` | Refresh timeout seconds -| number | 600
 `partition` | Partition to monitor | string | "/"
 `options` | Additional options to pass to [`dfs`](https://github.com/copycat-killer/lain/blob/master/scripts/dfs) | string, in the form `--type='fstype' | --exclude-type='fstype'` | nil
 `notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/fs#default-notification_preset)

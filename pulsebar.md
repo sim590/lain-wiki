@@ -14,15 +14,15 @@ local volume = lain.widget.pulsebar()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 5
+`timeout` | Refresh timeout seconds | number | 5
 `settings` | User settings | function | empty function
-`width` | Bar width | int | 63
-`height` | Bar height | int | 1
+`width` | Bar width | number | 63
+`height` | Bar height | number | 1
 `ticks` | Set bar ticks on | boolean | false
-`ticks_size` | Ticks size | int | 7
+`ticks_size` | Ticks size | number | 7
 `cmd` | PulseAudio command | string | same as [here](https://github.com/copycat-killer/lain/wiki/pulseaudio)
 `scallback` | [PulseAudio sink callback](https://github.com/copycat-killer/lain/wiki/pulseaudio/) | function | `nil`
-`sink` | Mixer sink | int | 0
+`sink` | Mixer sink | number | 0
 `colors` | Bar colors | table | see [Default colors](https://github.com/copycat-killer/lain/wiki/pulsebar#default-colors)
 `notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/pulsebar#default-notification_preset)
 `followtag` | Display the notification on currently focused screen | boolean | false

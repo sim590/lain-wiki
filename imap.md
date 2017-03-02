@@ -32,8 +32,8 @@ while the optional are:
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`port` | IMAP port | int | 993
-`timeout` | Refresh timeout seconds | int | 60
+`port` | IMAP port | number | 993
+`timeout` | Refresh timeout seconds | number | 60
 `is_plain` | Define whether `password` is a plain password (true) or a command that retrieves it (false) | boolean | false
 `followtag` | Notification behaviour | boolean | false
 `settings` | User settings | function | empty function

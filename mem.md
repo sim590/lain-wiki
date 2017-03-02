@@ -14,7 +14,7 @@ local mymem = lain.widget.mem()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 2
+`timeout` | Refresh timeout seconds | number | 2
 `settings` | User settings | function | empty function
 
 in `settings` you can use the following variables:

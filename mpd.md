@@ -26,12 +26,12 @@ Now playing songs are notified like this:
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 2
+`timeout` | Refresh timeout seconds | number | 2
 `password` | MPD password | string | ""
 `host` | MPD server | string | "127.0.0.1"
 `port` | MPD port | string | "6600"
 `music_dir` | Music directory | string | "~/Music"
-`cover_size` | Album art notification size | int | 100
+`cover_size` | Album art notification size | number | 100
 `cover_pattern` | Pattern for the album art file | string | `*\\.(jpg|jpeg|png|gif)`*
 `default_art` | Default art | string | `nil`
 `notify` | Show notification popups | string | "on"
@@ -127,8 +127,8 @@ If you don't use the widget for long periods and wish to spare CPU, you can togg
 -- disable MPD widget
 awful.key({ altkey }, "0",
     function ()
-        local common = { 
-            text = "MPD widget ", 
+        local common = {
+            text = "MPD widget ",
             position = "top_middle",
             timeout = 2
         }

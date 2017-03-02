@@ -14,12 +14,12 @@ local volume = lain.widget.alsabar()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 5
+`timeout` | Refresh timeout seconds | number | 5
 `settings` | User settings | function | empty function
-`width` | Bar width | int | 63
-`height` | Bar height | int | 1
+`width` | Bar width | number | 63
+`height` | Bar height | number | 1
 `ticks` | Set bar ticks on | boolean | false
-`ticks_size` | Ticks size | int | 7
+`ticks_size` | Ticks size | number | 7
 `cmd` | ALSA mixer command | string | "amixer"
 `channel` | Mixer channel | string | "Master"
 `togglechannel` | Toggle channel | string | `nil`
@@ -35,7 +35,7 @@ In case mute toggling can't be mapped to master channel (this happens, for insta
 
 Variable | Meaning | Type | Values
 --- | --- | --- | ---
-`volume_now.level` | Volume level | int | 0-100
+`volume_now.level` | Volume level | number | 0-100
 `volume_now.status` | Device status | string | "on", "off"
 
 In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.

@@ -28,14 +28,14 @@ Variable | Meaning | Type | Default
 `name` | client name | string | "QuakeDD"
 `argname` | how to specify client name | string | "-name %s"
 `extra` | extra `app` arguments | string | empty string
-`border` | border width | int | 1
+`border` | border width | number | 1
 `visible` | initially visible | boolean | false
 `followtag` | always spawn on currently focused screen | boolean | false
 `overlap` | Overlap the wibox or not | boolean | false
 `settings` | Additional settings to make on the client | function | nil
-`screen` | screen where to spawn the client | int | `awful.screen.focused()`
-`height` | dropdown client height | float in [0,1] or exact pixel size | 0.25
-`width` | dropdown client width | float in [0,1] or exact pixel size | 1
+`screen` | screen where to spawn the client | number | `awful.screen.focused()`
+`height` | dropdown client height | float in [0,1] or exact pixels number | 0.25
+`width` | dropdown client width | float in [0,1] or exact pixels number | 1
 `vert` | vertical position | string, possible values: "top", "bottom", "center" | "top"
 `horiz` | horizontal position | string, possible values: "left", "right", "center" | "left"
 

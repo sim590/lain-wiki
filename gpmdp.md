@@ -24,7 +24,7 @@ Now playing songs are notified like this:
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 2
+`timeout` | Refresh timeout seconds | number | 2
 `notify` | Show notification popups | string | "off"
 `file_location` |
 `followtag` | Display the notification on currently focused screen | boolean | false

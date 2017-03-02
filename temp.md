@@ -14,7 +14,7 @@ local mytemp = lain.widget.temp()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | int | 2
+`timeout` | Refresh timeout seconds | number | 2
 `tempfile` | Path of file which stores core temperature value | string | "/sys/class/thermal/thermal_zone0/temp"
 `settings` | User settings | function | empty function
 
