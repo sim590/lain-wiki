@@ -19,9 +19,10 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | number | 30
 `battery` | Single battery id | string | "BAT0"
-`batteries` | Multiple batteries id table | table of strings | {"BAT0"}
+`batteries` | Multiple batteries id table | table of strings | `{"BAT0"}`
 `ac` | AC | string | "AC0"
 `notify` | Show notification popups | string | "on"
+`n_perc` | Percentages assumed for critical and low battery levels | table of integers | `{5, 15}`
 `settings` | User settings | function | empty function
 
 You only have to define one between `battery` and `batteries`.
