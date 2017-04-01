@@ -19,11 +19,11 @@ If `widget` is a textbox, to markup it call `widget:set_markup(...)` within `set
 Example of a lain widget:
 
 ```lua
-local cpu = lain.widget.cpu({
+local cpu = lain.widget.cpu {
     settings = function()
         widget:set_markup("Cpu " .. cpu_now.usage)
     end
-})
+}
 -- to access the widget: cpu.widget
 ```
 
