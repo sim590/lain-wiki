@@ -20,7 +20,7 @@ Variable | Meaning | Type | Default
 in `settings` you can use the following variables:
 
 Variable | Meaning | Type
---- | --- | --- | ---
+--- | --- | --- 
 `mem_now.used` | Memory used (MiB) | string
 `mem_now.swapused` | Swap memory used (MiB) | string
 `mem_now.perc` | Memory percentage | int
