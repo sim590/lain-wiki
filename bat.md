@@ -86,4 +86,4 @@ The `update` function can be used to refresh the widget before `timeout` expires
     })
 
     ```
-* Alternatively, you can try [this widget instead](https://github.com/copycat-killer/lain/wiki/watch#upower).
+* Alternatively, you can try the `upower` widget [here](https://awesomewm.org/recipes/watch).
