@@ -106,17 +106,17 @@ You can control the widget with key bindings like these:
 -- PulseAudio volume control
 awful.key({ altkey }, "Up",
     function ()
-        os.execute(string.format("pactl set-sink-volume %d +1%%", volumewidget.sink))
+        os.execute(string.format("pactl set-sink-volume %d +1%%", volume.sink))
         volume.update()
     end),
 awful.key({ altkey }, "Down",
     function ()
-        os.execute(string.format("pactl set-sink-volume %d -1%%", volumewidget.sink))
+        os.execute(string.format("pactl set-sink-volume %d -1%%", volume.sink))
         volume.update()
     end),
 awful.key({ altkey }, "m",
     function ()
-        os.execute(string.format("pactl set-sink-mute %d toggle", volumewidget.sink))
+        os.execute(string.format("pactl set-sink-mute %d toggle", volume.sink))
         volume.update()
     end),
 awful.key({ altkey, "Control" }, "m",
