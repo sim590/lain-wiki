@@ -152,7 +152,7 @@ awful.key({ modkey, "Shift" }, "Right", function () lain.util.move_tag(-1) end),
 awful.key({ modkey, "Shift" }, "d", function () lain.util.delete_tag() end),
 ```
 
-The argument in `lain.util.add_tag` represents the tag layout, and is optional: if not present, it will be defaulted to `awful.layout.layouts[0]`.
+The argument in `lain.util.add_tag` represents the tag layout, and is optional: if not present, it will be defaulted to `awful.layout.suit.tile`.
 
 Useless gaps resize
 ---------------------
