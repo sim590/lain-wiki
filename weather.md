@@ -33,6 +33,7 @@ Variable | Meaning | Type | Default
 `notification_text_fun` | Function to format forecast notifications | function | see `notification_text_fun`
 `weather_na_markup` | Markup to be used when weather textbox is not available | text | " N/A "
 `followtag` | Display the notification on currently focused screen | boolean | false
+`showpopup` | Display popups with mouse hovering | string, possible values: "on", "off" | "on"
 `settings` | User settings | function | empty function
 
 - ``default_current_call``
