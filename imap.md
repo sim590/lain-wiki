@@ -36,6 +36,7 @@ Variable | Meaning | Type | Default
 `timeout` | Refresh timeout seconds | number | 60
 `is_plain` | Define whether `password` is a plain password (true) or a command that retrieves it (false) | boolean | false
 `followtag` | Notification behaviour | boolean | false
+`notify` | Show notification popups | string | "on"
 `settings` | User settings | function | empty function
 
 The reason why `is_plain` is false by default is to discourage the habit of storing passwords in plain.
