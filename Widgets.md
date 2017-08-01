@@ -10,7 +10,7 @@ Every lain widget contains a `wibox.widget`, which is updated by a timed functio
 
 Every `function` may take either a table or a list of variables as input.
 
-If the input is a table, you must define a function variable called `settings` in it. There you will be able to define the widget's appearance.
+If the input is a table, you must define a function variable called `settings` in it. There you will be able to define `widget` appearance.
 
 If `widget` is a textbox, to markup it call `widget:set_markup(...)` within `settings`.
 
