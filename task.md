@@ -45,3 +45,7 @@ notification_preset = {
     icon = helpers.icons_dir .. "/taskwarrior.png"
 }
 ```
+
+## Note
+
+* If your widget does not display `task next` output, try changing Taskwarrior verbose, for instance: `show_cmd = 'task rc.verbose:label'` or `show_cmd = 'task rc.verbose:nothing'`.
