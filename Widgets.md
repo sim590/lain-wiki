@@ -49,7 +49,6 @@ If you want to see some applications, check [awesome-copycats](https://github.co
 
 ## Users contributed
 
-- [gpmdp](https://github.com/copycat-killer/lain/wiki/gpmdp)
 - [kbdlayout](https://github.com/copycat-killer/lain/wiki/kbdlayout)
 - [moc](https://github.com/copycat-killer/lain/wiki/moc)
 - [redshift](https://github.com/copycat-killer/lain/wiki/redshift)
