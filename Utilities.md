@@ -14,7 +14,7 @@ awful.screen.connect_for_each_screen(function(s)
     -- [...]
 ```
 
-**Keybinding**
+**Keybinding example**
 
 ```lua
 awful.key({ modkey, }, "z", function () awful.screen.focused().quake:toggle() end),
