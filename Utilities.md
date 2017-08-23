@@ -53,9 +53,9 @@ Read [here](https://awesomewm.org/doc/api/classes/client.html#Object_properties)
 
 **Notes**
 
-* [Does not work](https://github.com/copycat-killer/lain/issues/358) with `gnome-terminal`, `konsole`, or any other terminal which is strictly designed for a Desktop Environment.
+* [Does not work](https://github.com/copycat-killer/lain/issues/358) with `gnome-terminal`, `konsole`, or any other terminal which is strictly designed for a Desktop Environment. Just pick a better terminal, [there's plenty](https://wiki.archlinux.org/index.php/List_of_applications#Terminal_emulators).
 * Set `followtag = true` if [experiencing issues with multiscreen setups](https://github.com/copycat-killer/lain/issues/346).
-* If your client is a terminal and you have a rule like `awful.client.setslave` for your terminals, ensure you use an exception for `QuakeDD` (or your defined `name`). Otherwise, you may run into problems with focus.
+* If you have a `awful.client.setslave` rule for your application, ensure you use an exception for `QuakeDD` (or your defined `name`). Otherwise, you may run into problems with focus.
 * If you are using a VTE-based terminal like `termite`, be sure to set [`argname = "--name %s"`](https://github.com/copycat-killer/lain/issues/211).
 
 Separators
