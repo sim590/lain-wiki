@@ -46,7 +46,7 @@ Variable | Meaning | Type | Default
 
 ```lua
 -- set the client sticky
-s.quake = lain.util.quake({ settings = function(c) c.sticky = true end })
+s.quake = lain.util.quake { settings = function(c) c.sticky = true end }
 ```
 
 Read [here](https://awesomewm.org/doc/api/classes/client.html#Object_properties) for the complete list of properties.
