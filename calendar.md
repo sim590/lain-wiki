@@ -6,6 +6,9 @@
 
 Attaches a calendar notification to a widget.
 
+This is a simpler but [faster](https://github.com/awesomeWM/awesome/issues/1861)
+alternative to [`awful.widget.calendar_popup](https://awesomewm.org/doc/api/classes/awful.widget.calendar_popup.html).
+
 ```lua
 local calendar = lain.widget.calendar()
 ```
