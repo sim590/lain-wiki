@@ -22,6 +22,12 @@ awful.screen.connect_for_each_screen(function(s)
 
 **Keybinding example**
 
+If using a global instance:
+```lua
+awful.key({ modkey, }, "z", function () quake:toggle() end),
+```
+
+If using a per-screen instance:
 ```lua
 awful.key({ modkey, }, "z", function () awful.screen.focused().quake:toggle() end),
 ```
@@ -37,7 +43,6 @@ Variable | Meaning | Type | Default
 `border` | border width | number | 1
 `visible` | initially visible | boolean | false
 `followtag` | always spawn on currently focused screen | boolean | false
-`onlyone` | one instance for all screens | boolean | false
 `overlap` | Overlap the wibox or not | boolean | false
 `settings` | Additional settings to make on the client | function | nil
 `screen` | screen where to spawn the client | number | `awful.screen.focused()`
