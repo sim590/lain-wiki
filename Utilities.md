@@ -5,7 +5,13 @@ A Quake-like dropdown container for your favourite application.
 
 **Usage**
 
-Define it in `connect_for_each_screen` function:
+Define it globally to have a single instance for all screens:
+
+```lua
+local quake = lain.util.quake()
+```
+
+or define it in `connect_for_each_screen` to have one instance for each screen:
 
 ```lua
 awful.screen.connect_for_each_screen(function(s)
