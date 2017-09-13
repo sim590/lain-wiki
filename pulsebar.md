@@ -20,14 +20,15 @@ Variable | Meaning | Type | Default
 `height` | Bar height | number | 1
 `ticks` | Set bar ticks on | boolean | false
 `ticks_size` | Ticks size | number | 7
-`cmd` | PulseAudio command | string | same as [here](https://github.com/copycat-killer/lain/wiki/pulseaudio)
-`scallback` | [PulseAudio sink callback](https://github.com/copycat-killer/lain/wiki/pulseaudio/) | function | `nil`
-`sink` | Mixer sink | number | 0
 `colors` | Bar colors | table | see [Default colors](https://github.com/copycat-killer/lain/wiki/pulsebar#default-colors)
-`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/pulsebar#default-notification_preset)
 `followtag` | Display the notification on currently focused screen | boolean | false
+`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/pulsebar#default-notification_preset)
+`devicetype` | PulseAudio device type | string | "sink"
+`cmd` | PulseAudio command | string | see [here](https://github.com/copycat-killer/lain/blob/master/widget/pulsebar.lua#L49)
 
 `settings` can use [these variables](https://github.com/copycat-killer/lain/wiki/pulseaudio#settings-variables).
+
+In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
 ### Default colors
 
@@ -50,12 +51,10 @@ notification_preset = {
 Variable | Meaning | Type
 --- | --- | ---
 `bar` | The widget | `wibox.widget.progressbar`
-`sink` | PulseAudio sink | string
+`device` | PulseAudio device | string
 `notify` | The notification | function
 `update` | Update state | function
 `tooltip` | The tooltip | `awful.tooltip`
-
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
 ## Buttons
 
@@ -87,4 +86,4 @@ volume.bar:buttons(awful.util.table.join(
 
 ## Keybindings
 
-Read [here](https://github.com/copycat-killer/lain/wiki/pulseaudio#keybindings). If you want notifications, use `volume.notify()` instead of `volume.update()`.
+Same as [here](https://github.com/copycat-killer/lain/wiki/pulseaudio#keybindings). If you want notifications, use `volume.notify()` instead of `volume.update()`.
