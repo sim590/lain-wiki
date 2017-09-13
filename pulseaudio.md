@@ -15,12 +15,12 @@ local volume = lain.widget.pulseaudio()
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | number | 5
-`devicetype | PulseAudio device type | string ("sink", "source") | "sink"
-`cmd` | PulseAudio command | string | [link](https://github.com/copycat-killer/lain/blob/master/widget/pulseaudio.lua#L28)
-`scallback` | PulseAudio sink callback | function | `nil`
+`devicetype` | PulseAudio device type | string ("sink", "source") | "sink"
+`cmd` | PulseAudio command | string | see [here](https://github.com/copycat-killer/lain/blob/master/widget/pulseaudio.lua#L26)
+`callback` | PulseAudio device callback | function | `nil`
 `settings` | User settings | function | empty function
 
-`cmd` catch infos from current default sink. You can redefine it, being sure that the ouput is something like this:
+`cmd` catch infos from current default device. You can redefine it, being sure that the ouput is something like this:
 
 ```shell
 * index: 0
@@ -31,16 +31,16 @@ Variable | Meaning | Type | Default
 
 **Note:** you can set PulseAudio default sink like this: `pacmd set-default-sink #sink`.
 
-If [`sed`](https://github.com/copycat-killer/lain/blob/master/widget/pulseaudio.lua#L28) doesn't work, you can try with `grep`:
+If sed doesn't work in `cmd`, you can try with a grep variant:
 
 ```shell
 pacmd list-sinks | grep -e $(pactl info | grep -e 'ink' | cut -d' ' -f3) -e 'volume: front' -e 'muted'
 ```
 
-`scallback` is a callback function to update `cmd`, in case you switch between audio channels and therefore PulseAudio sink changes. If default `cmd` works for you, you can tell `scallback` to work in the same way:
+`callback` is a callback function to update `cmd`, in case you switch between devices. If default `cmd` works for you, you can tell `callback` to work in the same way:
 
 ```lua
-scallback = function()
+callback = function()
     devicetype = "sink"
     return "pacmd list-" .. devicetype .. "s | sed -n -e '0,/*/d' -e '/base volume/d' -e '/volume:/p' -e '/muted:/p' -e '/device\\.string/p'"
 end
