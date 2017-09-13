@@ -23,7 +23,7 @@ Variable | Meaning | Type | Default
 `colors` | Bar colors | table | see [Default colors](https://github.com/copycat-killer/lain/wiki/pulsebar#default-colors)
 `followtag` | Display the notification on currently focused screen | boolean | false
 `notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/pulsebar#default-notification_preset)
-`devicetype` | PulseAudio device type | string | "sink"
+`devicetype` | PulseAudio device type | string ("sink", "source") | "sink"
 `cmd` | PulseAudio command | string | see [here](https://github.com/copycat-killer/lain/blob/master/widget/pulsebar.lua#L49)
 
 `settings` can use [these variables](https://github.com/copycat-killer/lain/wiki/pulseaudio#settings-variables).
