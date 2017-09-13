@@ -41,7 +41,7 @@ If you want to see some applications, check [awesome-copycats](https://github.co
 - [mem](https://github.com/copycat-killer/lain/wiki/mem)
 - [mpd](https://github.com/copycat-killer/lain/wiki/mpd)
 - [net](https://github.com/copycat-killer/lain/wiki/net)
-- [pulseaudio](https://github.com/copycat-killer/lain/wiki/pulseaudio)
+- [pulse](https://github.com/copycat-killer/lain/wiki/pulse)
 - [pulsebar](https://github.com/copycat-killer/lain/wiki/pulsebar)
 - [sysload](https://github.com/copycat-killer/lain/wiki/sysload)
 - [temp](https://github.com/copycat-killer/lain/wiki/temp)

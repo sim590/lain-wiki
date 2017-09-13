@@ -24,11 +24,13 @@ Variable | Meaning | Type | Default
 `followtag` | Display the notification on currently focused screen | boolean | false
 `notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/pulsebar#default-notification_preset)
 `devicetype` | PulseAudio device type | string ("sink", "source") | "sink"
-`cmd` | PulseAudio command | string | see [here](https://github.com/copycat-killer/lain/blob/master/widget/pulsebar.lua#L49)
+`cmd` | PulseAudio command | string or function | see [here](https://github.com/copycat-killer/lain/blob/master/widget/pulsebar.lua#L48)
 
-`settings` can use [these variables](https://github.com/copycat-killer/lain/wiki/pulseaudio#settings-variables).
+Read [pulse](https://github.com/copycat-killer/lain/wiki/pulse) page for `cmd` settings.
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
+`settings` can use [these variables](https://github.com/copycat-killer/lain/wiki/pulse#settings-variables).
+
+With multiple screens, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
 ### Default colors
 
@@ -58,8 +60,6 @@ Variable | Meaning | Type
 
 ## Buttons
 
-If you want buttons, just add the following after your widget in `rc.lua`.
-
 ```lua
 volume.bar:buttons(awful.util.table.join(
     awful.button({}, 1, function() -- left click
@@ -86,4 +86,4 @@ volume.bar:buttons(awful.util.table.join(
 
 ## Keybindings
 
-Same as [here](https://github.com/copycat-killer/lain/wiki/pulseaudio#keybindings). If you want notifications, use `volume.notify()` instead of `volume.update()`.
+Same as [here](https://github.com/copycat-killer/lain/wiki/pulse#keybindings). If you want notifications, use `volume.notify()` instead of `volume.update()`.

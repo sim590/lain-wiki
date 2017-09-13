@@ -7,7 +7,7 @@
 Shows and controls PulseAudio volume.
 
 ```lua
-local volume = lain.widget.pulseaudio()
+local volume = lain.widget.pulse()
 ```
 
 ## Input table
@@ -16,11 +16,10 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds | number | 5
 `devicetype` | PulseAudio device type | string ("sink", "source") | "sink"
-`cmd` | PulseAudio command | string | see [here](https://github.com/copycat-killer/lain/blob/master/widget/pulseaudio.lua#L26)
-`callback` | PulseAudio device callback | function | `nil`
+`cmd` | PulseAudio command | string or function | see [here](https://github.com/copycat-killer/lain/blob/master/widget/pulse.lua#L26)
 `settings` | User settings | function | empty function
 
-`cmd` catch infos from current default device. You can redefine it, being sure that the ouput is something like this:
+`cmd` is a terminal command to catch infos from current default device. You can redefine it, being sure that the ouput is something like this:
 
 ```shell
 * index: 0
@@ -29,21 +28,12 @@ Variable | Meaning | Type | Default
     device.string = "front:1"
 ```
 
-**Note:** you can set PulseAudio default sink like this: `pacmd set-default-sink #sink`.
+If your devices change dinamically, you can define it as a function which returns a command string.
 
-If sed doesn't work in `cmd`, you can try with a grep variant:
-
-```shell
-pacmd list-sinks | grep -e $(pactl info | grep -e 'ink' | cut -d' ' -f3) -e 'volume: front' -e 'muted'
-```
-
-`callback` is a callback function to update `cmd`, in case you switch between devices. If default `cmd` works for you, you can tell `callback` to work in the same way:
+If sed doesn't work, you can try with a grep variant:
 
 ```lua
-callback = function()
-    devicetype = "sink"
-    return "pacmd list-" .. devicetype .. "s | sed -n -e '0,/*/d' -e '/base volume/d' -e '/volume:/p' -e '/muted:/p' -e '/device\\.string/p'"
-end
+cmd = "pacmd list-" .. pulse.devicetype .. "s | grep -e $(pactl info | grep -e 'ink' | cut -d' ' -f3) -e 'volume: front' -e 'muted'"
 ```
 
 ### `settings` variables
@@ -52,14 +42,14 @@ end
 
 Variable | Meaning | Type | Values
 --- | --- | --- | ---
-`volume_now.index` | Sink index | string | >= "0"
-`volume_now.sink` | Sink name | string | sink name or "N/A"
-`volume_now.muted` | Sink mute status | string | "yes", "no", "N/A"
-`volume_now.channel` | Sink channels | table of string integers | `volume_now.channel[i]`, where `i >= 1`
-`volume_now.left` | Front left level | string | "0"-"100"
-`volume_now.right` | Front right level | string | "0"-"100"
+`volume_now.device` | Device name | string | device name or "N/A"
+`volume_now.index` | Device index | string | >= "0"
+`volume_now.muted` | Device mute status | string | "yes", "no", "N/A"
+`volume_now.channel` | Device channels | table of string integers | `volume_now.channel[i]`, where `i >= 1`
+`volume_now.left` | Front left sink level or first source | string | "0"-"100"
+`volume_now.right` | Front right sink level or second source | string | "0"-"100"
 
-`volume_now.channel` is a table of your pulseaudio sink channels. Fetch a channel level like this: `volume_now.channel[i]`, where `i >= 1`.
+`volume_now.channel` is a table of your PulseAudio devices. Fetch a channel level like this: `volume_now.channel[i]`, where `i >= 1`.
 
 `volume_now.{left,right}` are pointers for `volume_now.{channel[1], channel[2]}` (stereo).
 
@@ -71,8 +61,6 @@ Variable | Meaning | Type
 `update` | Update `widget` | function
 
 ## Buttons
-
-If you want buttons, just add the following after your widget in `rc.lua`.
 
 ```lua
 volume.widget:buttons(awful.util.table.join(
@@ -99,8 +87,6 @@ volume.widget:buttons(awful.util.table.join(
 ```
 
 ## Keybindings
-
-You can control the widget with key bindings like these:
 
 ```lua
 -- PulseAudio volume control
@@ -137,14 +123,13 @@ where `altkey = "Mod1"`.
 
 ```lua
 -- PulseAudio volume (based on multicolor theme)
-local volume = lain.widget.pulseaudio({
+local volume = lain.widget.pulse {
     settings = function()
-        vlevel = volume_now.left .. "-" .. volume_now.right .. "% | " .. volume_now.sink
+        vlevel = volume_now.left .. "-" .. volume_now.right .. "% | " .. volume_now.device
         if volume_now.muted == "yes" then
             vlevel = vlevel .. " M"
         end
-
         widget:set_markup(lain.util.markup("#7493d2", vlevel))
     end
-})
+}
 ```
