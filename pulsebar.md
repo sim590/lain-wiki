@@ -20,7 +20,7 @@ Variable | Meaning | Type | Default
 `height` | Bar height | number | 1
 `ticks` | Set bar ticks on | boolean | false
 `ticks_size` | Ticks size | number | 7
-`colors` | Bar colors | table | see [Default colors](https://github.com/copycat-killer/lain/wiki/pulsebar#default-colors)
+`colors` | Bar colors | table | see [default colors](https://github.com/copycat-killer/lain/wiki/pulsebar#default-colors)
 `followtag` | Display the notification on currently focused screen | boolean | false
 `notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/pulsebar#default-notification_preset)
 `devicetype` | PulseAudio device type | string ("sink", "source") | "sink"
