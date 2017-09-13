@@ -77,7 +77,7 @@ mail_notification _preset = {
 
 Note that `mailcount` is 0 either if there are no new mails or credentials are invalid, so make sure you get the right settings.
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
+With multiple screens, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
 You can have multiple instances of this widget at the same time.
 

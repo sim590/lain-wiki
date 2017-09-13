@@ -21,7 +21,7 @@ Variable | Meaning | Type | Default
 
 The tasks are shown in a notification popup when the mouse is moved over the attached `widget`, and the popup is hidden when the mouse is moved away. By default, the notification will show the output of `task next`. With `show_cmd`, the `task` popup command can be customized, for example if you want to [filter the tasks](https://taskwarrior.org/docs/filter.html) or show a [custom report](https://github.com/copycat-killer/lain/pull/213).
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
+With multiple screens, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
 You can call the notification with a keybinding like this:
 

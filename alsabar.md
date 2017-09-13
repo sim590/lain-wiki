@@ -38,7 +38,7 @@ Variable | Meaning | Type | Values
 `volume_now.level` | Volume level | number | 0-100
 `volume_now.status` | Device status | string | "on", "off"
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
+With multiple screens, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
 ### Default colors
 

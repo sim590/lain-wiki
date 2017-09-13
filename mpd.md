@@ -77,7 +77,7 @@ mpd_notification_preset = {
 }
 ```
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
+With multiple screens, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
 ## Output table
 

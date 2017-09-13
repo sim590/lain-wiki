@@ -61,7 +61,7 @@ local fsroothome = lain.widget.fs({
 
 Also, `settings` can modify `notification_preset` table. This table will be the preset for the naughty notifications. Check [here](https://awesomewm.org/doc/api/libraries/naughty.html#notify) for the list of variables it can contain.
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
+With multiple screens, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
 ### Default `notification_preset`
 

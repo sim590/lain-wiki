@@ -39,7 +39,7 @@ lain.widget.calendar({
 
 The notification will show an icon of the current day number, and output from ``cal`` with current day highlighted.
 
-In multiple screen setups, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
+With multiple screens, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
 ### Default `notification_preset`
 
