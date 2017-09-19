@@ -20,8 +20,8 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds for current weather status | number | 900 (15 min)
 `timeout_forecast` | Refresh timeout seconds for forecast notification | number | 86400 (24 hrs)
-`current_call` | Command to fetch weather status data from the API | string | see `default_current_call`
-`forecast_call` | Command to fetch forecast data from the API | string | see `default_forecast_call`
+`current_call` | Command to fetch weather status data from the API | string | see `default_current_call` below
+`forecast_call` | Command to fetch forecast data from the API | string | see `default_forecast_call` below
 `city_id` | API city code | number | not set
 `units` | Temperature units system | string | "metric"
 `lang` | API data localization | string | "en"
@@ -29,7 +29,7 @@ Variable | Meaning | Type | Default
 `date_cmd` | Forecast notification format style | string | "date -u -d @%d +'%%a %%d'"
 `icons_path` | Icons path | string | `lain/icons/openweathermap`
 `notification_preset` | Preset for notifications | table | empty table
-`notification_text_fun` | Function to format forecast notifications | function | see `notification_text_fun`
+`notification_text_fun` | Function to format forecast notifications | function | see `notification_text_fun` below
 `weather_na_markup` | Markup to be used when weather textbox is not available | text | " N/A "
 `followtag` | Display the notification on currently focused screen | boolean | false
 `showpopup` | Display popups with mouse hovering | string, possible values: "on", "off" | "on"
