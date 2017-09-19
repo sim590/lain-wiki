@@ -3,9 +3,9 @@
 [**Project homepage**](http://jonls.dk/redshift/)
 
 >**Redshift** is an application that adjusts the computer display's color temperature based upon the Sun's apparent position in relation to the user's location on Earth.
-
+>
 >The program is free software, inspired by the proprietary f.lux, and can be used to reduce eye strain as well as insomnia and delayed sleep phase syndrome.
-
+>
 >The computer display's color temperature transitions evenly from night to daytime temperature to allow the user's eyes to slowly adapt. At night, the color temperature is low and is typically 3000–4000 K (default is 3500 K), preferably matching the room's lighting temperature. Typical color temperature during the daytime is 5500–6500 K (default is 5500 K).
 
 **Source:** [Wikipedia](https://en.wikipedia.org/wiki/Redshift_%28software%29)
