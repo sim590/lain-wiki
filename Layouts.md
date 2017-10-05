@@ -249,7 +249,7 @@ theme.layout_centerwork  = theme.lain_icons .. "centerwork.png"
 theme.layout_centerhwork = theme.lain_icons .. "centerworkh.png" -- centerwork.horizontal
 ```
 
-Credits go to [Nicolas Estibals](https://github.com/nestibal) for creating
+Credit goes to [Nicolas Estibals](https://github.com/nestibal) for creating
 layout icons for default theme.
 
 You can use them as a template for your custom versions.
