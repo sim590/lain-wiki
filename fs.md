@@ -1,6 +1,6 @@
 ## Usage
 
-[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+[Read here.](https://github.com/lcpz/lain/wiki/Widgets#usage)
 
 ### Description
 
@@ -18,8 +18,8 @@ Variable | Meaning | Type | Default
 --- | --- | --- | ---
 `timeout` | Refresh timeout seconds -| number | 600
 `partition` | Partition to monitor | string | "/"
-`options` | Additional options to pass to [`dfs`](https://github.com/copycat-killer/lain/blob/master/scripts/dfs) | string, in the form `--type='fstype' | --exclude-type='fstype'` | nil
-`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/fs#default-notification_preset)
+`options` | Additional options to pass to [`dfs`](https://github.com/lcpz/lain/blob/master/scripts/dfs) | string, in the form `--type='fstype' | --exclude-type='fstype'` | nil
+`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/lcpz/lain/wiki/fs#default-notification_preset)
 `followtag` | Display the notification on currently focused screen | boolean | false
 `notify` | Display notifications | string | "on"
 `showpopup` | Display popups with mouse hovering | string, possible values: "on", "off" | "on"

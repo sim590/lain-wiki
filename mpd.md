@@ -1,6 +1,6 @@
 ## Usage
 
-[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+[Read here.](https://github.com/lcpz/lain/wiki/Widgets#usage)
 
 ### Description
 
@@ -46,7 +46,7 @@ Pay attention to case sensitivity when defining `music_dir`.
 
 `settings` can use `mpd_now` table, which contains the following values:
 
-(**note:** the first four are boolean [flags](https://github.com/copycat-killer/lain/pull/205), the remaining are all strings)
+(**note:** the first four are boolean [flags](https://github.com/lcpz/lain/pull/205), the remaining are all strings)
 
 - random_mode
 - single_mode
@@ -63,8 +63,8 @@ Pay attention to case sensitivity when defining `music_dir`.
 - track
 - genre
 - date
-- [time](https://github.com/copycat-killer/lain/pull/90) (length of current song, in seconds)
-- [elapsed](https://github.com/copycat-killer/lain/pull/90) (elapsed time of current song, in seconds)
+- [time](https://github.com/lcpz/lain/pull/90) (length of current song, in seconds)
+- [elapsed](https://github.com/lcpz/lain/pull/90) (elapsed time of current song, in seconds)
 
 and can modify `mpd_notification_preset` table, which will be the preset for the naughty notifications. Check [here](https://awesomewm.org/doc/api/libraries/naughty.html#notify) for the list of variables it can contain. Default definition:
 
@@ -147,18 +147,18 @@ awful.key({ altkey }, "0",
 
 ### Always use `set_markup`
 
-In `settings`, if you use `widget:set_text`, [it will ignore Pango markup](https://github.com/copycat-killer/lain/issues/258), so be sure to always use `widget:set_markup`.
+In `settings`, if you use `widget:set_text`, [it will ignore Pango markup](https://github.com/lcpz/lain/issues/258), so be sure to always use `widget:set_markup`.
 
 ### Volume fade in toggling MPD
 
-If you want a fade in/out in toggling MPD, you can put [this script](https://gist.github.com/copycat-killer/76e315bc27c6cdf7edd5021964b88df1) in your local `bin` directory:
+If you want a fade in/out in toggling MPD, you can put [this script](https://gist.github.com/lcpz/76e315bc27c6cdf7edd5021964b88df1) in your local `bin` directory:
 
 ```shell
-$ curl https://gist.githubusercontent.com/copycat-killer/76e315bc27c6cdf7edd5021964b88df1/raw/97f7ba586418a4e07637cfbc91d2974278dfa623/mpd-fade -o ~/bin/mpc-fade
+$ curl https://gist.githubusercontent.com/lcpz/76e315bc27c6cdf7edd5021964b88df1/raw/97f7ba586418a4e07637cfbc91d2974278dfa623/mpd-fade -o ~/bin/mpc-fade
 $ chmod +x ~/bin/mpc-fade
 ```
 
-Set your 1% decrease/increase commands [here](https://gist.github.com/copycat-killer/76e315bc27c6cdf7edd5021964b88df1#file-mpd-fade-L8-L9), then use a keybinding like this:
+Set your 1% decrease/increase commands [here](https://gist.github.com/lcpz/76e315bc27c6cdf7edd5021964b88df1#file-mpd-fade-L8-L9), then use a keybinding like this:
 
 ```lua
 -- MPD toggle with volume fading

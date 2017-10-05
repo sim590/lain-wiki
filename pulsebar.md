@@ -1,6 +1,6 @@
 ## Usage
 
-[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+[Read here.](https://github.com/lcpz/lain/wiki/Widgets#usage)
 
 ### Description
 
@@ -20,15 +20,15 @@ Variable | Meaning | Type | Default
 `height` | Bar height | number | 1
 `ticks` | Set bar ticks on | boolean | false
 `ticks_size` | Ticks size | number | 7
-`colors` | Bar colors | table | see [default colors](https://github.com/copycat-killer/lain/wiki/pulsebar#default-colors)
+`colors` | Bar colors | table | see [default colors](https://github.com/lcpz/lain/wiki/pulsebar#default-colors)
 `followtag` | Display the notification on currently focused screen | boolean | false
-`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/pulsebar#default-notification_preset)
+`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/lcpz/lain/wiki/pulsebar#default-notification_preset)
 `devicetype` | PulseAudio device type | string ("sink", "source") | "sink"
-`cmd` | PulseAudio command | string or function | see [here](https://github.com/copycat-killer/lain/blob/master/widget/pulsebar.lua#L48)
+`cmd` | PulseAudio command | string or function | see [here](https://github.com/lcpz/lain/blob/master/widget/pulsebar.lua#L48)
 
-Read [pulse](https://github.com/copycat-killer/lain/wiki/pulse) page for `cmd` settings.
+Read [pulse](https://github.com/lcpz/lain/wiki/pulse) page for `cmd` settings.
 
-`settings` can use [these variables](https://github.com/copycat-killer/lain/wiki/pulse#settings-variables).
+`settings` can use [these variables](https://github.com/lcpz/lain/wiki/pulse#settings-variables).
 
 With multiple screens, the default behaviour is to show a visual notification pop-up window on the first screen. By setting `followtag` to `true` it will be shown on the currently focused tag screen.
 
@@ -86,4 +86,4 @@ volume.bar:buttons(awful.util.table.join(
 
 ## Keybindings
 
-Same as [here](https://github.com/copycat-killer/lain/wiki/pulse#keybindings). If you want notifications, use `volume.notify()` instead of `volume.update()`.
+Same as [here](https://github.com/lcpz/lain/wiki/pulse#keybindings). If you want notifications, use `volume.notify()` instead of `volume.update()`.

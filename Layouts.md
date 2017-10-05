@@ -222,12 +222,12 @@ Following are a couple of `uselesstile` variants that were not part of lain. The
 Xmonad-like
 -----------
 
-If you want to have `awful.layout.suit.tile` behave like xmonad, with internal gaps two times wider than external ones, download [this](https://gist.github.com/copycat-killer/9e56dcfbe66bfe14967c) as `lain/layout/uselesstile`.
+If you want to have `awful.layout.suit.tile` behave like xmonad, with internal gaps two times wider than external ones, download [this](https://gist.github.com/lcpz/9e56dcfbe66bfe14967c) as `lain/layout/uselesstile`.
 
 Inverted master
 ---------------
 
-Want to invert master window position? Use [this](https://gist.github.com/copycat-killer/c59dc59c9f99d98218eb) version. You can set `single_gap` with `width` and `height` in your `theme.lua`, in order to define the window geometry when there's only one client, otherwise it goes maximized. An example:
+Want to invert master window position? Use [this](https://gist.github.com/lcpz/c59dc59c9f99d98218eb) version. You can set `single_gap` with `width` and `height` in your `theme.lua`, in order to define the window geometry when there's only one client, otherwise it goes maximized. An example:
 
     theme.single_gap = { width = 600, height = 100 }
 

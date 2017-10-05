@@ -1,6 +1,6 @@
 ## Usage
 
-[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+[Read here.](https://github.com/lcpz/lain/wiki/Widgets#usage)
 
 ### Description
 
@@ -29,4 +29,4 @@ Variable | Meaning | Type
 
 ## Note
 
-Depending on the architecture, note that your temp files location [might vary](https://github.com/copycat-killer/lain/issues/84#issuecomment-72751763).
+Depending on the architecture, note that your temp files location [might vary](https://github.com/lcpz/lain/issues/84#issuecomment-72751763).

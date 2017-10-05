@@ -1,6 +1,6 @@
 ## Usage
 
-[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+[Read here.](https://github.com/lcpz/lain/wiki/Widgets#usage)
 
 ### Description
 
@@ -23,8 +23,8 @@ Variable | Meaning | Type | Default
 `cal` | custom call for `cal` | string | "/usr/bin/cal"
 `attach_to` | Array of widgets | array | empty array
 `followtag` | Display the notification on currently focused screen | boolean | false
-`icons` | Path to calendar icons | string | [lain/icons/cal/white](https://github.com/copycat-killer/lain/tree/master)
-`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/copycat-killer/lain/wiki/calendar#default-notification_preset)
+`icons` | Path to calendar icons | string | [lain/icons/cal/white](https://github.com/lcpz/lain/tree/master)
+`notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/lcpz/lain/wiki/calendar#default-notification_preset)
 
 You can reset `cal` any way you like (using `-w` to display weeks as well, for instance). If the current day is not highlighted, you can reset `cal` to also include the proper coloring flag. For instance, under Arch Linux it's `/usr/bin/cal --color=always`, while under Ubuntu it's `/usr/bin/cal -h`.
 
@@ -85,7 +85,7 @@ end),
 
 * Naughty notifications require `notification_preset.font` to be **monospaced**, in order to correctly display the output.
 * In case current day is not being highlighted in notifications, try setting `cal` specifying your environment. For instance: `cal = "/usr/bin/env TERM=linux /usr/bin/cal --your-coloring-flag-here"`.
-* If you want to [disable notification icon](https://github.com/copycat-killer/lain/pull/351), set `icons = ""` in the input table.
+* If you want to [disable notification icon](https://github.com/lcpz/lain/pull/351), set `icons = ""` in the input table.
 * In order to have [khal](https://github.com/pimutils/khal) agenda output combined with the widget you can use this script as `cal`:
 
     ```shell

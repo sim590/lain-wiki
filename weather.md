@@ -1,6 +1,6 @@
 ## Usage
 
-[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+[Read here.](https://github.com/lcpz/lain/wiki/Widgets#usage)
 
 ### Description
 
@@ -103,7 +103,7 @@ Variable | Meaning | Type | Default
        return string.format("<b>%s</b>: %s, %d - %d ", day, desc, tmin, tmax)
    end
    ```
-   See [here](https://github.com/copycat-killer/lain/issues/186#issuecomment-203400918) for a complete customization example.
+   See [here](https://github.com/lcpz/lain/issues/186#issuecomment-203400918) for a complete customization example.
 
 - ``followtag``
 

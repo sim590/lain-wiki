@@ -1,6 +1,6 @@
 ## Usage
 
-[Read here.](https://github.com/copycat-killer/lain/wiki/Widgets#usage)
+[Read here.](https://github.com/lcpz/lain/wiki/Widgets#usage)
 
 ### Description
 
@@ -50,7 +50,7 @@ Variable | Meaning | Type
 
 ### Setting `iface` manually
 
-If the widget [spawns a "no carrier" notification and you are sure to have an active network device](https://github.com/copycat-killer/lain/issues/102), then autodetection is probably not working. This may due to [your user privileges](https://github.com/copycat-killer/lain/issues/102#issuecomment-246470526). In this case you can set `iface` manually. You can see which device is **UP,LOWER_UP** with the following command:
+If the widget [spawns a "no carrier" notification and you are sure to have an active network device](https://github.com/lcpz/lain/issues/102), then autodetection is probably not working. This may due to [your user privileges](https://github.com/lcpz/lain/issues/102#issuecomment-246470526). In this case you can set `iface` manually. You can see which device is **UP,LOWER_UP** with the following command:
 
 ```shell
 ip link show
