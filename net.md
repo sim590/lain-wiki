@@ -79,7 +79,7 @@ local mynetup = lain.widgets.net {
 ```lua
 local wifi_icon = wibox.widget.imagebox()
 local eth_icon = wibox.widget.imagebox()
-net = lain.widget.net {
+local net = lain.widget.net {
     notify = "off",
     wifi_state = "on",
     eth_state = "on",
