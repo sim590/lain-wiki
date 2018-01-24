@@ -7,7 +7,7 @@
 Shows the remaining time and percentage capacity of your laptop battery, as well as
 the current wattage. Multiple batteries are supported.
 
-Displays a notification when battery is low or critical.
+Displays a notification when battery is fully charged, low, or critical.
 
 ```lua
 local mybattery = lain.widget.bat()
@@ -29,7 +29,7 @@ You only have to define one between `battery` and `batteries`.
 
 If you have one battery, you can either use `args.battery = "BAT*"` or `args.batteries = {"BAT*"}`. Of course, if you have multiple batteries, you need to use the latter option.
 
-To disable warning notifications, set `notify` to `"off"`.
+To disable notifications, set `notify` to `"off"`.
 
 `settings` can use the `bat_now` table, which contains the following strings:
 
@@ -41,11 +41,23 @@ To disable warning notifications, set `notify` to `"off"`.
 - `time`, time remaining until charge if charging, until discharge if discharging (HH:SS string or "N/A");
 - `watt`, battery watts (float with 2 decimals).
 
-and can modify the following two tables, which will be the preset for the naughty notifications:
-* `bat_notification_low_preset`(used if battery charge level <= 15)
+and can modify the following three tables, which will be the preset for the naughty notifications:
+* `bat_notification_charged_preset` (used if battery is fully charged and connected to AC)
+* `bat_notification_low_preset` (used if battery charge level <= 15)
 * `bat_notification_critical_preset` (used if battery charge level <= 5)
 
 Check [here](https://awesomewm.org/doc/api/libraries/naughty.html#notify) for the list of variables they can contain. Default definitions:
+
+```lua
+bat_notification_charged_preset = {
+        title   = "Battery full",
+        text    = "You can unplug the cable",
+        timeout = 15,
+        fg      = "#202020",
+        bg      = "#CDCDCD"
+    }
+
+```
 
 ```lua
 bat_notification_low_preset = {
