@@ -70,7 +70,7 @@ When `is_plain == false` (default), `password` can be either a string, a table o
 
 ```lua
 mail_notification _preset = {
-    icon = lain/icons/mail.png,
+    icon = "lain/icons/mail.png",
     position = "top_left"
 }
 ```
