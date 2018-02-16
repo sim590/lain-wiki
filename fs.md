@@ -16,7 +16,7 @@ local mypartition = lain.widget.fs()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | integer | 600
+`timeout` | Refresh timeout (in seconds) | integer | 600
 `partition` | (Optional) Partition to watch: a notification will be displayed when full | string | `nil`
 `notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/lcpz/lain/wiki/fs#default-notification_preset)
 `followtag` | Display the notification on currently focused screen | boolean | false
@@ -31,7 +31,7 @@ Variable | Meaning | Type
 `percentage` | the used percentage | integer
 `size` | size in `units` of the given fs | float
 `used` | amount of space used in the given fs, expressed in `units` | float
-`free` | amount of free space in the given fs, expressed in `units` | float 
+`free` | amount of free space in the given fs, expressed in `units` | float
 
 Usage example:
 

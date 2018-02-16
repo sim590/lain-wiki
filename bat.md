@@ -17,7 +17,7 @@ local mybattery = lain.widget.bat()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | number | 30
+`timeout` | Refresh timeout (in seconds) | integer | 30
 `battery` | Single battery id | string | "BAT0"
 `batteries` | Multiple batteries id table | table of strings | `{"BAT0"}`
 `ac` | AC | string | "AC0"

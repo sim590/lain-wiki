@@ -14,7 +14,7 @@ local volume = lain.widget.pulse()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | number | 5
+`timeout` | Refresh timeout (in seconds) | integer | 5
 `devicetype` | PulseAudio device type | string ("sink", "source") | "sink"
 `cmd` | PulseAudio command | string or function | see [here](https://github.com/lcpz/lain/blob/master/widget/pulse.lua#L26)
 `settings` | User settings | function | empty function

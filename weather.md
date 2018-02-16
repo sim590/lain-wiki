@@ -18,14 +18,14 @@ local myweather = lain.widget.weather()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds for current weather status | number | 900 (15 min)
-`timeout_forecast` | Refresh timeout seconds for forecast notification | number | 86400 (24 hrs)
+`timeout` | Refresh timeout (in seconds) for current weather status | integer | 900 (15 min)
+`timeout_forecast` | Refresh timeout (in seconds) for forecast notification | integer | 86400 (24 hrs)
 `current_call` | Command to fetch weather status data from the API | string | see `default_current_call` below
 `forecast_call` | Command to fetch forecast data from the API | string | see `default_forecast_call` below
-`city_id` | API city code | number | not set
+`city_id` | API city code | integer | not set
 `units` | Temperature units system | string | "metric"
 `lang` | API data localization | string | "en"
-`cnt` | Forecast days interval | number | 5
+`cnt` | Forecast days interval | integer | 5
 `date_cmd` | Forecast notification format style | string | "date -u -d @%d +'%%a %%d'"
 `icons_path` | Icons path | string | `lain/icons/openweathermap`
 `notification_preset` | Preset for notifications | table | empty table

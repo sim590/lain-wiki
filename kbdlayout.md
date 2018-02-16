@@ -16,9 +16,9 @@ Left/right click switches to next/previous keyboard layout.
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`layouts` | Keyboard layouts and variants to switch between | table | **nil**
+`layouts` | Keyboard layouts and variants to switch between | table | `nil`
 `add_us_secondary` | Whether to add `us` as a secondary layout | boolean | true
-`timeout` | Refresh timeout (in seconds) | number | 10
+`timeout` | Refresh timeout (in seconds) | integer | 10
 `settings` | User settings | function | empty function
 
 - `layouts`

@@ -14,7 +14,7 @@ local mycpu = lain.widget.cpu()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | number | 2
+`timeout` | Refresh timeout (in seconds) | integer | 2
 `settings` | User settings | function | empty function
 
 `settings` can use these strings:

@@ -24,9 +24,9 @@ Now playing songs are notified like this:
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | number | 1
+`timeout` | Refresh timeout (in seconds) | integer | 1
 `music_dir` | Music directory | string | "~/Music"
-`cover_size` | Album art notification size | number | 100
+`cover_size` | Album art notification size (both height and width) | integer | 100
 `cover_pattern` | Pattern for the album art file | string | `*\\.(jpg|jpeg|png|gif)`*
 `default_art` | Default art | string | ""
 `followtag` | Display the notification on currently focused screen | boolean | false

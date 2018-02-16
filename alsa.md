@@ -14,7 +14,7 @@ local volume = lain.widget.alsa()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | number | 5
+`timeout` | Refresh timeout (in seconds) | integer | 5
 `cmd` | Alsa mixer command | string | "amixer"
 `channel` | Mixer channel | string | "Master"
 `togglechannel` | Toggle channel | string | `nil`
@@ -26,7 +26,7 @@ Variable | Meaning | Type | Default
 
 Variable | Meaning | Type | Values
 --- | --- | --- | ---
-`volume_now.level` | Volume level | number | 0-100
+`volume_now.level` | Volume level | integer | 0-100
 `volume_now.status` | Device status | string | "on", "off"
 
 ## Output table

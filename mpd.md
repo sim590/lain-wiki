@@ -26,12 +26,12 @@ Now playing songs are notified like this:
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | number | 2
+`timeout` | Refresh timeout (in seconds) | integer | 2
 `password` | MPD password | string | ""
 `host` | MPD server | string | "127.0.0.1"
 `port` | MPD port | string | "6600"
 `music_dir` | Music directory | string | "~/Music"
-`cover_size` | Album art notification size | number | 100
+`cover_size` | Album art notification size (both height and width) | integer | 100
 `cover_pattern` | Pattern for the album art file | string | `*\\.(jpg|jpeg|png|gif)`*
 `default_art` | Default art | string | `nil`
 `notify` | Show notification popups | string | "on"

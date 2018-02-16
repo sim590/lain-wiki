@@ -14,12 +14,12 @@ local volume = lain.widget.pulsebar()
 
 Variable | Meaning | Type | Default
 --- | --- | --- | ---
-`timeout` | Refresh timeout seconds | number | 5
+`timeout` | Refresh timeout (in seconds) | integer | 5
 `settings` | User settings | function | empty function
-`width` | Bar width | number | 63
-`height` | Bar height | number | 1
+`width` | Bar width | integer | 63
+`height` | Bar height | integer | 1
 `ticks` | Set bar ticks on | boolean | false
-`ticks_size` | Ticks size | number | 7
+`ticks_size` | Ticks size | integer | 7
 `colors` | Bar colors | table | see [default colors](https://github.com/lcpz/lain/wiki/pulsebar#default-colors)
 `followtag` | Display the notification on currently focused screen | boolean | false
 `notification_preset` | Notification preset | table | See [default `notification_preset`](https://github.com/lcpz/lain/wiki/pulsebar#default-notification_preset)
