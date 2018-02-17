@@ -243,3 +243,145 @@ awful.key({ "Mod1" }, "Tab", function()
     lain.util.menu_clients_current_tags({ width = 350 }, { keygrabber = true })
 end),
 ```
+
+menu\_iterator
+--------------
+
+A generic menu utility which enables iteration over lists of possible
+actions to execute. The perfect example is a simple menu for choosing what 
+configuration to apply to X with `xrandr`, as suggested on the [awesome wiki page][xrandr-awesomewiki].
+
+<p align="center">
+    <img src="img/xrandr.gif"/>
+    <br><b>NOTE:</b> above menu is <a href="https://github.com/sim590/dotfiles/blob/master/awesome/rc/xrandr.lua#L52">custom</a>
+</p>
+
+You can either create you own menu which has the following form:
+
+```
+{ { "choice description", callback } }
+```
+
+or use `util.menu_iterator.menu`, a generic menu creator.
+Below is a table explaining the content of the menu function
+arguments. The arguments are supplied as a table with named members.
+
+**lain.menu_iterator.iterator**
+
+| Argument  | Description                                                                           |
+|-----------|---------------------------------------------------------------------------------------|
+| `menu`    | The menu to iterate on.                                                               |
+| `timeout` | The time (in seconds) to wait on a choice before the choice is accepted (default: 4). |
+| `icon`    | The path to the icon to display in `naughty.notify` window.                           |
+
+**lain.menu_iterator.menu**
+
+<table>
+    <tr>
+        <td align="center"><b>Argument</b></td>
+        <td align="center"><b>Description</b></td>
+    </tr>
+    <tr>
+        <td><code>choices</code></td>
+        <td>A list of choices as string elements <code>{"choice1", "choice2", ...}</code></td>
+    </tr>
+    <tr>
+        <td><code>name</code></td>
+        <td>The name of the program concerned by this menu interface</td>
+    </tr>
+    <tr>
+        <td><code>selected_cb</code></td>
+        <td>The function to call for all selected choices through the menu. The
+        function is passed the choice of type string as parameter.</td>
+    </tr>
+    <tr>
+        <td><code>rejected_cb</code></td>
+        <td>The function to call for all rejected choices through the menu. The
+        function is passed the choice of type string as parameter</td>
+    </tr>
+    <tr>
+        <td><code>extra_choices</code></td>
+        <td>More choices to be added to the menu. The difference with those
+        choice is that they won't trigger any other action for rejected
+        choices.</td>
+    </tr>
+    <tr>
+        <td><code>combination</code></td>
+        <td>Can either be "powerset" or "single" (the default). The former will
+        generate a menu with choices that are the [powerset][] of the choices
+        given by the argument `choices`. The latter will simply take choices as
+        they come.</td>
+    </tr>
+</table>
+
+[powerset]: https://en.wikipedia.org/wiki/Power_set
+
+**Examples**
+
+First, include the menu iterator module:
+
+```lua
+local menu_iterator = require("lain.util.menu_iterator")
+```
+
+The simplest example is as follows:
+
+```lua
+local choices = {"My first choice", "My second choice"}
+local m = util.menu({
+    choices     = choices,
+    name        = "My awesome program",
+    selected_cb = function(choice)
+        -- do something with this with the user choice
+    end,
+    rejected_cb = function(choice)
+        -- do something with this rejected choice
+    end
+})
+```
+
+The call to the function `menu` will return a menu compatible with the function
+`iterate` in order to iterate on it using the `naughty.notify` utility. To do
+so, one has to write something like the following:
+
+```lua
+-- m defined above
+time_to_chose = 4
+my_awesome_icon = "/the/path/to/the/icon"
+menu_iterator.iterate(m, time_to_chose, my_awesome_icon)
+```
+
+Subsequent calls to the `iterate` function will step further into the list of
+choice to actually iterate over the list. Once the timeout has passed (4 seconds
+by default) without anymore calls to `iterate`, the choice is made and it calls
+the associated callbacks (for selected and rejected choices) configured in the
+menu.
+
+One can add a `Cancel` option which would do as it says: it would cancel the
+menu selection. Simply write:
+
+```lua
+local m = util.menu({
+    choices     = {"One thing", "along with this thing"},
+    name        = "My awesome program",
+    selected_cb = function(choice)
+        -- do something with this with the user choice
+    end,
+    rejected_cb = function(choice)
+        -- do something with this rejected choice
+    end,
+    -- We pass nil because there's nothing to do in this case. It is not forced
+    -- though. One could pass something to do on the "Cancel" choice of course.
+    extra_choices = { {"Cancel"}, nil },
+    combination = "powerset"
+})
+```
+
+In this last example, `powerset` has been set along with the set of choices
+`{"One thing", "along with this thing"}` which created the following powerset:
+
+```
+{{"One thing"}, {"along with this thing"}, { "One thing", "along with this thing" }}
+```
+
+[xrandr-awesomewiki]: https://awesomewm.org/recipes/xrandr/
