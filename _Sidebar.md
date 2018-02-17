@@ -23,3 +23,4 @@
     * [tag_view_non_empty](https://github.com/lcpz/lain/wiki/Utilities#tag_view_nonempty)
     * [magnify_client](https://github.com/lcpz/lain/wiki/Utilities#magnify_client)
     * [menu_clients_current_tags](https://github.com/lcpz/lain/wiki/Utilities#menu_clients_current_tags)
+    * [menu_iterator](https://github.com/lcpz/lain/wiki/Utilities#menu_iterator)
