@@ -248,7 +248,7 @@ menu\_iterator
 --------------
 
 A generic menu utility which enables iteration over lists of possible
-actions to execute. The perfect example is a menu for choosing what 
+actions to execute. The perfect example is a menu for choosing what
 configuration to apply to X with `xrandr`, as suggested on the [Awesome wiki page][https://awesomewm.org/recipes/xrandr].
 
 <p align="center">
@@ -305,7 +305,7 @@ local mymenu_iterable = lain.util.menu_iterator.menu {
 The variable `mymenu_iterable` is a menu compatible with the function `lain.util.menu_iterator.iterate`, which will iterate over it and displays notification with `naughty.notify` every time it is called. You can use it like this:
 
 ```lua
-local confirm_timeout = 5 -- time to wait before confirming the menu selection 
+local confirm_timeout = 5 -- time to wait before confirming the menu selection
 local my_notify_icon = "/path/to/icon" -- the icon to display in the notification
 lain.util.menu_iterator.iterate(mymenu_iterable, confirm_timeout, my_notify_icon)
 ```
